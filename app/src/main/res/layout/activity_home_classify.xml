@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.yj.cosmetics.widget.ProgressLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:progressLayoutDefStyle="@style/ProgressLayout">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        </android.support.v7.widget.RecyclerView>
+        </com.yj.cosmetics.widget.ProgressLayout>
+
+       <!-- <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis40"
+
+            ></android.support.v7.widget.RecyclerView>
+-->
+        <ImageView
+            android:id="@+id/home_classify_iv_cart"
+            android:layout_width="@dimen/dis40"
+            android:layout_height="@dimen/dis40"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dis16"
+            android:layout_marginRight="@dimen/dis18"
+            android:src="@mipmap/cart_light_dark"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:id="@+id/home_classify_iv_top"
+            android:layout_width="@dimen/dis40"
+            android:layout_height="@dimen/dis40"
+            android:layout_above="@id/home_classify_iv_cart"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dis18"
+            android:layout_marginBottom="@dimen/dis15"
+            android:src="@mipmap/upd_fl"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

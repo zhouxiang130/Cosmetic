@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/dis25"-->
+        <!--android:background="@drawable/shape_corner_shade"-->
+        <!--android:visibility="visible"/>-->
+
+    <include layout="@layout/titlebar_layout"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis180"
+        android:background="@color/CF5_F5_F5"
+        >　
+
+
+        <LinearLayout
+            android:id="@+id/nearby_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis140"
+            android:background="@drawable/shape_corner_shade"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_mine_free_sayest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dis3"
+                    android:paddingTop="@dimen/dis3"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_account_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dis3"
+                    android:paddingTop="@dimen/dis3"
+                    android:text="累计消费（元）"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font12"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dis0.5"
+                android:layout_height="@dimen/dis34"
+                android:background="@color/CD6_D6_D6"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_mine_store_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dis3"
+                    android:paddingTop="@dimen/dis3"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_total_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/dis3"
+                    android:paddingTop="@dimen/dis3"
+                    android:text="累计店铺（个）"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font12"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/frag_mine_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dis20"
+            android:layout_marginRight="@dimen/dis20"
+            app:cardCornerRadius="@dimen/dis10"
+            android:layout_marginBottom="@dimen/dis3"
+            app:cardElevation="@dimen/dis3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dis10">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis40"
+                    android:background="@color/white"
+                    app:tabIndicatorColor="@color/CE8_3C_3C"
+                    app:tabIndicatorHeight="@dimen/dis0"
+                    app:tabPaddingEnd="@dimen/dis_15"
+                    app:tabPaddingStart="@dimen/dis_15"
+                    app:tabSelectedTextColor="@color/CE8_3C_3C"
+                    app:tabTextAppearance="@style/CustomTabLayoutText13"
+                    app:tabTextColor="@color/CE8_3C_3C"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.yj.cosmetics.widget.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/frag_mine_ll">
+
+    </com.yj.cosmetics.widget.NoScrollViewPager>
+
+</LinearLayout>

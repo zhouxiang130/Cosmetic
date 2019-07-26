@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dis15"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis30"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/logical_detial_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/dis2"
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font11"
+                />
+
+            <TextView
+                android:id="@+id/logical_detial_tv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis5"
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font11"
+                />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/logical_detial_iv_state"
+            android:layout_width="@dimen/dis10"
+            android:layout_height="@dimen/dis10"
+            android:layout_marginLeft="@dimen/dis80"
+            android:layout_marginTop="@dimen/dis4"
+            android:background="@mipmap/round_right_fill_h"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/logical_detial_iv_state"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/logical_detial_tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="派送中"
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font14"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/logical_detial_tv_detial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dis15"
+                android:layout_marginTop="@dimen/dis2"
+                android:lineSpacingExtra="@dimen/dis3"
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font12"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:layout_marginTop="@dimen/dis15"
+                android:background="@color/CED_F1_F4"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

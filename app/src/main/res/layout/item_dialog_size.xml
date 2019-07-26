@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_size_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis10"
+        android:textColor="@color/C10_10_10"
+        android:textSize="@dimen/font14"
+        />
+
+    <com.yj.cosmetics.widget.CustomViewGroup.CustomSizeDialogViewGroup
+        android:id="@+id/dialog_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dis15"
+        />
+
+</LinearLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/CED_F1_F4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dis12"
+        android:paddingLeft="@dimen/dis15"
+        android:paddingRight="@dimen/dis15"
+        android:paddingTop="@dimen/dis12">
+
+        <RelativeLayout
+            android:id="@+id/item_post_judge_rl1"
+            android:layout_width="@dimen/dis75"
+            android:layout_height="@dimen/dis75"
+            android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+
+            <ImageView
+                android:id="@+id/item_post_judge_iv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dis4"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_goods"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/order_inner_goods_ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_settle_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font14" />
+
+            <TextView
+                android:id="@+id/item_settle_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-1dp"
+                android:layout_marginLeft="@dimen/dis3"
+                android:layout_toRightOf="@id/item_settle_tv1"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_settle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis18"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_toLeftOf="@id/order_inner_goods_ll1"
+            android:layout_toRightOf="@id/item_post_judge_rl1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font14" />
+
+        <TextView
+            android:id="@+id/item_settle_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_post_judge_rl1"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dis5"
+            android:layout_marginTop="@dimen/dis12"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font12" />
+
+        <TextView
+            android:id="@+id/item_settle_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_post_judge_rl1"
+            android:layout_marginBottom="@dimen/dis5"
+            android:layout_marginLeft="@dimen/dis18"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis12"
+            android:layout_toLeftOf="@id/item_settle_num"
+            android:layout_toRightOf="@id/item_post_judge_rl1"
+            android:textColor="@color/C85_85_85"
+            android:textSize="@dimen/font12" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dis15">
+
+        <TextView
+            android:id="@+id/judge_show_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="商品评分 :  "
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font13" />
+
+        <com.yj.cosmetics.widget.StarBar
+            android:id="@+id/judge_show_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis12"
+            android:layout_toRightOf="@id/judge_show_tv1"
+            app:starCount="5"
+            app:starDistance="@dimen/dis8"
+            app:starEmpty="@mipmap/favor_fill_n"
+            app:starFill="@mipmap/favor_fill_judge"
+            app:starSize="@dimen/dis18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/judge_show_rating"
+            android:text="谢谢您的支持~"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font12" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/judge_show_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dis8"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2"
+        android:gravity="start"
+        android:hint="说说它的优点和不足供其他小伙伴参考吧~"
+        android:minLines="7"
+        android:paddingLeft="@dimen/dis15"
+        android:paddingRight="@dimen/dis15"
+        android:paddingTop="@dimen/dis10"
+        android:paddingBottom="@dimen/dis15"
+        android:textColor="@color/C64_64_64"
+        android:maxLength="140"
+        android:textColorHint="@color/C64_64_64"
+        android:lineSpacingExtra="@dimen/dis5"
+        android:textSize="@dimen/font12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dis15"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/post_judge_tv_text_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/140"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font11" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dis10"
+        android:layout_marginTop="@dimen/dis5">
+
+        <RelativeLayout
+            android:id="@+id/judge_offer1_rl1"
+            android:layout_width="@dimen/dis68"
+            android:layout_height="@dimen/dis68"
+            android:layout_marginLeft="@dimen/dis15">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dis60"
+                android:layout_height="@dimen/dis60"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                    android:id="@+id/judge_show_offer1"
+                    android:layout_width="@dimen/dis60"
+                    android:layout_height="@dimen/dis60"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/dis2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add_p" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/judge_show_offer1close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@mipmap/round_close_fill_p" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/judge_offer2_rl2"
+            android:layout_width="@dimen/dis68"
+            android:layout_height="@dimen/dis68"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/judge_offer1_rl1"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="@dimen/dis60"
+                android:layout_height="@dimen/dis60"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add_p" />
+
+                <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                    android:id="@+id/judge_show_offer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/dis2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/judge_show_offer2close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/round_close_fill_p"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/judge_offer3_rl3"
+            android:layout_width="@dimen/dis68"
+            android:layout_height="@dimen/dis68"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/judge_offer2_rl2"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="@dimen/dis60"
+                android:layout_height="@dimen/dis60"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add_p" />
+
+                <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                    android:id="@+id/judge_show_offer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/dis2" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/judge_show_offer3close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/round_close_fill_p"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*最多上传3张图片"
+        android:layout_marginLeft="@dimen/dis18"
+        android:textSize="@dimen/font10"
+        android:textColor="@color/C64_64_64"
+        android:layout_marginBottom="@dimen/dis25"
+        />
+    <View
+        android:id="@+id/judge_goods_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE4_E4_E4" />
+</LinearLayout>

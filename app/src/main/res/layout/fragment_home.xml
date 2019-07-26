@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/frag_home_v_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis20"
+        android:background="@color/black"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/frag_classify_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis45"
+        android:layout_below="@id/frag_home_v_head"
+        android:background="@color/white"
+        >
+        <!--android:background="@color/transparent"-->
+
+        <RelativeLayout
+            android:id="@+id/frag_store_locinfo"
+            android:layout_width="@dimen/dis30"
+            android:layout_height="@dimen/dis30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis10">
+
+            <ImageView
+                android:id="@+id/frag_home_info_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/dis3"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/xiaoxi1"/>
+
+            <TextView
+                android:id="@+id/frag_home_tv_info"
+                android:layout_width="@dimen/dis16"
+                android:layout_height="@dimen/dis16"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_round360_e83"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font10"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frag_classify_rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dis8"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis8"
+            android:layout_toLeftOf="@id/frag_store_locinfo"
+            android:background="@drawable/shape_corner_ed_radius15">
+
+            <ImageView
+                android:id="@+id/frag_classify_iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis10"
+                android:src="@mipmap/search_for"/>
+
+            <TextView
+                android:id="@+id/frag_classify_tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis5"
+                android:layout_toRightOf="@id/frag_classify_iv_search"
+                android:singleLine="true"
+                android:text="搜索商品"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font12"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yj.cosmetics.widget.ProgressLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/xrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Cf7_f7_f7"
+                />
+
+            <View
+                android:id="@+id/home_vline"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis4"
+                android:layout_below="@id/frag_classify_rl_top"
+                android:background="@mipmap/projection_b"
+                android:rotation="180"
+                android:visibility="gone"/>
+
+
+        </com.yj.cosmetics.widget.ProgressLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/up_iv_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:background="@mipmap/upd_fl"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginRight="36dp"-->
+            <!--android:layout_marginEnd="36dp"-->
+            <!--android:layout_marginBottom="36dp"/>-->
+    </RelativeLayout>
+</LinearLayout>

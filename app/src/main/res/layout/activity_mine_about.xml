@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/CF8_F9_FB"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout" />
+
+
+    <ImageView
+        android:layout_width="@dimen/dis68"
+        android:layout_height="@dimen/dis68"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dis35"
+        android:src="@mipmap/logo" />
+
+
+    <TextView
+        android:id="@+id/change_alipay_alipay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dis40"
+        android:layout_marginTop="@dimen/dis20"
+        android:text="@string/app_name"
+        android:textColor="@color/C10_10_10"
+        android:textSize="@dimen/font14" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+    <com.yj.cosmetics.widget.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/mine_about_rl_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/change_alipay_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis15"
+                android:paddingBottom="@dimen/dis20"
+                android:paddingTop="@dimen/dis20"
+                android:singleLine="true"
+                android:text="公司简介"
+                android:textColor="@color/C1E_1E_1E"
+                android:textSize="@dimen/font15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:src="@drawable/more_next" />
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7" />
+
+    <com.yj.cosmetics.widget.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/mine_about_rl_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis15"
+                android:paddingBottom="@dimen/dis20"
+                android:paddingTop="@dimen/dis20"
+                android:singleLine="true"
+                android:text="用户服务协议"
+                android:textColor="@color/C1E_1E_1E"
+                android:textSize="@dimen/font15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:src="@drawable/more_next" />
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.MaterialRippleLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis8"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis15"
+                android:paddingBottom="@dimen/dis20"
+                android:paddingTop="@dimen/dis20"
+                android:singleLine="true"
+                android:text="当前版本"
+                android:textColor="@color/C1E_1E_1E"
+                android:textSize="@dimen/font15" />
+
+            <TextView
+                android:id="@+id/mine_about_tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:singleLine="true"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font14" />
+        </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7" />
+</LinearLayout>

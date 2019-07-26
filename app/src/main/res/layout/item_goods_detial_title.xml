@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dis45"
+        >
+            <TextView
+                android:id="@+id/item_goods_detial_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品"
+                android:textColor="@color/C10_10_10"
+                android:paddingLeft="@dimen/dis10"
+                android:paddingRight="@dimen/dis10"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:id="@+id/item_goods_detial_title_v"
+                android:layout_width="@dimen/dis30"
+                android:layout_height="@dimen/dis1"
+                android:background="@color/C10_10_10"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dis12"
+                />
+    </RelativeLayout>
+</LinearLayout>

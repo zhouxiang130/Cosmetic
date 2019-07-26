@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/CED_F1_F4"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis50"
+        android:background="@color/CF8_F8_F8"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/dis15"
+        android:text="（必选）请选择你想反馈的问题点"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <RelativeLayout
+        android:id="@+id/mine_setting_funtion_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dis10">
+
+
+        <CheckBox
+            android:id="@+id/settlement_cart_cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/selector_checkbox_order"
+            android:gravity="center"
+            android:padding="@dimen/dis8"/>
+        <!--android:clickable="false"-->
+
+        <TextView
+            android:id="@+id/mine_setting_tv_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis8"
+            android:layout_toRightOf="@id/settlement_cart_cb1"
+            android:text="功能异常: 功能故障或不可用"
+            android:textColor="@color/C1e_1e_1e"
+            android:textSize="@dimen/font15"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <RelativeLayout
+        android:id="@+id/mine_setting_product_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dis10">
+
+        <CheckBox
+            android:id="@+id/settlement_cart_cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:button="@drawable/selector_checkbox_order"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="@dimen/dis8"/>
+        <!--android:clickable="false"-->
+
+        <TextView
+            android:id="@+id/mine_setting_tv_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis8"
+            android:layout_toRightOf="@id/settlement_cart_cb2"
+            android:text="产品建议: 用的不爽，我有建议"
+            android:textColor="@color/C1e_1e_1e"
+            android:textSize="@dimen/font15"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <RelativeLayout
+        android:id="@+id/mine_setting_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dis10">
+
+
+        <CheckBox
+            android:id="@+id/settlement_cart_cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:button="@drawable/selector_checkbox_order"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="@dimen/dis8"/>
+
+        <TextView
+            android:id="@+id/mine_setting_tv_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dis8"
+            android:layout_toRightOf="@id/settlement_cart_cb3"
+            android:text="其他问题"
+            android:textColor="@color/C1e_1e_1e"
+            android:textSize="@dimen/font15"/>
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis50"
+        android:background="@color/CF8_F8_F8"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/dis15"
+        android:text="请补充详细问题和意见"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/judge_show_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis150"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="请输入不少于10个字的描述"
+            android:maxLength="140"
+            android:minLines="7"
+            android:paddingBottom="@dimen/dis10"
+            android:paddingLeft="@dimen/dis15"
+            android:paddingRight="@dimen/dis15"
+            android:paddingTop="@dimen/dis15"
+            android:textSize="@dimen/font15"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingRight="@dimen/dis10">
+
+            <TextView
+                android:id="@+id/input_text_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/240"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis6"
+            android:background="@color/CF8_F8_F8"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_title_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dis15"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    android:paddingLeft="@dimen/dis15"
+                    android:text="请提供相关问题的截图或照片"
+                    android:textColor="@color/C1E_1E_1E"/>
+
+
+                <TextView
+                    android:id="@+id/text_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="/4"
+                    android:textColor="@color/C1E_1E_1E"/>
+
+                <TextView
+                    android:id="@+id/text_img_num_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/text_nums"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="0"
+                    android:textColor="@color/C1E_1E_1E"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_img_gild"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis90"
+                android:layout_below="@id/rl_title_info"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis5">
+
+                    <RelativeLayout
+                        android:id="@+id/judge_offer1_rl1"
+                        android:layout_width="@dimen/dis68"
+                        android:layout_height="@dimen/dis68"
+                        android:layout_marginLeft="@dimen/dis15">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dis60"
+                            android:layout_height="@dimen/dis60"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                                android:id="@+id/judge_show_offer1"
+                                android:layout_width="@dimen/dis60"
+                                android:layout_height="@dimen/dis60"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:scaleType="centerCrop"
+                                app:riv_corner_radius="@dimen/dis2"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/add_p"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/judge_show_offer1close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/round_close_fill_p"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/judge_offer2_rl2"
+                        android:layout_width="@dimen/dis68"
+                        android:layout_height="@dimen/dis68"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_toRightOf="@id/judge_offer1_rl1"
+                        android:visibility="gone"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dis60"
+                            android:layout_height="@dimen/dis60"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/add_p"/>
+
+                            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                                android:id="@+id/judge_show_offer2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:riv_corner_radius="@dimen/dis2"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/judge_show_offer2close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/round_close_fill_p"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/judge_offer3_rl3"
+                        android:layout_width="@dimen/dis68"
+                        android:layout_height="@dimen/dis68"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_toRightOf="@id/judge_offer2_rl2"
+                        android:visibility="gone"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dis60"
+                            android:layout_height="@dimen/dis60"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/add_p"/>
+
+                            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                                android:id="@+id/judge_show_offer3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:riv_corner_radius="@dimen/dis2"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/judge_show_offer3close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/round_close_fill_p"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/judge_offer3_rl4"
+                        android:layout_width="@dimen/dis68"
+                        android:layout_height="@dimen/dis68"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_toRightOf="@id/judge_offer3_rl3"
+                       android:visibility="gone"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dis60"
+                            android:layout_height="@dimen/dis60"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_corner_aa_stoke0_5_ed_radius2">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/add_p"/>
+
+                            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                                android:id="@+id/judge_show_offer4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:riv_corner_radius="@dimen/dis2"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/judge_show_offer4close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/round_close_fill_p"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+    </LinearLayout>
+
+</LinearLayout>

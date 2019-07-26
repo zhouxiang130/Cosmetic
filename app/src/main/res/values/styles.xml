@@ -1,0 +1,247 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--<item name="colorPrimaryDark">@color/white</item>-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity
+        </item>
+        <item name="windowActionBar">false</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- <item name="android:windowIsTranslucent">true</item>  --><!--使要启动的activity背景变为透明 防止启动过慢黑屏现象-->
+    </style>
+
+
+    <style name="Appwelcome" parent="android:Theme.Translucent.NoTitleBar.Fullscreen"/>
+
+    <style name="AppWelcome" parent="AppTheme">
+        <item name="android:background">@drawable/splash</item>
+    </style>
+
+    <!-- CustomCheckBox theme -->
+    <style name="CustomCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_checkbox_order</item>
+
+    </style>
+
+
+    <!--activity跳转动画style-->
+    <style name="AnimationActivity" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/pull_in_right
+        </item>
+        <item name="android:activityOpenExitAnimation">@anim/push_out_left
+        </item>
+        <item name="android:activityCloseEnterAnimation">@anim/pull_in_left
+        </item>
+        <item name="android:activityCloseExitAnimation">@anim/push_out_right
+        </item>
+    </style>
+
+    <style name="CustomTabLayoutText13" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="CustomTabLayoutText14" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!--ratingbar_style-->
+    <style name="RatingBarShow" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_judge</item>
+        <item name="android:minHeight">@dimen/dis18</item>
+        <item name="android:maxHeight">@dimen/dis18</item>
+    </style>
+
+
+    <!--Update Dialog-->
+    <style name="UpdateDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@null</item>
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+        <item name="android:windowBackground">@color/transparent</item>
+
+    </style>
+
+    <style name="UpdateProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_update</item>
+    </style>
+
+
+    <!--CustomDialog-->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">
+            @android:style/Animation.Dialog
+        </item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan
+        </item>
+    </style>
+
+    <!--CustomPostDialog-->
+    <style name="CustomPostDialog" parent="@style/CustomDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!--GoodsSizeDialog-->
+    <style name="Goods_Size_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--CustomProgressDialog-->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@drawable/progress_round</item>
+
+    </style>
+    <!--ProgressLayout  Style-->
+    <style name="DefaultSmartStyle">
+        <item name="loading_layout">@layout/default_loading_layout</item>
+        <item name="none_content">@layout/default_none_layout</item>
+        <item name="network_content">@layout/default_neterror_layout</item>
+        <item name="failed_content">@layout/default_failed_layout</item>
+        <item name="no_comments">@layout/default_nocomment_layout</item>
+        <item name="no_collection">@layout/default_no_collection</item>
+        <item name="no_info">@layout/default_no_info</item>
+        <item name="no_search">@layout/default_no_search</item>
+        <item name="no_coupon">@layout/default_no_coupon</item>
+    </style>
+
+
+    <style name="CountDownTimerViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">0</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/font10</item>
+        <item name="android:textStyle">italic</item>
+
+    </style>
+
+
+    <!--ShoppingDeleteDialog-->
+    <style name="ShoppingDeleteDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+    <!--AddressCustomDialog-->
+    <style name="AddressCustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog_anim_style" parent="android:Animation">
+        <!--<item name="@android:windowEnterAnimation">@anim/dialog_anim_enter-->
+        <!--</item>-->
+        <!--<item name="@android:windowExitAnimation">@anim/dialog_anim_exit</item>-->
+    </style>
+
+    <style name="AppTheme_" parent="AppTheme">
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+
+
+    <style name="dialog" parent="@style/sheetdialog">
+        <item name="android:windowAnimationStyle">
+            @style/ActionSheetDialogAnimation
+        </item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in
+        </item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out
+        </item>
+    </style>
+
+    <style name="sheetdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">
+            @android:style/Animation.Dialog
+        </item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="my_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:gravity">center</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="MyToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorTabIndicator</item>
+        <item name="tabIndicatorHeight">1dp</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorTabTextSelected</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/tab_text_size</item>
+        <item name="android:textColor">@color/colorTabTextUnSelected</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mine_sign_bg_shade">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/qiandao_bg"
+                android:orientation="vertical">
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:orientation="vertical"
+                    android:paddingTop="24dp">
+
+                    <include layout="@layout/titlebar_layout"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis180"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingBottom="@dimen/dis5"
+                        android:paddingLeft="@dimen/dis5"
+                        android:paddingRight="@dimen/dis10"
+                        android:paddingTop="@dimen/dis5"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/mine_sign_ll_rule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/dis5"
+                            android:paddingLeft="@dimen/dis10"
+                            android:paddingRight="@dimen/dis10"
+                            android:paddingTop="@dimen/dis5">
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_rule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_corner_oval_"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="2dp"
+                                android:text="规则"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dis12"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/mine_Lifting_tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已签到"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font14"/>
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_dayNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLength="1"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font55"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="天"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font14"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/mine_sign_text_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/qiandao_bt"
+                        android:gravity="center"
+                        android:text="立即签到"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dis24"/>
+
+
+                </LinearLayout>
+
+                <!-- 签到打卡内容 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis140"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_corner_oval_one"
+                        android:orientation="horizontal"
+                        android:paddingBottom="25dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="25dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第一天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第二天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第三天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第四天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第五天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第六天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <CheckBox
+                                android:id="@+id/mine_sign_cb_day7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/selector_checkbox_sign"
+                                android:checked="false"
+                                android:clickable="false"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_sign_text_day7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="第七天"
+                                android:textColor="@color/Ccc_cc_cc"
+                                android:textSize="@dimen/dis10"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--  签到奖励内容 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent_color1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dis0.5"
+                            android:layout_weight="1"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dis0.5"
+                            android:layout_weight="1"
+                            android:background="@color/CE4_E4_E4"/>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="七日签到奖励"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dis15"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dis0.5"
+                            android:layout_weight="1"
+                            android:background="@color/CE4_E4_E4"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dis0.5"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/transparent_color1"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

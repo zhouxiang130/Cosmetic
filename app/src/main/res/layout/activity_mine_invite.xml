@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar_layout"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis160"
+            android:background="@drawable/invite_bg"
+            >
+
+            <TextView
+                android:id="@+id/mine_invite_tv_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dis28"
+                android:background="@drawable/shape_corner_left_radius_10_trans"
+                android:drawablePadding="@dimen/dis4"
+                android:drawableRight="@mipmap/rul_inv_next"
+                android:paddingBottom="@dimen/dis4"
+                android:paddingLeft="@dimen/dis6"
+                android:paddingRight="@dimen/dis3"
+                android:paddingTop="@dimen/dis4"
+                android:text="活动规则"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font11"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dis50"
+                android:layout_marginRight="@dimen/dis50"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dis8"
+                    android:layout_marginTop="@dimen/dis12"
+                    android:text="分享你的专属邀请码"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+
+                <TextView
+                    android:id="@+id/mine_invite_tv_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dis10"
+                    android:textColor="@color/CE8_3C_3C"
+                    android:textSize="@dimen/font15"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dis22"
+            android:text="好友用您的邀请码成功注册"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font12"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dis8"
+            android:text="您可以获得邀请奖励哦"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font12"
+            />
+
+        <Button
+            android:id="@+id/mine_invite_btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis40"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis28"
+            android:background="@drawable/shape_corner_e8_radius2"
+            android:text="复制邀请码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font14"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mine_invite_copy_img"
+        android:layout_width="@dimen/dis132"
+        android:layout_height="@dimen/dis132"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis15"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <View
+                android:layout_width="@dimen/dis48"
+                android:layout_height="@dimen/dis1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/CE7_E7_E7"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis10"
+                android:layout_marginRight="@dimen/dis10"
+                android:text="分享到"
+                android:textColor="@color/C10_10_10"
+                android:textSize="@dimen/font14"
+                />
+
+            <View
+                android:layout_width="@dimen/dis48"
+                android:layout_height="@dimen/dis1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/CE7_E7_E7"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis28"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/mine_invite_ll_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dis36"
+                    android:layout_height="@dimen/dis36"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/qq"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis10"
+                    android:text="QQ"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_invite_ll_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dis36"
+                    android:layout_height="@dimen/dis36"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wechat"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis10"
+                    android:text="微信"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_invite_ll_sina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dis36"
+                    android:layout_height="@dimen/dis36"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/micro_blog"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis10"
+                    android:text="新浪微博"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mine_invite_ll_circle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dis36"
+                    android:layout_height="@dimen/dis36"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/circle_of_friends"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis10"
+                    android:text="朋友圈"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

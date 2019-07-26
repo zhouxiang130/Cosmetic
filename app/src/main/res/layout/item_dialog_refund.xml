@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+           >
+
+
+    <RelativeLayout
+        android:id="@+id/refund_dialog_rl_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/dis10">
+
+        <TextView
+            android:id="@+id/dialog_refund_tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dis5"
+            android:text=""
+            android:textColor="@color/black_color1"
+            android:textSize="@dimen/font14"/>
+
+
+        <View
+            android:id="@+id/refund_detail_good_status_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:layout_below="@id/dialog_refund_tv_desc"
+            android:layout_marginTop="@dimen/dis8"
+            android:background="@color/CE7_E7_E7"/>
+
+
+        <CheckBox
+            android:id="@+id/dialog_refund_cb_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dialog_refund_tv_desc"
+            android:layout_alignBottom="@+id/dialog_refund_tv_desc"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dis5"
+            android:button="@drawable/selector_checkbox_order"
+            android:checked="true"
+            android:clickable="false"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

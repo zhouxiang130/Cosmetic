@@ -1,0 +1,39 @@
+<!--<html>-->
+    <!--<head>-->
+        <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+        <!--<style type="text/css">-->
+            <!--body{ font-size:12px; line-height:24px;}-->
+            <!--.title{font-size:36px;-->
+            <!--color:#ff0000;-->
+            <!--text-align:center;-->
+            <!--margin-top:28px-->
+            <!--}-->
+            <!--.content1{font-size:24px;-->
+            <!--color:#ff0000;-->
+            <!--text-align:center;-->
+            <!--margin-top:18px}-->
+            <!--.contentothers{font-size:24px;-->
+            <!--color:#ff0000;-->
+            <!--text-align:center;-->
+            <!--margin-top:8px}-->
+            <!--.imagecenter{text-align:center;-->
+            <!--margin-top:18px}-->
+
+        <!--</style>-->
+        <!--<script type="text/javascript">-->
+            <!--function invokeAndroidMethod(info) {-->
+            <!--javascript:<span style="font-size:18px;"><strong><span style="color:#FF0000;">qwert</span></strong></span>.showToast(info);-->
+            <!--}-->
+
+        <!--</script>-->
+    <!--</head>-->
+    <!--<body>-->
+        <!--<div class="imagecenter"><img id="image" src="images/haha.jpg"-->
+                                      <!--onclick="invokeAndroidMethod('JS调用Android中的方法！')"/></div>-->
+        <!--<div class="title">打油诗</div>-->
+        <!--<div class="content1">富了投机倒把的</div>-->
+        <!--<div class="contentothers">提了吹牛拍马的</div>-->
+        <!--<div class="contentothers">树了弄虚作假的</div>-->
+        <!--<div class="contentothers">苦了奉公守法的</div>-->
+    <!--</body>-->
+<!--</html>-->

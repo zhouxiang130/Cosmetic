@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dis38"
+              android:background="#FFFFFF"
+              android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis36"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/store_list_ll_default"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/store_list_tv_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="综合排序"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font14"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/store_list_ll_lately"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/store_list_tv_lately"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="距离最近"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font14"
+                />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/goods_list_iv_count"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/dis5"-->
+            <!--android:src="@mipmap/sort_by_default"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/store_list_ll_highest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/store_list_tv_highest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="销量最高"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font14"
+                />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/goods_list_iv_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/dis5"-->
+            <!--android:src="@mipmap/sort_by_default"/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.8"
+        android:background="@color/CE7_E7_E7"/>
+
+</LinearLayout>

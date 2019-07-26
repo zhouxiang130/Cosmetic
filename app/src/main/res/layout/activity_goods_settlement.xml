@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF6_F8_F9"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/settlement_goods_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/settlement_goods_solve"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dis15"
+                android:layout_weight="1"
+                android:background="@drawable/btn_enable_background"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dis30"
+                android:paddingRight="@dimen/dis30"
+                android:text="提交订单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font17"/>
+
+            <TextView
+                android:id="@+id/settlement_goods_tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/settlement_goods_solve"
+                android:gravity="center"
+                android:textColor="@color/CC8_3C_3C"
+                android:textSize="@dimen/font16"/>
+
+            <TextView
+                android:id="@+id/settlement_goods_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/settlement_goods_tvTotal"
+                android:gravity="center"
+                android:text="实付款：￥"
+                android:textColor="@color/CC8_3C_3C"
+                android:textSize="@dimen/font16"/>
+
+        </RelativeLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/settlement_goods_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis5"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dis25"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/settlement_goods_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingLeft="@dimen/dis15"
+                    android:paddingRight="@dimen/dis5"
+                    android:paddingTop="@dimen/dis18"
+                    >
+
+                    <ImageView
+                        android:id="@+id/settlement_goods_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis34"
+                        android:src="@mipmap/location_p"/>
+
+                    <RelativeLayout
+                        android:id="@+id/settlement_goods_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dis50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/dis10"
+                        android:paddingRight="@dimen/dis10"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/nex_p"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis12"
+                        android:layout_toRightOf="@id/settlement_goods_iv1"
+                        android:text="收货人 : "
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font14"/>
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dis18"
+                        android:layout_toLeftOf="@id/settlement_goods_next"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font14"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis5"
+                        android:layout_marginRight="@dimen/dis10"
+                        android:layout_toLeftOf="@id/settlement_goods_tel"
+                        android:layout_toRightOf="@id/settlement_goods_tv1"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font14"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/settlement_goods_tv1"
+                        android:layout_marginLeft="@dimen/dis12"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:layout_marginTop="@dimen/dis15"
+                        android:layout_toLeftOf="@id/settlement_goods_next"
+                        android:layout_toRightOf="@id/settlement_goods_iv1"
+                        android:lineSpacingExtra="@dimen/dis5"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font12"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settlement_goods_new_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dis15"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/settlement_goods_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dis5"
+                        android:text="+  添加收货地址"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font13"
+                        />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis2"
+                    android:background="@mipmap/lone_p"/>
+
+                <LinearLayout
+                    android:id="@+id/settlement_goods_ll_limit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dis8"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_marginTop="@dimen/dis8"
+                        android:background="@drawable/shape_corner_ea_stroke1_white_radius2"
+                        android:paddingBottom="@dimen/dis2"
+                        android:paddingLeft="@dimen/dis5"
+                        android:paddingRight="@dimen/dis5"
+                        android:paddingTop="@dimen/dis2"
+                        android:text="满邮"
+                        android:textColor="@color/CEA_68_1A"
+                        android:textSize="@dimen/font11"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dis7"
+                        android:singleLine="true"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:layout_marginTop="@dimen/dis5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis2"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dis8"
+                    android:paddingLeft="@dimen/dis15"
+                    android:paddingRight="@dimen/dis15"
+                    android:paddingTop="@dimen/dis10"
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/refound_detial_rl_normal_states"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dis8"
+                        >
+
+
+                        <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                            android:id="@+id/frag_mine_login_iv"
+                            android:layout_width="@dimen/dis30"
+                            android:layout_height="@dimen/dis30"
+                            android:layout_gravity="center_horizontal"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/default_goods"
+                            app:riv_border_color="@color/white"
+                            app:riv_border_width="@dimen/dis1"
+                            app:riv_corner_radius="360dp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/refound_detial_tv_normal_states"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/frag_mine_login_iv"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/dis15"
+                            android:text=""
+                            android:textColor="@color/C1e_1e_1e"
+                            android:textSize="@dimen/font14"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/specifications_next_x"
+                            android:visibility="gone"/>
+
+
+                        <!--CE7_E7_E7-->
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dis0.5"
+                        android:background="@color/CE7_E7_E7"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dis0.5"
+                        android:layout_marginTop="@dimen/dis8"
+                        android:background="@color/white"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dis65"
+                        >
+
+
+                        <RelativeLayout
+                            android:id="@+id/settlement_goods_rl1"
+                            android:layout_width="@dimen/dis65"
+                            android:layout_height="@dimen/dis65"
+                            android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+
+                            <ImageView
+                                android:id="@+id/settlement_goods_iv_goods"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dis4"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/default_goods"
+                                />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/settlement_goods_ll1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/settlement_goods_tv4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥"
+                                android:textColor="@color/C10_10_10"
+                                android:textSize="@dimen/font12"/>
+
+                            <TextView
+                                android:id="@+id/settlement_goods_tv_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="-1dp"
+                                android:layout_marginLeft="@dimen/dis3"
+                                android:layout_toRightOf="@id/settlement_goods_tv4"
+                                android:textColor="@color/C10_10_10"
+                                android:textSize="@dimen/font13"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/settlement_goods_tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dis15"
+                            android:layout_marginRight="@dimen/dis15"
+                            android:layout_toLeftOf="@id/settlement_goods_ll1"
+                            android:layout_toRightOf="@id/settlement_goods_rl1"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/C10_10_10"
+                            android:textSize="@dimen/font14"
+                            />
+
+                        <TextView
+                            android:id="@+id/settlement_goods_tv_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/settlement_goods_tv_title"
+                            android:layout_marginTop="@dimen/dis12"
+                            android:textColor="@color/C64_64_64"
+                            android:textSize="@dimen/font12"
+                            />
+
+                        <TextView
+                            android:id="@+id/settlement_goods_tv_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/settlement_goods_tv_title"
+                            android:layout_marginLeft="@dimen/dis15"
+                            android:layout_marginRight="@dimen/dis15"
+                            android:layout_marginTop="@dimen/dis12"
+                            android:layout_toLeftOf="@id/settlement_goods_tv_num"
+                            android:layout_toRightOf="@id/settlement_goods_rl1"
+                            android:maxLines="1"
+                            android:textColor="@color/C85_85_85"
+                            android:textSize="@dimen/font12"
+                            />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:layout_marginTop="@dimen/dis5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis18"
+                        android:paddingTop="@dimen/dis18"
+                        android:text="支付配送"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font14"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font13"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_toLeftOf="@id/settlement_goods_tv_fee"
+                        android:text="快递 : "
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"
+                    android:visibility="gone"/>
+
+                <com.yj.cosmetics.widget.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/goods_detial_ticket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dis15"
+                        android:paddingTop="@dimen/dis15">
+
+                        <TextView
+                            android:id="@+id/goods_item_tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dis15"
+                            android:text="优惠券抵扣"
+                            android:textColor="@color/C10_10_10"
+                            android:textSize="@dimen/font15"/>
+
+                        <ImageView
+                            android:id="@+id/img_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dis15"
+                            android:background="@mipmap/specifications_next_x"/>
+
+
+                        <TextView
+                            android:id="@+id/goods_item_ticket_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dis15"
+                            android:layout_toLeftOf="@id/img_1"
+                            android:layout_toRightOf="@id/goods_item_tv2"
+                            android:layout_weight="3"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:lines="1"
+                            android:maxLength="14"
+                            android:paddingRight="@dimen/dis15"
+                            android:text="优惠券"
+                            android:textColor="@color/CE8_3C_3C"
+                            android:textSize="@dimen/font13"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+                </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/settlement_goods_rl_rest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis5"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_rest_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis18"
+                        android:paddingTop="@dimen/dis18"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font14"
+                        />
+                    <!-- <android.support.v7.widget.SwitchCompat
+                         android:id="@+id/settlement_goods_switch"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginRight="@dimen/dis15"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         />-->
+                    <com.yj.cosmetics.widget.SwitchView
+                        android:id="@+id/settlement_goods_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dis28"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        app:isOpened="false"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_rest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:layout_toLeftOf="@id/settlement_goods_switch"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font12"
+
+                        />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis18"
+                        android:paddingTop="@dimen/dis18"
+                        android:text="运费"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font14"
+                        />
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_fee_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font14"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/settlement_goods_tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:textColor="@color/CC8_3C_3C"
+                        android:textSize="@dimen/font13"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:paddingBottom="@dimen/dis18"
+                        android:paddingTop="@dimen/dis18"
+                        android:text="商品金额"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font14"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:layout_marginTop="@dimen/dis5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/dis18"
+                    android:paddingLeft="@dimen/dis15"
+                    android:paddingTop="@dimen/dis18"
+                    android:text="选择支付方式"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font14"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/settlement_goods_cb_rl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis50"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:drawableLeft="@mipmap/alipay_payment"
+                        android:drawablePadding="@dimen/dis15"
+                        android:gravity="center_vertical"
+                        android:text="支付宝"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+
+                    <CheckBox
+                        android:id="@+id/settlement_goods_cb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:button="@drawable/selector_checkbox_order"
+                        android:checked="true"
+                        android:clickable="false"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis0.5"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:id="@+id/settlement_goods_cb_rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis50"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:drawableLeft="@mipmap/wechat_payment"
+                        android:drawablePadding="@dimen/dis15"
+                        android:gravity="center_vertical"
+                        android:text="微信支付"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+
+                    <CheckBox
+                        android:id="@+id/settlement_goods_cb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:button="@drawable/selector_checkbox_order"
+                        android:clickable="false"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/settlement_goods_v1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis4"
+            android:layout_above="@id/settlement_goods_bottom"
+            android:background="@mipmap/projection_b"/>
+    </RelativeLayout>
+</LinearLayout>

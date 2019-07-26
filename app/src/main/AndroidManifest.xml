@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yj.cosmetics"
+          android:versionCode="6"
+          android:versionName="3.0.3">
+
+
+    <permission
+        android:name="com.yj.cosmetics.cosmetic.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.yj.robust.cosmetic.WRITE_SETTINGS"/>
+
+    <!-- Optional for location -->
+    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!-- Optional for location -->
+    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name="com.yj.cosmetics.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.yj.cosmetics.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1d02ed81eb755111de2eb34fb37a6b77"/>
+        <!-- @TODO 正试KEY   1d02ed81eb755111de2eb34fb37a6b77 -->
+
+
+        <!-- 定位需要的服务 -->
+        <!--<service android:name="com.amap.api.location.APSService"/>-->
+
+        <!-- android:name=".ui.activity.SplashActivity" -->
+        <!-- 闪屏页activity -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppWelcome"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 引导页activity -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.AppGuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 用户登录页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.UserLoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 用户注册页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.UserRegistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- 忘记密码页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.UserForgotActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- 第三方登录注册页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.ThirdLoginRegistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- 个人中心编辑资料页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalDataActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 商品评价大图显示页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.BigImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心验证密码页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalConfirmPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心修改电话页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalTelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心验证电话页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalConfirmTelActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心绑定支付宝页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalAlipayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中修改昵称页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心修改密码页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MinePersonalPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心系统设置 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心关于我们 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAboutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心邀请好友 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineInviteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心我的收藏 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineCollectionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- @TODO 2.0  店铺详情界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- @TODO 3.0  搜索店铺列表界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.sotreList.StoreListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- @TODO 2.0  店铺地理位置地址详情界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.locAddress.locAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 个人中心管理地址 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAddressManageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 管理地址新建地址 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAddressNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心我的账户 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAccountActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 个人中心我的账户 2.0修改界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineAccount.MineAccount2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的优惠券界面 2.0添加界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineCoupon.MineCouponActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 领券中心 2.0添加页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.couponReceive.CouponReceiveActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 求助反馈 2.0添加页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineSettingHelp.MineSettingHelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 意见反馈 2.0添加界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineHelpSug.MineHelpSugActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 好物秒杀 2.0修改界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.homeSeckill.HomeSeckillActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 签到 2.0版本界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineSignIn.MineSignInActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的账户支出明细 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAccountCostActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的账户支出明细详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAccountCostDetialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的账户收益记录 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAccountProfitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的账户提现 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineAccountWithdrawActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- 我的积分 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineScoringActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的积分1 2.0修改页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineScoring.MineScoring1Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 选择服务类型 2.0 版本添加页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineRefundClass.MineRefundClassActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 退款填写界面 2.0 添加页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineRefundTable.MineRefundDetailTableActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- 退款/售后 2.0添加界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineRefundList.MineRefundListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 退款详情 2.0添加页面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.mineRefundDetail.MineRefundDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的积分积分明细 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineScoringDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的积分申请记录 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineScoringAccordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的积分申请记录详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineScoringAccordDetialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的积分提升额度 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineScoringPostActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的订单 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 我的订单订单详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineOrderDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 订单详情物流详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MineLogicalDetialActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 订单进行评价 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.PostJudgeGoodsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 消息中心 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.InfoCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 消息中心消息详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.InfoDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 主页秒杀列表 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.HomeSeckillActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 主页一级分类列表 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.HomeClassifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 主页二级分类商品列表 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.HomeGoodsListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 商品详情 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 商品评价 -->
+
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.JudgeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 填写订单购物车 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.SettlementCartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 填写订单商品 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.SettlementGoodsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 支付成功结果跳转 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.PayResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索页 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 通用webview -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.NormalWebViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!--我的免单界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MyFreeOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!--商家入住界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.MyStoreCheckInActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 下载app的activity -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.UpdateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 下载app的service -->
+        <service android:name="com.yj.cosmetics.service.DownAPKService"/>
+
+        <!-- shareSdk -->
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1106801272"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="24e2ebd475e87"/>
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="a92ce1f77e3077e542e3f7df7b7a3eec"/>
+
+        <activity
+            android:name="com.yj.cosmetics.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!--android:screenOrientation="portrait"-->
+
+        <!-- 微信支付回调 -->
+        <activity
+            android:name="com.yj.cosmetics.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- 支付宝支付声明 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+
+
+        <!-- 店家排队列表界面 -->
+        <activity
+            android:name="com.yj.cosmetics.ui.activity.StoreFellInDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+
+        <!-- @TODO 极光推送服务 -->
+
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+        </activity>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService"/>
+
+                <category android:name="com.yj.robust"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <!--<provider-->
+        <!--android:name="cn.jpush.android.service.DataProvider"-->
+        <!--android:authorities="com.yj.robust.DataProvider"-->
+        <!--android:exported="false"/>-->
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false"/>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.yj.robust"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/> <!-- Required  显示通知栏 -->
+                <category android:name="com.yj.robust"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.yj.cosmetics.broadcastreceiver.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION"/>
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+
+                <category android:name="com.yj.robust"/>
+            </intent-filter>
+        </receiver>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.yj.cosmetics.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <!-- <receiver android:name="com.yj.robust.broadcastreceiver.MyJPushMessageReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" /> -->
+        <!-- <category android:name="com.yj.robust"></category> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="44ce0e70b6a1908dc6495b99"/> <!-- </>值来自开发者平台取得的AppKey -->
+
+
+        <!-- 此处定义和智齿客服断开链接的静态广播 用于接收通知栏的点击事件 -->
+        <receiver
+            android:name="com.yj.cosmetics.broadcastreceiver.outLineReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.yj.robust.coustomServices_"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

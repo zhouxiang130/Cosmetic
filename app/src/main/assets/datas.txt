@@ -1,0 +1,57 @@
+{
+    "code": "200",
+    "data": {
+        "datas": [
+            {
+                "proCarts": [
+                    {
+                        "cartId": 391,
+                        "num": 1,
+                        "proId": 16,
+                        "proImg": "/upload/product/2018/05/09/3a3315a0-dda2-4508-8597-b16e1fb810c0.png",
+                        "proName": "极品红枸杞",
+                        "productAbstract": "极品红枸杞美容养颜",
+                        "productState": 1,
+                        "skuNum": 16,
+                        "skuPrice": 16,
+                        "skuPropertiesName": "成熟程度:3;营养价值:1;"
+                    },
+                    {
+                        "cartId": 390,
+                        "num": 1,
+                        "proId": 72,
+                        "proImg": "/upload/product/2018/06/29/3775d260-be20-4226-a5a7-6b338db4d350.jpg",
+                        "proName": "阳澄湖大闸蟹",
+                        "productAbstract": "产自于江苏，舌尖上的美味",
+                        "productState": 1,
+                        "skuNum": 81,
+                        "skuPrice": 278,
+                        "skuPropertiesName": "种类:(公4.0两 母3.0两)8只;"
+                    }
+                ],
+                "shopStore": "店铺一",
+                "shopStoreId": 1
+            },
+            {
+                "proCarts": [
+                    {
+                        "cartId": 389,
+                        "num": 1,
+                        "proId": 52,
+                        "proImg": "/upload/head/productImg/2018/06/29/b57c7335-c8f0-42a5-9f6a-2bcfd92262e6.png",
+                        "proName": "sfga",
+                        "productAbstract": "简介",
+                        "productState": 1,
+                        "skuNum": 976,
+                        "skuPrice": 234,
+                        "skuPropertiesName": "默认"
+                    }
+                ],
+                "shopStore": "店铺二",
+                "shopStoreId": 2
+            }
+        ],
+        "systemValue": "500"
+    },
+    "msg": "成功"
+}

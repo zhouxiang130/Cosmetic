@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+    >
+
+    <!--android:background="@drawable/shape_corner_red_radius1"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/miaosha_daojishi"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dis1"
+        android:paddingRight="@dimen/dis1"
+        >
+
+        <TextView
+            android:id="@+id/tv_hour_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_hour_unit"
+            style="@style/CountDownTimerViewStyle"
+            android:layout_marginLeft="1dp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/colon_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=" : "
+        android:textColor="@color/CE8_3C_3C"
+        android:textSize="@dimen/font12"
+        android:textStyle="bold"
+
+        />
+
+    <!--android:background="@drawable/shape_corner_red_radius1"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/miaosha_daojishi"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dis1"
+        android:paddingRight="@dimen/dis1"
+        >
+
+        <TextView
+            android:id="@+id/tv_min_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_min_unit"
+            style="@style/CountDownTimerViewStyle"
+            android:layout_marginLeft="1dp"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/colon_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text=" : "
+        android:textColor="@color/CE8_3C_3C"
+        android:textSize="@dimen/font12"
+        android:textStyle="bold"
+        />
+
+
+    <!--android:background="@drawable/shape_corner_red_radius1"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/miaosha_daojishi"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dis1"
+        android:paddingRight="@dimen/dis1"
+        >
+
+        <TextView
+            android:id="@+id/tv_sec_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_sec_unit"
+            style="@style/CountDownTimerViewStyle"
+            android:layout_marginLeft="1dp"/>
+    </LinearLayout>
+
+</LinearLayout>

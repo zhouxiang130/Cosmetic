@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/frag_home_v_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis28"
+            android:background="@drawable/shape_corner_shade"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/frag_classify_rl_top_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/frag_home_v_head"
+            android:background="@drawable/shape_corner_shade"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/frag_home_locinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dis30"
+                android:layout_marginLeft="@dimen/dis10"
+                android:layout_marginRight="@dimen/dis5"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/frag_store_info_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dis3"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/shouye_dingwei"/>
+
+
+                <com.yj.cosmetics.widget.MarqueeTextView
+                    android:id="@+id/frag_homes_tv_info"
+                    android:layout_width="@dimen/dis40"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/C1E_1E_1E"
+                    android:textSize="@dimen/font15"
+                    ptr:ignore="EllipsizeMaxLines"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dis5"
+                    android:paddingRight="@dimen/dis5"
+                    android:src="@mipmap/shouye_jiantou"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/frag_classify_rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis45"
+                android:layout_below="@id/frag_home_v_head"
+                android:layout_marginLeft="@dimen/dis10"
+                >
+                <!--android:background="@color/transparent"-->
+
+                <RelativeLayout
+                    android:id="@+id/frag_my_info"
+                    android:layout_width="@dimen/dis30"
+                    android:layout_height="@dimen/dis30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis10"
+                    android:layout_marginRight="@dimen/dis10">
+
+                    <ImageView
+                        android:id="@+id/frag_home_info_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dis3"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_message"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/frag_home_tv_info"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_round360_e83"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font8"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/frag_classify_rl_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dis8"
+                    android:layout_marginLeft="@dimen/dis5"
+                    android:layout_marginTop="@dimen/dis8"
+                    android:layout_toLeftOf="@id/frag_my_info"
+                    android:background="@drawable/shape_corner_ed_radius15">
+
+                    <ImageView
+                        android:id="@+id/frag_classify_iv_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis10"
+                        android:src="@mipmap/search_for"/>
+
+                    <TextView
+                        android:id="@+id/frag_classify_tv_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis5"
+                        android:layout_toRightOf="@id/frag_classify_iv_search"
+                        android:singleLine="true"
+                        android:text="搜索商品"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font12"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@id/frag_classify_rl_top_">
+
+            <com.yj.cosmetics.widget.ProgressLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/xrecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/Cf7_f7_f7"
+                    />
+
+                <View
+                    android:id="@+id/home_vline"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis4"
+                    android:layout_below="@id/frag_classify_rl_top"
+                    android:background="@mipmap/projection_b"
+                    android:rotation="180"
+                    android:visibility="gone"/>
+
+
+            </com.yj.cosmetics.widget.ProgressLayout>
+
+        </RelativeLayout>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/up_iv_icon"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="36dp"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:background="@mipmap/upd_fl"-->
+        <!--app:layout_behavior="com.yj.robust.behavior.ScrollAwareFABBehavior"/>-->
+    </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/frag_home_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_arrow_upward_black_24dp"
+            app:backgroundTint="#c3ffffff"
+            app:fabSize="mini"
+            app:layout_behavior="com.yj.cosmetics.behavior.ScrollAwareFABBehavior"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

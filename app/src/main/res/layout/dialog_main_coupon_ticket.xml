@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dis20"
+                android:paddingRight="@dimen/dis20">
+
+    <!--android:layout_centerVertical="true"-->
+
+
+    <RelativeLayout
+        android:id="@+id/integral_rl_title_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dis15">
+
+
+        <LinearLayout
+            android:id="@+id/dialog_coupon_ticket_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/dis8">
+
+            <ImageView
+                android:id="@+id/integral_iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close_circle"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/dialog_coupon_ticket_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:gravity="center">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/xrecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/dialog_coupon_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/dialog_main_coupon_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hongbao"/>
+
+
+        <LinearLayout
+            android:id="@+id/dialog_coupon_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dis20"
+                android:text="优惠大礼包"
+                android:textColor="@color/CE9_39_39"
+                android:textSize="@dimen/font28"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dis15">
+
+                <TextView
+                    android:id="@+id/text_111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="送您"
+                    android:textColor="@color/black_color1"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/dialog_coupon_ticket_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5张"
+                    android:textColor="@color/CE9_39_39"
+                    android:textSize="@dimen/font20"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券"
+                    android:textColor="@color/black_color1"
+                    android:textSize="@dimen/font16"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_coupon_ticket_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dialog_main_coupon_ticket"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_corner_c0_stroke5_yellow_radius55"
+            android:paddingBottom="@dimen/dis5"
+            android:paddingLeft="@dimen/dis35"
+            android:paddingRight="@dimen/dis35"
+            android:paddingTop="@dimen/dis5"
+            android:text="点击确认"
+            android:textColor="@color/CE9_39_39"
+            android:textSize="@dimen/font18"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:padding="@dimen/dis5">
+
+    <LinearLayout
+        android:id="@+id/classify_content_goods_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/classify_content_goods_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis75"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_goods"
+            />
+
+        <TextView
+            android:id="@+id/classify_content_goods_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dis3"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font12"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

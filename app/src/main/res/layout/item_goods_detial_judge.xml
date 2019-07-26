@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/goods_detial_judge_ll_yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/goods_detial_judge_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis18"
+            android:text="评论（0）"
+            android:textColor="@color/C85_85_85"
+            android:textSize="@dimen/font11"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/goods_detial_judge_tvmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dis12"
+            android:layout_marginTop="@dimen/dis12"
+            android:background="@drawable/selector_check_judge_e8_gray"
+            android:paddingBottom="@dimen/dis6"
+            android:paddingLeft="@dimen/dis10"
+            android:paddingRight="@dimen/dis10"
+            android:paddingTop="@dimen/dis6"
+            android:text="查看更多评价"
+            android:textColor="@color/CE8_3C_3C"
+            android:textSize="@dimen/font11"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/goods_detial_judge_rl_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/frag_cart_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/nojudge"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/dis34"
+         android:background="@color/CF6_F8_F9"
+         android:layout_marginTop="@dimen/dis12"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="商品详情"
+             android:layout_centerInParent="true"
+             android:textSize="@dimen/font13"
+             android:textColor="@color/C1E_1E_1E"
+             />
+     </RelativeLayout>-->

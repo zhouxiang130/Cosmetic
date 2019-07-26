@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+
+                >
+
+
+    <RelativeLayout
+        android:id="@+id/ll_title_all"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/dis10"
+        android:paddingTop="@dimen/dis10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/home_head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_corner_one"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="热门类目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font15"/>
+
+        <TextView
+            android:id="@+id/home_head_more_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/home_head_title"
+            android:layout_alignBottom="@+id/home_head_title"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/home_head_title"
+            android:layout_toRightOf="@+id/home_head_title"
+            android:drawablePadding="@dimen/dis5"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:text="精选超值商品"
+            android:textColor="@color/C85_85_85"
+            android:textSize="@dimen/font13"/>
+
+        <TextView
+            android:id="@+id/home_head_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="@dimen/dis5"
+            android:drawableRight="@mipmap/more_home"
+            android:paddingBottom="@dimen/dis5"
+            android:paddingLeft="@dimen/dis20"
+            android:paddingTop="@dimen/dis5"
+            android:text="查看更多"
+            android:textColor="@color/C85_85_85"
+            android:textSize="@dimen/font13"/>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_buttom_line"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ll_title_all"
+        android:layout_height="@dimen/dis1.5"
+        android:background="@color/CF7_F9_FA"/>
+
+    <View
+        android:id="@+id/view_line_"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis4"
+        android:visibility="gone"
+        android:layout_below="@id/view_buttom_line"
+        android:background="@color/CF7_F9_FA"/>
+</RelativeLayout>
+
+

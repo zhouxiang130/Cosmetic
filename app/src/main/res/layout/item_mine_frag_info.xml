@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:splitMotionEvents="false">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis215">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/bg"
+                    android:scaleType="centerCrop"/>
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_info"
+                    android:layout_width="@dimen/dis30"
+                    android:layout_height="@dimen/dis30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:layout_marginTop="@dimen/dis25"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dis22"
+                        android:layout_height="@dimen/dis22"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/dis3"
+                        android:src="@mipmap/xiaoxi2x"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_info"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_round360_white"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font8"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/frag_mine_head_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/mine_circle_bg"
+                        android:padding="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/frag_mine_login_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+
+                            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                                android:id="@+id/frag_mine_login_iv"
+                                android:layout_width="@dimen/dis65"
+                                android:layout_height="@dimen/dis65"
+                                android:layout_gravity="center_horizontal"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/default_avatar"
+                                app:riv_border_color="@color/white"
+                                app:riv_border_width="@dimen/dis1"
+                                app:riv_corner_radius="360dp"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/frag_mine_login_iv"
+                                android:layout_alignRight="@id/frag_mine_login_iv"
+                                android:background="@mipmap/bj"/>
+
+
+                        </RelativeLayout>
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/frag_mine_login_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/frag_mine_head_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/mine_new_tv_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLength="11"
+                                android:paddingTop="5dp"
+                                android:text="点击登录"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font18"
+                                />
+
+                            <TextView
+                                android:id="@+id/mine_new_tv_tel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/mobile_fill"
+                                android:drawablePadding="@dimen/dis5"
+                                android:paddingBottom="@dimen/dis2"
+                                android:paddingRight="@dimen/dis7"
+                                android:paddingTop="@dimen/dis2"
+                                android:text=""
+                                android:textColor="@color/CEB_CD_82"
+                                android:textSize="@dimen/font11"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/frag_mine_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_account_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="0.00"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font18"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="@dimen/dis6"
+                        android:text="账户余额 （元）"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font14"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CD6_D6_D6"/>
+
+                <LinearLayout
+                    android:id="@+id/frag_mine_scoring"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sobot_pic_img_width"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font18"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="@dimen/dis6"
+                        android:text="积分总额"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font14"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis6"
+            android:background="@color/CED_F1_F4"/>
+
+        <com.yj.cosmetics.widget.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_all"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis50"
+                >
+
+                <TextView
+                    android:id="@+id/mine_info_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis18"
+                    android:text="我的订单"
+                    android:textColor="@color/C10_10_10"
+                    android:textSize="@dimen/font14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:drawablePadding="@dimen/dis4"
+                    android:drawableRight="@mipmap/next_center_order"
+                    android:gravity="center"
+                    android:text="查看全部"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"
+                    />
+            </RelativeLayout>
+        </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis75"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_pay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis6"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/personal_pending_payment"
+                        android:text="待付款"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_pay_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignRight="@id/frag_mine_tv1"
+                        android:background="@drawable/shape_round360_e83_stroke1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis6"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/personal_pending_delivery"
+                        android:text="待发货"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_send_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignRight="@id/frag_mine_tv2"
+                        android:background="@drawable/shape_round360_e83_stroke1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_get"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis6"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/personal_tobe_received"
+                        android:text="待收货"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_get_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignRight="@id/frag_mine_tv3"
+                        android:background="@drawable/shape_round360_e83_stroke1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_judge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis6"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/personal_tobe_evaluated"
+                        android:text="待评价"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_judge_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignRight="@id/frag_mine_tv4"
+                        android:background="@drawable/shape_round360_e83_stroke1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frag_mine_order_drawback"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dis6"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/personal_return_goods"
+                        android:text="退款"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"
+                        />
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_drawback_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignRight="@id/frag_mine_tv5"
+                        android:background="@drawable/shape_round360_e83_stroke1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

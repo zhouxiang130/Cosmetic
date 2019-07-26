@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dis102"
+            android:background="@mipmap/networkerror"/>
+        <!--  <Button
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dis40"
+              android:background="@drawable/corner_background_yellow5_f6"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="@dimen/dis102"
+              android:layout_marginLeft="@dimen/dis42"
+              android:layout_marginRight="@dimen/dis42"
+              android:text="点击重新加载"
+              android:clickable="false"
+              android:focusable="false"
+              android:textSize="@dimen/font17"/>-->
+    </RelativeLayout>
+
+</LinearLayout>

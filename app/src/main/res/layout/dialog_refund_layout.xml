@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dis10"
+        android:paddingRight="@dimen/dis10">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dis10"
+            android:paddingTop="@dimen/dis10"
+            android:text="退款原因"
+            android:textColor="@color/black_color1"
+            android:textSize="@dimen/font16"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dis160"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis60"
+        android:paddingTop="@dimen/dis10">
+
+        <TextView
+            android:id="@+id/dialog_refund_tv_finish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis60"
+            android:background="@color/CE8_3C_3C"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16"/>
+    </RelativeLayout>
+    <!--android:background="@drawable/shape_corner_e8_radius55"-->
+
+</LinearLayout>

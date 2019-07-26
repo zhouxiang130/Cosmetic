@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/frag_store_v_head"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dis24"
+            android:background="@drawable/shape_corner_shade"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/frag_store_rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis45"
+            android:layout_below="@id/frag_store_v_head"
+            android:background="@drawable/shape_corner_shade"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <!--android:background="@color/transparent"-->
+
+            <LinearLayout
+                android:id="@+id/frag_store_locinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dis30"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dis10"
+                android:layout_marginRight="@dimen/dis5"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/frag_store_info_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dis3"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/dingwei"/>
+
+
+                <TextView
+                    android:id="@+id/frag_store_tv_info"
+                    android:layout_width="@dimen/dis40"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font15"
+                    ptr:ignore="EllipsizeMaxLines"/>
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/frag_store_rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dis8"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_marginLeft="@dimen/dis10"
+                android:layout_marginTop="@dimen/dis8"
+                android:layout_toRightOf="@id/frag_store_locinfo"
+                android:background="@drawable/shape_corner_ed_radius16">
+
+                <ImageView
+                    android:id="@+id/frag_store_iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis10"
+                    android:src="@mipmap/search_for"/>
+
+                <TextView
+                    android:id="@+id/frag_store_tv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis5"
+                    android:layout_toRightOf="@id/frag_store_iv_search"
+                    android:singleLine="true"
+                    android:text="搜索商家，商品名称"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/frag_store_rl_top">
+
+            <com.yj.cosmetics.widget.ProgressLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/xrecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/id"
+                    android:background="@color/Cf7_f7_f7"
+                    />
+
+                <View
+                    android:id="@+id/home_vline"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis4"
+                    android:layout_below="@id/frag_store_rl_top"
+                    android:background="@mipmap/projection_b"
+                    android:rotation="180"
+                    android:visibility="gone"/>
+
+
+            </com.yj.cosmetics.widget.ProgressLayout>
+
+        </RelativeLayout>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/up_iv_icon"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="36dp"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:background="@mipmap/upd_fl"-->
+        <!--app:layout_behavior="com.yj.robust.behavior.ScrollAwareFABBehavior"/>-->
+    </RelativeLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/frag_store_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:src="@drawable/ic_arrow_upward_black_24dp"-->
+        <!--app:backgroundTint="#c3ffffff"-->
+        <!--app:fabSize="mini"-->
+        <!--app:layout_behavior="com.yj.robust.behavior.ScrollAwareFABBehavior"/>-->
+
+
+</android.support.design.widget.CoordinatorLayout>

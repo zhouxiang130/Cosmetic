@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis65"
+                android:layout_marginTop="@dimen/dis2"
+                android:paddingLeft="@dimen/dis15"
+                android:paddingRight="@dimen/dis15"
+                android:paddingTop="@dimen/dis6"
+    >
+
+    <RelativeLayout
+        android:id="@+id/order_list_goods_rl1"
+        android:layout_width="@dimen/dis65"
+        android:layout_height="@dimen/dis65"
+        android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+
+        <ImageView
+            android:id="@+id/item_settle_iv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dis4"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_goods"
+            />
+    </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_settle_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-1dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dis3"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font13"
+            android:text=""
+            />
+    <TextView
+        android:id="@+id/item_settle_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥"
+        android:layout_toLeftOf="@id/item_settle_price"
+        android:textColor="@color/C10_10_10"
+        android:textSize="@dimen/font12"/>
+
+
+
+    <TextView
+        android:id="@+id/item_settle_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:layout_toLeftOf="@id/item_settle_tv1"
+        android:layout_toRightOf="@id/order_list_goods_rl1"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text=""
+        android:textColor="@color/C10_10_10"
+        android:textSize="@dimen/font14"
+        />
+
+    <TextView
+        android:id="@+id/item_settle_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_settle_title"
+        android:layout_marginTop="@dimen/dis12"
+        android:textColor="@color/C64_64_64"
+        android:textSize="@dimen/font12"
+        />
+
+    <TextView
+        android:id="@+id/item_settle_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_settle_title"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis12"
+        android:layout_toLeftOf="@id/item_settle_num"
+        android:layout_toRightOf="@id/order_list_goods_rl1"
+        android:textColor="@color/C85_85_85"
+        android:textSize="@dimen/font12"
+        />
+
+</RelativeLayout>
+

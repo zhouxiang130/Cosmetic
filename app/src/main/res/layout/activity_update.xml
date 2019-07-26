@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis12"
+            android:layout_marginTop="@dimen/dis22"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dis48"
+                    android:layout_height="@dimen/dis48"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:src="@mipmap/logo" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dis10"
+                    android:text="Robust"
+                    android:textColor="@color/C1E_1E_1E"
+                    android:textSize="@dimen/font21" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_update_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/dis5"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出"
+                    android:layout_gravity="center"
+                    android:textColor="@color/C40_40_40"
+                    android:textSize="@dimen/font15"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_update_try"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="重试"
+                    android:textColor="@color/C40_40_40"
+                    android:textSize="@dimen/font15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis1"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:background="@color/CE4_E4_E4"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis16"
+            android:layout_marginTop="@dimen/dis12"
+            android:text="更新内容:"
+            android:textColor="@color/C1E_1E_1E"
+            android:textSize="@dimen/font17" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_update_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis18"
+                    android:layout_marginRight="@dimen/dis18"
+                    android:layout_marginTop="@dimen/dis20"
+                    android:lineSpacingExtra="@dimen/dis12"
+                    android:textColor="@color/C40_40_40"
+                    android:textSize="@dimen/font15" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dis40"
+        android:layout_marginTop="@dimen/dis32"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_progress_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/C1E_1E_1E"
+            android:textSize="@dimen/font21" />
+
+        <ProgressBar
+            android:id="@+id/update_pb"
+            style="@style/UpdateProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:max="100" />
+    </RelativeLayout>
+</LinearLayout>

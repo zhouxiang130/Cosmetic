@@ -1,0 +1,18 @@
+{
+    "code": "200",
+    "data": {
+        "bannerList": [
+            {
+                "banner_id": 5,
+                "banner_img": "/upload/banner/2018/06/28/f3c76b0c-ae69-479d-8193-e76b9fed6faa.jpg",
+                "product_id": 72
+            },
+            {
+                "banner_id": 4,
+                "banner_img": "/upload/banner/2018/06/28/bd957aba-8777-4489-bd89-9faf159a72ca.jpg",
+                "product_id": 74
+            }
+        ]
+    },
+    "msg": "成功"
+}

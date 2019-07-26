@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/classify_content_iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis90"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_banner_empty"
+        app:riv_corner_radius="@dimen/dis3"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis15"
+        android:background="@color/CF6_F8_F9"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/classify_content_ill_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dis80"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <ImageView
+
+                android:layout_width="@dimen/dis125"
+                android:layout_height="@dimen/dis125"
+                android:src="@drawable/none_goods"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dis10"
+                android:text="暂无商品"
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font13"/>
+        </LinearLayout>
+
+        <com.yj.cosmetics.widget.WrapContentGridView
+            android:id="@+id/classify_content_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis15"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/dis12"
+            android:listSelector="@color/white"
+            android:numColumns="3"
+            android:paddingBottom="@dimen/dis22"
+            android:paddingLeft="@dimen/dis10"
+            android:paddingRight="@dimen/dis8"
+            android:paddingTop="@dimen/dis15"
+            android:verticalSpacing="@dimen/dis20"
+            >
+
+        </com.yj.cosmetics.widget.WrapContentGridView>
+
+    </RelativeLayout>
+
+</LinearLayout>

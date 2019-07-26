@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/ll_title"
+        layout="@layout/titlebar_layout"/>
+
+
+    <com.yj.cosmetics.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title"
+        ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/xrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/CF1_F4_F6"
+                >
+            </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.ProgressLayout>
+
+
+</RelativeLayout>

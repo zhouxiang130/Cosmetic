@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dis5"
+                android:layout_marginLeft="@dimen/dis15"
+                android:layout_marginRight="@dimen/dis15"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_to_store_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_corner_ed_radius10"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dis15"
+        android:paddingLeft="@dimen/dis10"
+        android:paddingRight="@dimen/dis10"
+        android:paddingTop="@dimen/dis15"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/frag_mine_login_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mine_circle_bg"
+            android:padding="1dp">
+
+
+            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                android:id="@+id/item_partake_shop_img"
+                android:layout_width="@dimen/dis70"
+                android:layout_height="@dimen/dis70"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_avatar"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/dis1"
+                app:riv_corner_radius="@dimen/dis360"
+                />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginTop="@dimen/dis15"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_consume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis5"
+                android:gravity="center"
+                android:text="05"
+
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font14"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_partake_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@id/frag_mine_login_"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_toLeftOf="@id/ll_pic"
+            android:layout_toRightOf="@id/frag_mine_login_"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font14"
+            android:textColor="@color/black"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/tv_partake_shop_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_partake_shop_name"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginTop="@dimen/dis10"
+            android:layout_toLeftOf="@id/ll_pic"
+            android:layout_toRightOf="@id/frag_mine_login_"
+            android:drawableLeft="@mipmap/icon_gold"
+            android:drawablePadding="@dimen/dis2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black_gray1"
+            android:textSize="@dimen/font13"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_partake_shop_loc"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginTop="@dimen/dis8"
+            android:layout_toRightOf="@id/frag_mine_login_"
+            android:text="2018-12-31 19:00:00"
+            android:textColor="@color/C66_66_66"
+            android:textSize="@dimen/font13"/>
+
+
+        <TextView
+            android:id="@+id/tv_partake_shop_locs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_date_time"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/icon_gold"
+            android:drawablePadding="@dimen/dis2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="+1000"
+            android:textColor="@color/black_gray1"
+            android:textSize="@dimen/font13"
+            android:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_top_suprescript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/icon_superscript"/>
+
+</RelativeLayout>

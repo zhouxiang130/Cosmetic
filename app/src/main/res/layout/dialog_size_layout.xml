@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis116"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis116"
+            >
+
+            <View
+                android:id="@+id/dialog_size_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis25"
+                android:background="@color/transparent"/>
+
+            <RelativeLayout
+                android:id="@+id/dialog_size_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/dialog_size_view"
+                android:background="@color/white">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/dialog_size_view"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dis150"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dialog_size_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dis12"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dialog_size_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格 :  "
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font13"/>
+
+                    <TextView
+                        android:id="@+id/dialog_size_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textColor="@color/CC8_3C_3C"
+                        android:textSize="@dimen/font12"/>
+
+                    <TextView
+                        android:id="@+id/dialog_size_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis5"
+                        android:textColor="@color/CC8_3C_3C"
+                        android:textSize="@dimen/font21"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_size_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dis5"
+                    android:layout_marginTop="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis10"
+                    android:paddingLeft="@dimen/dis10"
+                    android:paddingRight="@dimen/dis10"
+                    android:paddingTop="@dimen/dis10"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/close_g"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dialog_size_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dis2"
+                    android:textColor="@color/C10_10_10"
+                    android:textSize="@dimen/font12"/>
+
+                <TextView
+                    android:id="@+id/dialog_size_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_size_ll"
+                    android:layout_marginBottom="@dimen/dis2"
+                    android:layout_marginTop="@dimen/dis8"
+                    android:text="库存 :  "
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font11"/>
+
+                <TextView
+                    android:id="@+id/dialog_size_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dialog_size_ll"
+                    android:layout_marginBottom="@dimen/dis2"
+                    android:layout_marginTop="@dimen/dis8"
+                    android:layout_toRightOf="@id/dialog_size_tv3"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font11"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+            android:id="@+id/dialog_size_iv"
+            android:layout_width="@dimen/dis116"
+            android:layout_height="@dimen/dis116"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/dialog_size_rl1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_goods"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="@dimen/dis2"
+            app:riv_corner_radius="@dimen/dis5"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis12"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dis80"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis8"
+            android:background="@color/CED_F1_F4"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/dialog_size_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis15"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/dialog_size_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis15"
+                android:text="数量 : "
+                android:textColor="@color/C10_10_10"
+                android:textSize="@dimen/font14"/>
+
+            <TextView
+                android:id="@+id/dialog_size_tv_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis15"
+                android:layout_toRightOf="@id/dialog_size_tv4"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font12"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/dis90"
+                android:layout_height="@dimen/dis30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_f1_radius2"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="—"
+                    android:textColor="@color/C85_85_85"
+                    android:textSize="@dimen/font15"/>
+
+
+                <TextView
+                    android:id="@+id/dialog_size_tvCount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/C10_10_10"
+                    android:textSize="@dimen/font17"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_f1_radius2"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/C85_85_85"
+                    android:textSize="@dimen/font15"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dis102"
+                android:layout_height="@dimen/dis38"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/dialog_size_minus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/dialog_size_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/dialog_size_rl3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:layout_below="@id/dialog_size_rl2">
+
+            <LinearLayout
+                android:id="@+id/dialog_size_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dis5"
+                android:paddingLeft="@dimen/dis15"
+                android:paddingRight="@dimen/dis15"
+                android:paddingTop="@dimen/dis5">
+
+                <Button
+                    android:id="@+id/dialog_size_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_five"
+                    android:text="加入购物车"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font16"/>
+
+                <Button
+                    android:id="@+id/dialog_size_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_four"
+                    android:text="立即购买"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font16"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dis5"
+                android:paddingLeft="@dimen/dis15"
+                android:paddingRight="@dimen/dis15"
+                android:paddingTop="@dimen/dis5">
+
+                <Button
+                    android:id="@+id/dialog_size_soldout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_corner_eight"
+                    android:enabled="false"
+                    android:text="已售罄"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font16"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/ll_all_buttom_float_layer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@drawable/shape_corner_nine">
+            </View>
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/goods_detial_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis4"
+            android:layout_above="@id/dialog_size_rl3"
+            android:background="@mipmap/projection_b"/>
+    </RelativeLayout>
+</LinearLayout>

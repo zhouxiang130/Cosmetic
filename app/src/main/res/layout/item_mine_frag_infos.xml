@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/CE7_E7_E7"
+              android:orientation="vertical"
+              android:splitMotionEvents="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/CE7_E7_E7"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis6"
+            android:background="@color/CED_F1_F4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/CED_F1_F4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_invite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_yq"
+                        android:gravity="center"
+                        android:text="邀请好友"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_collection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_sc"
+                        android:gravity="center"
+                        android:text="我的收藏"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--&gt;-->
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_dz"
+                        android:gravity="center"
+                        android:text="地址管理"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_signIn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_qd"
+                        android:gravity="center"
+                        android:text="签到中心"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_ticket"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_yhq"
+                        android:gravity="center"
+                        android:text="我的优惠券"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--&gt;-->
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_coustom_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_kf"
+                        android:gravity="center"
+                        android:text="在线客服"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+
+
+                    <TextView
+                        android:id="@+id/frag_mine_tv_coustom_service_msg_num"
+                        android:layout_width="@dimen/dis16"
+                        android:layout_height="@dimen/dis16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_round360_e83_stroke2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font11"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_rx"
+                        android:gravity="center"
+                        android:text="客服热线"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_rl_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_sz"
+                        android:gravity="center"
+                        android:text="系统设置"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/dis0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE7_E7_E7"/>
+
+                <RelativeLayout
+                    android:id="@+id/frag_mine_rl_about"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dis8"
+                        android:drawableTop="@mipmap/icon_discover"
+                        android:gravity="center"
+                        android:text="关于我们"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font15"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF6_F8_F9"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/frag_classify_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis28"
+        android:background="@drawable/shape_corner_shade"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/frag_classify_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis45"
+        android:background="@drawable/shape_corner_shade"
+        >
+
+        <RelativeLayout
+            android:id="@+id/frag_classify_rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dis8"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis8"
+            android:background="@drawable/shape_corner_ed_radius15"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/frag_classify_iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis10"
+                android:src="@mipmap/search_for"
+                />
+
+            <TextView
+                android:id="@+id/frag_classify_tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis5"
+                android:layout_toRightOf="@id/frag_classify_iv_search"
+                android:singleLine="true"
+                android:text="搜索商品"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font12"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CEB_F0_F6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="@dimen/dis90"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="@dimen/dis0.5"
+            android:layout_height="match_parent"
+            android:background="@color/CEB_F0_F6"/>
+
+        <com.yj.cosmetics.widget.ProgressLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contentRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dis12"
+                android:layout_marginRight="@dimen/dis15"
+                android:layout_marginTop="@dimen/dis15"
+                android:background="@color/white"/>
+
+        </com.yj.cosmetics.widget.ProgressLayout>
+    </LinearLayout>
+
+</LinearLayout>

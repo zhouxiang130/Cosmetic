@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis6"
+        android:background="@color/CF7_F9_FA"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ivRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+    </RelativeLayout>
+    <!-- <com.yj.robust.widget.WrapContentGridView
+         android:id="@+id/home_gridview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:numColumns="5"
+         android:layout_marginLeft="@dimen/dis20"
+         android:layout_marginRight="@dimen/dis20"
+         android:horizontalSpacing="@dimen/dis25"
+         android:verticalSpacing="@dimen/dis8"
+         android:layout_marginTop="@dimen/dis15"
+         android:layout_marginBottom="@dimen/dis15"
+         android:nestedScrollingEnabled="false"
+         ></com.yj.robust.widget.WrapContentGridView>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis6"
+        android:background="@color/CF7_F9_FA"/>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+﻿{
+
+    "code": "200",
+    "data": [
+        {
+            "detailId": 1025,
+            "money": 38,
+            "nums": 1,
+            "pid": 14,
+            "psku": "默认",
+            "JudgeType": 0,
+            "GoodStatus": 0,
+            "price": "",
+            "reason": "",
+            "phone": "",
+            "Cause": "0",
+            "judgeContent": ""
+        }
+    ],
+    "msg": "成功"
+}

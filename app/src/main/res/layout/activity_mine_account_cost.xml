@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F9_FB"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/mine_account_cost_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis40"
+        android:background="@color/white">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mine_account_cost_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/CE8_3C_3C"
+            app:tabIndicatorHeight="@dimen/dis1.5"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="@dimen/dis_15"
+            app:tabPaddingStart="@dimen/dis_15"
+            app:tabSelectedTextColor="@color/CE8_3C_3C"
+            app:tabTextAppearance="@style/CustomTabLayoutText13"
+            app:tabTextColor="@color/C40_40_40"
+            >
+        </android.support.design.widget.TabLayout>
+        <!--<com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/mine_order_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:stl_customTabTextLayoutId="@layout/item_custom_tab"
+            app:stl_titleOffset="auto_center"
+            app:stl_indicatorColor="@color/T40_text_color"
+            app:stl_indicatorThickness="@dimen/dis2"
+            app:stl_indicatorGravity="bottom"
+            app:stl_indicatorWidth="auto"
+            app:stl_indicatorCornerRadius="@dimen/dis2"
+            app:stl_overlineThickness="0dp"
+            app:stl_underlineThickness="0dp"
+            app:stl_dividerThickness="0dp"
+            app:stl_clickable="true"
+            app:stl_indicatorInterpolation="smart"
+            />-->
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mine_account_cost_vline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE4_E4_E4"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

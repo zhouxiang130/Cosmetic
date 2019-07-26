@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/mine_ll_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/CFA_FA_FA"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/mine_coupon_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/C66_66_66"
+                android:textSize="@dimen/dis13"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/nex_p"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.yj.cosmetics.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.yj.cosmetics.widget.ProgressLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F8_F8"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis50"
+        android:background="@color/CF8_F8_F8"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/dis15"
+        android:text="选择你的反馈类型"/>
+
+    <com.yj.cosmetics.widget.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/mine_setting_helps_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis18"
+            android:layout_marginTop="@dimen/dis18">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis15"
+                android:drawableLeft="@mipmap/wentiqiuzhu"
+                android:drawablePadding="10dp"
+                android:text="问题求助"
+                android:textColor="@color/C1E_1E_1E"
+                android:textSize="@dimen/font15"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:drawablePadding="@dimen/dis10"
+                android:drawableRight="@mipmap/next_center_order"
+                android:text="前往我的客服"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font15"/>
+
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <com.yj.cosmetics.widget.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/mine_setting_helps_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis18"
+            android:layout_marginTop="@dimen/dis18">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis15"
+                android:drawableLeft="@mipmap/yijianfankui"
+                android:drawablePadding="10dp"
+                android:text="意见反馈"
+                android:textColor="@color/C1E_1E_1E"
+                android:textSize="@dimen/font15"/>
+
+            <TextView
+                android:id="@+id/mine_setting_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:drawablePadding="@dimen/dis10"
+                android:drawableRight="@mipmap/next_center_order"
+                android:text="功能异常或建议"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font15"/>
+
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+
+</LinearLayout>

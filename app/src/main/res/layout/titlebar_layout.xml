@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/title_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_corner_shade"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/title_fm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis45"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/title_ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/title_ll_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:focusable="false"
+                android:paddingRight="5dp"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
+                />
+            <!--android:paddingLeft="15dp"-->
+            <!--android:src="@mipmap/return_x"-->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16"
+            />
+        <!--android:rotation="90"-->
+        <RelativeLayout
+            android:id="@+id/title_rl_next"
+            android:layout_width="@dimen/dis102"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            >
+
+            <TextView
+                android:id="@+id/title_tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font13"
+
+                />
+            <!--android:rotation="90"-->
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/white"/>
+</LinearLayout>

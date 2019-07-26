@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_hour_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_hour_unit"
+            style="@style/CountDownTimerViewStyle"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/colon_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=": "
+        android:textColor="@color/white"
+        android:textSize="@dimen/font10"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_min_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_min_unit"
+            style="@style/CountDownTimerViewStyle"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/colon_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=": "
+        android:textColor="@color/white"
+        android:textSize="@dimen/font10"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_sec_decade"
+            style="@style/CountDownTimerViewStyle"/>
+
+        <TextView
+            android:id="@+id/tv_sec_unit"
+            style="@style/CountDownTimerViewStyle"
+            />
+    </LinearLayout>
+
+</LinearLayout>

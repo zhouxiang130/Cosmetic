@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dis5"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dis10">
+
+
+        <RelativeLayout
+            android:id="@+id/frag_mine_login_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis5"
+            android:background="@drawable/mine_circle_bg"
+            android:padding="1dp">
+
+
+            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                android:id="@+id/item_partake_shop_img"
+                android:layout_width="@dimen/dis60"
+                android:layout_height="@dimen/dis60"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_avatar"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/dis1"
+                app:riv_corner_radius="270dp"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_partake_shop_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dis10"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_crown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:src="@mipmap/huangguan"/>
+
+
+            <RelativeLayout
+                android:id="@+id/fl_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_crown"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/iv_round"
+                    android:layout_width="@dimen/dis30"
+                    android:layout_height="@dimen/dis30"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_round360_e83"/>
+
+
+                <TextView
+                    android:id="@+id/tv_row_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:text="01"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font15"/>
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_partake_shop_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前排名"
+                android:textColor="@color/C99_99_99"
+                android:textSize="@dimen/font13"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_partake_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginTop="@dimen/dis15"
+            android:layout_toLeftOf="@id/rl_partake_shop_detail"
+            android:layout_toRightOf="@id/frag_mine_login_"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/tv_partake_shop_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_partake_shop_name"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginTop="@dimen/dis10"
+            android:layout_toLeftOf="@id/rl_partake_shop_detail"
+            android:layout_toRightOf="@id/frag_mine_login_"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black_gray1"
+            android:textSize="@dimen/font14"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

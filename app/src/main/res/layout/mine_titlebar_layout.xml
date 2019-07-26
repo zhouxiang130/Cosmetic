@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/title_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_corner_shade"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/title_fm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis45"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/title_ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/title_ll_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:focusable="false"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_keyboard_arrow_left_white_24dp"
+                android:visibility="visible"
+                />
+            <!--android:paddingLeft="15dp"-->
+            <!--android:src="@mipmap/return_x"-->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16"
+            />
+        <!--android:rotation="90"-->
+        <RelativeLayout
+            android:id="@+id/title_rl_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:padding="@dimen/dis10"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <!--android:rotation="90"-->
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

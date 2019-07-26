@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dis5"
+        android:paddingTop="@dimen/dis8">
+
+        <RelativeLayout
+            android:id="@+id/refound_detial_rl_normal_states"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis30"
+            android:paddingLeft="@dimen/dis10"
+            android:paddingRight="@dimen/dis15"
+            >
+
+            <CheckBox
+                android:id="@+id/item_cart_cb"
+                android:layout_width="@dimen/dis28"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                style="@style/CustomCheckBoxTheme"
+                android:clickable="false"/>
+                <!--android:button="@drawable/selector_checkbox_cart_single"-->
+
+            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                android:id="@+id/frag_mine_login_iv"
+                android:layout_width="@dimen/dis30"
+                android:layout_height="@dimen/dis30"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/item_cart_cb"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_goods"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/dis1"
+                app:riv_corner_radius="360dp"
+                />
+
+
+            <TextView
+                android:id="@+id/refound_detial_tv_normal_states"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/frag_mine_login_iv"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dis15"
+                android:paddingRight="@dimen/dis15"
+                android:text=""
+                android:textColor="@color/C1e_1e_1e"
+                android:textSize="@dimen/font14"/>
+
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginLeft="@dimen/dis12"-->
+            <!--android:layout_toRightOf="@id/item_mine_collection_iv"-->
+            <!--android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"-->
+            <!--android:paddingBottom="@dimen/dis2"-->
+            <!--android:paddingLeft="@dimen/dis4"-->
+            <!--android:paddingRight="@dimen/dis4"-->
+            <!--android:paddingTop="@dimen/dis2"-->
+            <!--android:text="热卖"-->
+            <!--android:textColor="@color/CE8_3C_3C"-->
+            <!--android:textSize="@dimen/font10"-->
+
+            <TextView
+                android:id="@+id/refound_detial_tv_store_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/refound_detial_tv_normal_states"
+                android:background="@drawable/shape_corner_e8_stroke0_5_radius4"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dis2"
+                android:paddingLeft="@dimen/dis4"
+                android:paddingRight="@dimen/dis4"
+                android:paddingTop="@dimen/dis2"
+                android:text="休息中"
+                android:visibility="gone"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font12"/>
+
+            <ImageView
+                android:id="@+id/image_icon_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/specifications_next_x"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/refound_detial_rl_normal_states"/>
+
+
+        <!--<com.yj.robust.widget.WrapContentGridView-->
+        <!--android:id="@+id/gridView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/refound_detial_tv_normal_states"-->
+        <!--android:listSelector="@color/transparent"-->
+        <!--android:nestedScrollingEnabled="false"-->
+        <!--android:numColumns="1"-->
+        <!--android:paddingBottom="@dimen/dis5"-->
+        <!--android:paddingTop="@dimen/dis5">-->
+        <!--</com.yj.robust.widget.WrapContentGridView>-->
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis7"
+        android:layout_marginTop="@dimen/dis10"
+        android:background="@color/CF7_F9_FA"/>
+
+
+</LinearLayout>

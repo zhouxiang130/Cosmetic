@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/dis10"
+              android:paddingRight="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/dialog_ticket_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dis15"
+            android:paddingTop="@dimen/dis15"
+            android:textColor="@color/black_color1"
+            android:textSize="@dimen/font16"/>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dis150"
+                />
+                <!--android:minHeight="@dimen/dis180"-->
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis60"
+        android:padding="@dimen/dis10">
+
+        <Button
+            android:id="@+id/dialog_size_buy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis60"
+            android:background="@drawable/shape_corner_e8_radius55"
+            android:text="完成"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font16"/>
+    </RelativeLayout>
+
+</LinearLayout>

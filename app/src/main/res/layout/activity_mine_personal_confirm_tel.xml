@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F9_FB"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+
+    <ImageView
+        android:layout_width="@dimen/dis85"
+        android:layout_height="@dimen/dis85"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dis32"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/alipay_binding"/>
+
+
+    <TextView
+        android:id="@+id/change_alipay_alipay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dis25"
+        android:layout_marginTop="@dimen/dis18"
+        android:text="验证当前账号绑定手机号"
+        android:textColor="@color/C64_64_64"
+        android:textSize="@dimen/font12"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"
+            />
+
+        <TextView
+            android:id="@+id/change_alipay_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis20"
+            android:paddingTop="@dimen/dis20"
+            android:singleLine="true"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font14"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/mine_personal_tel_verify"
+                android:layout_width="@dimen/dis102"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font13"
+                />
+
+            <View
+                android:id="@+id/mine_personal_tel_v1"
+                android:layout_width="@dimen/dis0.5"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/mine_personal_tel_verify"
+                android:background="@color/CE7_E7_E7"/>
+
+            <EditText
+                android:id="@+id/mine_personal_confirm_tel_verify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis50"
+                android:layout_toLeftOf="@id/mine_personal_tel_v1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:maxLines="1"
+                android:maxLength="6"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dis15"
+                android:singleLine="true"
+                android:textColor="@color/C64_64_64"
+                android:textColorHint="@color/C64_64_64"
+                android:textSize="@dimen/font13"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <Button
+        android:id="@+id/mine_personal_confirm_tel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis40"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis22"
+        android:background="@drawable/shape_corner_e8_radius2"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font14"/>
+</LinearLayout>

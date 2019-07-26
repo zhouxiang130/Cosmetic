@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dis40"
+        android:layout_marginRight="@dimen/dis40"
+        android:background="@drawable/shape_corner_white5"
+        android:orientation="vertical">
+
+        <!--Header-->
+        <TextView
+            android:id="@+id/update_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dis15"
+            android:text="发现新版本"
+            android:textColor="@color/C1E_1E_1E"
+            android:textSize="@dimen/font19" />
+
+        <!--Body-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis12"
+            android:layout_marginRight="@dimen/dis12"
+            android:layout_marginTop="@dimen/dis28"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="版本:"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font16" />
+
+            <TextView
+                android:id="@+id/update_dialog_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis10"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font16" />
+
+            <TextView
+                android:id="@+id/up_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis18"
+                android:text="大小:"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font16"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/update_dialog_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis10"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font16" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis15"
+            android:layout_marginLeft="@dimen/dis12"
+            android:layout_marginRight="@dimen/dis12"
+            android:layout_marginTop="@dimen/dis16"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/update_dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/dis8"
+                android:minLines="3"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font16" />
+
+        </LinearLayout>
+        <!--Bottom-->
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis32"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis1"
+                android:background="@color/CE4_E4_E4" />
+
+            <TextView
+                android:id="@+id/update_dialog_force"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dis15"
+                android:paddingTop="@dimen/dis15"
+                android:text="立即更新"
+                android:textColor="@color/C40_40_40"
+                android:textSize="@dimen/font17"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/update_dialog_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/update_dialog_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingTop="@dimen/dis15"
+                    android:text="稍后再说"
+                    android:background="@drawable/selector_color_bgradius5_left"
+                    android:textColor="@color/C40_40_40"
+                    android:textSize="@dimen/font17" />
+
+                <View
+                    android:layout_width="@dimen/dis1"
+                    android:layout_height="match_parent"
+                    android:background="@color/CE4_E4_E4" />
+
+                <TextView
+                    android:id="@+id/update_dialog_update"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingTop="@dimen/dis15"
+                    android:text="立即更新"
+                    android:background="@drawable/selector_color_bgradius5_right"
+                    android:textColor="@color/C40_40_40"
+                    android:textSize="@dimen/font17"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

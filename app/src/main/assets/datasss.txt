@@ -1,0 +1,11 @@
+{
+    "data": {
+        "appForce": 2,
+        "appDesc": "修复bug,修复",
+        "appId": 2,
+        "appVersion": "3.1.0",
+        "appLink": "/upload/app/20180930/aa535486-2e88-4f64-93e7-b684f34f80a7.apk"
+    },
+    "code": "200",
+    "msg": "成功"
+}

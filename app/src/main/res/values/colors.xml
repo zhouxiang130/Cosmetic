@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+
+
+    <!--  @TODO white - gray -  black  -->
+    <color name="CF7_FD_F9">#f7fdf9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="CED_F1_F4">#EDF1F4</color>
+    <color name="CE7_E7_E7">#E7E7E7</color>
+    <color name="CFA_FA_FA">#FAFAFA</color>
+    <color name="Cf7_f7_f7">#f7f7f7</color>
+    <color name="CE4_E4_E4">#E4E4E4</color>
+    <color name="CF8_F8_F8">#F8F8F8</color>
+    <color name="CF6_F8_F9">#F6F8F9</color>
+    <color name="CEE_F2_F5">#EEF2F5</color>
+    <color name="CE9_EC_ED">#E9ECED</color>
+    <color name="CFB_E0_E5">#FBE0E5</color>
+    <color name="CEB_F0_F6">#EBF0F6</color>
+    <color name="CF7_F9_FA">#F7F9FA</color>
+    <color name="colorPrimaryDark">#c7c7c7</color>
+    <color name="RippleColor">#B7B7B7</color>
+    <color name="CC0_C0_C0">#C0C0C0</color>
+
+    <color name="colorTabTextUnSelected">#D3D3D2</color>
+    <color name="colorTabTextSelected">#FDFDFD</color>
+    <color name="colorTabIndicator">#FDFDFD</color>
+
+    <color name="colorHistoryItemPress">#CED0D0</color>
+    <color name="colorHistoryItemTextPress">#FFFFFF</color>
+    <color name="colorHistoryItemTextNormal">#ffffff</color>
+
+
+    <color name="CF1_F4_F6">#F1F4F6</color>
+    <color name="CDC_DF_E2">#DCDFE2</color>
+    <color name="CD6_D6_D6">#D6D6D6</color>
+    <color name="CF1_EC_E2">#F1ECE2</color>
+    <color name="CE3_E3_E3">#E3E3E3</color>
+    <color name="CF8_F9_FB">#F8F9FB</color>
+    <color name="CF5_F5_F5">#F5F5F5</color>
+    <color name="Ccc_cc_cc">#cccccc</color>
+    <color name="CE6_E6_E6">#E6E6E6</color>
+    <color name="CDC_DC_DC">#DCDCDC</color>
+    <color name="FFB_EB_2B2">#FFBEB2B2</color>
+    <color name="CA8_A8_A8">#A8A8A8</color>
+    <color name="CED_F0_F1">#aaedf0f1</color>
+    <color name="C9E_9E_9E">#9E9E9E</color>
+    <color name="C88_88_88">#888888</color>
+    <color name="C99_99_99">#999999</color>
+    <color name="C85_85_85">#858585</color>
+    <color name="C64_64_64">#646464</color>
+    <color name="C8d_ce_ce_ce">#8dcecece</color>
+    <color name="CAA_AA_AA">#AAAAAA</color>
+    <color name="C80_DC_DC_DC">#80dcdcdc</color>
+    <color name="trans_33">#55FFFFFF</color>
+    <color name="C7E_8F_9E">#7E8F9E</color>
+    <color name="C7F_7F_7F">#7F7F7F</color>
+    <color name="C66_66_66">#666666</color>
+    <color name="transparent_color1">#2ec9c9c9</color>
+    <color name="C00C2C2C2">#4bdfdfdf</color>
+    <color name="C40_40_40">#404040</color>
+    <color name="C4B_4B_4B">#4B4B4B</color>
+    <color name="C8D_A4_A4">#8d606060</color>
+    <color name="C52_52_52">#525252</color>
+    <color name="C8D_60_60_60">#8d606060</color>
+    <color name="black_color1">#333333</color>
+    <color name="trans_55">#55000000</color>
+    <color name="C1E_1E_1E">#1E1E1E</color>
+    <color name="C1e_1e_1e">#1e1e1e</color>
+    <color name="C10_10_10">#101010</color>
+    <color name="trans_aa">#AA000000</color>
+    <color name="C8A_00_00_00">#8a000000</color>
+    <color name="trans_7f">#7F000000</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="black">#000000</color>
+    <color name="black_gray1">#C8C8C8</color>
+
+    <color name="gray_99">#999999</color>
+
+    <color name="CEB_CD_82">#EBCD82</color>
+    <color name="CFF_BD_30">#FFBD30</color>
+    <color name="Cf6_ec_18">#f6ec18</color>
+    <color name="CF3_A4_3F">#F3A43F</color>
+    <color name="CFF_81_0D">#FF810D</color>
+    <color name="CEA_68_1A">#EA681A</color>
+    <color name="CF9_76_48">#F97648</color>
+    <color name="CC8_3C_3C">#C83C3C</color>
+    <color name="CC8_3C_3C_">#d8c83c3c</color>
+    <color name="CE8_3C_3C">#A050F3</color>
+    <color name="CE9_39_39">#e93939</color>
+    <color name="red">#FF3E5E</color>
+    <color name="Ce8_3c_3c">#e83c3c</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="C45_1F_84">#451F84</color>
+    <color name="C6F_7F_EC">#6F7FEC</color>
+
+    <color name="C9F_8A_60">#9F8A60</color>
+    <color name="C35_B6_FF">#35b6ff</color>
+    <color name="CFF_56_A7_F8">#FF56A7F8</color>
+    <color name="C64_83_A6">#6483A6</color>
+    <color name="C42_59_83">#425983</color>
+
+
+</resources>

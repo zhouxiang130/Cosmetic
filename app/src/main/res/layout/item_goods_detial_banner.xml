@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/goods_detial_ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.yj.cosmetics.widget.CustomBanner.CustomRollPagerView
+                android:id="@+id/goods_detial_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis208"
+                app:rollviewpager_play_delay="3000"/>
+
+            <LinearLayout
+                android:id="@+id/goods_detial_banner_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/goods_detial_banner"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dis15"
+                android:layout_marginRight="@dimen/dis15"
+                android:background="@drawable/shape_corner_trans7_radius12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tvnow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis7"
+                    android:paddingLeft="@dimen/dis15"
+                    android:paddingTop="@dimen/dis7"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font11"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tvall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dis15"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font11"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/goods_detial_seckill_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:background="@color/CE8_3C_3C"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font12"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_sec_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font19"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/goods_detial_banner_tv_op"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font10"/>
+
+                    <TextView
+                        android:id="@+id/goods_detial_banner_tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font10"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detial_banner_ll_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_goods_detial_tv_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距结束"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font10"/>
+
+                    <com.yj.cosmetics.widget.CustomCountDownTimerViewWhite
+                        android:id="@+id/item_goods_detial_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/goods_detial_banner_tv_precent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font10"/>
+
+                    <ProgressBar
+                        android:id="@+id/goods_detial_banner_pb"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="@dimen/dis60"
+                        android:layout_height="@dimen/dis4"
+                        android:layout_marginLeft="@dimen/dis5"
+                        android:layout_marginTop="@dimen/dis5"
+                        android:max="100"
+                        android:progressDrawable="@drawable/progressbar_horizontal_white_trans"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_detial_banner_ll_yes"
+                android:layout_width="@dimen/dis102"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/join_car_x"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font13"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font13"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dis10"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis15">
+
+
+
+            <TextView
+                android:id="@+id/goods_detial_banner_tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_corner_e8_radius2"
+                android:paddingBottom="@dimen/dis1"
+                android:paddingLeft="@dimen/dis3"
+                android:paddingRight="@dimen/dis3"
+                android:paddingTop="@dimen/dis1"
+                android:text="热卖"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font12"/>
+
+            <LinearLayout
+                android:id="@+id/goods_banner_ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis14"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/CC8_3C_3C"
+                    android:textSize="@dimen/font12"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv_price1_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/CC8_3C_3C"
+                    android:textSize="@dimen/font19"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="@color/CC8_3C_3C"
+                    android:textSize="@dimen/font12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv_price2_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/CC8_3C_3C"
+                    android:textSize="@dimen/font19"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_tv_op_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis10"
+                    android:textColor="@color/C85_85_85"
+                    android:textSize="@dimen/font10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:orientation="horizontal">
+
+                    <!--android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"-->
+                    <TextView
+                        android:id="@+id/goods_detial_tv_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis10"
+                        android:drawablePadding="@dimen/dis5"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/dis2"
+                        android:paddingLeft="@dimen/dis4"
+                        android:paddingRight="@dimen/dis4"
+                        android:paddingTop="@dimen/dis2"
+                        android:text="销量:"
+                        android:textColor="@color/C10_10_10"
+                        android:textSize="@dimen/font12"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/goods_banner_tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dis3"
+                    android:textColor="@color/C1E_1E_1E"
+                    android:layout_below="@id/goods_banner_ll1"
+                    android:textSize="@dimen/font16"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_banner_ll1"
+                android:layout_marginTop="@dimen/dis25"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_fee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="运费:"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_sold_moon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="月销:"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"/>
+
+                <TextView
+                    android:id="@+id/goods_detial_banner_return"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="返现:"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font12"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:visibility="gone"
+            android:background="@color/CF8_F8_F8">
+
+            <LinearLayout
+                android:id="@+id/goods_detial_ll_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dis15"
+                android:layout_marginTop="@dimen/dis10"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/round_check_r"
+                        android:drawablePadding="@dimen/dis5"
+                        android:text="24小时发货"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font11"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:drawableLeft="@mipmap/round_check_r"
+                        android:drawablePadding="@dimen/dis5"
+                        android:gravity=""
+                        android:text="七天退货"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font11"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:drawableLeft="@mipmap/round_check_r"
+                    android:drawablePadding="@dimen/dis5"
+                    android:text="支付返现"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font11"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/round_check_r"
+                        android:drawablePadding="@dimen/dis5"
+                        android:paddingRight="@dimen/dis15"
+                        android:text="购物返积分"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font11"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/goods_detial_tv_systemvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_detial_ll_style"
+                android:layout_marginLeft="@dimen/dis15"
+                android:layout_marginTop="@dimen/dis10"
+                android:drawableLeft="@mipmap/round_check_r"
+                android:drawablePadding="@dimen/dis5"
+                android:text="购买保障"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font11"/>
+        </RelativeLayout>
+
+
+        <com.yj.cosmetics.widget.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:id="@+id/goods_detial_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dis15"
+                android:paddingTop="@dimen/dis15">
+
+                <TextView
+                    android:id="@+id/goods_item_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:text="领券"
+                    android:textColor="@color/C66_66_66"
+                    android:textSize="@dimen/font15"/>
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:background="@mipmap/specifications_next_x"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/img_1"
+                    android:layout_toRightOf="@id/goods_item_tv2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/goods_item_ticket_textTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis25"
+                        android:layout_toRightOf="@id/goods_item_tv2"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_corner_oval_six"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="优惠券"
+                        android:textColor="@color/Ce8_3c_3c"
+                        android:textSize="@dimen/font13"/>
+
+                    <TextView
+                        android:id="@+id/goods_item_ticket_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:maxLength="14"
+                        android:paddingRight="@dimen/dis10"
+                        android:text="优惠券"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font13"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:visibility="gone"
+            android:background="@color/CE7_E7_E7"/>
+
+        <com.yj.cosmetics.widget.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:id="@+id/goods_detial_integral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dis15"
+                android:paddingTop="@dimen/dis15">
+
+                <TextView
+                    android:id="@+id/goods_item_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:text="促销"
+                    android:textColor="@color/C66_66_66"
+                    android:textSize="@dimen/font15"/>
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:background="@mipmap/specifications_next_x"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/img_2"
+                    android:layout_toRightOf="@id/goods_item_tv3"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/goods_item_integral_textTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis25"
+                        android:layout_toRightOf="@id/goods_item_tv3"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_corner_oval_six"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="积分"
+                        android:textColor="@color/Ce8_3c_3c"
+                        android:textSize="@dimen/font13"/>
+
+
+                    <TextView
+                        android:id="@+id/goods_item_integral_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:maxLength="14"
+                        android:paddingRight="@dimen/dis10"
+                        android:text="积分"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font13"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis5"
+            android:background="@color/CF6_F8_F9"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CE7_E7_E7"/>
+
+        <com.yj.cosmetics.widget.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/goods_detial_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dis15"
+                android:paddingTop="@dimen/dis15">
+
+                <TextView
+                    android:id="@+id/goods_item_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:text="规格"
+                    android:textColor="@color/C1E_1E_1E"
+                    android:textSize="@dimen/font15"/>
+
+                <TextView
+                    android:id="@+id/goods_item_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dis25"
+                    android:layout_toRightOf="@id/goods_item_tv1"
+                    android:textColor="@color/C64_64_64"
+                    android:textSize="@dimen/font13"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:background="@mipmap/specifications_next_x"/>
+            </RelativeLayout>
+        </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+        <View
+            android:id="@+id/goods_detial_v2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis5"
+            android:background="@color/CF6_F8_F9"/>
+    </LinearLayout>
+</LinearLayout>

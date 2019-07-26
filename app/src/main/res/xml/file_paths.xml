@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <!--<root-path name ="name" path="" />-->
+        <!--<external-path path="files_root"  name="Android/data/com.yj.robust/"  />-->
+        <!--<external-path name="/wendi/download/" path="files_root" />-->
+        <!--<external-path path="." name="external_storage_root" />-->
+
+        <external-path
+            name="files_root"
+            path="."/>
+        <external-path
+            name="external_storage_root"
+            path="Android/data/com.yj.robust/"/>
+        <external-files-path
+            name="files_root"
+            path="Android/data/com.yj.robust/"/>
+        <external-cache-path
+            name="external_storage_root"
+            path="Android/data/com.yj.robust/"/>
+        <files-path
+            name="files_root"
+            path="Android/data/com.yj.robust/"/>
+        <external-path
+            name="external_files"
+            path="."/>
+        <external-path
+            name="download"
+            path=""/>
+
+    </paths>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/CF6_F8_F9"
+              android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dis15"
+        android:paddingRight="@dimen/dis10"
+        android:paddingTop="@dimen/dis8"
+        >
+
+        <RelativeLayout
+            android:id="@+id/refound_detial_rl_normal_states"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis30"
+            >
+
+
+            <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                android:id="@+id/frag_mine_login_iv"
+                android:layout_width="@dimen/dis30"
+                android:layout_height="@dimen/dis30"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/item_cart_cb"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_goods"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/dis1"
+                app:riv_corner_radius="360dp"/>
+
+            <TextView
+                android:id="@+id/refound_detial_tv_normal_states"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/frag_mine_login_iv"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dis15"
+                android:text=""
+                android:textColor="@color/C1e_1e_1e"
+                android:textSize="@dimen/font14"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:layout_below="@id/refound_detial_rl_normal_states"
+            android:layout_marginTop="@dimen/dis8"
+            android:background="@color/CEE_F2_F5"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_"
+            />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:layout_marginTop="@dimen/dis5"
+        android:background="@color/Cf7_f7_f7"/>
+
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/main_footer_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RadioGroup
+            android:id="@+id/main_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:background="@color/white"
+            android:gravity="end|center"
+            android:orientation="horizontal"
+            >
+
+
+            <com.yj.cosmetics.widget.DrawableTextView
+                android:id="@+id/main_tv_homepage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dis50"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dis3"
+                android:layout_marginBottom="@dimen/dis3"
+                android:drawableTop="@drawable/selector_main_homepage"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dis7"
+                android:text="首页"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font12"/>
+
+            <com.yj.cosmetics.widget.DrawableTextView
+                android:id="@+id/main_tv_classify"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dis50"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="@dimen/dis2"
+                android:drawableTop="@drawable/selector_main_classify"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dis6"
+                android:text="分类"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font12"
+                />
+
+            <com.yj.cosmetics.widget.DrawableTextView
+                android:id="@+id/main_tv_store"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dis50"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="@dimen/dis2"
+                android:drawableTop="@drawable/selector_main_store"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dis8"
+                android:text="店铺"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font12"
+                />
+
+
+            <com.yj.cosmetics.widget.DrawableTextView
+                android:id="@+id/main_tv_cart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dis50"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dis3"
+                android:drawableTop="@drawable/selector_main_cart"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dis6"
+                android:text="购物车"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font12"/>
+
+            <com.yj.cosmetics.widget.DrawableTextView
+                android:id="@+id/main_tv_mine"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dis50"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dis3"
+                android:drawableTop="@drawable/selector_main_mine"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dis6"
+                android:text="我的"
+                android:textColor="@drawable/selector_color_10_e8"
+                android:textSize="@dimen/font12"
+                />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fm_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_footer_rl"
+        >
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis4"
+        android:layout_above="@id/main_footer_rl"
+        android:background="@mipmap/projection_b"
+        />
+</RelativeLayout>

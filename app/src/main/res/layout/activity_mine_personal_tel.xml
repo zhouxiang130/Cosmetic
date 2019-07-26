@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/CF8_F8_F8">
+
+    <include layout="@layout/titlebar_layout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"
+        android:layout_marginTop="@dimen/dis8"
+        />
+    <EditText
+        android:id="@+id/mine_personal_tel_ettel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis50"
+        android:background="@color/white"
+        android:textSize="@dimen/font13"
+        android:textColor="@color/C64_64_64"
+        android:singleLine="true"
+        android:inputType="number"
+        android:paddingLeft="@dimen/dis15"
+        android:hint="请输入手机号"
+        android:maxLength="11"
+        android:textColorHint="@color/C64_64_64"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis50"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/mine_personal_tel_verify"
+            android:layout_width="@dimen/dis102"
+            android:layout_height="match_parent"
+            android:text="获取验证码"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/font13"
+            android:gravity="center"
+            android:textColor="@color/CE8_3C_3C"
+            />
+        <View
+            android:id="@+id/mine_personal_tel_v1"
+            android:layout_width="@dimen/dis0.5"
+            android:layout_height="match_parent"
+            android:background="@color/CE7_E7_E7"
+            android:layout_toLeftOf="@id/mine_personal_tel_verify"/>
+
+        <EditText
+            android:id="@+id/mine_personal_tel_etverify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis50"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:textSize="@dimen/font13"
+            android:textColor="@color/C64_64_64"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/dis15"
+            android:textColorHint="@color/C64_64_64"
+            android:layout_toLeftOf="@id/mine_personal_tel_v1"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <Button
+        android:id="@+id/mine_personal_tel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis40"
+        android:background="@drawable/shape_corner_e8_radius2"
+        android:text="保存"
+        android:textSize="@dimen/font14"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis22"/>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--头像round图片style-->
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+    <!--Material-Ripple-Layout的style-->
+    <declare-styleable name="MaterialRippleLayout">
+        <attr name="mrl_rippleColor" format="color" localization="suggested" />
+        <attr name="mrl_rippleDimension" format="dimension" localization="suggested" />
+        <attr name="mrl_rippleOverlay" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleAlpha" format="float" localization="suggested" />
+        <attr name="mrl_rippleDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleFadeDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleHover" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleBackground" format="color" localization="suggested" />
+        <attr name="mrl_rippleDelayClick" format="boolean" localization="suggested" />
+        <attr name="mrl_ripplePersistent" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleInAdapter" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleRoundedCorners" format="dimension" localization="suggested" />
+    </declare-styleable>
+    <!--drawableTextView-->
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--StarBar-->
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+    </declare-styleable>
+
+    <!--ProgressLayout-->
+    <attr name="progressLayoutDefStyle" format="reference" />
+
+    <declare-styleable name="ProgressLayout">
+        <attr name="loading_layout" format="integer" />
+        <attr name="none_content" format="integer" />
+        <attr name="network_content" format="integer" />
+        <attr name="failed_content" format="integer" />
+        <attr name="no_comments" format="integer"/>
+        <attr name="no_collection" format="integer"/>
+        <attr name="no_info" format="integer"/>
+        <attr name="no_search" format="integer"/>
+        <attr name="no_coupon" format="integer"/>
+    </declare-styleable>
+    <style name="ProgressLayout">
+        <item name="loading_layout">@layout/default_loading_layout</item>
+        <item name="none_content">@layout/default_none_layout</item>
+        <item name="network_content">@layout/default_neterror_layout</item>
+        <item name="failed_content">@layout/default_failed_layout</item>
+        <item name="no_comments">@layout/default_nocomment_layout</item>
+        <item name="no_collection">@layout/default_no_collection</item>
+        <item name="no_info">@layout/default_no_info</item>
+        <item name="no_search">@layout/default_no_search</item>
+        <item name="no_coupon">@layout/default_no_coupon</item>
+    </style>
+
+    <!--SwitchButtonView-->
+        <declare-styleable name ="SwitchView">
+            <attr name="hasShadow" format="boolean"/>
+            <attr name="primaryColor" format="color"/>
+            <attr name="primaryColorDark" format="color"/>
+            <attr name="offColor" format="color"/>
+            <attr name="offColorDark" format="color"/>
+            <attr name="shadowColor" format="color"/>
+            <attr name="ratioAspect" format="float"/>
+            <attr name="isOpened" format="boolean"/>
+        </declare-styleable>
+
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="Layout_viewAspectRatio" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="fraction" />
+        <attr name="layout_heightPercent" format="fraction" />
+        <attr name="layout_marginPercent" format="fraction" />
+        <attr name="layout_marginLeftPercentX" format="fraction" />
+        <attr name="layout_marginLeftPercentY" format="fraction" />
+        <attr name="layout_marginLeftPercentScreenX" format="fraction" />
+        <attr name="layout_marginTopPercentX" format="fraction" />
+        <attr name="layout_marginTopPercentY" format="fraction" />
+        <attr name="layout_marginTopPercentScreenX" format="fraction" />
+        <attr name="layout_marginRightPercentX" format="fraction" />
+        <attr name="layout_marginRightPercentY" format="fraction" />
+        <attr name="layout_marginRightPercentScreenX" format="fraction" />
+        <attr name="layout_marginBottomPercentX" format="fraction" />
+        <attr name="layout_marginBottomPercentY" format="fraction" />
+        <attr name="layout_marginBottomPercentScreenX" format="fraction" />
+        <attr name="layout_marginStartPercent" format="fraction" />
+        <attr name="layout_marginEndPercent" format="fraction" />
+        <attr name="layout_aspectRatio" format="fraction" />
+        <attr name="layout_selfAspectRatio" format="float" />
+        <attr name="layout_widthTextSizePercent" format="fraction" />
+        <attr name="layout_screenWidthTextSizePercent" format="fraction" />
+        <attr name="layout_heightTextSizePercent" format="fraction" />
+    </declare-styleable>
+
+    <!--项目中用到的合法域名-->
+    <string-array name="legal_domain">
+    <item>wendiapp.com</item>
+    <item>192.168.0.142</item>
+    <item>wendi-</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+    <com.yj.cosmetics.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_wuliu_all_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis75"
+                    android:layout_marginBottom="@dimen/dis12"
+                    android:layout_marginLeft="@dimen/dis15"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:layout_marginTop="@dimen/dis12">
+
+                    <RelativeLayout
+                        android:id="@+id/mine_logical_detial_rl1"
+                        android:layout_width="@dimen/dis75"
+                        android:layout_height="@dimen/dis75"
+                        android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+
+                        <ImageView
+                            android:id="@+id/logical_detial_iv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dis4"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/default_goods"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis12"
+                        android:layout_toRightOf="@id/mine_logical_detial_rl1">
+
+                        <TextView
+                            android:id="@+id/logical_detial_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="派送中"
+                            android:textColor="@color/C10_10_10"
+                            android:textSize="@dimen/font16"/>
+
+                        <TextView
+                            android:id="@+id/logical_detial_tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="电话： "
+                            android:textColor="@color/C64_64_64"
+                            android:textSize="@dimen/font12"/>
+
+                        <TextView
+                            android:id="@+id/logical_detial_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/logical_detial_tv1"
+                            android:paddingRight="@dimen/dis10"
+                            android:paddingTop="@dimen/dis5"
+                            android:textColor="@color/C64_83_A6"
+                            android:textSize="@dimen/font13"/>
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/logical_detial_tv3"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_above="@id/logical_detial_tv1"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:text="承运： "-->
+                        <!--android:textColor="@color/C64_64_64"-->
+                        <!--android:textSize="@dimen/font12"/>-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/logical_detial_tv_name"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_above="@id/logical_detial_tv1"-->
+                        <!--android:layout_toRightOf="@id/logical_detial_tv3"-->
+                        <!--android:textColor="@color/C64_64_64"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:textSize="@dimen/font13"/>-->
+
+                        <TextView
+                            android:id="@+id/logical_detial_tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/logical_detial_phone"
+                            android:layout_marginBottom="@dimen/dis6"
+                            android:text="物流单号： "
+                            android:textColor="@color/C64_64_64"
+                            android:textSize="@dimen/font12"/>
+
+                        <TextView
+                            android:id="@+id/logical_detial_order_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/logical_detial_phone"
+                            android:layout_marginBottom="@dimen/dis6"
+                            android:layout_toRightOf="@id/logical_detial_tv2"
+                            android:textColor="@color/C64_64_64"
+                            android:textSize="@dimen/font12"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dis6"
+                    android:background="@color/CED_F1_F4"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dis15"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:layout_marginTop="@dimen/dis15"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dis12"
+                        android:layout_height="@dimen/dis15"
+                        android:layout_marginLeft="@dimen/dis79"
+                        android:layout_marginTop="@dimen/dis3"
+                        android:background="@mipmap/location_fill_w"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/logical_detial_tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dis14"
+                        android:textColor="@color/CE8_3C_3C"
+                        android:textSize="@dimen/font14"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_no_wuliu_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/tv_wuliu_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:text="暂无物流配送信息,请稍后查询."
+                        android:textSize="@dimen/font14"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tv_wuliu_info"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/img_wuliu"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_no_wuliu_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/textview_wuliu_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="暂无物流配送信息,请稍后查询."
+                    android:textSize="@dimen/font14"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textview_wuliu_info"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/img_wuliu"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.yj.cosmetics.widget.ProgressLayout>
+
+</LinearLayout>

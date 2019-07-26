@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F8_F8"
+              android:orientation="vertical">
+
+    <include layout="@layout/titlebar_layout"/>
+
+    <com.yj.cosmetics.widget.UserDefineScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis6"
+                android:background="@color/CF8_F8_F8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis14"
+                    android:paddingTop="@dimen/dis14">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="更换头像"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        />
+
+                    <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+                        android:id="@+id/mine_personal_iv_header"
+                        android:layout_width="@dimen/dis34"
+                        android:layout_height="@dimen/dis34"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:layout_toLeftOf="@id/mine_personal_iv5"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/default_avatar"
+                        app:riv_oval="true"/>
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CF5_F5_F5"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis18"
+                    android:paddingTop="@dimen/dis20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="更换昵称"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        />
+
+                    <TextView
+                        android:id="@+id/mine_personal_tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:layout_toLeftOf="@id/mine_personal_iv1"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font14"/>
+
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:visibility="gone"
+                android:background="@color/CF5_F5_F5"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_leaguer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis18"
+                    android:paddingTop="@dimen/dis20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="会员等级"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        android:visibility="invisible"
+                        />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/mine_personal_tv_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="测试"-->
+                    <!--android:layout_marginRight="@dimen/dis15"-->
+                    <!--android:layout_toLeftOf="@id/mine_personal_iv1"-->
+                    <!--android:textColor="@color/C64_64_64"-->
+                    <!--android:textSize="@dimen/font14"/>-->
+
+                    <TextView
+                        android:id="@+id/mine_personal_tv_leaguer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/mine_personal_iv6"
+                        android:ellipsize="end"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font14"/>
+
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis6"
+                android:background="@color/CF8_F8_F8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingTop="@dimen/dis18">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="绑定手机号"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        />
+
+                    <TextView
+                        android:id="@+id/mine_personal_tv_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:layout_toLeftOf="@id/mine_personal_iv2"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font14"
+                        />
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CF5_F5_F5"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingTop="@dimen/dis18">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="修改密码"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        />
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:visibility="gone"
+                android:background="@color/CE7_E7_E7"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis15"
+                android:visibility="gone"
+                android:background="@color/CF8_F8_F8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:visibility="gone"
+                android:background="@color/CE7_E7_E7"/>
+
+            <com.yj.cosmetics.widget.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/mine_personal_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dis15"
+                    android:paddingTop="@dimen/dis18">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis15"
+                        android:text="支付宝账号"
+                        android:textColor="@color/C1E_1E_1E"
+                        android:textSize="@dimen/font15"/>
+
+                    <ImageView
+                        android:id="@+id/mine_personal_iv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dis15"
+                        android:src="@drawable/more_next"
+                        />
+
+                    <TextView
+                        android:id="@+id/mine_personal_tv_alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:layout_toLeftOf="@id/mine_personal_iv4"
+                        android:textColor="@color/C64_64_64"
+                        android:textSize="@dimen/font14"
+                        />
+                </RelativeLayout>
+            </com.yj.cosmetics.widget.MaterialRippleLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dis0.5"
+                android:background="@color/CE7_E7_E7"/>
+
+
+        </LinearLayout>
+    </com.yj.cosmetics.widget.UserDefineScrollView>
+</LinearLayout>

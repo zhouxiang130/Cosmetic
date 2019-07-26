@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frag_mine_ll"
+        >
+
+        <com.yj.cosmetics.widget.ProgressLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/xrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/CF5_F5_F5"
+                />
+
+
+        </com.yj.cosmetics.widget.ProgressLayout>
+    </RelativeLayout>
+
+</LinearLayout>

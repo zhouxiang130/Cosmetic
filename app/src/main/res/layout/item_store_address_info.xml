@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dis5"
+        android:paddingLeft="@dimen/dis15"
+        android:paddingRight="@dimen/dis15"
+        android:paddingTop="@dimen/dis5">
+
+
+        <TextView
+            android:id="@+id/store_address_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="middle"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text=""
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font15"/>
+
+        <TextView
+            android:id="@+id/store_address_tv_loc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/store_address_tv_title"
+            android:layout_weight="2.5"
+            android:gravity="center|right"
+            android:paddingBottom="@dimen/dis10"
+            android:paddingLeft="@dimen/dis10"
+            android:paddingRight="@dimen/dis5"
+            android:paddingTop="@dimen/dis10"
+            android:text="重新定位"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font16"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dis20"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
