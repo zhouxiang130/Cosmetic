@@ -150,11 +150,11 @@ public class UserLoginActivity extends BaseActivity {
 		etAccount.setOnTouchListener(new View.OnTouchListener() {
 			@Override
 			public boolean onTouch(View view, MotionEvent motionEvent) {
-			    /*LogUtils.i("是否活动=="+isSoftShowing());
+			    /*LogUtils.e("是否活动=="+isSoftShowing());
 			    if(isSoftShowing()){
                     return false;
                 }*/
-				LogUtils.i("底部的高度是" + llBottom.getHeight() + "=========整体高度是====" + mScrollView.getHeight());
+				LogUtils.e("底部的高度是" + llBottom.getHeight() + "=========整体高度是====" + mScrollView.getHeight());
 				scrollVertical(mScrollView.getHeight() - llBottom.getHeight());
 				return false;
 			}
@@ -163,11 +163,11 @@ public class UserLoginActivity extends BaseActivity {
 		etPass.setOnTouchListener(new View.OnTouchListener() {
 			@Override
 			public boolean onTouch(View view, MotionEvent motionEvent) {
-	            /*LogUtils.i("是否活动=="+isSoftShowing());
+	            /*LogUtils.e("是否活动=="+isSoftShowing());
                 if(isSoftShowing()){
                     return false;
                 }*/
-				LogUtils.i("底部的高度是" + llBottom.getHeight() + "=========整体高度是====" + mScrollView.getHeight());
+				LogUtils.e("底部的高度是" + llBottom.getHeight() + "=========整体高度是====" + mScrollView.getHeight());
 				scrollVertical(mScrollView.getHeight() - llBottom.getHeight());
 				return false;
 			}
@@ -217,6 +217,7 @@ public class UserLoginActivity extends BaseActivity {
 				// QQ登录
 //                Platform qq = ShareSDK.getPlatform(this, QQ.NAME);
 //                authorize(qq);
+
 				qqlogin();
 				break;
 			case R.id.wechat_login:
@@ -265,7 +266,7 @@ public class UserLoginActivity extends BaseActivity {
 			mScrollView.postDelayed(new Runnable() {
 				@Override
 				public void run() {
-					LogUtils.i("弹出后的高度是" + to);
+					LogUtils.e("弹出后的高度是" + to);
 					mScrollView.scrollTo(0, to);
 					isScroll = false;
 				}
@@ -275,12 +276,12 @@ public class UserLoginActivity extends BaseActivity {
 
 
 	private void doAsyncLogin(String tel, final String password) {
-		LogUtils.i(" 我进入网络操作了");
+		LogUtils.e(" 我进入网络操作了");
 		Map<String, String> map = new HashMap<>();
 		map.put("userPhone", tel);
 		map.put("password", password);
 		map.put("loginType", "4");
-		LogUtils.i("params的值" + URLBuilder.format(map));
+		LogUtils.e("params的值" + URLBuilder.format(map));
 
 		try {
 			OkHttpUtils.post().url(URLBuilder.URLBaseHeader + URLBuilder.Login).tag(this)
@@ -307,7 +308,7 @@ public class UserLoginActivity extends BaseActivity {
 				@Override
 				public UserInfoEntity parseNetworkResponse(Response response) throws Exception {
 					String json = response.body().string().trim();
-					LogUtils.i("doAsyncLogin --- json的值" + json);
+					LogUtils.e("doAsyncLogin --- json的值" + json);
 					NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 					if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 						return new UserInfoEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -318,7 +319,7 @@ public class UserLoginActivity extends BaseActivity {
 
 				@Override
 				public void onResponse(UserInfoEntity response) {
-					LogUtils.i("我在response中");
+					LogUtils.e("我在response中");
 					if (isFinishing()) {
 						return;
 					}
@@ -353,7 +354,7 @@ public class UserLoginActivity extends BaseActivity {
 						ToastUtils.showToast(UserLoginActivity.this, "网络故障,请稍后再试");
 					}
 
-					LogUtils.i("网络故障" + e);
+					LogUtils.e("网络故障" + e);
 					disMissDialog();
 					super.onError(call, e);
 
@@ -367,13 +368,13 @@ public class UserLoginActivity extends BaseActivity {
 
 	private void saveInfo(UserInfoEntity info) {
 		mUtils.saveTel(info.getData().getUserPhone());
-		LogUtils.i("uid的值" + info.getData().getUserId());
+		LogUtils.e("uid的值" + info.getData().getUserId());
 		mUtils.saveUid(info.getData().getUserId());
-		LogUtils.i("uid的userutils" + mUtils.getUid());
+		LogUtils.e("uid的userutils" + mUtils.getUid());
 		mUtils.saveUserName(info.getData().getUserName());
-		LogUtils.i("HeadImd--" + info.getData().getHeadImg());
+		LogUtils.e("HeadImd--" + info.getData().getHeadImg());
 		mUtils.saveAvatar(info.getData().getHeadImg());
-		LogUtils.i("headImg ======" + mUtils.getAvatar());
+		LogUtils.e("headImg ======" + mUtils.getAvatar());
 		mUtils.saveInviteCode(info.getData().getAgentNumber());
 		mUtils.saveQQOpenId(info.getData().getQqOpenId());
 		mUtils.saveWXOpenId(info.getData().getWechatId());
@@ -506,21 +507,18 @@ public class UserLoginActivity extends BaseActivity {
 
 
 	private void qqlogin() {
-
 		Platform qq = ShareSDK.getPlatform(QQ.NAME);
 		qq.SSOSetting(false);
-
 		// 此处必须删除授权的资料，不删除会出现第三方平台退出依然能够登录
 		if (qq.isAuthValid()) { //如果授权就删除授权资料
 			qq.removeAccount(true);
 		}
-
 		//回调信息，可以在这里获取基本的授权返回的信息，但是注意如果做提示和UI操作要传到主线程handler里去执行
 		qq.setPlatformActionListener(new PlatformActionListener() {
 			@Override
 			public void onError(Platform arg0, int arg1, Throwable arg2) {
 				// TODO Auto-generated method stub
-				LogUtils.i("我onError了" + arg2);
+				LogUtils.e("11我onError了" + arg2);
 				arg2.printStackTrace();
 				Bundle bundle = new Bundle();
 				bundle.putString("error", arg2 + "");
@@ -536,7 +534,6 @@ public class UserLoginActivity extends BaseActivity {
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
 				mHandler.sendMessage(msg);
-
 				//输出所有授权信息
 				arg0.getDb().exportData();
 				PlatformDb platDB = arg0.getDb();//获取数平台数据DB
@@ -547,13 +544,14 @@ public class UserLoginActivity extends BaseActivity {
 				String id = platDB.getUserId();
 				name = platDB.getUserName();
 				openId = arg0.getDb().getUserId();
-				LogUtils.i(arg0.getDb().getUserId() + "userid........................");
-				LogUtils.i("对象值" + platDB);
-				LogUtils.i("token" + token + ".....gender" + gender + ".....icon" + icon + ".....id" + id + ".....name" + name);
+				LogUtils.e(arg0.getDb().getUserId() + "userid........................");
+				LogUtils.e("对象值" + platDB);
+				LogUtils.e("token" + token + ".....gender" + gender + ".....icon" + icon + ".....id" + id + ".....name" + name);
 
-				LogUtils.i(".icon的值" + icon + "..........");
+
+				LogUtils.e(".icon的值" + icon + "..........");
 				if (openId != null) {
-					LogUtils.i("." + openId + "..........");
+					LogUtils.e("." + openId + "..........");
 //                    doRequestOpenId(openId,"QQ",name,icon);
 					doRequestOpenId("QQ");
 				}
@@ -562,7 +560,7 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onCancel(Platform arg0, int arg1) {
-				LogUtils.i("我onCancell ");
+				LogUtils.e("我onCancell ");
 				// TODO Auto-generated method stub
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
@@ -570,42 +568,34 @@ public class UserLoginActivity extends BaseActivity {
 
 			}
 		});
-
 		if (qq.isClientValid()) {
 			//判断是否存在授权凭条的客户端，true是有客户端，false是无
 		}
-
-
 		//authorize与showUser单独调用一个即可
 		//qq.authorize();
 		qq.showUser(null);//授权并获取用户信息
-		LogUtils.i("userid........................" + qq.getDb().getUserId());
+		LogUtils.e("userid........................" + qq.getDb().getUserId());
 		//移除授权
 		//weibo.removeAccount(true);
 	}
 
 	private void wechatLogin() {
-
 		if (!MyApplication.mWxApi.isWXAppInstalled()) {
 			ToastUtils.showToast(UserLoginActivity.this, "您还未安装微信客户端");
 			return;
 		}
-
 		Platform wechat = ShareSDK.getPlatform(Wechat.NAME);
 		wechat.SSOSetting(false);
-
 		if (wechat.isAuthValid()) { //如果授权就删除授权资料
 			wechat.removeAccount(true);
 		}
-
-
 		//回调信息，可以在这里获取基本的授权返回的信息，但是注意如果做提示和UI操作要传到主线程handler里去执行
 		wechat.setPlatformActionListener(new PlatformActionListener() {
 
 			@Override
 			public void onError(Platform arg0, int arg1, Throwable arg2) {
 				// TODO Auto-generated method stub
-				LogUtils.i("我onError了" + arg2);
+				LogUtils.e("222我onError了" + arg2);
 				arg2.printStackTrace();
 				Bundle bundle = new Bundle();
 				bundle.putString("error", arg2 + "");
@@ -631,11 +621,11 @@ public class UserLoginActivity extends BaseActivity {
 				String id = platDB.getUserId();
 				name = platDB.getUserName();
 				openId = arg2.get("unionid").toString();
-				LogUtils.i("全部返回值" + arg2);
+				LogUtils.e("全部返回值" + arg2);
 				Log.e(TAG, "openId." + openId + "..........");
-				LogUtils.i("token" + token + ".....gender" + gender + ".....icon" + icon + ".....id" + id + ".....name" + name);
-				LogUtils.i(".icon的值" + icon + "..........");
-				LogUtils.i("weixin  UnionId>>>>> " + openId);
+				LogUtils.e("token" + token + ".....gender" + gender + ".....icon" + icon + ".....id" + id + ".....name" + name);
+				LogUtils.e(".icon的值" + icon + "..........");
+				LogUtils.e("weixin  UnionId>>>>> " + openId);
 				if (openId != null) {
 //                    doRequestOpenId(openId,"weChat",name,icon);
 					doRequestOpenId("weChat");
@@ -668,7 +658,7 @@ public class UserLoginActivity extends BaseActivity {
 					.tag(this)
 					.addParams(Key.data, URLBuilder.format(map))
 					.build();
-			LogUtils.i("传输的值" + URLBuilder.format(map));
+			LogUtils.e("传输的值" + URLBuilder.format(map));
 		} else if (platform.equals("weChat")) {
 			Map<String, String> map = new HashMap<>();
 			map.put("wxOpenid", openId);
@@ -678,7 +668,7 @@ public class UserLoginActivity extends BaseActivity {
 					.tag(this)
 					.addParams(Key.data, URLBuilder.format(map))
 					.build();
-			LogUtils.i("传输的值" + URLBuilder.format(map));
+			LogUtils.e("传输的值" + URLBuilder.format(map));
 		}
 
 		params.execute(new Utils.MyResultCallback<UserInfoEntity>() {
@@ -691,14 +681,13 @@ public class UserLoginActivity extends BaseActivity {
 				} else {
 					ToastUtils.showToast(UserLoginActivity.this, "网络故障,请稍后再试");
 				}
-				LogUtils.i("网络故障" + e);
+				LogUtils.e("网络故障" + e);
 			}
-
 
 			@Override
 			public UserInfoEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				LogUtils.i("json的值" + json);
+				LogUtils.e("json的值" + json);
 				NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 				if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 					return new UserInfoEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -757,14 +746,14 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				LogUtils.i("count的值。" + count);
+				LogUtils.e("count的值。" + count);
 				if (s.length() > 0) {
-					LogUtils.i("我长度大于0了");
+					LogUtils.e("我长度大于0了");
 					if (tvPass.getVisibility() == View.VISIBLE) {
 						tvPass.setVisibility(View.GONE);
 					}
 				} else {
-					LogUtils.i("我显示了");
+					LogUtils.e("我显示了");
 					tvPass.setVisibility(View.VISIBLE);
 				}
 			}
@@ -789,14 +778,14 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				LogUtils.i("count的值。" + count);
+				LogUtils.e("count的值。" + count);
 				if (s.length() > 0) {
-					LogUtils.i("我长度大于0了");
+					LogUtils.e("我长度大于0了");
 					if (tvAccount.getVisibility() == View.VISIBLE) {
 						tvAccount.setVisibility(View.GONE);
 					}
 				} else {
-					LogUtils.i("我显示了");
+					LogUtils.e("我显示了");
 					tvAccount.setVisibility(View.VISIBLE);
 				}
 			}

@@ -33,8 +33,6 @@ import okhttp3.Response;
  */
 
 public class MyAccountListFrags extends LazyLoadFragment {
-
-
 	private int flag, pageNum = 1;
 	private MyAccListAdapter shopListAdapter;
 	private List<AccountListEntity.DataBean.ListBean> data = null;
@@ -51,9 +49,8 @@ public class MyAccountListFrags extends LazyLoadFragment {
 
 	// 1 定义了所有activity必须实现的接口方法
 	public interface FragmentInteraction {
-		void process(String str, String s);
+		void process(String str, String s, int type);
 	}
-
 
 	// 当FRagmen被加载到activity的时候会被回调
 	@Override
@@ -91,7 +88,6 @@ public class MyAccountListFrags extends LazyLoadFragment {
 	protected void lazyLoad() {
 		refresh();
 	}
-
 
 	@Override
 	protected void initView() {
@@ -132,7 +128,6 @@ public class MyAccountListFrags extends LazyLoadFragment {
 	protected void initData() {
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
 		linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-
 		mRecyclerView.setLayoutManager(linearLayoutManager);
 		mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
 		mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallClipRotate);
@@ -160,8 +155,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 	 * @param pageNum
 	 * @param flag
 	 */
-	public void doAsyncGetData(String userId, int pageNum, int flag) {
-
+	public void doAsyncGetData(String userId, int pageNum, final int flag) {
 		Map<String, String> map = new HashMap<>();
 		map.put("userId", userId);
 		map.put("pageNum", String.valueOf(pageNum));
@@ -176,11 +170,10 @@ public class MyAccountListFrags extends LazyLoadFragment {
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<AccountListEntity>() {
 
-
 			@Override
 			public AccountListEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.i(TAG, "doAsyncGetData -- json的值" + json);
+				Log.e(TAG, "json的值1==" + json);
 				AccountListEntity shopListEntity = new Gson().fromJson(json, AccountListEntity.class);
 				return shopListEntity;
 			}
@@ -192,11 +185,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 					if (response.getData() != null) {
 						datas = response.getData();
 						dataList = datas.getList();
-						if (dataList != null && dataList.size() != 0) {
-							showContent(dataList);
-						} else {
-							setNoneList();
-						}
+						showContent(dataList, flag);
 					} else {
 						setNoneList();
 					}
@@ -210,11 +199,8 @@ public class MyAccountListFrags extends LazyLoadFragment {
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				showContent(null);
+				showContent(null, flag);
 				setRefreshComplete();
-
-				Log.i(TAG, "onError: " + e);
-				Log.i(TAG, "doAsyncGetData ----我故障了--" + e);
 //				String homejson1 = FileUtils.loadFromLocal(1);
 				if (call.isCanceled()) {
 					call.cancel();
@@ -226,8 +212,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 	}
 
 
-	public void loadMoreData(String userId, int pageNum, int flag) {
-
+	public void loadMoreData(String userId, int pageNum, final int flag) {
 		Map<String, String> map = new HashMap<>();
 		map.put("userId", userId);
 		map.put("pageNum", String.valueOf(pageNum));
@@ -245,7 +230,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 			@Override
 			public AccountListEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.i(TAG, "loadMoreData -- json的值" + json);
+				Log.e(TAG, "json的值2==" + json);
 				AccountListEntity shopListEntity = new Gson().fromJson(json, AccountListEntity.class);
 				return shopListEntity;
 			}
@@ -258,7 +243,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 						AccountListEntity.DataBean data = response.getData();
 						if (data.getList() != null && data.getList().size() > 0) {
 							dataList.addAll(data.getList());
-							showContent(dataList);
+							showContent(dataList, flag);
 							setRefreshComplete();
 						} else {
 							setNoMore(true);
@@ -275,11 +260,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-
 				setRefreshComplete();
-
-				Log.i(TAG, "onError: " + e);
-				Log.i(TAG, "doAsyncGetData ----我故障了--" + e);
 //				String homejson1 = FileUtils.loadFromLocal(1);
 				if (call.isCanceled()) {
 					call.cancel();
@@ -291,16 +272,17 @@ public class MyAccountListFrags extends LazyLoadFragment {
 	}
 
 
-	public void showContent(List<AccountListEntity.DataBean.ListBean> data) {
+	public void showContent(List<AccountListEntity.DataBean.ListBean> data, int type) {
 		this.data = data;
 		if (datas.getmMoney() != null && datas.getMcash() != null) {
-			if (listerner != null) {
-				listerner.process(datas.getmMoney(), datas.getMcash());
-			}
-
+			listerner.process(datas.getmMoney(), datas.getMcash(), type);
 		}
-		mProgressLayout.showContent();
-		shopListAdapter.setData(data);
+		if (dataList != null && dataList.size() != 0) {
+			mProgressLayout.showContent();
+			shopListAdapter.setData(data);
+		}else {
+			setNoneList();
+		}
 	}
 
 	public void setRefreshComplete() {
@@ -335,8 +317,5 @@ public class MyAccountListFrags extends LazyLoadFragment {
 		mRecyclerView.setNoMore(true);
 		mRecyclerView.setPullRefreshEnabled(true);
 		pageNum--;
-
 	}
-
-
 }

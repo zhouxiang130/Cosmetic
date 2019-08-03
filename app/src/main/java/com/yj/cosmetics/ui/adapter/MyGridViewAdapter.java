@@ -1,11 +1,13 @@
 package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
@@ -21,7 +23,7 @@ import java.util.List;
 public class MyGridViewAdapter extends BaseAdapter {
 
 
-	private List<ShopListEntity.DataBean.ShopArrayBean.ProductlistBean> mData= null;
+	private List<ShopListEntity.DataBean.ShopArrayBean.ProductlistBean> mData = null;
 	private Context mContext = null;
 	private LayoutInflater mlayoutInflater;
 
@@ -47,8 +49,9 @@ public class MyGridViewAdapter extends BaseAdapter {
 	}
 
 	//写一个静态的class,把layout_grid_item的控件转移过来使用
-	 class ViewHolder {
-		public ImageView Grid_imageview;
+	class ViewHolder {
+		ImageView Grid_imageview;
+		TextView tvProduct;
 	}
 
 	@Override
@@ -62,11 +65,13 @@ public class MyGridViewAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			//获取控件对象
 			holder.Grid_imageview = convertView.findViewById(R.id.store_list_iv1);
+			holder.tvProduct = convertView.findViewById(R.id.tv_product);
 			convertView.setTag(holder);
-
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
+		holder.tvProduct.setText("￥" + mData.get(position).getProduct_current());
+
 		//加载第三方网络图片
 		Glide.with(mContext)
 				.load(URLBuilder.getUrl(mData.get(position).getProduct_listImg()))

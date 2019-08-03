@@ -156,7 +156,7 @@ public class DownAPKService extends Service {
 		createNotificationChannel(false);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			mBuilder = new NotificationCompat.Builder(this, CHANNEL_ID);
-			mBuilder.setContentTitle("问地");
+			mBuilder.setContentTitle("菲梵仙子");
 			mBuilder.setContentText("正在下载");
 			mBuilder.setSmallIcon(R.mipmap.logo);
 			mBuilder.setPriority(NotificationCompat.PRIORITY_LOW);
@@ -168,8 +168,8 @@ public class DownAPKService extends Service {
 		} else {
 			builder1 = new Notification.Builder(this);
 			builder1.setSmallIcon(R.mipmap.logo); //设置图标
-			builder1.setTicker("问地开始下载");
-			builder1.setContentTitle("问地"); //设置标题
+			builder1.setTicker("菲梵仙子开始下载");
+			builder1.setContentTitle("菲梵仙子"); //设置标题
 			builder1.setContentText("正在下载"); //消息内容
 			builder1.setWhen(System.currentTimeMillis()); //发送时间
 			//builder1.setDefaults(Notification.DEFAULT_ALL); //设置默认的提示音，振动方式，灯光

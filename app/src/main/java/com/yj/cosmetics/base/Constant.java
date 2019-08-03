@@ -15,7 +15,7 @@ public class Constant {
 
 
 	// APP_ID 替换为你的应用从官方网站申请到的合法appId
-	public static final String APP_ID = "wxa819e5feed3334fa";
+	public static final String APP_ID = "wx1e522f6d3ce6f599";
 	public static final String ZC_appkey = "1add5fe6182c48fbb2c9d5c41211bfe6";
 	public static final String KEY = "1864325941258664";
 

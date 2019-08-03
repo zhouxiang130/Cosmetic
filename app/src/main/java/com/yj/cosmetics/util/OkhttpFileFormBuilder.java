@@ -88,7 +88,7 @@ public class OkhttpFileFormBuilder extends OkHttpRequestBuilder implements HasPa
             String pid = (String)i$.next();
             for(int i = 0;i<fileMap.get(pid).size();i++){
                 String fileName = System.currentTimeMillis()+fileMap.get(pid).get(i).getName();
-                LogUtils.i("fileName的值===="+fileName+"============路径是=="+fileMap.get(pid).get(i));
+                LogUtils.e("fileName的值===="+fileName+"============路径是=="+fileMap.get(pid).get(i));
                 this.files.add(new PostFormBuilder.FileInput(name,pid,fileMap.get(pid).get(i)));
             }
         }

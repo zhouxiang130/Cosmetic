@@ -33,10 +33,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
                     android:background="@drawable/btn_enable_radius55_background"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingLeft="@dimen/dis18"
-                    android:paddingRight="@dimen/dis18"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingRight="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="立即支付"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font14"
@@ -50,10 +50,10 @@
                     android:layout_marginRight="@dimen/dis15"
                     android:layout_toLeftOf="@id/order_detial_pay"
                     android:background="@drawable/shape_corner_c0_stroke1_white_radius55"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingLeft="@dimen/dis18"
-                    android:paddingRight="@dimen/dis18"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingRight="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="取消订单"
                     android:textColor="@color/C40_40_40"
                     android:textSize="@dimen/font14"
@@ -117,8 +117,7 @@
                             android:paddingBottom="@dimen/dis5"
                             android:text=""
                             android:textColor="@color/white"
-                            android:textSize="@dimen/font16"
-                            />
+                            android:textSize="@dimen/font16"/>
 
                         <TextView
                             android:id="@+id/order_detial_tv_state_detial"
@@ -149,11 +148,10 @@
                         android:id="@+id/order_detial_rl_normal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis28"
                         android:layout_marginLeft="@dimen/dis15"
+                        android:layout_marginTop="@dimen/dis28"
                         android:layout_marginRight="@dimen/dis15"
-                        android:layout_marginTop="@dimen/dis28">
-
+                        android:layout_marginBottom="@dimen/dis28">
 
                         <TextView
                             android:id="@+id/order_detial_tv_normal_state"
@@ -172,12 +170,10 @@
                         android:id="@+id/order_detial_rl_logistic"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis20"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:layout_marginRight="@dimen/dis5"
                         android:layout_marginTop="@dimen/dis22"
-                        >
-
+                        android:layout_marginRight="@dimen/dis5"
+                        android:layout_marginBottom="@dimen/dis20">
 
                         <ImageView
                             android:id="@+id/order_detial_iv2_receive"
@@ -194,8 +190,7 @@
                             android:layout_height="@dimen/dis15"
                             android:layout_marginTop="@dimen/dis10"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/deliver_p"
-                            />
+                            android:src="@mipmap/deliver_p"/>
 
                         <TextView
                             android:id="@+id/order_detial_tv5"
@@ -209,8 +204,7 @@
                             android:maxLines="3"
                             android:text="您的订单正在派送,请注意消息查收"
                             android:textColor="@color/C64_64_64"
-                            android:textSize="@dimen/font13"
-                            />
+                            android:textSize="@dimen/font13"/>
 
                         <TextView
                             android:id="@+id/mine_order_detial_tv_ftime"
@@ -221,8 +215,7 @@
                             android:layout_marginTop="@dimen/dis5"
                             android:layout_toRightOf="@id/order_detial_iv1"
                             android:textColor="@color/C88_88_88"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                     </RelativeLayout>
                 </LinearLayout>
@@ -236,20 +229,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:paddingBottom="@dimen/dis18"
                     android:paddingLeft="@dimen/dis15"
-                    android:paddingRight="@dimen/dis15"
                     android:paddingTop="@dimen/dis18"
-                    >
+                    android:paddingRight="@dimen/dis15"
+                    android:paddingBottom="@dimen/dis18">
 
                     <ImageView
                         android:id="@+id/order_detial_iv2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis36"
-                        android:src="@mipmap/location_p"
-
-                        />
+                        android:src="@mipmap/location_p"/>
 
                     <TextView
                         android:id="@+id/order_detial_tv2"
@@ -260,7 +250,6 @@
                         android:text="收货人 : "
                         android:textColor="@color/C1E_1E_1E"
                         android:textSize="@dimen/font14"/>
-
 
                     <TextView
                         android:id="@+id/order_detial_tel"
@@ -302,8 +291,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis5"
-                    android:background="@color/CF6_F8_F9"
-                    />
+                    android:background="@color/CF6_F8_F9"/>
 
 
                 <View
@@ -316,28 +304,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
-                    >
+                    android:paddingBottom="@dimen/dis5">
 
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_shop_detail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="@dimen/dis8"
                         android:paddingLeft="@dimen/dis10"
-                        android:paddingRight="@dimen/dis15"
                         android:paddingTop="@dimen/dis8"
-                        >
-
+                        android:paddingRight="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis8">
 
                         <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                             android:id="@+id/frag_mine_shop_iv"
                             android:layout_width="@dimen/dis28"
                             android:layout_height="@dimen/dis28"
-                            android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
                             android:src="@mipmap/default_goods"
@@ -405,24 +390,21 @@
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/dis15"
-                    android:paddingRight="@dimen/dis15"
-                    >
+                    android:paddingRight="@dimen/dis15">
 
                     <RelativeLayout
                         android:id="@+id/order_detial_rl_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis15"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="商品应付金额"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font14"
-                            />
+                            android:textSize="@dimen/font14"/>
 
                         <TextView
                             android:id="@+id/order_detial_goods_price"
@@ -438,18 +420,16 @@
                         android:id="@+id/order_detial_rl_sendcost"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis12"
                         android:layout_marginTop="@dimen/dis15"
-                        android:visibility="gone"
-                        >
+                        android:layout_marginBottom="@dimen/dis12"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="运费"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font14"
-                            />
+                            android:textSize="@dimen/font14"/>
 
                         <TextView
                             android:id="@+id/order_detial_sendcost"
@@ -470,8 +450,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis15"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -495,8 +474,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis15"
                         android:paddingBottom="@dimen/dis12"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -523,9 +501,8 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis15"
-                        >
+                        android:layout_marginBottom="@dimen/dis15">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -540,8 +517,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="@color/CC8_3C_3C"
-                            android:textSize="@dimen/font13"
-                            />
+                            android:textSize="@dimen/font13"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -562,11 +538,10 @@
                         android:id="@+id/order_detial_payStyle_"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis12"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis12"
-                        android:orientation="horizontal"
-                        >
+                        android:layout_marginBottom="@dimen/dis12"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="@dimen/dis60"
@@ -588,8 +563,8 @@
                     android:id="@+id/order_detial_vmore"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis5"
-                    android:visibility="gone"
-                    android:background="@color/CF6_F8_F9"/>
+                    android:background="@color/CF6_F8_F9"
+                    android:visibility="gone"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -600,9 +575,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis10"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis10"
+                        android:layout_marginBottom="@dimen/dis10"
                         android:orientation="horizontal">
 
                         <TextView
@@ -632,9 +607,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis10"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis10"
+                        android:layout_marginBottom="@dimen/dis10"
                         android:orientation="horizontal">
 
                         <TextView
@@ -665,12 +640,11 @@
                         android:id="@+id/order_detial_payStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis10"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis10"
+                        android:layout_marginBottom="@dimen/dis10"
                         android:orientation="horizontal"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="@dimen/dis60"
@@ -699,12 +673,11 @@
                         android:id="@+id/order_detial_deliver_goods"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis10"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis10"
+                        android:layout_marginBottom="@dimen/dis10"
                         android:orientation="horizontal"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="@dimen/dis60"

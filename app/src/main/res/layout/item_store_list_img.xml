@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-    >
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_hot_ll1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dis5">
 
-    <RelativeLayout
-        android:id="@+id/home_hot_ll1"
+    <ImageView
+        android:id="@+id/store_list_iv1"
+        android:layout_width="@dimen/dis85"
+        android:layout_height="@dimen/dis85"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_goods"/>
+
+    <TextView
+        android:id="@+id/tv_product"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dis5">
-
-
-        <ImageView
-            android:id="@+id/store_list_iv1"
-            android:layout_width="@dimen/dis85"
-            android:layout_height="@dimen/dis85"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/default_goods"/>
-    </RelativeLayout>
-
-</LinearLayout>
+        android:layout_alignBottom="@id/store_list_iv1"
+        android:background="@color/trans_7f"
+        android:paddingLeft="@dimen/dis5"
+        android:paddingTop="@dimen/dis2"
+        android:paddingRight="@dimen/dis5"
+        android:paddingBottom="@dimen/dis2"
+        android:text="￥3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dis13"/>
+</RelativeLayout>

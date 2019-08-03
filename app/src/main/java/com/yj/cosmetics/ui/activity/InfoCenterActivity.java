@@ -38,11 +38,8 @@ public class InfoCenterActivity extends BaseActivity {
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
-
 	InfoCenterAdapter mAdapter;
-
 	private List<InfoCenterEntity.InfoCenterData> mList;
-
 	private int pageNum = 1;
 
 	@Override
@@ -52,7 +49,6 @@ public class InfoCenterActivity extends BaseActivity {
 
 	@Override
 	protected void initView() {
-
 		setTitleText("消息中心");
 		mList = new ArrayList<>();
 		LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -69,7 +65,6 @@ public class InfoCenterActivity extends BaseActivity {
 				startActivity(intent);
 			}
 		});
-
 	}
 
 	@Override

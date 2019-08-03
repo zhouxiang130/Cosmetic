@@ -591,7 +591,7 @@ public class SettlementCartActivity extends BaseActivity {
 				@Override
 				public AlipayEntity parseNetworkResponse(Response response) throws Exception {
 					String json = response.body().string().trim();
-					LogUtils.i("json的值" + json);
+					LogUtils.e("json的值" + json);
 					NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 					if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 						return new AlipayEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -605,7 +605,7 @@ public class SettlementCartActivity extends BaseActivity {
 					if (response != null && response.getCode().equals(response.HTTP_OK)) {
 						//返回值为200 说明请求成功
 						if (response.getData() != null && response.getData().getOrderString() != null /*&& !TextUtils.isEmpty(response.getData().getAppPayJson().getAPPID())*/) {
-							mUtils.savePayOrder(response.getData().getAppPayJson().getOrderNum());
+							mUtils.savePayOrder(response.getData().getOrderNum());
 							mUtils.savePayType("cart");
 							alipay(response.getData().getOrderString());
 						} else {
@@ -634,7 +634,7 @@ public class SettlementCartActivity extends BaseActivity {
 				@Override
 				public void onError(Call call, Exception e) {
 					super.onError(call, e);
-					LogUtils.i("网络请求失败 获取轮播图错误" + e);
+					LogUtils.e("网络请求失败" + e);
 					if (call.isCanceled()) {
 						call.cancel();
 					} else {
@@ -655,8 +655,7 @@ public class SettlementCartActivity extends BaseActivity {
 		Map<String, String> map = new HashMap<>();
 		map.put("userId", mUtils.getUid());
 		map.put("cartIds", cartIdObj);
-		map.put("pay", "2");
-
+		map.put("pay", "0");
 		if (userCouponId != -1) {
 			map.put("userCouponId", userCouponId + "");
 		}
@@ -699,7 +698,7 @@ public class SettlementCartActivity extends BaseActivity {
 				@Override
 				public WXPayEntity parseNetworkResponse(Response response) throws Exception {
 					String json = response.body().string().trim();
-					LogUtils.i("json的值" + json);
+					LogUtils.e("json的值" + json);
 					NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 					if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 						return new WXPayEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -754,7 +753,7 @@ public class SettlementCartActivity extends BaseActivity {
 				@Override
 				public void onError(Call call, Exception e) {
 					super.onError(call, e);
-					LogUtils.i("网络请求失败 获取轮播图错误" + e);
+					LogUtils.i("网络请求失败" + e);
 					if (call.isCanceled()) {
 						call.cancel();
 					} else {

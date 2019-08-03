@@ -42,31 +42,14 @@ public class MineOrderActivity extends BaseActivity {
 	@BindView(R.id.mine_order_vline)
 	View vLine2;
 	OrderListReceiver orderListReceiver;
-
-
 	private List<String> mTitle = new ArrayList<String>();
 	private List<Fragment> mFragment = new ArrayList<Fragment>();
-
-
-	private boolean visible = true;
 	private DynamicReceiver dynamicReceiver;
-
 
 	@Override
 	protected int getContentView() {
 		return R.layout.activity_mine_order;
 	}
-
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        tabLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                TabSetIndicator.setIndicator(tabLayout, 0 ,0);
-            }
-        });
-    }*/
 
 	@Override
 	protected void initView() {
@@ -83,7 +66,6 @@ public class MineOrderActivity extends BaseActivity {
 		dynamicReceiver = new DynamicReceiver();
 		//注册广播接收
 		registerReceiver(dynamicReceiver, filter);
-
 		for (int i = 0; i < mTitle.size(); i++) {
 			mFragment.add(MineOrderFrag.instant(i - 1));
 		}
@@ -98,12 +80,9 @@ public class MineOrderActivity extends BaseActivity {
 
 	//通过继承 BroadcastReceiver建立动态广播接收器
 	class DynamicReceiver extends BroadcastReceiver {
-		private static final String TAG = "DynamicReceiver";
 
 		@Override
 		public void onReceive(Context context, Intent intent) {
-
-			Log.i(TAG, "DynamicReceiver: " + intent.getStringExtra("flag") + " -------- " + mTitle.size());
 			//接收到广播
 			if (intent.getStringExtra("flag") != null) {
 				int CurrentItems = Integer.parseInt(intent.getStringExtra("flag"));
@@ -111,11 +90,9 @@ public class MineOrderActivity extends BaseActivity {
 				doFragRefresh();
 				return;
 			}
-
 			mViewpager.setCurrentItem(mTitle.size() - 1);
 		}
 	}
-
 
 	@Override
 	protected void initData() {

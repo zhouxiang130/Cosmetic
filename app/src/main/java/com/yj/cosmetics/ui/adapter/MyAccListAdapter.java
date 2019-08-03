@@ -65,34 +65,27 @@ public class MyAccListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 					.centerCrop()
 					.error(R.mipmap.default_avatar)
 					.into(((PartakeViewHolder) holder).ivStore);
-//
 			((PartakeViewHolder) holder).tvDateTime.setText(data.get(position).getInsertTime());
 			((PartakeViewHolder) holder).shopName.setText(data.get(position).getShopName());
 			if (falg == 0) {
 				((PartakeViewHolder) holder).tvStoreLocs.setVisibility(View.GONE);
 				((PartakeViewHolder) holder).tvStoreLoc.setVisibility(View.VISIBLE);
-				((PartakeViewHolder) holder).tvStoreLoc.setText("￥:" + data.get(position).getPayMoney());
+				((PartakeViewHolder) holder).tvStoreLoc.setText(data.get(position).getPayMoney());
 				((PartakeViewHolder) holder).ivSuperScript.setBackgroundResource(R.mipmap.icon_superscripts);
-
 				((PartakeViewHolder) holder).tvConsume.setVisibility(View.VISIBLE);
-
 				if (data.get(position).getRowNum() > 9) {
 					((PartakeViewHolder) holder).tvConsume.setText(String.valueOf(data.get(position).getRowNum()));
 				} else {
 					((PartakeViewHolder) holder).tvConsume.setText("0" + data.get(position).getRowNum());
 				}
-
 			} else {
 				((PartakeViewHolder) holder).tvStoreLoc.setVisibility(View.INVISIBLE);
 				((PartakeViewHolder) holder).tvStoreLocs.setVisibility(View.VISIBLE);
-				((PartakeViewHolder) holder).tvStoreLocs.setText("￥:" + data.get(position).getPayMoney());
+				((PartakeViewHolder) holder).tvStoreLocs.setText(data.get(position).getPayMoney());
 
 				((PartakeViewHolder) holder).ivSuperScript.setBackgroundResource(R.mipmap.icon_superscript);
 				((PartakeViewHolder) holder).tvConsume.setVisibility(View.GONE);
-
 			}
-//
-//
 //			((PartakeViewHolder) holder).pic.setText(data.get(position).getPayMoney());
 //
 //
@@ -124,29 +117,20 @@ public class MyAccListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
 		@BindView(R.id.item_partake_shop_img)
 		RoundedImageView ivStore;
-
 //		@BindView(R.id.tv_partake_shop_detail)
 //		TextView pic;//价格
-
 		@BindView(R.id.tv_partake_shop_name)
 		TextView shopName; //名字
-
 		@BindView(R.id.tv_partake_shop_loc)
 		TextView tvStoreLoc;
 		@BindView(R.id.tv_partake_shop_locs)
 		TextView tvStoreLocs;
 		@BindView(R.id.iv_top_suprescript)
 		ImageView ivSuperScript;//日期名称 //消费 免单
-
-
 		@BindView(R.id.tv_consume)
 		TextView tvConsume;//已免单  /已消费
-
-
 		@BindView(R.id.tv_date_time)
 		TextView tvDateTime;//日期名称 //消费 免单
-
-
 		@BindView(R.id.rl_to_store_detail)
 		RelativeLayout rlGotoDetail;
 		private onItemClickListener mListener;
@@ -165,7 +149,6 @@ public class MyAccListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 			}
 		}
 	}
-
 
 	public interface onItemClickListener {
 		void onItemClick(View view, int postion);

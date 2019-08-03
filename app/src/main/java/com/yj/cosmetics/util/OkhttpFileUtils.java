@@ -2,6 +2,7 @@ package com.yj.cosmetics.util;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import com.zhy.http.okhttp.builder.GetBuilder;
 import com.zhy.http.okhttp.builder.HeadBuilder;

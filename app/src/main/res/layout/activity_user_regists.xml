@@ -250,9 +250,7 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            >
+                            android:layout_height="wrap_content">
 
                             <ImageView
                                 android:id="@+id/user_regist_tv4"
@@ -269,7 +267,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="@dimen/dis15"
                                 android:layout_toRightOf="@id/user_regist_tv4"
-                                android:text="邀请码（可不填）"
+                                android:text="请再次输入密码"
                                 android:textColor="@color/C88_88_88"
                                 android:textSize="@dimen/font15"/>
 

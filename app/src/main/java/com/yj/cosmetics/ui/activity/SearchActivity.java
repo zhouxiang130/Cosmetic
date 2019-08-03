@@ -88,7 +88,7 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 			@Override
 			public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
 				if (actionId == EditorInfo.IME_ACTION_SEARCH || (keyEvent != null && keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-					LogUtils.i("ActionID的值" + actionId);
+//					LogUtils.i("ActionID的值" + actionId);
 					LogUtils.i("IMEACTIONSEARCH的值" + EditorInfo.IME_ACTION_SEARCH);
 					searchTag = etContent.getText().toString();
 					KeyBoardUtils.hintKb(SearchActivity.this);
@@ -241,6 +241,7 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 			intent.putExtra("name", searchTag);
 			startActivity(intent);
 		} else {
+			etContent.setText(searchTag);
 			intent = new Intent(this, HomeGoodsListActivity.class);
 			intent.putExtra("shopId", shopId);
 			Log.e(TAG, "searchTrag的值========" + searchTag + shopId);

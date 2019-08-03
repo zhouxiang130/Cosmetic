@@ -320,7 +320,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 				} else {
 					//立即支付
 					//@TODO  增加分类支付-------------------------
-					showPayDialog(oid, payMode, payIcon, data.getUpOrderMoney());
+					showPayDialog(oid, payMode, payIcon, data.getOrderPaymoney());
 //					if (!TextUtils.isEmpty(data.getOrderPayStyle())) {}
 				}
 				break;
@@ -336,16 +336,14 @@ public class MineOrderDetailActivity extends BaseActivity {
 				}
 				break;
 			case R.id.title_tv_next:
-				doAsyncGetShare(data.getOrderId(),data.getShopId());
+				doAsyncGetShare(data.getOrderId(), data.getShopId());
 				break;
 		}
 	}
 
 
-	private void showPayDialog(final String orderId,
-	                           String[] payMode,
-	                           Integer[] payIcon,
-	                           String tvPrice) {
+	private void showPayDialog(final String orderId, String[] payMode,
+	                           Integer[] payIcon, String tvPrice) {
 
 		if (mineOrderPayDialog == null) {
 			mineOrderPayDialog = new MineOrderPayDialog(this);
@@ -360,18 +358,13 @@ public class MineOrderDetailActivity extends BaseActivity {
 			public void onClick(View view) {
 				checkedPosition = mineOrderPayDialog.getCheckedPosition();
 				switch (checkedPosition) {
-					/*case 0://账户余额
-						payWithAlipay(orderId, "3", btnFinish);
-						break;*/
-					case 0://支付宝支付
-						payWithAlipay(orderId, "0", btnFinish);
+					case 0:
+						payWithAlipay(orderId, "1", btnFinish);
 						break;
-					case 1://2 微信支付
-						doPayWeChat(orderId, "1", btnFinish);
+					case 1:
+						doPayWeChat(orderId, "0", btnFinish);
 						break;
 				}
-
-				Log.i(TAG, "showPayDialog ---- checkedPosition  " + checkedPosition);
 				mineOrderPayDialog.dismiss();
 			}
 		});
@@ -601,9 +594,8 @@ public class MineOrderDetailActivity extends BaseActivity {
 		tvOrderNum.setText(data.getOrderNum());
 		tvTime.setText(data.getTime());
 		if (data.getOrderPayStyle().equals("1")) {
-			//1支付宝 2微信
 			tvPayStyle.setText("支付宝");
-		} else if (data.getOrderPayStyle().equals("2")) {
+		} else if (data.getOrderPayStyle().equals("0")) {
 			tvPayStyle.setText("微信");
 		} else {
 			tvPayStyle.setText("余额支付");
@@ -726,7 +718,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 		}
 
 
-		QuickeOrderDialog.getTvContent().setText("");
+		QuickeOrderDialog.getTvContent().setText(URLBuilder.URLBaseHeader + shareData.getUrl());
 		QuickeOrderDialog.getTvCopyUrl().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -739,18 +731,16 @@ public class MineOrderDetailActivity extends BaseActivity {
 		QuickeOrderDialog.getTvFriend().setOnClickListener(new View.OnClickListener() {//朋友圈
 			@Override
 			public void onClick(View v) {
-				showShare(Wechat.NAME);
+//				showShare(Wechat.NAME);
 			}
 		});
 		QuickeOrderDialog.getTvWeChat().setOnClickListener(new View.OnClickListener() {//微信好友
 			@Override
 			public void onClick(View v) {
-				showShare(WechatMoments.NAME);
+//				showShare(WechatMoments.NAME);
 			}
 		});
 	}
-
-
 
 
 	final int Finish = 0x11;
@@ -799,7 +789,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 			// site是分享此内容的网站名称，仅在QQ空间使用
 			oks.setSite(this.getString(R.string.app_name));
 			// siteUrl是分享此内容的网站地址，仅在QQ空间使用
-			oks.setSiteUrl("http://www.51xianchang.com");
+			oks.setSiteUrl("http://www.szffxz.com/weChat/homePageTwo/toIndex");
 			LogUtils.i("分享信息设置结束了");
 		} else {
 			ToastUtils.showToast(this, "无法获取分享信息,请检查网络");
@@ -845,13 +835,6 @@ public class MineOrderDetailActivity extends BaseActivity {
 		oks.show(MineOrderDetailActivity.this);
 	}
 
-
-
-
-
-
-
-
 	public void doAsyncGetShare(String orderId, String shopId) {
 		Map<String, String> map = new HashMap<>();
 		map.put("shopId", shopId);
@@ -865,7 +848,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 			@Override
 			public ShareEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				LogUtils.i("parseNetworkResponse json的值" + json);
+				LogUtils.i("json的值" + json);
 				return new Gson().fromJson(json, ShareEntity.class);
 			}
 
@@ -915,7 +898,6 @@ public class MineOrderDetailActivity extends BaseActivity {
 			}
 		});
 	}
-
 
 
 	private void showConfirmGetDialog() {

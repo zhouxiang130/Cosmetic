@@ -67,8 +67,6 @@ public class MineCollectionActivity extends BaseActivity {
 			LogUtils.i("我添加了" + i);
 			mFragment.add(MineCollectFrag.instant(i+1));
 		}
-
-
 		MineOrderTabAdapter adapter = new MineOrderTabAdapter(getSupportFragmentManager(), mTitle, mFragment);
 		mViewpager.setAdapter(adapter);
 		//为TabLayout设置ViewPager

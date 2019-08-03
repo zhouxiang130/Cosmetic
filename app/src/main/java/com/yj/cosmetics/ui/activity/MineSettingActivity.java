@@ -152,11 +152,9 @@ public class MineSettingActivity extends BaseActivity {
 						public void onClick(DialogInterface dialogInterface, int i) {
 							//确认按钮
 							mUtils.logOut();
-
 							Intent intent = new Intent();
 							intent.setAction("CN.YJ.ROBUST.REFRESHDATA");
 							sendBroadcast(intent);
-
 //							preferencesUtil.setValue("userType", "");
 							delectJpushAlias();
 							tvLogOut.postDelayed(new Runnable() {

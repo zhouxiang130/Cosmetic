@@ -27,8 +27,7 @@ import com.yj.cosmetics.util.UserUtils;
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 
 	private UserUtils mUtils;
-	private static final String TAG = "MicroMsg.SDKSample.WXPayEntryActivity";
-	
+
     private IWXAPI api;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,15 +51,10 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 	@Override
 	public void onResp(BaseResp resp) {
 //		Log.d(TAG, "onPayFinish, errCode = " + resp.errCode);
-		LogUtils.i("type的值"+resp.getType());
-		LogUtils.i("PAYBYWX的值"+ConstantsAPI.COMMAND_PAY_BY_WX);
-		LogUtils.i("resp的errCode的值"+resp.errCode);
+		LogUtils.e("type的值"+resp.getType());
+		LogUtils.e("PAYBYWX的值"+ConstantsAPI.COMMAND_PAY_BY_WX);
+		LogUtils.e("resp的errCode的值"+resp.errCode);
 		if (resp.getType() == ConstantsAPI.COMMAND_PAY_BY_WX) {
-			/*AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setTitle("我是builder的Title");
-			builder.setMessage(String.valueOf(resp.errCode)+"我是错误code");
-			builder.show();*/
-
 			if(resp.errCode == 0){
 				LogUtils.i("我进入errCode == 0 了"+resp.errCode);
 				MyApplication.orderListRefresh = true;
@@ -99,7 +93,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 						startActivity(orderIntent);
 					}
 
-					LogUtils.i("我是错误code" + resp.errCode);
+					LogUtils.e("我是错误code" + resp.errCode);
 					ToastUtils.showToast(WXPayEntryActivity.this, "微信支付失败");
 				}
 			}

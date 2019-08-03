@@ -315,7 +315,7 @@ public class ManageAddressAdapter extends RecyclerView.Adapter<RecyclerView.View
 		if (!deleteDialog.isShowing()) {
 			deleteDialog.show();
 		}
-		deleteDialog.getTvTitle().setText("确认删除该收获地址?");
+		deleteDialog.getTvTitle().setText("确认删除该收货地址?");
 		deleteDialog.getTvConfirm().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {

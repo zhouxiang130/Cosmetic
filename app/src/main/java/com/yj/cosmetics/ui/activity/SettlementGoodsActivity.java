@@ -576,7 +576,7 @@ public class SettlementGoodsActivity extends BaseActivity {
 		}
 
 		map.put("proNumber", proNumber);
-		map.put("pay", "2");
+		map.put("pay", "0");
 		if (!TextUtils.isEmpty(addressId)) {
 			map.put("addressId", addressId);
 		} else {
@@ -614,7 +614,7 @@ public class SettlementGoodsActivity extends BaseActivity {
 				@Override
 				public WXPayEntity parseNetworkResponse(Response response) throws Exception {
 					String json = response.body().string().trim();
-					LogUtils.i("json的值" + json);
+					LogUtils.e("json的值" + json);
 					NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 					if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 						return new WXPayEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -711,7 +711,6 @@ public class SettlementGoodsActivity extends BaseActivity {
 		} else {
 			map.put("userMoneyType", "2");
 		}
-		LogUtils.i("传输的值" + URLBuilder.format(map));
 		try {
 			OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/payImmediatelyAddOrder")
 					.addParams("data", URLBuilder.format(map))
@@ -781,7 +780,7 @@ public class SettlementGoodsActivity extends BaseActivity {
 				@Override
 				public void onError(Call call, Exception e) {
 					super.onError(call, e);
-					LogUtils.i("网络请求失败 获取轮播图错误" + e);
+					LogUtils.i("网络请求失败" + e);
 					if (call.isCanceled()) {
 						call.cancel();
 					} else {

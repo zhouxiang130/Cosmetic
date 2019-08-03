@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="sobot_welcomeBackcolor">#019587</color>
+    <color name="sobot_welcomeBackcolor">#A050F3</color>
     <color name="sobot_viewpagerbackground">#EBEBEB</color>
     <!-- tab底部栏目的切换 -->
     <color name="sobot_title_category_select_color">#A52A2A</color>
@@ -116,4 +116,12 @@
     <color name="sobot_text_btn_color">#ffffff</color>
     <color name="sobot_text_btn_color_pressed">#80ffffff</color>
 
+    <color name="CC8_3C_3C_">#d8c83c3c</color>
+    <color name="CE8_3C_3C">#A050F3</color>
+    <color name="CE9_39_39">#e93939</color>
+    <color name="red">#FF3E5E</color>
+    <color name="Ce8_3c_3c">#e83c3c</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="C45_1F_84">#451F84</color>
+    <color name="C6F_7F_EC">#6F7FEC</color>
 </resources>

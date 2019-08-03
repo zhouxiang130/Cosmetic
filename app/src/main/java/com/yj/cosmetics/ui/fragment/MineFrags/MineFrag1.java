@@ -245,14 +245,11 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 				}
 				break;
 			case R.id.frag_mine_sjrz://店铺入住
-
 				if (mUtils.isLogin()) {
-
 					Intent intentCompany = new Intent(getActivity(), NormalWebViewActivity.class);
 					intentCompany.putExtra("url", URLBuilder.URLBaseHeader + URLBuilder.SjRz);
-					intentCompany.putExtra("title", "商家入住");
+					intentCompany.putExtra("title", "商家入驻");
 					startActivity(intentCompany);
-
 				} else {
 					IntentUtils.IntentToLogin(getActivity());
 				}

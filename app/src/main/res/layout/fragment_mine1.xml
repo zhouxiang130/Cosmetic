@@ -40,17 +40,15 @@
                         android:layout_width="@dimen/dis30"
                         android:layout_height="@dimen/dis30"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis25"
-                        >
+                        android:layout_marginRight="@dimen/dis15">
 
                         <ImageView
                             android:layout_width="@dimen/dis22"
                             android:layout_height="@dimen/dis22"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="@dimen/dis3"
-                            android:src="@mipmap/xiaoxi2x"
-                            />
+                            android:src="@mipmap/xiaoxi2x"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_info"
@@ -105,8 +103,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignBottom="@id/frag_mine_login_iv"
                                     android:layout_alignRight="@id/frag_mine_login_iv"
+                                    android:layout_alignBottom="@id/frag_mine_login_iv"
                                     android:background="@mipmap/bj"/>
 
 
@@ -148,9 +146,9 @@
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@mipmap/mobile_fill"
                                     android:drawablePadding="@dimen/dis5"
-                                    android:paddingBottom="@dimen/dis2"
-                                    android:paddingRight="@dimen/dis7"
                                     android:paddingTop="@dimen/dis2"
+                                    android:paddingRight="@dimen/dis7"
+                                    android:paddingBottom="@dimen/dis2"
                                     android:text=""
                                     android:textColor="@color/CEB_CD_82"
                                     android:textSize="@dimen/font11"/>
@@ -171,8 +169,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
                     android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:visibility="gone">
 
                     <LinearLayout
@@ -275,8 +273,8 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:drawablePadding="@dimen/dis4"
                         android:drawableRight="@mipmap/next_center_order"
+                        android:drawablePadding="@dimen/dis4"
                         android:gravity="center"
                         android:text="查看全部"
                         android:textColor="@color/C64_64_64"
@@ -315,8 +313,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dis6"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/personal_pending_payment"
+                            android:drawablePadding="@dimen/dis8"
                             android:text="待付款"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font12"
@@ -356,8 +354,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dis6"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/personal_pending_delivery"
+                            android:drawablePadding="@dimen/dis8"
                             android:text="待发货"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font12"
@@ -398,8 +396,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dis6"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/personal_tobe_received"
+                            android:drawablePadding="@dimen/dis8"
                             android:text="待收货"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font12"
@@ -440,8 +438,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dis6"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/personal_tobe_evaluated"
+                            android:drawablePadding="@dimen/dis8"
                             android:text="待评价"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font12"
@@ -483,8 +481,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dis6"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/personal_return_goods"
+                            android:drawablePadding="@dimen/dis8"
                             android:text="退款"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font12"
@@ -531,16 +529,16 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_yq"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="我的免单"
                             android:textColor="@color/C10_10_10"
@@ -560,16 +558,16 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_dp"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="商家入驻"
                             android:textColor="@color/C10_10_10"
@@ -594,14 +592,14 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_dz"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="地址管理"
                             android:textColor="@color/C10_10_10"
@@ -628,14 +626,14 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_sc"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="我的收藏"
                             android:textColor="@color/C10_10_10"
@@ -654,14 +652,14 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_kf"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="在线客服"
                             android:textColor="@color/C10_10_10"
@@ -685,14 +683,14 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_sz"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="系统设置"
                             android:textColor="@color/C10_10_10"
@@ -735,14 +733,14 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_rx"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="客服热线"
                             android:textColor="@color/C10_10_10"
@@ -762,14 +760,14 @@
                         android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp">
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_about"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="关于我们"
                             android:textColor="@color/C10_10_10"
@@ -795,8 +793,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:drawablePadding="@dimen/dis8"
                             android:drawableTop="@mipmap/icon_sz"
+                            android:drawablePadding="@dimen/dis8"
                             android:gravity="center"
                             android:text="系统设置"
                             android:textColor="@color/C10_10_10"

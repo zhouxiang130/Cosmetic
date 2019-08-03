@@ -3,6 +3,7 @@ package com.yj.cosmetics.ui.fragment.MineCollectFrag;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -73,8 +74,6 @@ public class MineCollectFrag extends LazyLoadFragment {
 		mRecyclerView.addOnItemTouchListener(new SwipeItemLayout.OnSwipeItemTouchListener(getContext()));
 		mAdapter = new MineCollectionAdapter(getContext(), mList, mUtils, flag);
 		mRecyclerView.setAdapter(mAdapter);
-
-
 		mAdapter.setOnItemClickListener(new MineCollectionAdapter.SpendDetialClickListener() {
 			@Override
 			public void onItemClick(View view, int postion, int flags) {

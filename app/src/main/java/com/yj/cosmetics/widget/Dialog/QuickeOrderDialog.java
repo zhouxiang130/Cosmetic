@@ -48,7 +48,6 @@ public class QuickeOrderDialog extends Dialog {
         setWindow();
         tvWeChat = (TextView)view.findViewById(R.id.tv_wChat);
         tvFriend = (TextView)view.findViewById(R.id.tv_friend);
-
         tvContent = (TextView)view.findViewById(R.id.dialog_normal_content);
         tvCopy = (TextView)view.findViewById(R.id.tv_copy_url);
 

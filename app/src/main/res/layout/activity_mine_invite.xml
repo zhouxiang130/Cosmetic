@@ -16,8 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis160"
-            android:background="@drawable/invite_bg"
-            >
+            android:background="@drawable/invite_bg">
 
             <TextView
                 android:id="@+id/mine_invite_tv_rule"
@@ -34,8 +33,7 @@
                 android:paddingTop="@dimen/dis4"
                 android:text="活动规则"
                 android:textColor="@color/white"
-                android:textSize="@dimen/font11"
-                />
+                android:textSize="@dimen/font11"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

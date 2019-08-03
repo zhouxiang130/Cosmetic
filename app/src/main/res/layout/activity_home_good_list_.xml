@@ -7,7 +7,6 @@
               android:background="@color/transparent"
               android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis45"
             android:background="@drawable/shape_corner_shade"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
             <RelativeLayout
                 android:id="@+id/goods_list_return"
@@ -31,8 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis10"
-                    app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"
-                    />
+                    app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -40,18 +37,16 @@
                 android:layout_width="@dimen/dis30"
                 android:layout_height="@dimen/dis30"
                 android:layout_alignParentRight="true"
-                android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
-                android:layout_marginRight="10dp"
-                >
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:scaleType="center"
-                    android:src="@mipmap/icon_message"
-                    />
+                    android:src="@mipmap/icon_message"/>
 
                 <TextView
                     android:id="@+id/goods_list_tv_info"
@@ -63,20 +58,18 @@
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="@dimen/font8"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/dis8"
-                android:layout_marginRight="@dimen/dis10"
                 android:layout_marginTop="@dimen/dis8"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_marginBottom="@dimen/dis8"
                 android:layout_toLeftOf="@id/goods_list_info"
                 android:layout_toRightOf="@id/goods_list_return"
-                android:background="@drawable/shape_corner_ed_radius15"
-                >
+                android:background="@drawable/shape_corner_ed_radius15">
 
                 <ImageView
                     android:id="@+id/search_modify_iv"
@@ -84,8 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis10"
-                    android:src="@mipmap/search_for"
-                    />
+                    android:src="@mipmap/search_for"/>
 
                 <TextView
                     android:id="@+id/search_modify_tv"
@@ -97,8 +89,7 @@
                     android:hint="搜索商品"
                     android:singleLine="true"
                     android:textColor="@color/C88_88_88"
-                    android:textSize="@dimen/font12"
-                    />
+                    android:textSize="@dimen/font12"/>
             </RelativeLayout>
         </RelativeLayout>
 
@@ -106,9 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis1"
             android:background="@color/CED_F0_F1"/>
-
     </LinearLayout>
-
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -137,12 +126,10 @@
                     android:background="@color/white"
                     android:visibility="gone">
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
 
                         <LinearLayout
                             android:id="@+id/rl_all_info"
@@ -151,9 +138,8 @@
                             android:gravity="center"
                             android:orientation="vertical"
                             android:paddingLeft="@dimen/dis10"
-                            android:paddingRight="@dimen/dis15"
-                            android:paddingTop="@dimen/dis10">
-
+                            android:paddingTop="@dimen/dis10"
+                            android:paddingRight="@dimen/dis15">
 
                             <RelativeLayout
                                 android:id="@+id/relativeLayout"
@@ -165,8 +151,8 @@
                                     android:id="@+id/fl_store_list_iv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
                                     android:layout_centerVertical="true"
                                     android:gravity="center">
 
@@ -174,33 +160,29 @@
                                         android:id="@+id/store_list_iv"
                                         android:layout_width="@dimen/dis90"
                                         android:layout_height="@dimen/dis90"
-                                        android:layout_marginEnd="@dimen/dis10"
-                                        android:layout_marginLeft="15dp"
-                                        android:layout_marginRight="@dimen/dis15"
                                         android:layout_marginStart="15dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginEnd="@dimen/dis10"
+                                        android:layout_marginRight="@dimen/dis15"
                                         android:scaleType="centerCrop"
                                         android:src="@mipmap/default_goods"/>
-
 
                                     <TextView
                                         android:id="@+id/item_tv_store_states"
                                         android:layout_width="@dimen/dis90"
                                         android:layout_height="wrap_content"
-                                        android:layout_alignBottom="@+id/store_list_iv"
-                                        android:layout_alignLeft="@+id/store_list_iv"
                                         android:layout_alignStart="@+id/store_list_iv"
+                                        android:layout_alignLeft="@+id/store_list_iv"
+                                        android:layout_alignBottom="@+id/store_list_iv"
                                         android:background="@color/C8D_A4_A4"
                                         android:gravity="center_horizontal"
-                                        android:paddingBottom="@dimen/dis5"
                                         android:paddingTop="@dimen/dis5"
+                                        android:paddingBottom="@dimen/dis5"
                                         android:text="休息中"
                                         android:textColor="@color/white"
                                         android:textSize="@dimen/font12"
                                         android:visibility="gone"/>
-
-
                                 </RelativeLayout>
-
 
                                 <LinearLayout
                                     android:id="@+id/ll_store_title"
@@ -216,20 +198,19 @@
                                         android:id="@+id/store_list_tv_title_"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_alignLeft="@+id/store_list_tv_sales"
                                         android:layout_alignStart="@+id/store_list_tv_sales"
+                                        android:layout_alignLeft="@+id/store_list_tv_sales"
                                         android:background="@drawable/shape_corner_e8_radius3"
                                         android:ellipsize="end"
                                         android:maxLines="1"
-                                        android:paddingBottom="@dimen/dis2"
                                         android:paddingLeft="@dimen/dis3"
-                                        android:paddingRight="@dimen/dis3"
                                         android:paddingTop="@dimen/dis2"
+                                        android:paddingRight="@dimen/dis3"
+                                        android:paddingBottom="@dimen/dis2"
                                         android:text=""
                                         android:textColor="@color/white"
                                         android:textSize="@dimen/font12"
                                         android:visibility="gone"/>
-
 
                                     <TextView
                                         android:id="@+id/store_list_tv_title"
@@ -237,9 +218,9 @@
                                         android:layout_height="wrap_content"
                                         android:ellipsize="end"
                                         android:maxLines="1"
-                                        android:paddingBottom="@dimen/dis2"
                                         android:paddingLeft="@dimen/dis5"
                                         android:paddingTop="@dimen/dis2"
+                                        android:paddingBottom="@dimen/dis2"
                                         android:textColor="@color/C10_10_10"
                                         android:textSize="@dimen/font15"/>
                                 </LinearLayout>
@@ -248,26 +229,26 @@
                                     android:id="@+id/ll_all_info"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:layout_alignBottom="@+id/fl_store_list_iv"
                                     android:layout_below="@id/ll_store_title"
+                                    android:layout_alignBottom="@+id/fl_store_list_iv"
                                     android:layout_toEndOf="@+id/fl_store_list_iv"
                                     android:layout_toRightOf="@+id/fl_store_list_iv"
                                     android:gravity="bottom"
                                     android:orientation="vertical"
-                                    android:paddingBottom="@dimen/dis5"
-                                    android:paddingLeft="@dimen/dis5">
+                                    android:paddingLeft="@dimen/dis5"
+                                    android:paddingBottom="@dimen/dis5">
 
                                     <TextView
                                         android:id="@+id/store_list_tv_sales"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:paddingBottom="@dimen/dis5"
-                                        android:paddingTop="@dimen/dis5"
-                                        android:textColor="@color/C85_85_85"
-                                        android:textSize="@dimen/font12"
-                                        android:text=""
                                         android:ellipsize="end"
                                         android:maxLines="1"
+                                        android:paddingTop="@dimen/dis5"
+                                        android:paddingBottom="@dimen/dis5"
+                                        android:text=""
+                                        android:textColor="@color/C85_85_85"
+                                        android:textSize="@dimen/font12"
                                         android:visibility="visible"/>
 
                                     <TextView
@@ -277,14 +258,12 @@
                                         android:layout_alignBottom="@+id/fl_store_list_iv"
                                         android:layout_toEndOf="@+id/fl_store_list_iv"
                                         android:layout_toRightOf="@+id/fl_store_list_iv"
-                                        android:paddingBottom="@dimen/dis5"
-                                        android:maxLines="2"
                                         android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:paddingBottom="@dimen/dis5"
                                         android:text=""
                                         android:textColor="@color/C85_85_85"
                                         android:textSize="@dimen/font12"/>
-
-
                                 </LinearLayout>
 
                                 <TextView
@@ -296,15 +275,14 @@
                                     android:layout_alignParentRight="true"
                                     android:layout_marginBottom="@dimen/dis3"
                                     android:background="@drawable/shape_corner_e9_radius3"
-                                    android:paddingBottom="@dimen/dis2"
                                     android:paddingLeft="@dimen/dis5"
-                                    android:paddingRight="@dimen/dis4"
                                     android:paddingTop="@dimen/dis2"
-                                    android:text="问地物流"
+                                    android:paddingRight="@dimen/dis4"
+                                    android:paddingBottom="@dimen/dis2"
+                                    android:text="菲梵仙子物流"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/font12"
                                     android:visibility="gone"/>
-
                             </RelativeLayout>
 
                             <LinearLayout
@@ -317,8 +295,8 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:drawablePadding="@dimen/dis10"
                                     android:drawableRight="@mipmap/next_center_order"
+                                    android:drawablePadding="@dimen/dis10"
                                     android:text="查看更多"
                                     android:textColor="@color/red"
                                     android:textSize="@dimen/font15"/>
@@ -332,14 +310,12 @@
                     </LinearLayout>
                 </RelativeLayout>
 
-
                 <View
                     android:id="@+id/shop_order_vline"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
                     android:layout_gravity="bottom"
                     android:background="@color/CE4_E4_E4"/>
-
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/tl_home_toolbar"
@@ -348,7 +324,6 @@
                     android:layout_height="@dimen/dis44"
                     android:layout_gravity="bottom"
                     android:gravity="bottom">
-
 
                     <LinearLayout
                         android:id="@+id/id"
@@ -372,10 +347,7 @@
                                 android:gravity="center"
                                 android:text="推荐"
                                 android:textColor="@drawable/selector_color_10_e8"
-                                android:textSize="@dimen/font14"
-                                />
-
-
+                                android:textSize="@dimen/font14"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -393,8 +365,7 @@
                                 android:gravity="center"
                                 android:text="销量"
                                 android:textColor="@drawable/selector_color_10_e8"
-                                android:textSize="@dimen/font14"
-                                />
+                                android:textSize="@dimen/font14"/>
 
                             <ImageView
                                 android:id="@+id/goods_list_iv_count"
@@ -419,8 +390,7 @@
                                 android:gravity="center"
                                 android:text="价格"
                                 android:textColor="@drawable/selector_color_10_e8"
-                                android:textSize="@dimen/font14"
-                                />
+                                android:textSize="@dimen/font14"/>
 
                             <ImageView
                                 android:id="@+id/goods_list_iv_price"
@@ -452,22 +422,17 @@
                         android:layout_height="@dimen/dis0.5"
                         android:layout_below="@id/id"
                         android:background="@color/CED_F0_F1"/>
-
-
                 </android.support.v7.widget.Toolbar>
-
-
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
-
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_home_random"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="onClick"
             android:src="@drawable/ic_arrow_upward_black_24dp"
             app:backgroundTint="#c3ffffff"
@@ -480,6 +445,4 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
     </android.support.design.widget.CoordinatorLayout>
-
-
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
+import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -519,13 +520,14 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		mWebView.getSettings().setUseWideViewPort(true);
 		mWebView.getSettings().setSupportZoom(true);
 		mWebView.getSettings().setBuiltInZoomControls(false);
-		mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);//先清除webView的缓存，在加载数据，防止后台更改数据了，没有及时刷新数据
+//		mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);//先清除webView的缓存，在加载数据，防止后台更改数据了，没有及时刷新数据
 		mWebView.clearCache(true);
-
 		mWebView.getSettings().setJavaScriptEnabled(true);
-//		mWebView.getSettings().setBlockNetworkImage(false); // 解决图片不显示
+		mWebView.getSettings().setBlockNetworkImage(false); // 解决图片不显示
 		mWebView.setWebViewClient(new MyWebViewClient());
 		mWebView.setWebChromeClient(new MyWebChromeClient());
+		mWebView.getSettings().setLoadWithOverviewMode(true);
+		mWebView.setInitialScale(100);
 //		mWebView.getSettings().setDomStorageEnabled(true);
 //        mWebView.requestFocus();
 //		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

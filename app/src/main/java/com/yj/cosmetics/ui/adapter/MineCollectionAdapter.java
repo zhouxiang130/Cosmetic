@@ -50,8 +50,6 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 	CustomNormalContentDialog mDeleteDialog;
 	UserUtils mUtils;
 
-	private String TAG = "MineCollectionAdapter";
-
 	public MineCollectionAdapter(Context mContext, List<MineCollectEntity.DataBean.ListBean> mList, UserUtils mUtils, int flag) {
 		this.mContext = mContext;
 		this.mList = mList;
@@ -80,7 +78,6 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 	@Override
 	public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
 		if (holder instanceof CollectionViewHolder) {
-
 			if (flag == 1) {
 				((CollectionViewHolder) holder).mllall.setVisibility(View.GONE);
 				((CollectionViewHolder) holder).rlCollStore.setVisibility(View.VISIBLE);
@@ -135,8 +132,6 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 						.into(((CollectionViewHolder) holder).iv);
 
 			}
-
-
 			((CollectionViewHolder) holder).llDelete.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -211,6 +206,7 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 			this.mListener = listener;
 			//@TODO 布局文件 添加点击事件
 			mllall.setOnClickListener(this);
+			rlCollStore.setOnClickListener(this);
 		}
 
 		@Override

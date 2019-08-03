@@ -295,7 +295,7 @@ public class MainActivity extends BaseActivity {
 		if (!isExit) {
 			isExit = true;
 //            ToastUtils.custom("再按一次退出程序!");
-			ToastUtils.showToast(this, "再按一次退出问地!");
+			ToastUtils.showToast(this, "再按一次退出菲梵仙子!");
 			tExit = new Timer();
 			tExit.schedule(new TimerTask() {
 				@Override

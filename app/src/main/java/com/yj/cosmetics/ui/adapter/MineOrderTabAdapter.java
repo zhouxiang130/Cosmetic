@@ -16,7 +16,6 @@ public class MineOrderTabAdapter extends FragmentPagerAdapter {
     private List<Fragment> views;
 
     public MineOrderTabAdapter(FragmentManager fm, List<String> title, List<Fragment> views){
-
         super(fm);
         this.title = title;
         this.views = views;

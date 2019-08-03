@@ -16,7 +16,7 @@ public class URLBuilder {
 
 //	public static final String URLBaseHeader = "http://192.168.0.103:8080";//测试接口2
 //	public static final String URLBaseHeader = "http://192.168.0.115";//测试接口2
-//	public static final String URLBaseHeader = "http://192.168.0.159:8088";//测试接口
+//	public static final String URLBaseHeader = "http://192.168.0.151:8081";//测试接口
 //	public static final String URLBaseHeader = "http://192.168.0.108";//测试接口3
 
 	public static final String searchUserBill = "/phone/user/billCash";//我的免单列表

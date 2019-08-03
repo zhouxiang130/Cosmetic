@@ -87,7 +87,7 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 //        setEnable();
 		loadingDialog = new CustomProgressDialog(this);
 		rlNext.setVisibility(View.VISIBLE);
-		tvNext.setTextColor(getResources().getColor(R.color.C1E_1E_1E));
+		tvNext.setTextColor(getResources().getColor(R.color.white));
 		tvNext.setTextSize(13);
 		tvNext.setText("保存");
 
@@ -164,10 +164,10 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 					ToastUtils.showToast(this, "请输入正确的手机号码");
 				} else {
 					//地址验证
-					doAsynAddress();
+//					doAsynAddress();
 					//手机号格式正确
 
-//					doAsyncEditAddress();
+					doAsyncEditAddress();
 				}
 				break;
 		}

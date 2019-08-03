@@ -136,7 +136,7 @@
                     android:paddingLeft="@dimen/dis5"
                     android:paddingRight="@dimen/dis4"
                     android:paddingTop="@dimen/dis2"
-                    android:text="问地物流"
+                    android:text="菲梵仙子物流"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font12"
                     android:visibility="gone"

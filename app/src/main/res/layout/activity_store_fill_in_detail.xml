@@ -13,24 +13,19 @@
 
     <include layout="@layout/titlebar_layout"/>
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis150"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:orientation="vertical"
-        >
-
+        android:orientation="vertical">
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis80"
             android:layout_alignParentTop="true"
             android:background="@drawable/shape_corner_shade">
-
         </View>
-
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -39,8 +34,7 @@
             android:layout_marginLeft="@dimen/dis15"
             android:layout_marginRight="@dimen/dis15"
             app:cardCornerRadius="@dimen/dis10"
-            app:cardElevation="@dimen/dis3"
-            >
+            app:cardElevation="@dimen/dis3">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -56,7 +50,6 @@
                     android:background="@drawable/mine_circle_bg"
                     android:padding="1dp">
 
-
                     <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                         android:id="@+id/frag_store_iv"
                         android:layout_width="@dimen/dis65"
@@ -66,23 +59,18 @@
                         android:src="@mipmap/default_avatar"
                         app:riv_border_color="@color/white"
                         app:riv_border_width="@dimen/dis1"
-                        app:riv_corner_radius="10dp"
-                        />
-
-
+                        app:riv_corner_radius="10dp"/>
                 </RelativeLayout>
-
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/rl_mine_login_"
                     android:layout_alignTop="@id/rl_mine_login_"
+                    android:layout_alignBottom="@id/rl_mine_login_"
                     android:layout_marginLeft="@dimen/dis10"
                     android:layout_toRightOf="@id/rl_mine_login_"
                     android:gravity="center|left"
                     android:orientation="vertical">
-
 
                     <TextView
                         android:id="@+id/tv_store_name"
@@ -104,10 +92,8 @@
                         android:paddingTop="@dimen/dis5"
                         android:text=""
                         android:textColor="@color/black_gray1"
-                        android:textSize="@dimen/font13"
-                        />
+                        android:textSize="@dimen/font13"/>
                 </LinearLayout>
-
 
                 <View
                     android:id="@+id/view_lines"
@@ -117,14 +103,12 @@
                     android:layout_marginTop="@dimen/dis3"
                     android:background="@color/CD6_D6_D6"/>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/view_lines"
                     android:layout_marginTop="@dimen/dis5"
                     android:orientation="horizontal">
-
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -133,15 +117,14 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-
                         <TextView
                             android:id="@+id/tv_mine_free_sayest"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis2"
                             android:paddingTop="@dimen/dis2"
+                            android:paddingBottom="@dimen/dis2"
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font16"
@@ -153,13 +136,11 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis3"
                             android:paddingTop="@dimen/dis3"
+                            android:paddingBottom="@dimen/dis3"
                             android:text="消费金额"
                             android:textColor="@color/black_gray1"
-                            android:textSize="@dimen/font12"
-                            />
-
+                            android:textSize="@dimen/font12"/>
                     </LinearLayout>
 
                     <View
@@ -176,15 +157,14 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-
                         <TextView
                             android:id="@+id/tv_mine_store_num"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis2"
                             android:paddingTop="@dimen/dis2"
+                            android:paddingBottom="@dimen/dis2"
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font16"
@@ -196,48 +176,53 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis3"
                             android:paddingTop="@dimen/dis3"
+                            android:paddingBottom="@dimen/dis3"
                             android:text="我的排名"
                             android:textColor="@color/black_gray1"
-                            android:textSize="@dimen/font12"
-                            />
-
+                            android:textSize="@dimen/font12"/>
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </RelativeLayout>
-
         </android.support.v7.widget.CardView>
-
-
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginBottom="@dimen/dis10"
+            android:layout_weight="1"
+            android:text="排名"
+            android:textColor="@color/CE8_3C_3C"
+            android:textSize="@dimen/font16"/>
+
+        <ImageView
+            android:id="@+id/iv_speed_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis15"
+            android:layout_marginBottom="@dimen/dis10"
+            android:src="@mipmap/speed_up"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/xrecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-
-        <!--<com.dftechnology.integral.widget.ProgressLayout
-            android:id="@+id/progress_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            ptr:progressLayoutDefStyle="@style/ProgressLayout">
-        </com.dftechnology.integral.widget.ProgressLayout>-->
-
-
+            android:layout_height="match_parent"/>
     </RelativeLayout>
-
-
 </LinearLayout>

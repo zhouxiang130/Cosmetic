@@ -296,9 +296,7 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 //				Log.d(TAG, "onResponse-size: " + cookies);
 //				String s = session.substring(0, session.indexOf(";"));
 //				Log.i(TAG, "shopList>>>>>>>>>>>>session is  :" + s);
-
 				String json = response.body().string().trim();
-				LogUtils.i("shopList -- json的值" + json);
 				return new Gson().fromJson(json, ShopListEntity.class);
 			}
 

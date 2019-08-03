@@ -41,6 +41,7 @@ import com.yj.cosmetics.ui.activity.MineOrderActivity;
 import com.yj.cosmetics.ui.activity.MineOrderDetailActivity;
 import com.yj.cosmetics.ui.activity.PayResultActivity;
 import com.yj.cosmetics.ui.activity.PostJudgeGoodsActivity;
+import com.yj.cosmetics.ui.activity.SettlementGoodsActivity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
@@ -387,14 +388,12 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 	private TextView btnFinish;
 
 	private void showPayDialog(final List<MineOrderEntity.DataBean.UserOrderMapsBean> mList,
-	                           final int position,
-	                           String[] payMode,
-	                           Integer[] payIcon) {
+	                           final int position, String[] payMode, Integer[] payIcon) {
 
 		if (mineOrderPayDialog == null) {
 			mineOrderPayDialog = new MineOrderPayDialog(mContext);
 		}
-		mineOrderPayDialog.setCustomDialog(payMode, payIcon, mList.get(position).getUpOrderMoney());
+		mineOrderPayDialog.setCustomDialog(payMode, payIcon, mList.get(position).getOrderPayamount());
 		if (!mineOrderPayDialog.isShowing()) {
 			mineOrderPayDialog.show();
 		}
@@ -403,20 +402,14 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			@Override
 			public void onClick(View view) {
 				checkedPosition = mineOrderPayDialog.getCheckedPosition();
-
 				switch (checkedPosition) {
-//					case 0://账户余额
-//						payWithAlipay(mList.get(position).getOrderId(), "3", btnFinish);
-//						break;
 					case 0://1支付宝支付
-						payWithAlipay(mList.get(position).getOrderId(), "0", btnFinish);
+						payWithAlipay(mList.get(position).getOrderId(), "1", btnFinish);
 						break;
 					case 1://2 微信支付
-						doPayWeChat(mList.get(position).getOrderId(), "1", btnFinish);
+						doPayWeChat(mList.get(position).getOrderId(), "0", btnFinish);
 						break;
 				}
-
-				Log.i(TAG, "showPayDialog ---- checkedPosition  " + checkedPosition);
 				mineOrderPayDialog.dismiss();
 			}
 		});
@@ -487,7 +480,6 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 		map.put("shopId", shopId);
 		map.put("userId", mUtils.getUid());
 		map.put("orderId", orderId);
-		LogUtils.i("传输的网络数据" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePageTwo/share")
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<ShareEntity>() {
@@ -498,7 +490,6 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 				LogUtils.i("parseNetworkResponse json的值" + json);
 				return new Gson().fromJson(json, ShareEntity.class);
 			}
-
 
 			@Override
 			public void inProgress(float progress) {
@@ -527,7 +518,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
 					}
 				} else {
-					ToastUtils.showToast(mContext, "无法获取分享信息 :)" + response.getMsg());
+					ToastUtils.showToast(mContext, "无法获取分享信息" + response.getMsg());
 				}
 			}
 
@@ -559,7 +550,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 		}
 
 
-		QuickeOrderDialog.getTvContent().setText("");
+		QuickeOrderDialog.getTvContent().setText(URLBuilder.URLBaseHeader + shareData.getUrl());
 		QuickeOrderDialog.getTvCopyUrl().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -569,16 +560,16 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			}
 		});
 
-		QuickeOrderDialog.getTvFriend().setOnClickListener(new View.OnClickListener() {//朋友圈
+		QuickeOrderDialog.getTvFriend().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				showShare(Wechat.NAME);
+//				showShare(Wechat.NAME);
 			}
 		});
 		QuickeOrderDialog.getTvWeChat().setOnClickListener(new View.OnClickListener() {//微信好友
 			@Override
 			public void onClick(View v) {
-				showShare(WechatMoments.NAME);
+//				showShare(WechatMoments.NAME);
 			}
 		});
 	}
@@ -629,7 +620,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			// site是分享此内容的网站名称，仅在QQ空间使用
 			oks.setSite(mContext.getString(R.string.app_name));
 			// siteUrl是分享此内容的网站地址，仅在QQ空间使用
-			oks.setSiteUrl("http://www.51xianchang.com");
+			oks.setSiteUrl("http://www.szffxz.com/weChat/homePageTwo/toIndex");
 			LogUtils.i("分享信息设置结束了");
 		} else {
 			ToastUtils.showToast(mContext, "无法获取分享信息,请检查网络");
@@ -839,7 +830,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			@Override
 			public WXPayEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				LogUtils.i("json的值" + json);
+				LogUtils.e("json的值" + json);
 				return new Gson().fromJson(json, WXPayEntity.class);
 			}
 
@@ -920,7 +911,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			@Override
 			public AlipayEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				LogUtils.i("json的值" + json);
+				LogUtils.e("json的值" + json);
 				NormalEntity normalEntity = new Gson().fromJson(json, NormalEntity.class);
 				if (normalEntity.getData().equals("") && !normalEntity.getCode().equals("200")) {
 					return new AlipayEntity(normalEntity.getCode(), normalEntity.getMsg());
@@ -931,7 +922,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
 			@Override
 			public void onResponse(AlipayEntity response) {
-				disMissDialogs();
+
 				if (response != null && response.getCode().equals(response.HTTP_OK)) {
 					if (response.getData() != null && response.getData().getOrderString() != null /*&& !TextUtils.isEmpty(response.getData().getAppPayJson().getAPPID())*/) {
 						mUtils.savePayOrder(oid);
@@ -945,15 +936,15 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 							mUtils.savePayType("goods");
 							mContext.startActivity(intent);
 							mContext.doFragRefresh();
-
 						} else {
-							ToastUtils.showToast(mContext, "无法获取支付信息，请稍后再试");
+							ToastUtils.showToast(mContext, "支付失败");
 						}
 					}
 				} else {
 					ToastUtils.showToast(mContext, response.getCode() + " :)" + response.getMsg());
 				}
 				tvPay.setEnabled(true);
+				disMissDialogs();
 			}
 
 			@Override

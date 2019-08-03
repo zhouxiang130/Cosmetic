@@ -30,10 +30,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/dialog_normal_title"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/dis15"
             android:layout_marginLeft="@dimen/dis10"
-            android:layout_marginRight="@dimen/dis10"
             android:layout_marginTop="@dimen/dis25"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginBottom="@dimen/dis15"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="拨打0371-55007049热线，联系官方客服"
@@ -51,10 +51,10 @@
             android:layout_marginTop="@dimen/dis5"
             android:background="@drawable/selector_draw"
             android:gravity="center"
-            android:paddingBottom="@dimen/dis4"
             android:paddingLeft="@dimen/dis15"
-            android:paddingRight="@dimen/dis15"
             android:paddingTop="@dimen/dis4"
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis4"
             android:text="复制链接"
             android:textColor="@color/C10_10_10"
             android:textSize="@dimen/font14"/>
@@ -119,33 +119,28 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/dis20"
-            android:orientation="horizontal"
-
-            >
-
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_friend"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
-                android:drawableTop="@mipmap/icon_friend"
+                android:drawableTop="@mipmap/icon_wechat"
+                android:drawablePadding="@dimen/dis5"
                 android:gravity="center"
-                android:text="朋友圈"
+                android:text="微信好友"
                 android:textColor="@color/black_color1"
                 android:textSize="@dimen/font14"/>
-
 
             <TextView
                 android:id="@+id/tv_wChat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawablePadding="@dimen/dis5"
-                android:drawableTop="@mipmap/icon_wechat"
+                android:drawableTop="@mipmap/icon_friend"
                 android:gravity="center"
-                android:text="微信好友"
+                android:text="朋友圈"
                 android:textColor="@color/black_color1"
                 android:textSize="@dimen/font14"/>
         </LinearLayout>

@@ -216,6 +216,10 @@ public class ThirdLoginRegistActivity extends BaseActivity {
                     ToastUtils.showToast(ThirdLoginRegistActivity.this,"密码不小于6位");
                     return;
                 }
+                if (!etInvite.getText().toString().trim().equals(etPwd.getText().toString().trim())){
+                    ToastUtils.showToast(ThirdLoginRegistActivity.this,"确认密码错误");
+                    return;
+                }
                 if(!cbCheck.isChecked()){
                     ToastUtils.showToast(ThirdLoginRegistActivity.this,"请阅读并同意用户协议");
                     return;
@@ -352,8 +356,7 @@ public class ThirdLoginRegistActivity extends BaseActivity {
         map.put("name",name);
         map.put("headimg",headimg);
         LogUtils.i("传输的值" + URLBuilder.format(map));
-        OkHttpUtils.post().url(URLBuilder.URLBaseHeader+"/phone/user/quickRegister.act" +
-                "").tag(this)
+        OkHttpUtils.post().url(URLBuilder.URLBaseHeader+"/phone/user/quickRegister").tag(this)
                 .addParams(Key.data, URLBuilder.format(map))
                 .build()
                 .execute(new Utils.MyResultCallback<UserInfoEntity>() {
@@ -372,8 +375,6 @@ public class ThirdLoginRegistActivity extends BaseActivity {
                             }
                         }
                     }
-
-
                     //网络请求错误时进行的操作
                     @Override
                     public void onError(Call call, Exception e) {

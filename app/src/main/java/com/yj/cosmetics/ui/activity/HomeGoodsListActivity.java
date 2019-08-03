@@ -47,15 +47,12 @@ import okhttp3.Response;
  */
 
 public class HomeGoodsListActivity extends BaseActivity {
-
-
 	@BindView(R.id.goods_list_tv_default)
 	TextView tvDefault;
 	@BindView(R.id.goods_list_tv_count)
 	TextView tvCount;
 	@BindView(R.id.rl_all_info)
 	LinearLayout rl_all_info;
-
 	@BindView(R.id.viewpager)
 	ViewPager viewPager;
 	@BindView(R.id.goods_list_tv_price)
@@ -70,35 +67,27 @@ public class HomeGoodsListActivity extends BaseActivity {
 	TextView tvInfo;
 	@BindView(R.id.ll_bottom_more)
 	LinearLayout llButtomMore;
-
-
 	@BindView(R.id.store_list_iv)
 	ImageView ivShopIcon;
 	@BindView(R.id.item_tv_store_states)
 	TextView tvStoreStates;
-
 	@BindView(R.id.store_list_tv_title_)
 	TextView tvTitle_;
-
 	@BindView(R.id.store_list_tv_title)
 	TextView tvTitle;
-
 	@BindView(R.id.store_list_tv_expenses)
 	TextView tvExpenses;
-
 	@BindView(R.id.store_list_tv_sales)
 	TextView tvSales;
-
 	@BindView(R.id.fab_home_random)
 	FloatingActionButton fab;
-
 	@BindView(R.id.rl_store_info)
 	RelativeLayout rlStoreInfo;
-
+	@BindView(R.id.search_modify_tv)
+	TextView tvSearch;
 	private String countTag = "default";
 	private String priceTag = "default";
 	private String orderby = "recommend";
-
 	private List<Fragment> mFragment = new ArrayList<Fragment>();
 	private HomeGoodsListFrag instant;
 	private String shopId, classifyId, type, name, TAG, productIds;
@@ -112,27 +101,23 @@ public class HomeGoodsListActivity extends BaseActivity {
 
 	@Override
 	protected void initView() {
-
 		shopId = getIntent().getStringExtra("shopId");
 		classifyId = getIntent().getStringExtra("classifyId");
 		productIds = getIntent().getStringExtra("productIds");
 		type = getIntent().getStringExtra("type");
 		name = getIntent().getStringExtra("name");
 		TAG = getIntent().getStringExtra("TAG");
-
 		instant = HomeGoodsListFrag.instant(shopId, classifyId, type, name, TAG, productIds);
-
 		tvDefault.setSelected(true);
 		mFragment.add(instant);
 		adapter = new MineOrderTabAdapters(getSupportFragmentManager(), mFragment);
 		viewPager.setAdapter(adapter);
-
-
 //		if (shopId != null) {
 		myReceiver = new MyReceiver();
 		IntentFilter intentFilter = new IntentFilter();
 		intentFilter.addAction("CN.YJ.ROBUST.NOTIFYACTIVITY");
 		registerReceiver(myReceiver, intentFilter);
+		tvSearch.setText(name);
 //		}
 	}
 

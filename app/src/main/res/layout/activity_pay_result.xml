@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
     <include layout="@layout/titlebar_layout"/>
+
     <ImageView
         android:id="@+id/pay_result_iv_state"
         android:layout_width="@dimen/dis80"
@@ -12,45 +14,49 @@
         android:layout_marginTop="@dimen/dis75"
         android:src="@mipmap/success_pay"
         />
+
     <TextView
         android:id="@+id/pay_result_tv_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dis40"
         android:text="支付成功"
-        android:textSize="@dimen/font19"
         android:textColor="@color/C10_10_10"
-        android:layout_marginTop="@dimen/dis40"/>
+        android:textSize="@dimen/font19"/>
+
     <TextView
         android:id="@+id/pay_result_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dis15"
         android:text="我们将尽快为您安排发货"
-        android:textSize="@dimen/font11"
         android:textColor="@color/C1E_1E_1E"
-        android:layout_marginTop="@dimen/dis15"/>
+        android:textSize="@dimen/font11"/>
+
     <Button
         android:id="@+id/pay_result_btn_shopping"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis40"
-        android:text="继续购物"
-        android:background="@drawable/shape_corner_e8_radius2"
         android:layout_marginLeft="@dimen/dis80"
-        android:layout_marginRight="@dimen/dis80"
         android:layout_marginTop="@dimen/dis60"
+        android:layout_marginRight="@dimen/dis80"
+        android:background="@drawable/shape_corner_e8_radius2"
+        android:text="继续购物"
         android:textColor="@color/white"
         android:textSize="@dimen/font17"
         />
+
     <Button
         android:id="@+id/pay_result_btn_order"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis40"
         android:layout_marginLeft="@dimen/dis80"
-        android:layout_marginRight="@dimen/dis80"
-        android:text="订单详情"
         android:layout_marginTop="@dimen/dis15"
+        android:layout_marginRight="@dimen/dis80"
+        android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"
+        android:text="订单详情"
         android:textColor="@color/CE8_3C_3C"
         android:textSize="@dimen/font17"
-        android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"
         />
 
 </LinearLayout>

@@ -57,9 +57,9 @@ public class InfoCenterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 			((InfoViewHolder) holder).tvTitle.setText(mList.get(position).getTitle());
 			((InfoViewHolder) holder).tvContent.setText(mList.get(position).getContent());
 			if (mList.get(position).getIsRead() == 1) {
-				((InfoViewHolder) holder).ivMessage_.setVisibility(View.VISIBLE);
-			} else {
 				((InfoViewHolder) holder).ivMessage_.setVisibility(View.GONE);
+			} else {
+				((InfoViewHolder) holder).ivMessage_.setVisibility(View.VISIBLE);
 			}
 		}
 	}
@@ -98,6 +98,6 @@ public class InfoCenterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 	}
 
 	public interface SpendDetialClickListener {
-		 void onItemClick(View view, int postion);
+		void onItemClick(View view, int postion);
 	}
 }

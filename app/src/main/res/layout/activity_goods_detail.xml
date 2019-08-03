@@ -2,8 +2,7 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,24 +21,20 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/dis50">
 
-
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
                     android:nestedScrollingEnabled="false">
-
                 </android.support.v7.widget.RecyclerView>
             </android.support.v4.widget.NestedScrollView>
-
 
             <View
                 android:id="@+id/frag_home_v_head"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis24"
                 android:background="@color/transparent"/>
-
 
             <RelativeLayout
                 android:id="@+id/rl_toolbar_all"
@@ -83,10 +78,7 @@
                     android:layout_height="@dimen/dis45"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="@dimen/dis80"
-                    android:layout_marginRight="@dimen/dis80"
-
-                    >
-
+                    android:layout_marginRight="@dimen/dis80">
                 </android.support.v7.widget.RecyclerView>
             </RelativeLayout>
 
@@ -97,10 +89,7 @@
                 android:layout_below="@id/rl_toolbar_all"
                 android:background="@color/CE7_E7_E7"
                 android:visibility="gone"/>
-
-
         </RelativeLayout>
-
 
         <LinearLayout
             android:id="@+id/goods_detial_llbottom"
@@ -127,11 +116,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:paddingRight="@dimen/dis6"
                         android:paddingTop="@dimen/dis6"
+                        android:paddingRight="@dimen/dis6"
                         android:src="@mipmap/dianpu"/>
-
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -145,16 +132,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:paddingRight="@dimen/dis6"
                         android:paddingTop="@dimen/dis6"
+                        android:paddingRight="@dimen/dis6"
                         android:src="@mipmap/cart_light_x"/>
 
                     <TextView
                         android:id="@+id/goods_detial_cartNum"
                         android:layout_width="@dimen/dis14"
                         android:layout_height="@dimen/dis14"
-                        android:layout_alignRight="@id/goods_detial_cart"
                         android:layout_alignTop="@id/goods_detial_cart"
+                        android:layout_alignRight="@id/goods_detial_cart"
                         android:background="@drawable/shape_round360_e83"
                         android:gravity="center"
                         android:textColor="@color/white"
@@ -176,17 +163,16 @@
                         android:layout_marginTop="@dimen/dis5"
                         android:src="@mipmap/like_x"/>
                 </RelativeLayout>
-
             </LinearLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="@dimen/dis5"
                 android:paddingLeft="@dimen/dis5"
+                android:paddingTop="@dimen/dis5"
                 android:paddingRight="@dimen/dis5"
-                android:paddingTop="@dimen/dis5">
+                android:paddingBottom="@dimen/dis5">
 
                 <!--android:background="@drawable/shape_corner_nine"-->
                 <LinearLayout
@@ -223,13 +209,11 @@
                     android:id="@+id/ll_all_buttom_float_layer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
-                    android:background="@drawable/shape_corner_nine">
+                    android:background="@drawable/shape_corner_nine"
+                    android:visibility="gone">
                 </View>
-
             </FrameLayout>
         </LinearLayout>
-
 
         <RelativeLayout
             android:id="@+id/frag_mine_order_send"
@@ -237,8 +221,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/goods_detial_llbottom"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="30dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp">
             <!--android:visibility="gone"-->
 
             <RelativeLayout
@@ -262,11 +246,9 @@
                     android:text="0"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font11"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone"/>
             </RelativeLayout>
         </RelativeLayout>
-
 
         <View
             android:id="@+id/goods_detial_view"

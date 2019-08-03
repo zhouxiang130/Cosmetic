@@ -456,10 +456,10 @@
         <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
         <meta-data
             android:name="Mob-AppKey"
-            android:value="24e2ebd475e87"/>
+            android:value="2be33dd382f78"/>
         <meta-data
             android:name="Mob-AppSecret"
-            android:value="a92ce1f77e3077e542e3f7df7b7a3eec"/>
+            android:value="cddde6609d50a86b3a982d90c8dc80a8"/>
 
         <activity
             android:name="com.yj.cosmetics.wxapi.WXEntryActivity"

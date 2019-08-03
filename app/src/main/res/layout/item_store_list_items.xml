@@ -10,9 +10,9 @@
         android:id="@+id/frag_mine_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dis2"
         android:layout_marginLeft="@dimen/dis10"
         android:layout_marginRight="@dimen/dis10"
+        android:layout_marginBottom="@dimen/dis2"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="3dp"
         app:cardElevation="1dp"
@@ -79,24 +79,21 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/shape_corner_e8_stroke0_5_radius16"
-                    android:paddingBottom="@dimen/dis3"
                     android:paddingLeft="@dimen/dis10"
-                    android:paddingRight="@dimen/dis10"
                     android:paddingTop="@dimen/dis3"
+                    android:paddingRight="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis3"
                     android:text="进店"
                     android:textColor="@color/CE8_3C_3C"/>
-
-
             </RelativeLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/fl_store_list_iv"
                 android:layout_marginLeft="@dimen/dis10"
-                android:layout_marginRight="@dimen/dis10"
                 android:layout_marginTop="@dimen/dis10"
+                android:layout_marginRight="@dimen/dis10"
                 android:orientation="horizontal">
 
                 <!--<android.support.v7.widget.RecyclerView-->
@@ -114,7 +111,6 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:verticalSpacing="@dimen/dis10"></GridView>
-
 
                 <!--   <ImageView
                        android:id="@+id/store_list_iv1"

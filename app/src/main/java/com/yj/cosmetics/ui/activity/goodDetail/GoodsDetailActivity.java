@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,6 +32,8 @@ import com.sobot.chat.utils.ZhiChiConstant;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
+import com.yj.cosmetics.broadcastreceiver.MyReceiver;
+import com.yj.cosmetics.function.CustomServices;
 import com.yj.cosmetics.model.GoodsCommentEntity;
 import com.yj.cosmetics.model.GoodsEntity;
 import com.yj.cosmetics.model.GoodsEntitys;
@@ -85,11 +88,8 @@ import cn.onekeyshare.OnekeyShare;
  * @TODO 商品详情界面
  */
 
-public class GoodsDetailActivity extends BaseActivity implements
-		CustomRollPagerView.ScrollChangeListener,
-		GoodsDetailContentAdapter.ShowDetialInterface,
-		CustomSizeDialogViewGroup.OnGroupItemClickListener,
-		GoodsDetailContentAdapter.showDialogTicket
+public class GoodsDetailActivity extends BaseActivity implements CustomRollPagerView.ScrollChangeListener, GoodsDetailContentAdapter.ShowDetialInterface,
+		CustomSizeDialogViewGroup.OnGroupItemClickListener, GoodsDetailContentAdapter.showDialogTicket
 //		,GoodDetail_contract.View
 {
 
@@ -114,12 +114,10 @@ public class GoodsDetailActivity extends BaseActivity implements
 	RelativeLayout rlTitleAll;
 	@BindView(R.id.goods_detial_store)
 	RelativeLayout rlStore;
-
 	@BindView(R.id.goods_detial_scrollview)
 	NestedScrollView mScrollView;
 	@BindView(R.id.frag_mine_tv_send_num)
 	TextView tvMessageNum;
-
 	@BindView(R.id.frag_home_v_head)
 	View vHead;
 	@BindView(R.id.home_vline)
@@ -161,7 +159,7 @@ public class GoodsDetailActivity extends BaseActivity implements
 	private boolean isClick = false;
 	private String productId, sproductId;
 
-//	private String newDate;
+	//	private String newDate;
 	private MyThread myThread;
 
 	public static final int VISIBLE = 0x00000000;
@@ -230,8 +228,6 @@ public class GoodsDetailActivity extends BaseActivity implements
 		mRecyclerView.setLayoutManager(layoutManager);
 		mRecyclerView.setHasFixedSize(true);
 		mRecyclerView.setNestedScrollingEnabled(false);
-
-
 		mAdapter = new GoodsDetailContentAdapter(this, data, mJudge);
 		mRecyclerView.setAdapter(mAdapter);
 		mAdapter.setShowDetialInterface(this);
@@ -260,27 +256,29 @@ public class GoodsDetailActivity extends BaseActivity implements
 //						return;
 //					}
 //				}
-
 				isClick = true;
 				mTitleAdapter.mPosition = postion;
 				mTitleAdapter.notifyDataSetChanged();
-
 				switch (postion) {
 					case 0:
 						mRecyclerView.smoothScrollToPosition(0);
-						mScrollView.smoothScrollTo(0, 0);
+//						mScrollView.smoothScrollTo(0, 0);
+						mScrollView.scrollTo(0, 0);
 						break;
 					case 1:
 						layoutManager.scrollToPositionWithOffset(2, 0);
 //                        mScrollView.smoothScrollTo(0, judgeHeight + goodsHeight);
-						mScrollView.smoothScrollTo(0, goodsHeight);
+//						mScrollView.smoothScrollTo(0, goodsHeight);
+						mScrollView.scrollTo(0, (goodsHeight / 2));
 						break;
 					case 2:
 						mRecyclerView.smoothScrollToPosition(1);
-						mScrollView.smoothScrollTo(0, judgeHeight + goodsHeight);
+//						mScrollView.smoothScrollTo(0, judgeHeight + goodsHeight);
+						mScrollView.scrollTo(0, judgeHeight + goodsHeight);
 						break;
 					case 3:
-						mScrollView.smoothScrollTo(0, judgeHeight + goodsHeight);
+//						mScrollView.smoothScrollTo(0, judgeHeight + goodsHeight);
+						mScrollView.scrollTo(0, judgeHeight + goodsHeight);
 						break;
 				}
 				recyclerViewTitle.postDelayed(new Runnable() {
@@ -350,7 +348,6 @@ public class GoodsDetailActivity extends BaseActivity implements
 		mScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
 			@Override
 			public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-//				LogUtils.i("scrollY的值==" + scrollY + "==isCLick的值===" + isClick);
 				if (!isClick) {
 					if (scrollY < goodsHeight) {
 						mTitleAdapter.mPosition = 0;
@@ -364,33 +361,24 @@ public class GoodsDetailActivity extends BaseActivity implements
 //							mTitleAdapter.mPosition = 3;
 //						} else {
 //						}
-							mTitleAdapter.mPosition = 2;
-
+						mTitleAdapter.mPosition = 2;
 						mTitleAdapter.notifyDataSetChanged();
 					}
 				}
-
-				LogUtils.i("scrollY----" + scrollY + "-----mHeight----" + mHeight);
 				if (scrollY <= 0) {
-
-					Log.i(TAG, "onScrollChange1111: " + "<<<<<<<<<<<<<<<= 0");
 					//顶部图处于最顶部，标题栏透明
 					setTopColor(Color.argb(0, 255, 255, 255));
-					rlTitleAll.setBackgroundColor(Color.argb(0, 255, 255, 255));
+					rlTitleAll.setBackgroundColor(Color.argb(0, 160, 80, 243));
 					vLine.setVisibility(View.GONE);
 					recyclerViewTitle.setVisibility(View.GONE);
-
 				} else if (scrollY > 0 && scrollY < mHeight) {
-					Log.i(TAG, "onScrollChange1111: " + "> 0 < mHeight ");
 					//滑动过程中，渐变
 					float scale = (float) scrollY / mHeight;//算出滑动距离比例
 					float alpha = (255 * scale);//得到透明度
 					setTopColor(Color.argb((int) alpha, 0, 0, 0));
-					rlTitleAll.setBackgroundColor(Color.argb((int) alpha, 255, 255, 255));
+					rlTitleAll.setBackgroundColor(Color.argb((int) alpha, 160, 80, 243));
 					vLine.setVisibility(View.GONE);
 					recyclerViewTitle.setVisibility(View.VISIBLE);
-
-
 //					int strokeWidth = 5; // 3dp 边框宽度
 //					int roundRadius = 15; // 8dp 圆角半径
 //					int strokeColor = Color.parseColor("#2E3135");//边框颜色int fillColor = Color.parseColor("#DFDFE0");//内部填充颜色
@@ -400,13 +388,9 @@ public class GoodsDetailActivity extends BaseActivity implements
 //					gd.setStroke(strokeWidth, strokeColor);
 //					int colors[] = { 0xff255779 , 0xff3e7492, 0xffa6c0cd };//分别为开始颜色，中间夜色，结束颜
 //					GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, colors);
-
-
-
 				} else {
-					Log.i(TAG, "onScrollChange1111: " + "---------------------------");
 					//过顶部图区域，标题栏定色
-					rlTitleAll.setBackgroundColor(Color.argb(255, 255, 255, 255));
+					rlTitleAll.setBackgroundColor(Color.argb(255, 160, 80, 243));
 					setTopColor(Color.argb(255, 0, 0, 0));
 					vLine.setVisibility(View.VISIBLE);
 				}
@@ -426,11 +410,10 @@ public class GoodsDetailActivity extends BaseActivity implements
 		transTitle();
 	}
 
-
 	@TargetApi(21)
 	private void setTopColor(int color) {
 		if (Build.VERSION.SDK_INT >= 21) {
-			Log.i(TAG, "setTopColor: " + color);
+			Log.e(TAG, "setTopColor: " + color);
 			vHead.setBackgroundColor(color);
 		}
 	}
@@ -602,24 +585,24 @@ public class GoodsDetailActivity extends BaseActivity implements
 	private void doCustomServices() {
 		//用户信息设置
 		//设置用户自定义字段
-//		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-//		userInfo.setUid(mUtils.getUid());
-//		userInfo.setTel(mUtils.getTel());
-//		userInfo.setRealname(mUtils.getUserName());
-//		Log.i(TAG, "doCustomServices: " + mUtils.getTel() + "------" + mUtils.getUserName() + "---" + URLBuilder.getUrl(mUtils.getAvatar()));
-//		userInfo.setUname(mUtils.getUserName());
-//		userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
+		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
+		userInfo.setUid(mUtils.getUid());
+		userInfo.setTel(mUtils.getTel());
+		userInfo.setRealname(mUtils.getUserName());
+		Log.i(TAG, "doCustomServices: " + mUtils.getTel() + "------" + mUtils.getUserName() + "---" + URLBuilder.getUrl(mUtils.getAvatar()));
+		userInfo.setUname(mUtils.getUserName());
+		userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
 
-//		if (data != null) {
-//			//咨询信息设置
-//			//@TODO  SP 存储需要咨询商品的
-//			preferencesUtil.setValue("product_name", data.getProductName());
-//			preferencesUtil.setValue("Product_abstract", data.getProductAbstract());
-//			preferencesUtil.setValue("product_listimg", data.getProductListimg());
-//			preferencesUtil.setValue("product_url", data.getProductUrl());
-//			CustomServices customServices = new CustomServices(this);
-//			customServices.doCustomServices(preferencesUtil);
-//		}
+		if (data != null) {
+			//咨询信息设置
+			//@TODO  SP 存储需要咨询商品的
+			preferencesUtil.setValue("product_name", data.getData().getProductName());
+			preferencesUtil.setValue("Product_abstract", data.getData().getProductAbstract());
+			preferencesUtil.setValue("product_listimg", data.getData().getProductListimg());
+			preferencesUtil.setValue("product_url", data.getData().getProductUrl());
+			CustomServices customServices = new CustomServices(this);
+			customServices.doCustomServices(preferencesUtil);
+		}
 	}
 
 
@@ -776,8 +759,6 @@ public class GoodsDetailActivity extends BaseActivity implements
 		if (sproductId != null) {
 			map.put("sproductId", sproductId);
 		}
-
-		LogUtils.i("商品详情传的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/productDetails")
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<GoodsEntitys>() {
@@ -844,15 +825,11 @@ public class GoodsDetailActivity extends BaseActivity implements
 	}
 
 	private void setData() {
-
-
 		if (data.getData().getShopId() != null && !data.getData().getShopId().equals("")) {
 			rlStore.setVisibility(View.VISIBLE);
 		} else {
 			rlStore.setVisibility(View.GONE);
 		}
-
-
 //		if (data.getReceipt() != null && !data.getReceipt().equals("")) {
 //			if (data.getReceipt().equals("1")) {
 //				vFloatLayer.setVisibility(View.GONE);
@@ -897,15 +874,13 @@ public class GoodsDetailActivity extends BaseActivity implements
 //				}
 //			}
 //		}
-
-//		if (!TextUtils.isEmpty(data.getWhetcollection())) {
-//			if (data.getWhetcollection().equals("no")) {
-//				ivLike.setImageResource(R.mipmap.like_x);
-//			} else {
-//				ivLike.setImageResource(R.mipmap.like_fill_x);
-//			}
-//		}
-
+		if (!TextUtils.isEmpty(data.getData().getWhetcollection())) {
+			if (data.getData().getWhetcollection().equals("no")) {
+				ivLike.setImageResource(R.mipmap.like_x);
+			} else {
+				ivLike.setImageResource(R.mipmap.like_fill_x);
+			}
+		}
 //		if (!TextUtils.isEmpty(data.getCartNumber())) {
 //			if (data.getCartNumber().equals("0")) {
 //				tvCartNum.setVisibility(View.GONE);
@@ -1502,7 +1477,6 @@ public class GoodsDetailActivity extends BaseActivity implements
 							- hours * (1000 * 60 * 60) - minutes * (1000 * 60)) / 1000;
 //并保存在商品time这个属性内
 					String finaltime = days + "天" + hours + "时" + minutes + "分" + second + "秒";
-//					Log.i(TAG, "run: " + finaltime);
 					mRecommendActivitiesList.setFinalTime(finaltime);
 					mRecommendActivitiesList.setHours((int) hours_);
 					mRecommendActivitiesList.setMin((int) minutes);

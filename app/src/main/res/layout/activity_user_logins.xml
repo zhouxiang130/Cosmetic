@@ -309,13 +309,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@mipmap/qq_login"
+                        android:visibility="gone"
                         android:clickable="true"/>
 
                     <ImageView
                         android:id="@+id/wechat_login"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dis40"
                         android:background="@mipmap/wechat_login"
                         android:clickable="true"/>
                 </LinearLayout>

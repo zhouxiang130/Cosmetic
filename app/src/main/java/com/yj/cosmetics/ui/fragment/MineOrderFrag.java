@@ -2,6 +2,7 @@ package com.yj.cosmetics.ui.fragment;
 
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -111,13 +112,9 @@ public class MineOrderFrag extends LazyLoadFragment {
 		Map<String, String> map = new HashMap<>();
 		map.put("usersId", mUtils.getUid());
 		map.put("pageNum", pageNum + "");
-
-
-
 		if (flag >= 0) {
 			map.put("orderState", flag + "");
 		}
-
 		LogUtils.i("传输的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/user/userOrders")
 				.addParams("data", URLBuilder.format(map))

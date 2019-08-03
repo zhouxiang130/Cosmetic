@@ -56,18 +56,18 @@ android {
             keyAlias 'rob'
             keyPassword 'yjrobust'
 //            storeFile rootProject.file("keystore/wxkey.jks")
-            storeFile file('C:/Users/Administrator/Desktop/Robust_File/KEY_STORE/robust/robust.jks')
+            storeFile file('E:/Cosmetic/robust.jks')
             //填写你本地的路径
             storePassword 'yjrobust'
         }
-   /*     debug {
+     debug {
             keyAlias 'rob'
             keyPassword 'yjrobust'
 //            storeFile rootProject.file("keystore/wxkey.jks")
-            storeFile file('C:/Users/Administrator/Desktop/Robust_File/KEY_STORE/robust/robust.jks')
+         storeFile file('E:/Cosmetic/robust.jks')
             //填写你本地的路径
             storePassword 'yjrobust'
-        }*/
+        }
     }
 
     android {

@@ -12,7 +12,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="商品"
-                android:textColor="@color/C10_10_10"
+                android:textColor="@color/white"
                 android:paddingLeft="@dimen/dis10"
                 android:paddingRight="@dimen/dis10"
                 android:layout_centerVertical="true"
@@ -21,7 +21,7 @@
                 android:id="@+id/item_goods_detial_title_v"
                 android:layout_width="@dimen/dis30"
                 android:layout_height="@dimen/dis1"
-                android:background="@color/C10_10_10"
+                android:background="@color/white"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="@dimen/dis12"
                 />

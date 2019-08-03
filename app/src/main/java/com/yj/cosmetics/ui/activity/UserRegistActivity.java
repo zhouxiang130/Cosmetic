@@ -214,6 +214,10 @@ public class UserRegistActivity extends BaseActivity {
 					ToastUtils.showToast(UserRegistActivity.this, "密码不小于6位");
 					return;
 				}
+				if (etInvite.getText().toString().equals(etPwd.getText().toString())) {
+					ToastUtils.showToast(UserRegistActivity.this, "再次输入密码错误");
+					return;
+				}
 				if (!cbCheck.isChecked()) {
 					ToastUtils.showToast(UserRegistActivity.this, "请阅读并同意用户协议");
 					return;
@@ -225,8 +229,7 @@ public class UserRegistActivity extends BaseActivity {
 				} else {
 					btnConfirm.setEnabled(false);
 					doAsyncRegister(etTel.getText().toString().trim(), etPwd.getText().toString().trim(),
-							etVerify.getText
-									().toString().trim());
+							etVerify.getText().toString().trim());
 				}
 				break;
 			case R.id.title_ll_iv:
@@ -350,9 +353,6 @@ public class UserRegistActivity extends BaseActivity {
 		map.put("userPhone", userName);
 		map.put("password", MD5Utils.MD5(passWord));
 		map.put("msgCode", vertifyCode);
-		if (!TextUtils.isEmpty(etInvite.getText().toString().trim())) {
-			map.put("parentCode", etInvite.getText().toString().trim());
-		}
 		LogUtils.i("doAsyncRegister 传输的值" + URLBuilder.format(map));
 		try {
 			OkHttpUtils.post().url(URLBuilder.URLBaseHeader + URLBuilder.Regist).tag(this)

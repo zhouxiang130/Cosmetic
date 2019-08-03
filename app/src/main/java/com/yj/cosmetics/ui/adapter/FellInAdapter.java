@@ -79,6 +79,8 @@ public class FellInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 				((PartakeViewHolder) holder).iv_round.setBackgroundResource(R.drawable.shape_round360_e83);
 			}
 
+
+
 			if (rowNum != null) {
 				if (mData.get(positions).getRowNum().equals(rowNum)) {
 					((PartakeViewHolder) holder).iv_round.setBackgroundResource(R.drawable.shape_round360_e95);
@@ -117,9 +119,10 @@ public class FellInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 	}
 
 
+
+
 	@Override
 	public int getItemViewType(int position) {
-		Log.i("TAG position ", "getItemViewType: " + mData.size() + ">>>>position: " + position);
 		if (position == 20) {
 			return 1;
 		} else {

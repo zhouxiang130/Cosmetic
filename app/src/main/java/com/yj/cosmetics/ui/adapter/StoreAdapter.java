@@ -45,7 +45,7 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 	private static final String TAG = "StoreAdapter";
 	private List<ShopListEntity.DataBean.ShopArrayBean> mData = null;
-//	private List<StoreListEntity.DataBean.ProductClassifyListBean> mList = null;
+	//	private List<StoreListEntity.DataBean.ProductClassifyListBean> mList = null;
 	private Activity mContext;
 	private ShopListClickListener mItemClickListener;
 	private int pos;
@@ -54,16 +54,14 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 	private List<ImageView> points;
 
 	public StoreAdapter(Activity mContext,
-	                    /*List<StoreListEntity.DataBean.ProductClassifyListBean> mList,*/
-	                    List<ShopListEntity.DataBean.ShopArrayBean> mData) {
+			/*List<StoreListEntity.DataBean.ProductClassifyListBean> mList,*/
+			            List<ShopListEntity.DataBean.ShopArrayBean> mData) {
 		points = new ArrayList<>();//点的集合
 		this.mContext = mContext;
 //		this.mList = mList;
 		this.mData = mData;
 		storeClassEntity = new StoreClassEntity();
 	}
-
-
 
 
 	public void setOnItemClickListener(ShopListClickListener listener) {
@@ -237,8 +235,6 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 
 		} else if (viewHolder instanceof StoreItemViewHolder) {
-
-			Log.i(TAG, "onBindViewHolder: " + position);
 			pos = position - 0;
 
 		/*	if (mData.get(pos).getReceipt() != null && !mData.get(pos).getReceipt().equals("")) {
@@ -424,8 +420,8 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 		TextView tvStoreName;
 		@BindView(R.id.tv_store_mon_sale)
 		TextView tvMonSale;
-		@BindView(R.id.tv_go_to_soter_detail)
-		TextView tvGoDetail;
+//		@BindView(R.id.tv_go_to_soter_detail)
+//		TextView tvGoDetail;
 		//		@BindView(R.id.store_recyle_view)
 //		RecyclerView recyclerView;
 		@BindView(R.id.gridView)

@@ -42,7 +42,6 @@ import okhttp3.Response;
 
 public class StoreListActivity extends BaseActivity {
 
-
 	private static final String TAG = "StoreListActivity";
 	@BindView(R.id.store_list_tv_default)
 	TextView storeListTvDefault;
@@ -58,22 +57,16 @@ public class StoreListActivity extends BaseActivity {
 	LinearLayout storeListLlHighest;
 	@BindView(R.id.title_view)
 	View vLine;
-
 	@BindView(R.id.recyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
-
 	private String name;
 	private LinearLayoutManager layoutManager;
-
-
 	private int pageNum = 0;
-
 	private List<ShopListEntity.DataBean.ShopArrayBean> shopArray = new ArrayList<>();
 	private List<StoreListEntity.DataBean.ProductClassifyListBean> mList = new ArrayList<>();
 //	private SearchStoreListAdapter mAdapter;
-
 	private StoreAdapter mAdapter;
 
 	@Override
@@ -148,15 +141,11 @@ public class StoreListActivity extends BaseActivity {
 
 	private void doRefreshData() {
 		mProgressLayout.showContent();
-
 		Map<String, String> map = new HashMap<>();
 //		map.put("orderBy", orderby);
 		map.put("shopName", name);
 		map.put("pageNum", String.valueOf(pageNum));
-
-
 		LogUtils.i("shopList 传输的值" + URLBuilder.format(map));
-
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePageTwo/shopList")
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<ShopListEntity>() {
@@ -174,10 +163,13 @@ public class StoreListActivity extends BaseActivity {
 					//返回值为200 说明请求成功
 					if (response.getData() != null) {
 						shopArray.clear();
-						shopArray.addAll(response.getData().getShopArray());
+						if (response.getData().getShopArray()==null||response.getData().getShopArray().size()==-0){
+							setNoneList();
+						}else {
+							shopArray.addAll(response.getData().getShopArray());
+							mProgressLayout.showContent();
+						}
 						mAdapter.notifyDataSetChanged();
-						mProgressLayout.showContent();
-
 					} else {
 						mProgressLayout.showNone(new View.OnClickListener() {
 							@Override
@@ -210,7 +202,6 @@ public class StoreListActivity extends BaseActivity {
 					mProgressLayout.showNetError(new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
-
 							mRecyclerView.refresh();
 						}
 					});
@@ -226,13 +217,10 @@ public class StoreListActivity extends BaseActivity {
 	}
 
 	private void loadMoreData() {
-
 		Map<String, String> map = new HashMap<>();
 //		map.put("orderBy", orderby);
 		map.put("shopName", name);
 		map.put("pageNum", String.valueOf(pageNum));
-
-
 		LogUtils.i("shopList 传输的值" + URLBuilder.format(map));
 
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePageTwo/shopList")
@@ -271,9 +259,7 @@ public class StoreListActivity extends BaseActivity {
 
 			@Override
 			public void onError(Call call, Exception e) {
-
 				super.onError(call, e);
-
 				mRecyclerView.refreshComplete();
 				mRecyclerView.loadMoreComplete();
 				mRecyclerView.setPullRefreshEnabled(true);
@@ -316,5 +302,14 @@ public class StoreListActivity extends BaseActivity {
 				mRecyclerView.refresh();
 				break;
 		}
+	}
+
+	public void setNoneList() {
+		mProgressLayout.showNone(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});//没有数据
 	}
 }
