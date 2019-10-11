@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
-import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -97,9 +96,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 					.from(mContext).inflate(R.layout.item_goods_detial_judge, parent, false));
 			return judgeViewHolder;
 		} else {
-//			webViewHolder = new WebViewHolder(LayoutInflater
-//					.from(mContext).inflate(R.layout.item_goods_detial_webview, parent, false));
-
 			LogUtils.i("我在返回ViewType");
 			WebView mWebView = new WebView(mContext);
 			mWebView.setLayoutParams(lp);
@@ -307,9 +303,11 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 					((JudgeViewHolder) holder).rlNo.setVisibility(View.VISIBLE);
 					((JudgeViewHolder) holder).llYes.setVisibility(View.GONE);
 				}
-			} else {
-//                ((CouponReceiveHolder) holder).rlNo.setVisibility(View.VISIBLE);
-//                ((CouponReceiveHolder) holder).llYes.setVisibility(View.GONE);
+			}
+			webViewInit(((JudgeViewHolder) holder).WebViews);
+			if (data != null && !TextUtils.isEmpty(data.getData().getProductUrl())) {
+//				String productUrl = data.getData().getProductUrl();
+				((JudgeViewHolder) holder).WebViews.loadUrl(URLBuilder.URLBaseHeader + data.getData().getProductUrl());
 			}
 
 			mContext.judgeHeight = ((JudgeViewHolder) holder).llYes.getHeight() * size * size;
@@ -322,10 +320,10 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 			if (data != null) {
 //                LogUtils.i("jsp的值=====" + data.getDetailJsp());
 			}
-			if (data != null && !TextUtils.isEmpty(data.getData().getProductUrl())) {
+/*			if (data != null && !TextUtils.isEmpty(data.getData().getProductUrl())) {
 				mWebView.loadUrl(URLBuilder.URLBaseHeader + data.getData().getProductUrl());
 //				((WebViewHolder) holder).mWebView.loadUrl("http://www.wendiapp.com/phone/homePage/detailJsp.act?productId=852");
-			}
+			}*/
 
 		} else if (holder instanceof SuYuanViewHolder) {
 
@@ -473,6 +471,9 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		@BindView(R.id.goods_detial_judge_ll_yes)
 		LinearLayout llYes;
 
+		@BindView(R.id.webViews)
+		com.yj.cosmetics.widget.mWebView WebViews;
+
 		public JudgeViewHolder(View itemView) {
 			super(itemView);
 			ButterKnife.bind(this, itemView);
@@ -520,14 +521,13 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		mWebView.getSettings().setUseWideViewPort(true);
 		mWebView.getSettings().setSupportZoom(true);
 		mWebView.getSettings().setBuiltInZoomControls(false);
-//		mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);//先清除webView的缓存，在加载数据，防止后台更改数据了，没有及时刷新数据
+		mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);//先清除webView的缓存，在加载数据，防止后台更改数据了，没有及时刷新数据
 		mWebView.clearCache(true);
+
 		mWebView.getSettings().setJavaScriptEnabled(true);
-		mWebView.getSettings().setBlockNetworkImage(false); // 解决图片不显示
+//		mWebView.getSettings().setBlockNetworkImage(false); // 解决图片不显示
 		mWebView.setWebViewClient(new MyWebViewClient());
 		mWebView.setWebChromeClient(new MyWebChromeClient());
-		mWebView.getSettings().setLoadWithOverviewMode(true);
-		mWebView.setInitialScale(100);
 //		mWebView.getSettings().setDomStorageEnabled(true);
 //        mWebView.requestFocus();
 //		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

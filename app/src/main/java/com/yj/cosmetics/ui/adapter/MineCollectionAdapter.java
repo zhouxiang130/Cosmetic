@@ -114,7 +114,7 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 				((CollectionViewHolder) holder).tvOp.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 				((CollectionViewHolder) holder).tvTitle.setText(mList.get(position).getProductName());
-				((CollectionViewHolder) holder).tvOp.setText(" " + mList.get(position).getProductOrginal());
+				((CollectionViewHolder) holder).tvOp.setText("￥" + mList.get(position).getProductOrginal());
 				((CollectionViewHolder) holder).tvPrice.setText(mList.get(position).getProductCurrent());
 				((CollectionViewHolder) holder).tvJudge.setText("销量:" + mList.get(position).getDetailNumMonth());
 //				if (mList.get(position).getProductHot().equals("2")) {

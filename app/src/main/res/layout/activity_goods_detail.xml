@@ -49,12 +49,20 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/im_return"
+                        android:layout_width="@dimen/dis40"
+                        android:layout_height="@dimen/dis40"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis12"
+                        android:background="@drawable/shape_oval_white"/>
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginRight="@dimen/dis30"
-                        android:src="@mipmap/return_x"/>
+                        android:src="@drawable/ic_keyboard_arrow_left_white_24dp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -64,12 +72,20 @@
                     android:layout_alignParentRight="true">
 
                     <ImageView
+                        android:id="@+id/im_share"
+                        android:layout_width="@dimen/dis40"
+                        android:layout_height="@dimen/dis40"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dis5"
+                        android:background="@drawable/shape_oval_white"/>
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginRight="@dimen/dis20"
-                        android:src="@mipmap/share_x"/>
+                        android:src="@mipmap/share_slices"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView

@@ -24,8 +24,6 @@ import butterknife.BindView;
  */
 
 public class MineCollectionActivity extends BaseActivity {
-
-
 	@BindView(R.id.mine_collect_tablayout)
 	TabLayout tabLayout;
 	@BindView(R.id.viewpager)
@@ -36,8 +34,6 @@ public class MineCollectionActivity extends BaseActivity {
 	RelativeLayout rlTitle;
 	@BindView(R.id.mine_order_vline)
 	View vLine2;
-
-
 	private List<String> mTitle = new ArrayList<String>();
 	private List<Fragment> mFragment = new ArrayList<Fragment>();
 
@@ -45,7 +41,6 @@ public class MineCollectionActivity extends BaseActivity {
 //	SwipeHorXRecyclerView mRecyclerView;
 //	@BindView(R.id.progress_layout)
 //	ProgressLayout mProgressLayout;
-
 
 	@Override
 	protected int getContentView() {
@@ -56,10 +51,8 @@ public class MineCollectionActivity extends BaseActivity {
 	protected void initView() {
 		setTitleText("我的收藏");
 		vLine.setVisibility(View.GONE);
-
 		mTitle.add("店铺");
 		mTitle.add("商品");
-
 		for (int i = 0; i < mTitle.size(); i++) {
 		    /*if(i == 2){
 		        i++;
@@ -75,10 +68,7 @@ public class MineCollectionActivity extends BaseActivity {
 		//使用ViewPager的适配器
 		//忘了这句干啥的了. 如果使用过程中有问题.应该就是这句导致的.
 		tabLayout.setTabsFromPagerAdapter(adapter);
-
-
 	}
-
 
 	@Override
 	protected void initData() {
@@ -97,9 +87,7 @@ public class MineCollectionActivity extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
 	}
-
 
 	@Override
 	protected void onDestroy() {

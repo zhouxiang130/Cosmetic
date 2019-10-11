@@ -118,7 +118,6 @@
                     app:tabSelectedTextColor="@color/CE8_3C_3C"
                     app:tabTextAppearance="@style/CustomTabLayoutText13"
                     app:tabTextColor="@color/CE8_3C_3C"/>
-
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>

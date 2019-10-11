@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/goods_detial_judge_ll_yes"
@@ -24,9 +24,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            >
-
+            android:nestedScrollingEnabled="false">
         </android.support.v7.widget.RecyclerView>
 
         <TextView
@@ -43,10 +41,8 @@
             android:paddingBottom="@dimen/dis6"
             android:text="查看更多评价"
             android:textColor="@color/CE8_3C_3C"
-            android:textSize="@dimen/font11"
-            />
+            android:textSize="@dimen/font11"/>
     </LinearLayout>
-
 
     <RelativeLayout
         android:id="@+id/goods_detial_judge_rl_no"
@@ -64,4 +60,9 @@
             android:src="@mipmap/nojudge"/>
     </RelativeLayout>
 
-</RelativeLayout>
+    <com.yj.cosmetics.widget.mWebView
+        android:id="@+id/webViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_detial_judge_ll_yes"/>
+</LinearLayout>

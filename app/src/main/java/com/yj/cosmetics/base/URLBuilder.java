@@ -10,13 +10,13 @@ import java.util.Map;
 
 public class URLBuilder {
 
-	public static final String URLBaseHeader = "http://www.szffxz.com";//正式服务器/
+//	public static final String URLBaseHeader = "http://www.szffxz.com";//正式服务器/
 //	public static final String URLBaseHeaders = "https://www.wendiapp.com";//部分使用 https:处理加密操作
 
 
 //	public static final String URLBaseHeader = "http://192.168.0.103:8080";//测试接口2
 //	public static final String URLBaseHeader = "http://192.168.0.115";//测试接口2
-//	public static final String URLBaseHeader = "http://192.168.0.151:8081";//测试接口
+public static final String URLBaseHeader = "http://192.168.1.176:8088";//测试接口
 //	public static final String URLBaseHeader = "http://192.168.0.108";//测试接口3
 
 	public static final String searchUserBill = "/phone/user/billCash";//我的免单列表
@@ -50,7 +50,7 @@ public class URLBuilder {
 	public static final String InviteRule = "/phone/homePage/rule.do?type=2";
 
 	public static String getUrl(String url) {
-		if (url.startsWith("http:")) {
+		if (url.startsWith("http")) {
 			return url;
 		} else {
 //			if (url.startsWith("/")) {

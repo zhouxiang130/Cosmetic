@@ -7,7 +7,6 @@
 
     <include layout="@layout/titlebar_layout"/>
 
-
     <com.yj.cosmetics.widget.ProgressLayout
         android:id="@+id/progress_layout"
         android:layout_width="match_parent"
@@ -20,10 +19,6 @@
             android:layout_height="match_parent"
             android:background="@color/C45_1F_84"
             android:visibility="gone">
-
-
         </com.jcodecraeer.xrecyclerview.XRecyclerView>
     </com.yj.cosmetics.widget.ProgressLayout>
-
-
 </LinearLayout>

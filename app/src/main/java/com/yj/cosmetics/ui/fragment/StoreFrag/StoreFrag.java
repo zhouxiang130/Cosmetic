@@ -52,8 +52,6 @@ import okhttp3.Response;
  */
 
 public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfaces {
-
-	private static final String TAG = "StoreFrag";
 	Unbinder unbinder;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
@@ -278,11 +276,8 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 //		if (!TextUtils.isEmpty(latitude + "")) {
 //			map.put("shopLatitude", latitude + "");
 //		}
-
 		LogUtils.i("shopList 传输的值" + URLBuilder.format(map));
-
 		String session = mUtils.getSession();
-		Log.i(TAG, "session:Id " + session);
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePageTwo/shopList")
 				.addParams("data", URLBuilder.format(map))
 				.tag(getActivity()).build().execute(new Utils.MyResultCallback<ShopListEntity>() {
@@ -341,7 +336,6 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.i(TAG, "onError: " + e);
 				mRecyclerView.refreshComplete();
 				LogUtils.i("doAsyncGetData ----我故障了--" + e);
 				if (call.isCanceled()) {

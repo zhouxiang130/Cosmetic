@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.yj.cosmetics"
           android:versionCode="6"
           android:versionName="3.0.3">
-
 
     <permission
         android:name="com.yj.cosmetics.cosmetic.permission.JPUSH_MESSAGE"
@@ -21,7 +21,8 @@
     <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+                     tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -35,7 +36,8 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+                     tools:ignore="ProtectedPermissions"/>
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 蓝牙分享所需的权限 -->
@@ -61,11 +63,6 @@
             android:value="1d02ed81eb755111de2eb34fb37a6b77"/>
         <!-- @TODO 正试KEY   1d02ed81eb755111de2eb34fb37a6b77 -->
 
-
-        <!-- 定位需要的服务 -->
-        <!--<service android:name="com.amap.api.location.APSService"/>-->
-
-        <!-- android:name=".ui.activity.SplashActivity" -->
         <!-- 闪屏页activity -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.SplashActivity"
@@ -75,17 +72,14 @@
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <!-- 引导页activity -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.AppGuideActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 用户登录页 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.UserLoginActivity"
@@ -169,25 +163,21 @@
             android:name="com.yj.cosmetics.ui.activity.MineCollectionActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- @TODO 2.0  店铺详情界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- @TODO 3.0  搜索店铺列表界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.sotreList.StoreListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- @TODO 2.0  店铺地理位置地址详情界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.locAddress.locAddressActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 个人中心管理地址 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.MineAddressManageActivity"
@@ -234,13 +224,11 @@
             android:name="com.yj.cosmetics.ui.activity.homeSeckill.HomeSeckillActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 签到 2.0版本界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.mineSignIn.MineSignInActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 我的账户支出明细 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.MineAccountCostActivity"
@@ -272,7 +260,6 @@
             android:name="com.yj.cosmetics.ui.activity.mineScoring.MineScoring1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 选择服务类型 2.0 版本添加页面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.mineRefundClass.MineRefundClassActivity"
@@ -284,19 +271,16 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-
         <!-- 退款/售后 2.0添加界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.mineRefundList.MineRefundListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 退款详情 2.0添加页面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.mineRefundDetail.MineRefundDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 我的积分积分明细 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.MineScoringDetailActivity"
@@ -369,7 +353,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 商品评价 -->
-
         <activity
             android:name="com.yj.cosmetics.ui.activity.JudgeActivity"
             android:launchMode="singleTask"
@@ -399,19 +382,16 @@
             android:name="com.yj.cosmetics.ui.activity.NormalWebViewActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!--我的免单界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.MyFreeOrderActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!--商家入住界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.MyStoreCheckInActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
         <!-- 下载app的activity -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.UpdateActivity"
@@ -419,9 +399,7 @@
             android:screenOrientation="portrait"/>
         <!-- 下载app的service -->
         <service android:name="com.yj.cosmetics.service.DownAPKService"/>
-
         <!-- shareSdk -->
-
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -429,24 +407,19 @@
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <data android:scheme="tencent1106801272"/>
-
                 <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-
             <!-- 调用新浪原生SDK，需要注册的回调activity -->
             <intent-filter>
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
-
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-
             <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
             <intent-filter>
                 <data android:scheme="line.1477692153"/>
-
                 <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.BROWSABLE"/>
@@ -467,13 +440,11 @@
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <!--android:screenOrientation="portrait"-->
-
         <!-- 微信支付回调 -->
         <activity
             android:name="com.yj.cosmetics.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:screenOrientation="portrait"/>
-
         <!-- 支付宝支付声明 -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
@@ -487,8 +458,6 @@
             android:exported="false"
             android:screenOrientation="behind">
         </activity>
-
-
         <!-- 店家排队列表界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.StoreFellInDetailActivity"
@@ -497,17 +466,13 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
-
         <!-- @TODO 极光推送服务 -->
-
-
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"
             android:exported="false"
             android:theme="@style/MyDialogStyle">
         </activity>
-
         <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
         <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
         <service
@@ -516,11 +481,9 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService"/>
-
                 <category android:name="com.yj.robust"/>
             </intent-filter>
         </service>
-
         <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <service
@@ -534,18 +497,10 @@
                 <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
             </intent-filter>
         </service>
-
-        <!-- since 3.0.9 Required SDK 核心功能 -->
-        <!--<provider-->
-        <!--android:name="cn.jpush.android.service.DataProvider"-->
-        <!--android:authorities="com.yj.robust.DataProvider"-->
-        <!--android:exported="false"/>-->
-
         <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.AlarmReceiver"
             android:exported="false"/>
-
         <!-- Required SDK核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
@@ -559,7 +514,6 @@
                 <category android:name="com.yj.robust"/>
             </intent-filter>
         </activity>
-
         <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
@@ -595,8 +549,6 @@
                 <category android:name="com.yj.robust"/>
             </intent-filter>
         </receiver>
-
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.yj.cosmetics.file_provider"
@@ -606,22 +558,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"/>
         </provider>
-
-        <!-- <receiver android:name="com.yj.robust.broadcastreceiver.MyJPushMessageReceiver"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" /> -->
-        <!-- <category android:name="com.yj.robust"></category> -->
-        <!-- </intent-filter> -->
-        <!-- </receiver> -->
-
         <meta-data
             android:name="JPUSH_CHANNEL"
             android:value="developer-default"/>
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="44ce0e70b6a1908dc6495b99"/> <!-- </>值来自开发者平台取得的AppKey -->
-
-
         <!-- 此处定义和智齿客服断开链接的静态广播 用于接收通知栏的点击事件 -->
         <receiver
             android:name="com.yj.cosmetics.broadcastreceiver.outLineReceiver"
@@ -632,5 +574,4 @@
             </intent-filter>
         </receiver>
     </application>
-
 </manifest>

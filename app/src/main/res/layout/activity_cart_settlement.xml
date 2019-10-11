@@ -11,9 +11,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/settlement_cart_bottom"
@@ -55,9 +53,7 @@
                 android:text="实付款：￥"
                 android:textColor="@color/CC8_3C_3C"
                 android:textSize="@dimen/font16"/>
-
         </RelativeLayout>
-
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -70,19 +66,17 @@
                 android:layout_marginTop="@dimen/dis5"
                 android:descendantFocusability="blocksDescendants"
                 android:orientation="vertical"
-                android:paddingBottom="@dimen/dis25"
-                >
+                android:paddingBottom="@dimen/dis25">
 
                 <RelativeLayout
                     android:id="@+id/settlement_cart_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:paddingBottom="@dimen/dis15"
                     android:paddingLeft="@dimen/dis15"
-                    android:paddingRight="@dimen/dis5"
                     android:paddingTop="@dimen/dis18"
-                    >
+                    android:paddingRight="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis15">
 
                     <ImageView
                         android:id="@+id/settlement_cart_iv1"
@@ -98,8 +92,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:paddingLeft="@dimen/dis10"
-                        android:paddingRight="@dimen/dis10"
-                        >
+                        android:paddingRight="@dimen/dis10">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -125,8 +118,7 @@
                         android:layout_marginRight="@dimen/dis18"
                         android:layout_toLeftOf="@id/settlement_cart_next"
                         android:textColor="@color/C1E_1E_1E"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_name"
@@ -137,8 +129,7 @@
                         android:layout_toLeftOf="@id/settlement_cart_tel"
                         android:layout_toRightOf="@id/settlement_cart_tv1"
                         android:textColor="@color/C1E_1E_1E"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_content"
@@ -146,14 +137,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/settlement_cart_tv1"
                         android:layout_marginLeft="@dimen/dis12"
-                        android:layout_marginRight="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis15"
+                        android:layout_marginRight="@dimen/dis15"
                         android:layout_toLeftOf="@id/settlement_cart_next"
                         android:layout_toRightOf="@id/settlement_cart_iv1"
                         android:lineSpacingExtra="@dimen/dis5"
                         android:textColor="@color/C64_64_64"
-                        android:textSize="@dimen/font12"
-                        />
+                        android:textSize="@dimen/font12"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -162,8 +152,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:padding="@dimen/dis15"
-                    >
+                    android:padding="@dimen/dis15">
 
                     <TextView
                         android:id="@+id/settlement_cart_new"
@@ -172,8 +161,7 @@
                         android:padding="@dimen/dis5"
                         android:text="+  添加收货地址"
                         android:textColor="@color/C1E_1E_1E"
-                        android:textSize="@dimen/font13"
-                        />
+                        android:textSize="@dimen/font13"/>
                 </RelativeLayout>
 
                 <ImageView
@@ -181,12 +169,10 @@
                     android:layout_height="@dimen/dis2"
                     android:background="@mipmap/lone_p"/>
 
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
-                    android:background="@color/CE7_E7_E7"
-                    />
+                    android:background="@color/CE7_E7_E7"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -205,18 +191,17 @@
                         android:id="@+id/settlement_cart_tv_tag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dis8"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis8"
+                        android:layout_marginBottom="@dimen/dis8"
                         android:background="@drawable/shape_corner_ea_stroke1_white_radius2"
-                        android:paddingBottom="@dimen/dis2"
                         android:paddingLeft="@dimen/dis5"
-                        android:paddingRight="@dimen/dis5"
                         android:paddingTop="@dimen/dis2"
+                        android:paddingRight="@dimen/dis5"
+                        android:paddingBottom="@dimen/dis2"
                         android:text="满邮"
                         android:textColor="@color/CEA_68_1A"
-                        android:textSize="@dimen/font11"
-                        />
+                        android:textSize="@dimen/font11"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_tv_limit"
@@ -226,34 +211,15 @@
                         android:layout_marginLeft="@dimen/dis7"
                         android:singleLine="true"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font12"
-                        />
+                        android:textSize="@dimen/font12"/>
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    >
+                    android:background="@color/white">
                 </android.support.v7.widget.RecyclerView>
-
-                <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="@dimen/dis0.5"-->
-                <!--android:background="@color/CE7_E7_E7"/>-->
-
-                <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="@dimen/dis0.5"-->
-                <!--android:background="@color/CE7_E7_E7"-->
-                <!--/>-->
-
-                <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="@dimen/dis0.5"-->
-                <!--android:layout_marginTop="@dimen/dis5"-->
-                <!--android:background="@color/CE7_E7_E7"/>-->
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -265,12 +231,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingTop="@dimen/dis18"
+                        android:paddingBottom="@dimen/dis18"
                         android:text="支付配送"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_fee"
@@ -280,8 +245,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font13"
-                        />
+                        android:textSize="@dimen/font13"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -291,8 +255,7 @@
                         android:layout_toLeftOf="@id/settlement_cart_fee"
                         android:text="快递:"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font12"
-                        />
+                        android:textSize="@dimen/font12"/>
                 </RelativeLayout>
 
                 <View
@@ -310,8 +273,8 @@
                         android:id="@+id/goods_detial_ticket"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="@dimen/dis15"
-                        android:paddingTop="@dimen/dis15">
+                        android:paddingTop="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis15">
 
                         <TextView
                             android:id="@+id/goods_item_tv2"
@@ -332,13 +295,6 @@
                             android:layout_marginRight="@dimen/dis15"
                             android:background="@mipmap/specifications_next_x"/>
 
-                        <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:gravity="center"-->
-                        <!--android:orientation="horizontal"-->
-                        <!--android:visibility="visible">-->
-
                         <TextView
                             android:id="@+id/goods_item_ticket_content"
                             android:layout_width="match_parent"
@@ -357,10 +313,8 @@
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font13"
                             android:visibility="gone"/>
-                        <!--</LinearLayout>-->
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
-
 
                 <RelativeLayout
                     android:id="@+id/settlement_cart_rl_rest"
@@ -368,27 +322,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dis5"
                     android:background="@color/white"
-                    android:visibility="gone"
-                    >
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/settlement_cart_tv_rest_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingTop="@dimen/dis18"
+                        android:paddingBottom="@dimen/dis18"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font14"
-                        />
-                    <!--    <android.support.v7.widget.SwitchCompat
-                        android:id="@+id/settlement_cart_switch_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/dis15"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        />-->
+                        android:textSize="@dimen/font14"/>
+
                     <com.yj.cosmetics.widget.SwitchView
                         android:id="@+id/settlement_cart_switch_btn"
                         android:layout_width="wrap_content"
@@ -396,8 +341,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        app:isOpened="false"
-                        />
+                        app:isOpened="false"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_tv_rest"
@@ -407,9 +351,7 @@
                         android:layout_marginRight="@dimen/dis15"
                         android:layout_toLeftOf="@id/settlement_cart_switch_btn"
                         android:textColor="@color/CE8_3C_3C"
-                        android:textSize="@dimen/font12"
-
-                        />
+                        android:textSize="@dimen/font12"/>
                 </RelativeLayout>
 
                 <View
@@ -428,12 +370,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingTop="@dimen/dis18"
+                        android:paddingBottom="@dimen/dis18"
                         android:text="运费"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_tv_sendcost"
@@ -443,10 +384,8 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
                         android:textColor="@color/CE8_3C_3C"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
                 </RelativeLayout>
-
 
                 <View
                     android:layout_width="match_parent"
@@ -462,12 +401,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingTop="@dimen/dis18"
+                        android:paddingBottom="@dimen/dis18"
                         android:text="商品金额"
                         android:textColor="@color/C10_10_10"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/settlement_cart_tv_price"
@@ -477,16 +415,13 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
                         android:textColor="@color/CC8_3C_3C"
-                        android:textSize="@dimen/font13"
-                        />
+                        android:textSize="@dimen/font13"/>
                 </RelativeLayout>
-
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
-                    android:background="@color/CE7_E7_E7"
-                    />
+                    android:background="@color/CE7_E7_E7"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -498,19 +433,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:paddingBottom="@dimen/dis18"
                     android:paddingLeft="@dimen/dis15"
                     android:paddingTop="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis18"
                     android:text="选择支付方式"
                     android:textColor="@color/C64_64_64"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
-                    android:background="@color/CE7_E7_E7"
-                    />
+                    android:background="@color/CE7_E7_E7"/>
 
                 <RelativeLayout
                     android:id="@+id/settlement_cart_cb_rl2"
@@ -538,9 +471,7 @@
                         android:layout_marginRight="@dimen/dis15"
                         android:button="@drawable/selector_checkbox_order"
                         android:checked="true"
-                        android:clickable="false"
-                        />
-
+                        android:clickable="false"/>
                 </RelativeLayout>
 
                 <View
@@ -573,9 +504,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginRight="@dimen/dis15"
                         android:button="@drawable/selector_checkbox_order"
-                        android:clickable="false"
-                        />
-
+                        android:clickable="false"/>
                 </RelativeLayout>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>

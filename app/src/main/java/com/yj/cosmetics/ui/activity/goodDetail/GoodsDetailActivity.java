@@ -124,7 +124,10 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	View vLine;
 	@BindView(R.id.ll_all_buttom_float_layer)
 	View vFloatLayer;
-
+	@BindView(R.id.im_return)
+	ImageView imReturn;
+	@BindView(R.id.im_share)
+	ImageView imShare;
 
 	final int Finish = 0x11;
 	final int Cancel = 0x88;
@@ -356,11 +359,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 						mTitleAdapter.mPosition = 1;
 						mTitleAdapter.notifyDataSetChanged();
 					} else if (scrollY > goodsHeight + judgeHeight) {
-
-//						if (data != null && !TextUtils.isEmpty(data.getSpiderUrl())) {
-//							mTitleAdapter.mPosition = 3;
-//						} else {
-//						}
 						mTitleAdapter.mPosition = 2;
 						mTitleAdapter.notifyDataSetChanged();
 					}
@@ -369,6 +367,8 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 					//顶部图处于最顶部，标题栏透明
 					setTopColor(Color.argb(0, 255, 255, 255));
 					rlTitleAll.setBackgroundColor(Color.argb(0, 160, 80, 243));
+					imReturn.getBackground().setAlpha(255);
+					imShare.getBackground().setAlpha(255);
 					vLine.setVisibility(View.GONE);
 					recyclerViewTitle.setVisibility(View.GONE);
 				} else if (scrollY > 0 && scrollY < mHeight) {
@@ -379,6 +379,8 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 					rlTitleAll.setBackgroundColor(Color.argb((int) alpha, 160, 80, 243));
 					vLine.setVisibility(View.GONE);
 					recyclerViewTitle.setVisibility(View.VISIBLE);
+					imReturn.getBackground().setAlpha(255 - (int) alpha);
+					imShare.getBackground().setAlpha(255 - (int) alpha);
 //					int strokeWidth = 5; // 3dp 边框宽度
 //					int roundRadius = 15; // 8dp 圆角半径
 //					int strokeColor = Color.parseColor("#2E3135");//边框颜色int fillColor = Color.parseColor("#DFDFE0");//内部填充颜色
@@ -392,6 +394,8 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 					//过顶部图区域，标题栏定色
 					rlTitleAll.setBackgroundColor(Color.argb(255, 160, 80, 243));
 					setTopColor(Color.argb(255, 0, 0, 0));
+					imReturn.getBackground().setAlpha(0);
+					imShare.getBackground().setAlpha(0);
 					vLine.setVisibility(View.VISIBLE);
 				}
 
