@@ -46,8 +46,6 @@ import static android.view.View.VISIBLE;
  */
 
 public class SearchActivity extends BaseActivity implements CustomSearchHotViewGroup.OnGroupItemClickListener, CustomSearchHistoryViewGroup.OnGroupItemClickListener {
-
-	private static final String TAG = "SearchActivity";
 	@BindView(R.id.search_layout)
 	RelativeLayout title;
 	@BindView(R.id.search_modify_hots)
@@ -73,23 +71,22 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 
 	@Override
 	protected void initView() {
-		etContent.setHint(" 搜索 商品名称");
 		shopId = getIntent().getStringExtra("shopId");
 		TAB = getIntent().getStringExtra("TAB");
 		storeList = getIntent().getStringExtra("storeList");
-		Log.e(TAG, "initView: " + shopId);
+		if (null != storeList) {
+			etContent.setHint(" 搜索 店铺名称");
+		} else {
+			etContent.setHint(" 搜索 商品名称");
+		}
 		/*默认搜索列表*/
 		getSearchHot();
 		resetHistory();
-		//Result  Ticket RecyclerView
-
 		etContent.addTextChangedListener(new EditChangedListener());
 		etContent.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 			@Override
 			public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
 				if (actionId == EditorInfo.IME_ACTION_SEARCH || (keyEvent != null && keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-//					LogUtils.i("ActionID的值" + actionId);
-					LogUtils.i("IMEACTIONSEARCH的值" + EditorInfo.IME_ACTION_SEARCH);
 					searchTag = etContent.getText().toString();
 					KeyBoardUtils.hintKb(SearchActivity.this);
 					if (!searchTag.equals("")) {
@@ -109,7 +106,6 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 
 	@Override
 	public void onHotGroupItemClick(int item, String text) {
-		LogUtils.i("我点击了");
 		etContent.setText(text);
 		etContent.setSelection(text.length());
 		searchTag = etContent.getText().toString();
@@ -122,20 +118,11 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 
 	@Override
 	public void onHistoryGroupItemClick(int item, String text) {
-		LogUtils.i("我点击了" + item);
 		etContent.setText(text);
 		etContent.setSelection(text.length());
 		searchTag = etContent.getText().toString();
 		KeyBoardUtils.hintKb(this);
 		intentToResult();
-	}
-
-
-	private void showshadowSearch() {
-		if (Build.VERSION.SDK_INT >= 21) {
-			title.setElevation(getResources().getDimension(R.dimen.dis2));
-			title.setOutlineProvider(ViewOutlineProvider.BOUNDS);
-		}
 	}
 
 	private class EditChangedListener implements TextWatcher {
@@ -244,7 +231,6 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 			etContent.setText(searchTag);
 			intent = new Intent(this, HomeGoodsListActivity.class);
 			intent.putExtra("shopId", shopId);
-			Log.e(TAG, "searchTrag的值========" + searchTag + shopId);
 			intent.putExtra("name", searchTag);
 			intent.putExtra("TAG", "1");
 			if (TAB != null) {
