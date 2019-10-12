@@ -28,56 +28,12 @@
                 android:layout_height="@dimen/dis0.5"
                 android:background="@color/CE7_E7_E7"/>
 
-            <!--  <RelativeLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="@dimen/dis53"
-                  >
-
-                  <TextView
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_centerVertical="true"
-                      android:layout_marginLeft="@dimen/dis15"
-                      android:text="接收消息通知"
-                      android:textColor="@color/C1E_1E_1E"
-                      android:textSize="@dimen/font15" />
-                  <com.yj.robust.widget.SwitchView
-                      android:id="@+id/mine_setting_swbtn"
-                      android:layout_width="wrap_content"
-                      android:layout_height="@dimen/dis30"
-                      app:isOpened="false"
-                      android:layout_alignParentRight="true"
-                      android:layout_marginRight="@dimen/dis5"
-                      android:layout_centerVertical="true"
-                      android:paddingRight="@dimen/dis10"
-                      android:paddingLeft="@dimen/dis10"
-                      />
-                  <TextView
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_centerVertical="true"
-                      android:text="已开启"
-                      android:textColor="@color/C64_64_64"
-                      android:textSize="@dimen/font14"
-                      android:layout_toLeftOf="@id/mine_setting_swbtn"
-                      />
-              </RelativeLayout>
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="@dimen/dis0.5"
-              android:background="@color/CE7_E7_E7" />-->
-
-            <!--<com.yj.robusts.widget.MaterialRippleLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-
             <RelativeLayout
                 android:id="@+id/mine_setting_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dis18"
                 android:layout_marginTop="@dimen/dis18"
+                android:layout_marginBottom="@dimen/dis18"
                 android:visibility="gone">
 
                 <TextView
@@ -96,13 +52,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
-                    app:isOpened="false"
-                    />
-
-
+                    app:isOpened="false"/>
             </RelativeLayout>
-            <!--</com.yj.robusts.widget.MaterialRippleLayout>-->
-
 
             <View
                 android:layout_width="match_parent"
@@ -117,8 +68,8 @@
                     android:id="@+id/mine_setting_update"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis18"
-                    android:layout_marginTop="@dimen/dis18">
+                    android:layout_marginTop="@dimen/dis18"
+                    android:layout_marginBottom="@dimen/dis18">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,16 +102,6 @@
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
-            <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dis0.5"-->
-            <!--android:background="@color/CE7_E7_E7"/>-->
-
-            <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dis6"-->
-            <!--android:background="@color/CF8_F8_F8"/>-->
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
@@ -174,8 +115,8 @@
                     android:id="@+id/mine_setting_clean"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis18"
-                    android:layout_marginTop="@dimen/dis18">
+                    android:layout_marginTop="@dimen/dis18"
+                    android:layout_marginBottom="@dimen/dis18">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -196,7 +137,6 @@
                         android:textSize="@dimen/font14"/>
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
-
 
             <View
                 android:layout_width="match_parent"
@@ -221,8 +161,8 @@
                     android:id="@+id/mine_setting_help"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis18"
                     android:layout_marginTop="@dimen/dis18"
+                    android:layout_marginBottom="@dimen/dis18"
                     android:paddingRight="@dimen/dis15">
 
                     <TextView
@@ -262,8 +202,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
-                >
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/mine_setting_logout"
@@ -273,7 +212,6 @@
                     android:text="退出登录"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font16"/>
-
             </RelativeLayout>
 
             <View

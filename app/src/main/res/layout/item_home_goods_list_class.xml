@@ -26,8 +26,7 @@
                 android:gravity="center"
                 android:text="推荐"
                 android:textColor="@drawable/selector_color_10_e8"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
         </LinearLayout>
 
         <LinearLayout
@@ -45,8 +44,7 @@
                 android:gravity="center"
                 android:text="销量"
                 android:textColor="@drawable/selector_color_10_e8"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <ImageView
                 android:id="@+id/goods_list_iv_count"
@@ -71,8 +69,7 @@
                 android:gravity="center"
                 android:text="价格"
                 android:textColor="@drawable/selector_color_10_e8"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <ImageView
                 android:id="@+id/goods_list_iv_price"
@@ -104,5 +101,4 @@
         android:layout_height="@dimen/dis0.5"
         android:layout_below="@id/id"
         android:background="@color/CED_F0_F1"/>
-
 </LinearLayout>

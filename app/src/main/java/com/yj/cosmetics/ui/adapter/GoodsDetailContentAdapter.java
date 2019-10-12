@@ -45,12 +45,9 @@ import butterknife.ButterKnife;
  */
 
 public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "GoodsDetailContentAdapter";
 	private GoodsDetailActivity mContext;
 	SpendDetialClickListener mItemClickListener;
 	public GoodsBannerAdapter mBannerAdapter;
-
 	GoodsEntitys.DataBeanX data;
 	GoodsCommentEntity.GoodsCommentData mJudge;
 	private String style;
@@ -261,7 +258,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		} else if (holder instanceof JudgeViewHolder) {
 			if (mJudge != null) {
 				size = mJudge.getCommArray().size();
-				Log.i(TAG, "onBindViewHolder: getCommArray " + size);
 				if (mJudge.getCommArray() != null && size > 0) {
 //                    ((CouponReceiveHolder) holder).llYes.setVisibility(View.VISIBLE);
 //                    ((CouponReceiveHolder) holder).rlNo.setVisibility(View.GONE);
@@ -617,7 +613,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 	@SuppressLint("LongLogTag")
 	@Override
 	public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
-		Log.i(TAG, "onDetachedFromRecyclerView: >>>>>>>>>>>>>");
 		super.onDetachedFromRecyclerView(recyclerView);
 	}
 }

@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible">
-
         </android.support.v7.widget.RecyclerView>
 
         <View
@@ -32,12 +31,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="@dimen/dis15"
             android:paddingTop="@dimen/dis15"
+            android:paddingBottom="@dimen/dis15"
             android:text="取消"
             android:textColor="@color/C1E_1E_1E"
             android:textSize="@dimen/font14"/>
-
     </LinearLayout>
 
     <ScrollView
@@ -46,13 +44,12 @@
         android:layout_height="wrap_content"
         android:visibility="visible">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/dis15"
-            android:paddingTop="@dimen/dis15">
+            android:paddingTop="@dimen/dis15"
+            android:paddingBottom="@dimen/dis15">
 
             <TextView
                 android:layout_width="match_parent"
@@ -66,8 +63,8 @@
                 android:id="@+id/store_dialog_info_rl_services"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis10"
                 android:paddingTop="@dimen/dis10"
+                android:paddingBottom="@dimen/dis10"
                 android:visibility="gone">
 
                 <TextView
@@ -79,15 +76,13 @@
                     android:text=""
                     android:textColor="@color/C64_64_64"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis10"
-                android:paddingTop="@dimen/dis10">
+                android:paddingTop="@dimen/dis10"
+                android:paddingBottom="@dimen/dis10">
 
                 <TextView
                     android:id="@+id/store_dialog_info_rl_services_title"
@@ -97,15 +92,6 @@
                     android:text="店铺名"
                     android:textColor="@color/black"
                     android:textSize="@dimen/font16"/>
-
-                <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_below="@id/store_dialog_info_rl_services_title"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:paddingTop="@dimen/dis10">-->
-
 
                 <com.yj.cosmetics.widget.MTextView
                     android:id="@+id/store_dialog_info_rl_services_content"
@@ -119,17 +105,13 @@
                     android:text=""
                     android:textColor="@color/C64_64_64"
                     android:textSize="@dimen/font14"/>
-
-
-                <!--</LinearLayout>-->
-
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis10"
-                android:paddingTop="@dimen/dis10">
+                android:paddingTop="@dimen/dis10"
+                android:paddingBottom="@dimen/dis10">
 
                 <TextView
                     android:id="@+id/store_dialog_info_rl_services_title2"
@@ -140,16 +122,15 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/font16"/>
 
-
                 <TextView
                     android:id="@+id/store_dialog_info_rl_services_content2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dis10"
                     android:layout_toRightOf="@id/store_dialog_info_rl_services_title2"
                     android:ellipsize="end"
                     android:gravity="right"
-                    android:layout_marginLeft="@dimen/dis10"
                     android:lineSpacingExtra="@dimen/dis5"
                     android:maxLines="1"
                     android:text=""
@@ -160,8 +141,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis10"
-                android:paddingTop="@dimen/dis10">
+                android:paddingTop="@dimen/dis10"
+                android:paddingBottom="@dimen/dis10">
 
                 <TextView
                     android:id="@+id/store_dialog_info_rl_services_title3"
@@ -172,7 +153,6 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/font16"/>
 
-
                 <TextView
                     android:id="@+id/store_dialog_info_rl_services_content3"
                     android:layout_width="match_parent"
@@ -180,8 +160,8 @@
                     android:layout_below="@id/store_dialog_info_rl_services_title3"
                     android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text=""
                     android:textColor="@color/C64_64_64"
                     android:textSize="@dimen/font14"/>

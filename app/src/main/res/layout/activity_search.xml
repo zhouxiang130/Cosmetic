@@ -1,137 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ptr="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis45"
-        android:background="@color/white"
-        android:layout_marginBottom="@dimen/dis10">
+        android:layout_marginBottom="@dimen/dis10"
+        android:background="@color/white">
+
         <TextView
             android:id="@+id/search_modify_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="取消"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:paddingRight="@dimen/dis15"
-            />
+            android:text="取消"/>
+
         <RelativeLayout
             android:id="@+id/search_rl_back"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/back_sear"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis15"
-                android:layout_marginRight="@dimen/dis15"/>
+                android:layout_marginRight="@dimen/dis15"
+                android:src="@mipmap/back_sear"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/shape_corner_ed_radius15_"
-            android:layout_marginRight="@dimen/dis10"
-            android:layout_toLeftOf="@id/search_modify_cancel"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis10"
             android:layout_marginBottom="@dimen/dis8"
+            android:layout_toLeftOf="@id/search_modify_cancel"
             android:layout_toRightOf="@id/search_rl_back"
-            >
+            android:background="@drawable/shape_corner_ed_radius15_">
+
             <ImageView
                 android:id="@+id/search_modify_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/search_for"
-                android:layout_marginLeft="@dimen/dis10"
                 android:layout_centerVertical="true"
-                />
+                android:layout_marginLeft="@dimen/dis10"
+                android:src="@mipmap/search_for"/>
+
             <EditText
                 android:id="@+id/search_modify_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="@dimen/font12"
-                android:textColor="@color/C88_88_88"
-                android:layout_toRightOf="@id/search_modify_iv"
-                android:layout_marginLeft="@dimen/dis5"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis5"
+                android:layout_toRightOf="@id/search_modify_iv"
                 android:background="@null"
                 android:imeOptions="actionSearch"
                 android:singleLine="true"
-                />
+                android:textColor="@color/C88_88_88"
+                android:textSize="@dimen/font12"/>
+
             <ImageView
-            android:id="@+id/search_modify_clean"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/empty_sear"
-            android:layout_marginRight="@dimen/dis5"
-            android:paddingLeft="@dimen/dis5"
-            android:paddingRight="@dimen/dis5"
-            android:visibility="gone"
-            />
+                android:id="@+id/search_modify_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis5"
+                android:paddingLeft="@dimen/dis5"
+                android:paddingRight="@dimen/dis5"
+                android:src="@mipmap/empty_sear"
+                android:visibility="gone"/>
         </RelativeLayout>
     </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/search_hint_lv"
+
+    <LinearLayout
+        android:id="@+id/search_hint_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dis5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:text="热门搜索"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font14"/>
+
+        <com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHotViewGroup
+            android:id="@+id/search_modify_hots"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/dis5"
-            android:background="@color/white"
-            >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginTop="@dimen/dis32"
+            android:layout_marginRight="@dimen/dis15">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="热门搜索"
-                android:textSize="@dimen/font14"
-                android:layout_marginLeft="@dimen/dis15"
+                android:text="搜索历史"
                 android:textColor="@color/C10_10_10"
-                />
-            <com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHotViewGroup
-                android:id="@+id/search_modify_hots"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dis10"
-                >
+                android:textSize="@dimen/font14"/>
 
-            </com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHotViewGroup>
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/search_modify_clean_history"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dis32"
-                android:layout_marginLeft="@dimen/dis15"
-                android:layout_marginRight="@dimen/dis15"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="搜索历史"
-                    android:textSize="@dimen/font14"
-                    android:textColor="@color/C10_10_10"
-                    />
-                <ImageView
-                    android:id="@+id/search_modify_clean_history"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@mipmap/delete_sear"
-                    />
-            </RelativeLayout>
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/delete_sear"/>
+        </RelativeLayout>
 
-            <com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHistoryViewGroup
-                android:id="@+id/search_modify_history"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dis10"
-                >
-            </com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHistoryViewGroup>
-        </LinearLayout>
-
+        <com.yj.cosmetics.widget.CustomViewGroup.CustomSearchHistoryViewGroup
+            android:id="@+id/search_modify_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dis10"/>
+    </LinearLayout>
 </LinearLayout>

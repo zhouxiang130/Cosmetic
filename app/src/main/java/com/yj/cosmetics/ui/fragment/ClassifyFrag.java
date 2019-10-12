@@ -45,7 +45,6 @@ import okhttp3.Response;
  */
 
 public class ClassifyFrag extends BaseFragment {
-
 	@BindView(R.id.recyclerView)
 	RecyclerView titleRecyclerView;
 	@BindView(R.id.contentRecyclerview)
@@ -56,12 +55,9 @@ public class ClassifyFrag extends BaseFragment {
 	RelativeLayout rlTop;
 	@BindView(R.id.frag_classify_head)
 	View vHead;
-
-
 	ClassifyTitleAdapter mTitleAdapter;
 	ClassifyContentAdapter mContentAdapter;
 	private GridLayoutManager gridLayoutManager;
-
 	private List<ClassifyEntity.ClassifyData.ClassifyItem> mTitle;
 	private ClassifyContentEntity.ClassifyContentData data;
 
@@ -75,20 +71,16 @@ public class ClassifyFrag extends BaseFragment {
 	@Override
 	protected void initData() {
 		mTitle = new ArrayList<>();
-
 		LinearLayoutManager titleLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
 		titleRecyclerView.setLayoutManager(titleLayoutManager);
 		mTitleAdapter = new ClassifyTitleAdapter(getActivity(), mTitle);
 		titleRecyclerView.setAdapter(mTitleAdapter);
-
 //		LinearLayoutManager contentLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
 //		contentRecyclerView.setLayoutManager(contentLayoutManager);
 		gridLayoutManager = new GridLayoutManager(getActivity(), 3);
 		contentRecyclerView.setLayoutManager(gridLayoutManager);
-
 		mContentAdapter = new ClassifyContentAdapter(getActivity(), data);
 		contentRecyclerView.setAdapter(mContentAdapter);
-
 		mTitleAdapter.setOnItemClickListener(new ClassifyTitleAdapter.SpendDetialClickListener() {
 			@Override
 			public void onItemClick(View view, int postion) {
@@ -103,7 +95,6 @@ public class ClassifyFrag extends BaseFragment {
 				titleRecyclerView.smoothScrollBy(0, (int) (view.getY() + view.getHeight() + rlTop.getHeight() - windowHeight / 2));
 			}
 		});
-
 		doAsyncGetTitle();
 		transTitle();
 	}
@@ -124,7 +115,6 @@ public class ClassifyFrag extends BaseFragment {
 				break;
 		}
 	}
-
 
 	private void doAsyncGetTitle() {
 		mProgressLayout.showContent();
@@ -170,7 +160,6 @@ public class ClassifyFrag extends BaseFragment {
 				if (call.isCanceled()) {
 					call.cancel();
 				} else {
-
 					mProgressLayout.showNetError(new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
@@ -205,15 +194,6 @@ public class ClassifyFrag extends BaseFragment {
 						data = response.getData();
 						mContentAdapter.setData(data);
 						mProgressLayout.showContent();
-//						if (data.getProductClassifys()!=null && data.getProductClassifys().size()!=0){
-//						}else {
-//							mProgressLayout.showNone(new View.OnClickListener() {
-//								@Override
-//								public void onClick(View view) {
-//								}
-//							});
-//						}
-
 					} else {
 						mProgressLayout.showNone(new View.OnClickListener() {
 							@Override
@@ -221,7 +201,6 @@ public class ClassifyFrag extends BaseFragment {
 							}
 						});
 					}
-
 				} else {
 					LogUtils.i("我挂了" + response.getMsg());
 					mProgressLayout.showNetError(new View.OnClickListener() {

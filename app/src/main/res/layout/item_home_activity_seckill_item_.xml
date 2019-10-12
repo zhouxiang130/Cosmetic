@@ -8,9 +8,7 @@
         android:id="@+id/item_account_profit_v1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis8"
-        android:visibility="gone"
-        />
-        <!--android:background="@color/CF5_F5_F5"-->
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,11 +20,10 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/dis10"
             android:paddingLeft="@dimen/dis15"
-            android:paddingRight="@dimen/dis15"
             android:paddingTop="@dimen/dis12"
-            >
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis10">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -37,9 +34,7 @@
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_corner_dc_stroke1_white_radius2"
-                    >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/item_seckill_iv"
@@ -49,8 +44,6 @@
                         android:layout_centerHorizontal="true"
                         android:scaleType="centerCrop"
                         android:src="@mipmap/default_goods"/>
-
-
                 </RelativeLayout>
 
                 <com.yj.cosmetics.widget.CustomCountDownTimerViews
@@ -58,10 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/item_seckill_iv"
-                    android:gravity="center"
-                    />
-
-
+                    android:gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
@@ -70,8 +60,7 @@
                 android:layout_marginLeft="@dimen/dis20"
                 android:layout_weight="8"
                 android:gravity="center|left"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/item_seckill_tv_title"
@@ -94,15 +83,13 @@
                     android:textColor="@color/C85_85_85"
                     android:textSize="@dimen/font12"/>
 
-
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/item_seckill_tv_state"
@@ -133,8 +120,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/item_seckill_tv_confirm"
-                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
                         android:textColor="@color/CE8_3C_3C"
                         android:textSize="@dimen/font14"/>
 
@@ -147,7 +134,6 @@
                         android:textSize="@dimen/font10"/>
                 </LinearLayout>
 
-
                 <TextView
                     android:id="@+id/item_seckill_tv_confirm"
                     android:layout_width="wrap_content"
@@ -155,14 +141,13 @@
                     android:layout_weight="1"
                     android:background="@drawable/shape_corner_e8_radius3"
                     android:gravity="center"
-                    android:paddingBottom="@dimen/dis2"
                     android:paddingLeft="@dimen/dis15"
-                    android:paddingRight="@dimen/dis15"
                     android:paddingTop="@dimen/dis2"
+                    android:paddingRight="@dimen/dis15"
+                    android:paddingBottom="@dimen/dis2"
                     android:text="马上抢"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font12"/>
-
             </LinearLayout>
         </LinearLayout>
 
@@ -170,8 +155,6 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis0.5"
             android:background="@color/CE9_EC_ED"
-            android:visibility="gone"
-            />
-
+            android:visibility="gone"/>
     </RelativeLayout>
 </LinearLayout>

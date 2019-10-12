@@ -7,7 +7,6 @@
               android:paddingLeft="@dimen/dis10"
               android:paddingRight="10dp">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,13 +14,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/dialog_ticket_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/dis15"
             android:paddingTop="@dimen/dis15"
+            android:paddingBottom="@dimen/dis15"
             android:text="优惠券"
             android:textColor="@color/black_color1"
             android:textSize="@dimen/font16"/>
@@ -34,8 +32,7 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="@dimen/dis160"
-                />
+                android:minHeight="@dimen/dis160"/>
 
             <LinearLayout
                 android:id="@+id/ll_integral_info"
@@ -48,10 +45,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_corner_e8_stroke0_5_radius8"
-                    android:paddingBottom="@dimen/dis3"
                     android:paddingLeft="@dimen/dis10"
-                    android:paddingRight="@dimen/dis10"
                     android:paddingTop="@dimen/dis3"
+                    android:paddingRight="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis3"
                     android:text="积分"
                     android:textColor="@color/Ce8_3c_3c"
                     android:textSize="@dimen/font15"/>
@@ -81,5 +78,4 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font16"/>
     </RelativeLayout>
-
 </LinearLayout>

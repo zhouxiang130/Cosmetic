@@ -8,7 +8,5 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis70"
-        android:background="@color/CF8_F8_F8"
-        />
-
+        android:background="@color/CF8_F8_F8"/>
 </LinearLayout>

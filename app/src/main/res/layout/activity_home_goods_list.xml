@@ -6,14 +6,12 @@
               android:background="@color/white"
               android:orientation="vertical">
 
-
     <RelativeLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis45"
         android:background="@color/white"
-        android:gravity="center"
-        >
+        android:gravity="center">
 
         <RelativeLayout
             android:id="@+id/goods_list_return"
@@ -26,8 +24,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15"
-                android:src="@mipmap/return_x"
-                />
+                android:src="@mipmap/return_x"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -35,18 +32,16 @@
             android:layout_width="@dimen/dis30"
             android:layout_height="@dimen/dis30"
             android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
-            android:layout_marginRight="10dp"
-            >
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp">
 
             <ImageView
                 android:layout_width="@dimen/dis20"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/xiaoxi1"
-                />
+                android:src="@mipmap/xiaoxi1"/>
 
             <TextView
                 android:id="@+id/goods_list_tv_info"
@@ -58,20 +53,18 @@
                 android:text=""
                 android:textColor="@color/white"
                 android:textSize="@dimen/font8"
-                android:visibility="gone"
-                />
+                android:visibility="gone"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dis8"
-            android:layout_marginRight="@dimen/dis10"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginBottom="@dimen/dis8"
             android:layout_toLeftOf="@id/goods_list_info"
             android:layout_toRightOf="@id/goods_list_return"
-            android:background="@drawable/shape_corner_ed_radius15"
-            >
+            android:background="@drawable/shape_corner_ed_radius15">
 
             <ImageView
                 android:id="@+id/search_modify_iv"
@@ -79,8 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis10"
-                android:src="@mipmap/search_for"
-                />
+                android:src="@mipmap/search_for"/>
 
             <TextView
                 android:id="@+id/search_modify_tv"
@@ -92,8 +84,7 @@
                 android:hint="搜索商品"
                 android:singleLine="true"
                 android:textColor="@color/C88_88_88"
-                android:textSize="@dimen/font12"
-                />
+                android:textSize="@dimen/font12"/>
         </RelativeLayout>
     </RelativeLayout>
 
@@ -101,22 +92,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <!--<com.jude.rollviewpager.RollPagerView-->
-            <!--android:id="@+id/rollPagerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dis150"-->
-            <!--app:rollviewpager_play_delay="3000"/>-->
-
-
-
         <LinearLayout
             android:id="@+id/id"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis36"
             android:background="@color/white"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/goods_list_ll_default"
@@ -133,8 +114,7 @@
                     android:gravity="center"
                     android:text="推荐"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
 
             <LinearLayout
@@ -152,8 +132,7 @@
                     android:gravity="center"
                     android:text="销量"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/goods_list_iv_count"
@@ -178,8 +157,7 @@
                     android:gravity="center"
                     android:text="价格"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/goods_list_iv_price"
@@ -224,13 +202,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#f4f4f4"/>
-
-            <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/xrecyclerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="@color/white"/>-->
-
         </com.yj.cosmetics.widget.ProgressLayout>
     </RelativeLayout>
 </LinearLayout>

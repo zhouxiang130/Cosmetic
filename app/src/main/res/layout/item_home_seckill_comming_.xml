@@ -8,32 +8,27 @@
         android:id="@+id/item_account_profit_v1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis8"
-        android:background="@color/CF8_F9_FB"
-        />
+        android:background="@color/CF8_F9_FB"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/dis10">
-        <!--android:background="@color/Ce8_3c_3c"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/dis10"
             android:paddingLeft="@dimen/dis15"
-            android:paddingRight="@dimen/dis15"
             android:paddingTop="@dimen/dis12"
-            >
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis10">
 
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dis100"
-                android:layout_weight="3.5"
-                android:background="@drawable/shape_corner_dc_stroke1_white_radius2"
-                >
+                android:layout_weight="3.5">
 
                 <ImageView
                     android:id="@+id/item_seckill_iv"
@@ -58,23 +53,22 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:maxLines="2"
-                    android:paddingBottom="@dimen/dis2"
                     android:paddingTop="@dimen/dis2"
+                    android:paddingBottom="@dimen/dis2"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <TextView
                     android:id="@+id/item_seckill_tv_style"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_above="@+id/linearLayout"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_weight="1"
                     android:maxLines="1"
-                    android:paddingBottom="@dimen/dis2"
                     android:paddingTop="@dimen/dis2"
+                    android:paddingBottom="@dimen/dis2"
                     android:textColor="@color/C85_85_85"
                     android:textSize="@dimen/font12"/>
 
@@ -82,14 +76,13 @@
                     android:id="@+id/item_seckill_tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
                     android:layout_weight="1"
-                    android:paddingBottom="@dimen/dis2"
                     android:paddingTop="@dimen/dis2"
+                    android:paddingBottom="@dimen/dis2"
                     android:textColor="@color/C64_64_64"
-                    android:textSize="@dimen/font13"
-                    />
+                    android:textSize="@dimen/font13"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,8 +90,8 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingBottom="@dimen/dis2"
-                    android:paddingTop="@dimen/dis2">
+                    android:paddingTop="@dimen/dis2"
+                    android:paddingBottom="@dimen/dis2">
 
                     <TextView
                         android:id="@+id/item_seckill_tv_price"
@@ -106,8 +99,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:textColor="@color/CE8_3C_3C"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
 
                     <TextView
                         android:id="@+id/item_seckill_tv_op"
@@ -116,11 +108,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="@dimen/dis8"
                         android:textColor="@color/C85_85_85"
-                        android:textSize="@dimen/font10"
-                        />
-
+                        android:textSize="@dimen/font10"/>
                 </LinearLayout>
-
 
                 <TextView
                     android:id="@+id/item_seckill_tv_confirm"
@@ -131,17 +120,13 @@
                     android:layout_weight="1"
                     android:background="@drawable/shape_corner_pink_radius3"
                     android:gravity="center"
-                    android:paddingBottom="@dimen/dis3"
                     android:paddingLeft="@dimen/dis15"
-                    android:paddingRight="@dimen/dis15"
                     android:paddingTop="@dimen/dis3"
+                    android:paddingRight="@dimen/dis15"
+                    android:paddingBottom="@dimen/dis3"
                     android:text="即将开抢"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/font12"
-
-                    />
-
-
+                    android:textSize="@dimen/font12"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -149,6 +134,5 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE9_EC_ED"
-        />
+        android:background="@color/CE9_EC_ED"/>
 </LinearLayout>

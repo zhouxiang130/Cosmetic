@@ -19,7 +19,6 @@
             android:background="@drawable/shape_corner_shade"
             android:visibility="gone"/>
 
-
         <LinearLayout
             android:id="@+id/frag_classify_rl_top_"
             android:layout_width="match_parent"
@@ -46,7 +45,6 @@
                     android:scaleType="centerCrop"
                     android:src="@mipmap/shouye_dingwei"/>
 
-
                 <com.yj.cosmetics.widget.MarqueeTextView
                     android:id="@+id/frag_homes_tv_info"
                     android:layout_width="@dimen/dis40"
@@ -63,7 +61,6 @@
                     android:textSize="@dimen/font15"
                     ptr:ignore="EllipsizeMaxLines"/>
 
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -72,18 +69,14 @@
                     android:paddingRight="@dimen/dis5"
                     android:src="@mipmap/shouye_jiantou"
                     android:visibility="visible"/>
-
             </LinearLayout>
-
 
             <RelativeLayout
                 android:id="@+id/frag_classify_rl_top"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis45"
                 android:layout_below="@id/frag_home_v_head"
-                android:layout_marginLeft="@dimen/dis10"
-                >
-                <!--android:background="@color/transparent"-->
+                android:layout_marginLeft="@dimen/dis10">
 
                 <RelativeLayout
                     android:id="@+id/frag_my_info"
@@ -98,12 +91,10 @@
                         android:id="@+id/frag_home_info_iv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="@dimen/dis3"
                         android:layout_alignParentBottom="true"
+                        android:padding="@dimen/dis3"
                         android:scaleType="center"
-                        android:src="@mipmap/icon_message"
-                        />
-
+                        android:src="@mipmap/icon_message"/>
 
                     <TextView
                         android:id="@+id/frag_home_tv_info"
@@ -116,16 +107,15 @@
                         android:textColor="@color/white"
                         android:textSize="@dimen/font8"
                         android:visibility="gone"/>
-
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/frag_classify_rl_search"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/dis8"
                     android:layout_marginLeft="@dimen/dis5"
                     android:layout_marginTop="@dimen/dis8"
+                    android:layout_marginBottom="@dimen/dis8"
                     android:layout_toLeftOf="@id/frag_my_info"
                     android:background="@drawable/shape_corner_ed_radius15">
 
@@ -149,14 +139,12 @@
                         android:textColor="@color/C64_64_64"
                         android:textSize="@dimen/font12"/>
                 </RelativeLayout>
-
             </RelativeLayout>
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:layout_below="@id/frag_classify_rl_top_">
 
             <com.yj.cosmetics.widget.ProgressLayout
@@ -169,8 +157,7 @@
                     android:id="@+id/xrecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/Cf7_f7_f7"
-                    />
+                    android:background="@color/Cf7_f7_f7"/>
 
                 <View
                     android:id="@+id/home_vline"
@@ -180,37 +167,19 @@
                     android:background="@mipmap/projection_b"
                     android:rotation="180"
                     android:visibility="gone"/>
-
-
             </com.yj.cosmetics.widget.ProgressLayout>
-
         </RelativeLayout>
-
-        <!--<ImageView-->
-        <!--android:id="@+id/up_iv_icon"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginBottom="36dp"-->
-        <!--android:layout_marginEnd="20dp"-->
-        <!--android:layout_marginRight="20dp"-->
-        <!--android:background="@mipmap/upd_fl"-->
-        <!--app:layout_behavior="com.yj.robust.behavior.ScrollAwareFABBehavior"/>-->
     </RelativeLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/frag_home_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_arrow_upward_black_24dp"
-            app:backgroundTint="#c3ffffff"
-            app:fabSize="mini"
-            app:layout_behavior="com.yj.cosmetics.behavior.ScrollAwareFABBehavior"/>
-
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/frag_home_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_arrow_upward_black_24dp"
+        app:backgroundTint="#c3ffffff"
+        app:fabSize="mini"
+        app:layout_behavior="com.yj.cosmetics.behavior.ScrollAwareFABBehavior"/>
 </android.support.design.widget.CoordinatorLayout>

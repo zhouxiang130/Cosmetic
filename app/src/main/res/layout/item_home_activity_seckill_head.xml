@@ -10,6 +10,5 @@
         android:layout_marginTop="@dimen/dis8"
         android:scaleType="centerCrop"
         android:src="@mipmap/default_goods"
-        android:visibility="gone"
-        />
+        android:visibility="gone"/>
 </LinearLayout>

@@ -58,10 +58,6 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
 
 
 public class MainActivity extends BaseActivity {
-
-	//private ImageButton rbNews,rbShop,rbVideo,rbCommunity,rbMine;
-	public static final String TAG = "MainActivity";
-
 	@BindView(R.id.main_tv_homepage)
 	TextView tvHomepage;
 	@BindView(R.id.main_tv_classify)
@@ -139,7 +135,6 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && !response.HTTP_OK.equals(response.getCode())) {
-					Log.e(TAG, " searchUserLock >>> onResponse: " + response.toString());
 					mUtils.logOut();
 				}
 			}
@@ -163,7 +158,6 @@ public class MainActivity extends BaseActivity {
 		//判断权限
 	}
 
-
 	/**
 	 * 跳转应用首页
 	 */
@@ -171,10 +165,6 @@ public class MainActivity extends BaseActivity {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-
-				Log.i(TAG, "is_notification_skip:--- " + preferencesUtil.getValuesBoolean("is_notification_skip")
-						+ " ---is_open_chat_message_info :---- " + preferencesUtil.getValuesBoolean("is_open_chat_message_info"));
-
 				if (!preferencesUtil.getValuesBoolean("is_notification_skip")) {
 					if (preferencesUtil.getValuesBoolean("is_open_chat_message_info")) {
 						preferencesUtil.setBooleanValue("is_notification_skip", true);

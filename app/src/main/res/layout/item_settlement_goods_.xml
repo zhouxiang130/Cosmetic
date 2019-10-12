@@ -4,32 +4,26 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@color/CF6_F8_F9"
-              android:orientation="vertical"
-    >
-
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingLeft="@dimen/dis15"
-        android:paddingRight="@dimen/dis10"
         android:paddingTop="@dimen/dis8"
-        >
+        android:paddingRight="@dimen/dis10">
 
         <RelativeLayout
             android:id="@+id/refound_detial_rl_normal_states"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dis30"
-            >
-
+            android:layout_height="@dimen/dis30">
 
             <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                 android:id="@+id/frag_mine_login_iv"
                 android:layout_width="@dimen/dis30"
                 android:layout_height="@dimen/dis30"
                 android:layout_gravity="center_horizontal"
-                android:layout_toRightOf="@id/item_cart_cb"
                 android:scaleType="fitXY"
                 android:src="@mipmap/default_goods"
                 app:riv_border_color="@color/white"
@@ -48,8 +42,6 @@
                 android:text=""
                 android:textColor="@color/C1e_1e_1e"
                 android:textSize="@dimen/font14"/>
-
-
         </RelativeLayout>
 
         <View
@@ -64,24 +56,17 @@
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_"
-            />
-
-
+            android:layout_below="@id/line_"/>
     </RelativeLayout>
-
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE7_E7_E7"
-        />
+        android:background="@color/CE7_E7_E7"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
         android:layout_marginTop="@dimen/dis5"
         android:background="@color/Cf7_f7_f7"/>
-
-
 </LinearLayout>

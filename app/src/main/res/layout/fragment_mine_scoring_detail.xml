@@ -5,7 +5,6 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-
     <com.yj.cosmetics.widget.ProgressLayout
         android:id="@+id/progress_layout"
         android:layout_width="match_parent"
@@ -15,9 +14,6 @@
         <com.jcodecraeer.xrecyclerview.XRecyclerView
             android:id="@+id/xrecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent"/>
     </com.yj.cosmetics.widget.ProgressLayout>
-
-
 </LinearLayout>

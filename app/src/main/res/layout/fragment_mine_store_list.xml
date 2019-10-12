@@ -6,7 +6,6 @@
               android:gravity="center"
               android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -34,8 +33,7 @@
                     android:gravity="center"
                     android:text="推荐"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
 
             <LinearLayout
@@ -53,8 +51,7 @@
                     android:gravity="center"
                     android:text="销量"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/goods_list_iv_count"
@@ -79,8 +76,7 @@
                     android:gravity="center"
                     android:text="价格"
                     android:textColor="@drawable/selector_color_10_e8"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/goods_list_iv_price"
@@ -125,15 +121,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#f4f4f4"/>
-
-            <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/xrecyclerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="@color/white"/>-->
-
         </com.yj.cosmetics.widget.ProgressLayout>
     </RelativeLayout>
-
-
 </LinearLayout>

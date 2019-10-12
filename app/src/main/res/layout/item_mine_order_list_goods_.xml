@@ -1,93 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="@dimen/dis6"
-    android:layout_marginTop="@dimen/dis2"
-    >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dis2"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/dis6">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dis65"
-        >
+        android:layout_height="@dimen/dis65">
+
         <RelativeLayout
             android:id="@+id/order_list_goods_rl1"
             android:layout_width="@dimen/dis65"
-            android:layout_height="@dimen/dis65"
-            android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+            android:layout_height="@dimen/dis65">
+
             <ImageView
                 android:id="@+id/item_settle_iv1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/default_goods"
-                android:scaleType="centerCrop"
                 android:layout_margin="@dimen/dis4"
-                />
-
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_goods"/>
         </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/order_inner_goods_ll1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_alignParentRight="true"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/item_settle_tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="￥"
-                android:textSize="@dimen/font12"
-                android:textColor="@color/C10_10_10"/>
+                android:textColor="@color/C10_10_10"
+                android:textSize="@dimen/font12"/>
+
             <TextView
                 android:id="@+id/item_settle_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/font13"
-                android:layout_toRightOf="@id/item_settle_tv1"
                 android:layout_marginLeft="@dimen/dis3"
                 android:layout_marginBottom="-1dp"
+                android:layout_toRightOf="@id/item_settle_tv1"
                 android:textColor="@color/C10_10_10"
-                />
+                android:textSize="@dimen/font13"/>
         </LinearLayout>
+
         <TextView
             android:id="@+id/item_settle_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/font14"
-            android:textColor="@color/C10_10_10"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:layout_toLeftOf="@id/order_inner_goods_ll1"
-            android:layout_toRightOf="@id/order_list_goods_rl1"
             android:layout_marginLeft="@dimen/dis15"
             android:layout_marginRight="@dimen/dis15"
-            />
+            android:layout_toLeftOf="@id/order_inner_goods_ll1"
+            android:layout_toRightOf="@id/order_list_goods_rl1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font14"/>
+
         <TextView
             android:id="@+id/item_settle_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:textSize="@dimen/font12"
             android:layout_below="@id/item_settle_title"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/dis12"
             android:textColor="@color/C64_64_64"
-            />
+            android:textSize="@dimen/font12"/>
+
         <TextView
             android:id="@+id/item_settle_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/font12"
-            android:textColor="@color/C85_85_85"
+            android:layout_below="@id/item_settle_title"
             android:layout_marginLeft="@dimen/dis15"
             android:layout_marginTop="@dimen/dis12"
-            android:layout_below="@id/item_settle_title"
-            android:layout_toRightOf="@id/order_list_goods_rl1"
-            android:layout_toLeftOf="@id/item_settle_num"
             android:layout_marginRight="@dimen/dis15"
-            />
-
-
+            android:layout_toLeftOf="@id/item_settle_num"
+            android:layout_toRightOf="@id/order_list_goods_rl1"
+            android:textColor="@color/C85_85_85"
+            android:textSize="@dimen/font12"/>
     </RelativeLayout>
-
 </LinearLayout>

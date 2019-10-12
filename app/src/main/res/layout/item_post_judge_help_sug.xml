@@ -14,7 +14,6 @@
         android:paddingLeft="@dimen/dis15"
         android:text="（必选）请选择你想反馈的问题点"/>
 
-
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
@@ -27,7 +26,6 @@
         android:background="@color/white"
         android:padding="@dimen/dis10">
 
-
         <CheckBox
             android:id="@+id/settlement_cart_cb1"
             android:layout_width="wrap_content"
@@ -36,7 +34,6 @@
             android:button="@drawable/selector_checkbox_order"
             android:gravity="center"
             android:padding="@dimen/dis8"/>
-        <!--android:clickable="false"-->
 
         <TextView
             android:id="@+id/mine_setting_tv_content1"
@@ -48,7 +45,6 @@
             android:text="功能异常: 功能故障或不可用"
             android:textColor="@color/C1e_1e_1e"
             android:textSize="@dimen/font15"/>
-
     </RelativeLayout>
 
     <View
@@ -72,7 +68,6 @@
             android:checked="false"
             android:gravity="center"
             android:padding="@dimen/dis8"/>
-        <!--android:clickable="false"-->
 
         <TextView
             android:id="@+id/mine_setting_tv_content2"
@@ -84,8 +79,6 @@
             android:text="产品建议: 用的不爽，我有建议"
             android:textColor="@color/C1e_1e_1e"
             android:textSize="@dimen/font15"/>
-
-
     </RelativeLayout>
 
     <View
@@ -99,7 +92,6 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:padding="@dimen/dis10">
-
 
         <CheckBox
             android:id="@+id/settlement_cart_cb3"
@@ -121,10 +113,7 @@
             android:text="其他问题"
             android:textColor="@color/C1e_1e_1e"
             android:textSize="@dimen/font15"/>
-
-
     </RelativeLayout>
-
 
     <View
         android:layout_width="match_parent"
@@ -144,7 +133,6 @@
         android:layout_height="@dimen/dis0.5"
         android:background="@color/CE7_E7_E7"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -162,10 +150,10 @@
             android:hint="请输入不少于10个字的描述"
             android:maxLength="140"
             android:minLines="7"
-            android:paddingBottom="@dimen/dis10"
             android:paddingLeft="@dimen/dis15"
-            android:paddingRight="@dimen/dis15"
             android:paddingTop="@dimen/dis15"
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis10"
             android:textSize="@dimen/font15"/>
 
         <LinearLayout
@@ -173,8 +161,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="bottom|right"
             android:orientation="horizontal"
-            android:paddingBottom="10dp"
-            android:paddingRight="@dimen/dis10">
+            android:paddingRight="@dimen/dis10"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/input_text_num"
@@ -225,7 +213,6 @@
                     android:text="请提供相关问题的截图或照片"
                     android:textColor="@color/C1E_1E_1E"/>
 
-
                 <TextView
                     android:id="@+id/text_nums"
                     android:layout_width="wrap_content"
@@ -233,9 +220,9 @@
                     android:layout_alignParentRight="true"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:paddingBottom="5dp"
-                    android:paddingRight="15dp"
                     android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="5dp"
                     android:text="/4"
                     android:textColor="@color/C1E_1E_1E"/>
 
@@ -245,12 +232,10 @@
                     android:layout_height="wrap_content"
                     android:layout_toLeftOf="@id/text_nums"
                     android:background="@color/white"
-                    android:paddingBottom="5dp"
                     android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:text="0"
                     android:textColor="@color/C1E_1E_1E"/>
-
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -282,8 +267,8 @@
                                 android:id="@+id/judge_show_offer1"
                                 android:layout_width="@dimen/dis60"
                                 android:layout_height="@dimen/dis60"
-                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:scaleType="centerCrop"
                                 app:riv_corner_radius="@dimen/dis2"/>
@@ -310,8 +295,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer1_rl1"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -348,8 +332,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer2_rl2"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -386,8 +369,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer3_rl3"
-                       android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -418,17 +400,12 @@
                             android:visibility="gone"/>
                     </RelativeLayout>
                 </RelativeLayout>
-
             </RelativeLayout>
-
-
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis0.5"
             android:background="@color/CE7_E7_E7"/>
-
     </LinearLayout>
-
 </LinearLayout>

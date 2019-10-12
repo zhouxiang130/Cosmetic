@@ -5,7 +5,6 @@
               android:background="@color/transparent_color1"
               android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,9 +17,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            >
-
+            android:orientation="vertical">
 
             <View
                 android:layout_width="@dimen/dis0.5"
@@ -40,7 +37,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="6"
                 android:background="@color/CE4_E4_E4"/>
-
         </LinearLayout>
 
         <LinearLayout
@@ -53,15 +49,13 @@
                 android:id="@+id/mine_sign_text_ticket_class_line"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
-                android:background="@color/CE4_E4_E4"
-                />
+                android:background="@color/CE4_E4_E4"/>
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <ImageView
                     android:id="@+id/mine_sign_img_ticket_class_"
@@ -69,7 +63,6 @@
                     android:layout_height="75dp"
                     android:layout_alignParentRight="true"
                     android:background="@mipmap/qd_jl_false"/>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,16 +82,14 @@
                             android:layout_height="wrap_content"
                             android:gravity="center|bottom"
                             android:orientation="horizontal"
-                            android:paddingTop="10dp"
-                            >
+                            android:paddingTop="10dp">
 
                             <TextView
                                 android:id="@+id/mine_sign_text_ticket_price_symbol"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="￥"
-                                android:textColor="@color/white"
-                                />
+                                android:textColor="@color/white"/>
 
                             <TextView
                                 android:id="@+id/mine_sign_text_ticket_price"
@@ -114,8 +105,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:visibility="gone"
-                                />
+                                android:visibility="gone"/>
                         </LinearLayout>
 
                         <TextView
@@ -131,7 +121,6 @@
                             android:text="测试啊啊啊啊"
                             android:textColor="@color/white"
                             android:textSize="@dimen/dis11"/>
-
                     </RelativeLayout>
 
                     <LinearLayout
@@ -149,9 +138,8 @@
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:paddingLeft="@dimen/dis5"
-                            android:paddingRight="@dimen/dis5"
                             android:paddingTop="@dimen/dis10"
-                            >
+                            android:paddingRight="@dimen/dis5">
 
                             <TextView
                                 android:id="@+id/mine_sign_text_ticket_class"
@@ -161,15 +149,14 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginLeft="5dp"
                                 android:background="@drawable/shape_corner_oval_two"
-                                android:paddingBottom="2dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
                                 android:gravity="center"
+                                android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
                                 android:text="折扣券"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/dis11"/>
-
 
                             <TextView
                                 android:id="@+id/mine_sign_text_ticket_class_content"
@@ -179,14 +166,13 @@
                                 android:layout_centerHorizontal="true"
                                 android:ellipsize="end"
                                 android:maxLines="1"
-                                android:paddingBottom="2dp"
                                 android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
                                 android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
                                 android:text="测试啊啊啊啊"
                                 android:textColor="@color/C10_10_10"
                                 android:textSize="@dimen/dis11"/>
-
                         </RelativeLayout>
 
                         <LinearLayout
@@ -197,21 +183,18 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis1"
-                                android:layout_weight="0.2"
-                                />
+                                android:layout_weight="0.2"/>
 
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis0.5"
                                 android:layout_weight="5"
-                                android:background="@color/CE4_E4_E4"
-                                />
+                                android:background="@color/CE4_E4_E4"/>
 
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis1"
-                                android:layout_weight="0.2"
-                                />
+                                android:layout_weight="0.2"/>
                         </LinearLayout>
 
                         <RelativeLayout
@@ -243,10 +226,10 @@
                                 android:layout_marginRight="10dp"
                                 android:gravity="center"
                                 android:orientation="vertical"
-                                android:paddingBottom="5dp"
                                 android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
                                 android:paddingRight="5dp"
-                                android:paddingTop="5dp">
+                                android:paddingBottom="5dp">
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -263,8 +246,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
                 android:background="@color/CE4_E4_E4"
-                android:visibility="gone"
-                />
+                android:visibility="gone"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

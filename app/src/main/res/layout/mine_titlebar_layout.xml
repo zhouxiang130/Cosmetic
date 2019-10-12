@@ -5,22 +5,18 @@
               android:layout_height="wrap_content"
               android:background="@drawable/shape_corner_shade"
               android:gravity="center_vertical"
-              android:orientation="vertical"
-    >
+              android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/title_fm"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dis45"
-
-        >
+        android:layout_height="@dimen/dis45">
 
         <LinearLayout
             android:id="@+id/title_ll_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            >
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/title_ll_iv"
@@ -32,10 +28,7 @@
                 android:focusable="false"
                 android:paddingRight="5dp"
                 android:src="@drawable/ic_keyboard_arrow_left_white_24dp"
-                android:visibility="visible"
-                />
-            <!--android:paddingLeft="15dp"-->
-            <!--android:src="@mipmap/return_x"-->
+                android:visibility="visible"/>
         </LinearLayout>
 
         <TextView
@@ -45,9 +38,8 @@
             android:layout_gravity="center"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="@dimen/font16"
-            />
-        <!--android:rotation="90"-->
+            android:textSize="@dimen/font16"/>
+
         <RelativeLayout
             android:id="@+id/title_rl_next"
             android:layout_width="wrap_content"
@@ -56,15 +48,11 @@
             android:layout_centerVertical="true"
             android:layout_gravity="end"
             android:gravity="center"
-            android:padding="@dimen/dis10"
-            >
+            android:padding="@dimen/dis10">
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-            <!--android:rotation="90"-->
+                android:layout_height="wrap_content"/>
         </RelativeLayout>
     </FrameLayout>
-
 </LinearLayout>

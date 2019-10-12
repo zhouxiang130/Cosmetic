@@ -109,7 +109,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white">
-            <!--android:layout_height="@dimen/dis190"-->
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/collapsing_toolbar"

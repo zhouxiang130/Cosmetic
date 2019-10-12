@@ -10,15 +10,13 @@
 
     <com.yj.cosmetics.widget.UserDefineScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <View
                 android:layout_width="match_parent"
@@ -38,8 +36,8 @@
                     android:id="@+id/mine_personal_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis14"
-                    android:paddingTop="@dimen/dis14">
+                    android:paddingTop="@dimen/dis14"
+                    android:paddingBottom="@dimen/dis14">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -57,8 +55,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:src="@drawable/more_next"
-                        />
+                        android:src="@drawable/more_next"/>
 
                     <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                         android:id="@+id/mine_personal_iv_header"
@@ -86,8 +83,8 @@
                     android:id="@+id/mine_personal_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis18"
-                    android:paddingTop="@dimen/dis20">
+                    android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis18">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,8 +102,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:src="@drawable/more_next"
-                        />
+                        android:src="@drawable/more_next"/>
 
                     <TextView
                         android:id="@+id/mine_personal_tv_name"
@@ -117,27 +113,26 @@
                         android:layout_toLeftOf="@id/mine_personal_iv1"
                         android:textColor="@color/C64_64_64"
                         android:textSize="@dimen/font14"/>
-
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
-                android:visibility="gone"
-                android:background="@color/CF5_F5_F5"/>
+                android:background="@color/CF5_F5_F5"
+                android:visibility="gone"/>
 
             <com.yj.cosmetics.widget.MaterialRippleLayout
                 android:layout_width="match_parent"
-                android:visibility="gone"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:id="@+id/mine_personal_leaguer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis18"
-                    android:paddingTop="@dimen/dis20">
+                    android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis18">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -156,19 +151,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
                         android:src="@drawable/more_next"
-                        android:visibility="invisible"
-                        />
-
-                    <!--<TextView-->
-                    <!--android:id="@+id/mine_personal_tv_name"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:text="测试"-->
-                    <!--android:layout_marginRight="@dimen/dis15"-->
-                    <!--android:layout_toLeftOf="@id/mine_personal_iv1"-->
-                    <!--android:textColor="@color/C64_64_64"-->
-                    <!--android:textSize="@dimen/font14"/>-->
+                        android:visibility="invisible"/>
 
                     <TextView
                         android:id="@+id/mine_personal_tv_leaguer"
@@ -181,7 +164,6 @@
                         android:maxLines="1"
                         android:textColor="@color/C64_64_64"
                         android:textSize="@dimen/font14"/>
-
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
@@ -208,8 +190,8 @@
                     android:id="@+id/mine_personal_tel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis15"
-                    android:paddingTop="@dimen/dis18">
+                    android:paddingTop="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis15">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -227,8 +209,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:src="@drawable/more_next"
-                        />
+                        android:src="@drawable/more_next"/>
 
                     <TextView
                         android:id="@+id/mine_personal_tv_tel"
@@ -238,8 +219,7 @@
                         android:layout_marginRight="14dp"
                         android:layout_toLeftOf="@id/mine_personal_iv2"
                         android:textColor="@color/C64_64_64"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
@@ -256,8 +236,8 @@
                     android:id="@+id/mine_personal_pwd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis15"
-                    android:paddingTop="@dimen/dis18">
+                    android:paddingTop="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis15">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -275,40 +255,39 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:src="@drawable/more_next"
-                        />
+                        android:src="@drawable/more_next"/>
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
-                android:visibility="gone"
-                android:background="@color/CE7_E7_E7"/>
+                android:background="@color/CE7_E7_E7"
+                android:visibility="gone"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis15"
-                android:visibility="gone"
-                android:background="@color/CF8_F8_F8"/>
+                android:background="@color/CF8_F8_F8"
+                android:visibility="gone"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
-                android:visibility="gone"
-                android:background="@color/CE7_E7_E7"/>
+                android:background="@color/CE7_E7_E7"
+                android:visibility="gone"/>
 
             <com.yj.cosmetics.widget.MaterialRippleLayout
                 android:layout_width="match_parent"
-                android:visibility="gone"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:id="@+id/mine_personal_alipay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis15"
-                    android:paddingTop="@dimen/dis18">
+                    android:paddingTop="@dimen/dis18"
+                    android:paddingBottom="@dimen/dis15">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -326,8 +305,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/dis15"
-                        android:src="@drawable/more_next"
-                        />
+                        android:src="@drawable/more_next"/>
 
                     <TextView
                         android:id="@+id/mine_personal_tv_alipay"
@@ -337,8 +315,7 @@
                         android:layout_marginRight="14dp"
                         android:layout_toLeftOf="@id/mine_personal_iv4"
                         android:textColor="@color/C64_64_64"
-                        android:textSize="@dimen/font14"
-                        />
+                        android:textSize="@dimen/font14"/>
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
@@ -346,8 +323,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
                 android:background="@color/CE7_E7_E7"/>
-
-
         </LinearLayout>
     </com.yj.cosmetics.widget.UserDefineScrollView>
 </LinearLayout>

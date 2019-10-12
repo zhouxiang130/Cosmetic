@@ -11,14 +11,11 @@
         android:layout_marginLeft="@dimen/dis15"
         android:layout_marginTop="@dimen/dis10"
         android:textColor="@color/C10_10_10"
-        android:textSize="@dimen/font14"
-        />
+        android:textSize="@dimen/font14"/>
 
     <com.yj.cosmetics.widget.CustomViewGroup.CustomSizeDialogViewGroup
         android:id="@+id/dialog_view_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dis15"
-        />
-
+        android:layout_marginLeft="@dimen/dis15"/>
 </LinearLayout>

@@ -10,15 +10,14 @@
         android:id="@+id/ll_title"
         layout="@layout/titlebar_layout"/>
 
-
     <Button
         android:id="@+id/item_mine_manage_confirm"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis40"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dis20"
         android:layout_marginLeft="@dimen/dis15"
         android:layout_marginRight="@dimen/dis15"
+        android:layout_marginBottom="@dimen/dis20"
         android:background="@drawable/shape_corner_e8_radius2"
         android:text="添加新地址"
         android:textColor="@color/white"
@@ -31,7 +30,6 @@
         android:layout_height="match_parent"
         android:layout_above="@id/item_mine_manage_confirm"
         android:layout_below="@+id/ll_title"
-
         ptr:progressLayoutDefStyle="@style/ProgressLayout">
 
         <RelativeLayout
@@ -41,8 +39,7 @@
             <com.jcodecraeer.xrecyclerview.XRecyclerView
                 android:id="@+id/xrecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
             </com.jcodecraeer.xrecyclerview.XRecyclerView>
 
             <LinearLayout
@@ -51,16 +48,14 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:visibility="gone"
-                >
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="@dimen/dis102"
                     android:layout_height="@dimen/dis102"
                     android:layout_marginTop="@dimen/dis150"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/address_empty"
-                    />
+                    android:src="@mipmap/address_empty"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,17 +71,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dis40"
                     android:background="@drawable/shape_corner_e8_stroke0_5_radius16"
-                    android:paddingBottom="@dimen/dis8"
                     android:paddingLeft="@dimen/dis12"
-                    android:paddingRight="@dimen/dis12"
                     android:paddingTop="@dimen/dis8"
+                    android:paddingRight="@dimen/dis12"
+                    android:paddingBottom="@dimen/dis8"
                     android:text="新建收货地址"
                     android:textColor="@color/CE8_3C_3C"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
         </RelativeLayout>
     </com.yj.cosmetics.widget.ProgressLayout>
-
-
 </RelativeLayout>

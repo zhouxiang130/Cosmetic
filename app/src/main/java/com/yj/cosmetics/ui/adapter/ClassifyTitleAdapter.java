@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
  */
 
 public class ClassifyTitleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
     private Context mContext;
     List<ClassifyEntity.ClassifyData.ClassifyItem> mList;
     SpendDetialClickListener mItemClickListener;
@@ -35,7 +34,6 @@ public class ClassifyTitleAdapter extends RecyclerView.Adapter<RecyclerView.View
     public void setOnItemClickListener(SpendDetialClickListener listener) {
         this.mItemClickListener = listener;
     }
-
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -55,8 +53,10 @@ public class ClassifyTitleAdapter extends RecyclerView.Adapter<RecyclerView.View
         if(holder instanceof TitleViewHolder){
             if(mPosition == position){
                 ((TitleViewHolder) holder).tvTitle.setTextColor(mContext.getResources().getColor(R.color.CE8_3C_3C));
+                ((TitleViewHolder) holder).llTitle.setBackgroundColor(mContext.getResources().getColor(R.color.CF6_F8_F9));
             }else{
                 ((TitleViewHolder) holder).tvTitle.setTextColor(mContext.getResources().getColor(R.color.C10_10_10));
+                ((TitleViewHolder) holder).llTitle.setBackgroundColor(mContext.getResources().getColor(R.color.white));
             }
             ((TitleViewHolder) holder).tvTitle.setText(mList.get(position).getClassify_name());
         }

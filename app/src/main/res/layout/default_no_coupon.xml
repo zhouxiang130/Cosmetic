@@ -2,14 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical"
-    >
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        >
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/no_info_iv"
@@ -17,8 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dis80"
-            android:background="@mipmap/zanwuyouhuiquan"
-            />
+            android:background="@mipmap/zanwuyouhuiquan"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +26,5 @@
             android:text="暂无优惠券"
             android:textColor="@color/C85_85_85"
             android:textSize="@dimen/font13"/>
-
-
     </RelativeLayout>
 </LinearLayout>

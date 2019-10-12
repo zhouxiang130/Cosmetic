@@ -12,7 +12,6 @@
         android:id="@+id/rl_to_store_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_line"
         android:layout_centerVertical="true"
         android:background="@drawable/shape_corner_ed_radius10"
         android:gravity="center"
@@ -126,7 +125,6 @@
             android:textColor="@color/black_gray1"
             android:textSize="@dimen/font13"
             android:visibility="visible"/>
-
     </RelativeLayout>
 
     <ImageView

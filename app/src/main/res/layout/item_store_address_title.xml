@@ -4,16 +4,14 @@
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/CF1_F4_F6"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/dis10"
         android:paddingLeft="@dimen/dis15"
-        android:paddingTop="@dimen/dis10">
-
+        android:paddingTop="@dimen/dis10"
+        android:paddingBottom="@dimen/dis10">
 
         <TextView
             android:id="@+id/store_address_tv_title"
@@ -24,8 +22,5 @@
             android:text="当前地址"
             android:textColor="@color/C10_10_10"
             android:textSize="@dimen/font13"/>
-
-
     </LinearLayout>
-
 </LinearLayout>

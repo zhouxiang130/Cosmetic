@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
-           >
-
+              android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/refund_dialog_rl_"
@@ -22,7 +20,6 @@
             android:textColor="@color/black_color1"
             android:textSize="@dimen/font14"/>
 
-
         <View
             android:id="@+id/refund_detail_good_status_line"
             android:layout_width="match_parent"
@@ -30,7 +27,6 @@
             android:layout_below="@id/dialog_refund_tv_desc"
             android:layout_marginTop="@dimen/dis8"
             android:background="@color/CE7_E7_E7"/>
-
 
         <CheckBox
             android:id="@+id/dialog_refund_cb_"
@@ -44,9 +40,5 @@
             android:button="@drawable/selector_checkbox_order"
             android:checked="true"
             android:clickable="false"/>
-
-
     </RelativeLayout>
-
-
 </LinearLayout>

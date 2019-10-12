@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        >
-    <ImageView
-        android:id="@+id/none_layout_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dis80"
-        android:background="@mipmap/norecord" />
-        <!--<TextView
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/none_layout_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dis10"
-            android:layout_below="@id/none_layout_tv"
-            android:text="过会再来吧 ╮(╯▽╰)╭"
-            android:paddingRight="@dimen/dis20"
-            android:textSize="@dimen/font17"/>-->
+            android:layout_marginTop="@dimen/dis80"
+            android:background="@mipmap/norecord"/>
     </RelativeLayout>
-
 </LinearLayout>

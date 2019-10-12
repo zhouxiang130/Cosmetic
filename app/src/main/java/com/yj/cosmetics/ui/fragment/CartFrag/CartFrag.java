@@ -60,12 +60,8 @@ import okhttp3.Response;
  * @TODO 购物车
  */
 
-public class CartFrag extends BaseFragment implements
-		CartListAdapter.CheckInterface,
-		CartListAdapter.ModifyCountInterface,
-		CartListAdapter.CheckInterfaces {
-
-	private static final String TAG = "CartFrag";
+public class CartFrag extends BaseFragment implements CartListAdapter.CheckInterface,
+		CartListAdapter.ModifyCountInterface, CartListAdapter.CheckInterfaces {
 	@BindView(R.id.frag_cart_gridview)
 	WrapContentGridView mGridView;
 	@BindView(R.id.recyclerView)
@@ -92,17 +88,13 @@ public class CartFrag extends BaseFragment implements
 	LinearLayout llBottom;
 	@BindView(R.id.frag_cart_rl_edit)
 	RelativeLayout rlEdit;
-
 	CartListAdapter mListAdapter;
 	CartLikeAdapter mLikeAdapter;
-
 	CustomNormalContentDialog deleteDialog;
 	CustomProgressDialog mDialog;
-
 	private List<HomeListEntity.HomeListData.HomeListItem> mLike;
 	private List<CartsEntity.DataBean.ProCartsBean> mList;
 	private List<CartsEntity.DataBean.ProCartsBean> mData = new ArrayList<>();
-
 	public List<Integer> changeList = new ArrayList<>();
 	private float totalPrice = 0;// 购买的商品总价
 	private int totalCount = 0;// 购买的商品总数量
@@ -129,18 +121,14 @@ public class CartFrag extends BaseFragment implements
 		mListAdapter = new CartListAdapter(getActivity(), mList);
 		mRecyclerView.setAdapter(mListAdapter);
 		mListAdapter.setCheckInterface(this);
-
 		mListAdapter.setCheckInterfaces(this);
 		mListAdapter.setModifyCountInterface(this);
-
 		mListAdapter.setOnItemsClickListener(new CartListAdapter.ProductDetailClickListener() {
-
 			@Override
 			public void onItemClicks(View view, int pos, int postion) {
-
 				//@TODO 这里是商品点击事件
-				Log.i(TAG, "mList.size(): " + mList.size());
-				Log.i(TAG, "setOnItemsClickListener: " + pos + " postion : " + postion);
+				LogUtils.i( "mList.size(): " + mList.size());
+				LogUtils.i("setOnItemsClickListener: " + pos + " postion : " + postion);
 				if (mList.size() != 0) {
 					sproductId = mList.get(postion).getShopProArray().get(pos).getSproductId();
 					productId = mList.get(postion).getShopProArray().get(pos).getProId();
@@ -153,7 +141,6 @@ public class CartFrag extends BaseFragment implements
 				}
 			}
 		});
-
 		mListAdapter.setOnItemClickListener(new CartListAdapter.ProfitDetialClickListener() {
 			@Override
 			public void onItemClick(View view, int postion) {
@@ -169,8 +156,6 @@ public class CartFrag extends BaseFragment implements
 //				}
 			}
 		});
-
-
 		mLikeAdapter = new CartLikeAdapter(getActivity(), mLike);
 		mGridView.setAdapter(mLikeAdapter);
 		mGridView.setFocusable(false);
@@ -193,9 +178,7 @@ public class CartFrag extends BaseFragment implements
 			//联网获取数据
 			doRefreshData();
 			doAsyncGetList();
-			rlEdit.setVisibility(View.VISIBLE);
 		} else {
-			rlEdit.setVisibility(View.GONE);
 			llBottom.setVisibility(View.GONE);
 			rlNomore.setVisibility(View.VISIBLE);
 			mRecyclerView.setVisibility(View.GONE);
@@ -247,7 +230,7 @@ public class CartFrag extends BaseFragment implements
 						for (int i = 0; i < mList.size(); i++) {
 //							if (mList.get(i).getReceipt().equals("1")) {
 							for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
-								Log.i(TAG, "onClick: " + i + ">>>>>>>>" + j);
+								LogUtils.i("onClick: " + i + ">>>>>>>>" + j);
 								if (mList.get(i).getShopProArray().get(j).getProductState() == 0) {
 									mList.get(i).getShopProArray().get(j).setChoosed(true);
 									mList.get(i).setChoosed(true);
@@ -266,7 +249,7 @@ public class CartFrag extends BaseFragment implements
 						for (int i = 0; i < mList.size(); i++) {
 							mList.get(i).setChoosed(false);
 							for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
-								Log.i(TAG, "onClick: " + i + ">>>>>>>>" + j);
+								LogUtils.i("onClick: " + i + ">>>>>>>>" + j);
 								if (mList.get(i).getShopProArray().get(j).getProductState() == 0) {
 									mList.get(i).getShopProArray().get(j).setChoosed(false);
 								} else {
@@ -280,12 +263,9 @@ public class CartFrag extends BaseFragment implements
 //					mListAdapter.setNotifyDataSetChanged();
 				}
 				statistics();
-
-
 				break;
 			case R.id.frag_cart_tv_solve:
 				if (checkChoosed()) {
-
 					StringBuffer stringBuffer = new StringBuffer();
 					for (int i = 0; i < mList.size(); i++) {
 						for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
@@ -340,9 +320,8 @@ public class CartFrag extends BaseFragment implements
 	@Override
 	public void checkGroup(int pos, int position, boolean isChecked) {
 		//@TODO
-		Log.i(TAG, "checkGroup: 店铺： " + pos + " 店铺商品 : " + position);
+		LogUtils.i("checkGroup: 店铺： " + pos + " 店铺商品 : " + position);
 		if (mList.size() != 0) {
-
 			//把对应的商品设置为true
 			mList.get(pos).getShopProArray().get(position).setChoosed(isChecked);
 
@@ -450,7 +429,6 @@ public class CartFrag extends BaseFragment implements
 	 */
 	@Override
 	public void doIncrease(int pos, int position, View showCountView, boolean isChecked) {
-
 		int currentCount = Integer.parseInt(mList.get(pos).getShopProArray().get(position).getNum());
 		LogUtils.i("位置是" + pos + ">>>>>>>position : " + position + ".....currentCount是" + currentCount);
 		currentCount++;
@@ -459,8 +437,7 @@ public class CartFrag extends BaseFragment implements
 		statistics();
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(mList.get(pos).getShopProArray().get(position).getCartId() + ":" + currentCount + ";");
-		Log.i(TAG, "onClick:>>>>> " + stringBuffer.toString());
-
+		LogUtils.i("onClick:>>>>> " + stringBuffer.toString());
 		doChangeCount(stringBuffer.toString(), pos, position, currentCount, showCountView);
 	}
 
@@ -478,9 +455,9 @@ public class CartFrag extends BaseFragment implements
 		if (currentCount == 1) {
 			return;
 		}
-		Log.e(TAG, "doDecrease: " + currentCount);
+		 LogUtils.i("doDecrease: " + currentCount);
 		currentCount--;
-		Log.e(TAG, "doDecrease: " + currentCount);
+		 LogUtils.i(  "doDecrease: " + currentCount);
 //		mList.get(pos).getShopProArray().get(position).setNum(String.valueOf(currentCount));
 //		((TextView) showCountView).setText(currentCount + "");
 
@@ -488,7 +465,7 @@ public class CartFrag extends BaseFragment implements
 		statistics();
 		StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append(mList.get(pos).getShopProArray().get(position).getCartId() + ":" + currentCount + ";");
-		Log.i(TAG, "onClick:>>>>> " + stringBuffer.toString());
+		LogUtils.i("onClick:>>>>> " + stringBuffer.toString());
 
 		doChangeCount(stringBuffer.toString(), pos, position, currentCount, showCountView);
 //		for (int i = 0; i < changeList.size(); i++) {
@@ -532,11 +509,10 @@ public class CartFrag extends BaseFragment implements
 		totalCount = 0;
 		totalPrice = 0;
 		totalPrices = "0.00";
-
 		for (int i = 0; i < mList.size(); i++) {
 			for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
 				if (mList.get(i).getShopProArray().get(j).isChoosed()) {
-//					Log.i(TAG, "statistics: " + mList.get(i).getShopProArray().get(j).getSkuPrice() + "-------" + mList.get(i).getShopProArray().get(j).getNum());
+//					LogUtils.i((  "statistics: " + mList.get(i).getShopProArray().get(j).getSkuPrice() + "-------" + mList.get(i).getShopProArray().get(j).getNum());
 					totalCount += Integer.parseInt(mList.get(i).getShopProArray().get(j).getNum());
 
 					totalPrice += Float.parseFloat(mList.get(i).getShopProArray().get(j).getSkuPrice()) * Integer.parseInt(mList.get(i).getShopProArray().get(j).getNum());
@@ -544,16 +520,13 @@ public class CartFrag extends BaseFragment implements
 				}
 			}
 		}
-
-//		Log.i(TAG, "statistics: " + totalPrices);
+//		LogUtils.i((  "statistics: " + totalPrices);
 		tvTotal.setText(totalPrices + "");
 		tvSolve.setText("结算（" + totalCount + "）");
 	}
 
 	private void showDeleteDialog(final int i, final int pos, final int position) {
-
 		deleteDialog = new CustomNormalContentDialog(getActivity());
-
 		deleteDialog.show();
 		deleteDialog.getTvTitle().setText("确认删除商品吗？");
 		deleteDialog.getTvContent().setText("商品删除后，可重新挑选喜欢的商品下单");
@@ -573,8 +546,6 @@ public class CartFrag extends BaseFragment implements
 				} else {
 					stringBuffer.append(mList.get(pos).getShopProArray().get(position).getCartId() + ";");
 				}
-
-				Log.i(TAG, "onClick: " + stringBuffer.toString());
 				doDeleteData(stringBuffer.toString(), false);
 				dismissDialog();
 				/*deleteDialog.dismiss();
@@ -615,12 +586,12 @@ public class CartFrag extends BaseFragment implements
 			@Override
 			public void onResponse(CartsEntity response) {
 				if (response != null && response.getCode().equals(response.HTTP_OK)) {
-
 					if (response.getData() != null && response.getData().getProCarts() != null && response.getData().getProCarts().size() != 0) {
 						//成功之后setData
 						setData(response);
-
+						rlEdit.setVisibility(View.VISIBLE);
 					} else {
+						rlEdit.setVisibility(View.GONE);
 						mRecyclerView.setVisibility(View.GONE);
 						rlNomore.setVisibility(View.VISIBLE);
 						LogUtils.i("我进入到展示了===" + (llBottom.getVisibility() == View.VISIBLE));
@@ -708,7 +679,7 @@ public class CartFrag extends BaseFragment implements
 //		mData.clear();
 		mList.addAll(response.getData().getProCarts());
 
-		Log.i(TAG, "mList.size(): " + mList.size());
+		LogUtils.i("mList.size(): " + mList.size());
 //		mData.addAll(response.getData().getProCarts());
 
 		mListAdapter.setNewData(response.getData().getProCarts());
@@ -804,7 +775,7 @@ public class CartFrag extends BaseFragment implements
 						String splitId = ids.split(";")[0];
 						for (int i = 0; i < mList.size(); i++) {
 							for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
-								Log.e(TAG, "onResponse:>>>1111 " + mList.get(i).getShopProArray().size());
+								 LogUtils.i(  "onResponse:>>>1111 " + mList.get(i).getShopProArray().size());
 								if (mList.get(i).getShopProArray().get(j).getCartId() == Integer.parseInt(splitId)) {
 									mList.get(i).getShopProArray().remove(j);
 //									if (mList.get(i).getShopProArray().size() == 0) {
@@ -885,7 +856,6 @@ public class CartFrag extends BaseFragment implements
 					mData.clear();
 					mList.get(pos).getShopProArray().get(position).setNum(String.valueOf(currentCount));
 					((TextView) showCountView).setText(currentCount + "");
-
 					for (int i = 0; i < mList.size(); i++) {
 						for (int j = 0; j < mList.get(i).getShopProArray().size(); j++) {
 							LogUtils.i("mList的值" + mList.get(i).getShopProArray().get(j).getProName());

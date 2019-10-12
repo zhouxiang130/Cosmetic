@@ -21,8 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@mipmap/bg_shart_top"
-            android:gravity="center_horizontal"
-            />
+            android:gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/dialog_normal_content"
@@ -38,9 +37,7 @@
             android:maxLines="1"
             android:text="拨打0371-55007049热线，联系官方客服"
             android:textColor="@color/C64_64_64"
-            android:textSize="@dimen/font14"
-            />
-
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/tv_copy_url"
@@ -59,21 +56,6 @@
             android:textColor="@color/C10_10_10"
             android:textSize="@dimen/font14"/>
 
-
-        <!--<Button-->
-        <!--android:id="@+id/btn_register"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="@dimen/dis15"-->
-        <!--android:layout_marginRight="@dimen/dis15"-->
-        <!--android:layout_marginTop="28dp"-->
-        <!---->
-        <!--android:text="提交申请"-->
-        <!---->
-        <!--android:textSize="@dimen/font14"-->
-        <!--/>-->
-
-
         <RelativeLayout
             android:id="@+id/rl_share_info"
             android:layout_width="wrap_content"
@@ -89,9 +71,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/dis15"
                 android:text="去分享"
-
                 android:textSize="@dimen/font14"/>
-
 
             <View
                 android:layout_width="@dimen/dis45"
@@ -108,9 +88,7 @@
                 android:layout_marginLeft="@dimen/dis20"
                 android:layout_toRightOf="@id/tv_share_title"
                 android:background="@color/CE7_E7_E7"/>
-
         </RelativeLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -146,4 +124,3 @@
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
-

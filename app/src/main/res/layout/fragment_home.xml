@@ -18,9 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis45"
         android:layout_below="@id/frag_home_v_head"
-        android:background="@color/white"
-        >
-        <!--android:background="@color/transparent"-->
+        android:background="@color/white">
 
         <RelativeLayout
             android:id="@+id/frag_store_locinfo"
@@ -51,16 +49,15 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/font10"
                 android:visibility="gone"/>
-
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/frag_classify_rl_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dis8"
             android:layout_marginLeft="@dimen/dis15"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginBottom="@dimen/dis8"
             android:layout_toLeftOf="@id/frag_store_locinfo"
             android:background="@drawable/shape_corner_ed_radius15">
 
@@ -84,7 +81,6 @@
                 android:textColor="@color/C64_64_64"
                 android:textSize="@dimen/font12"/>
         </RelativeLayout>
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -101,8 +97,7 @@
                 android:id="@+id/xrecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/Cf7_f7_f7"
-                />
+                android:background="@color/Cf7_f7_f7"/>
 
             <View
                 android:id="@+id/home_vline"
@@ -112,20 +107,6 @@
                 android:background="@mipmap/projection_b"
                 android:rotation="180"
                 android:visibility="gone"/>
-
-
         </com.yj.cosmetics.widget.ProgressLayout>
-
-        <!--<ImageView-->
-            <!--android:id="@+id/up_iv_icon"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:background="@mipmap/upd_fl"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_alignParentEnd="true"-->
-            <!--android:layout_marginRight="36dp"-->
-            <!--android:layout_marginEnd="36dp"-->
-            <!--android:layout_marginBottom="36dp"/>-->
     </RelativeLayout>
 </LinearLayout>

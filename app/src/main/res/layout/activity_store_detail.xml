@@ -6,13 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <RelativeLayout
         android:id="@+id/frag_store_rl_top"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis45"
         android:background="@drawable/shape_corner_shade">
-
 
         <ImageView
             android:id="@+id/frag_store_info_iv"
@@ -22,15 +20,14 @@
             android:layout_centerVertical="true"
             android:src="@drawable/ic_keyboard_arrow_left_white_24dp"/>
 
-
         <RelativeLayout
             android:id="@+id/frag_store_rl_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/dis8"
             android:layout_marginLeft="@dimen/dis5"
-            android:layout_marginRight="@dimen/dis10"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginBottom="@dimen/dis8"
             android:layout_toRightOf="@id/frag_store_info_iv"
             android:background="@drawable/shape_corner_ed_radius16">
 
@@ -54,14 +51,12 @@
                 android:textColor="@color/C64_64_64"
                 android:textSize="@dimen/font12"/>
         </RelativeLayout>
-
     </RelativeLayout>
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/frag_store_rl_top"
-        >
+        android:layout_below="@id/frag_store_rl_top">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
@@ -75,33 +70,28 @@
                 app:contentScrim="?attr/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:background="@drawable/shape_corner_shade"
-                    android:paddingBottom="@dimen/dis15"
                     android:paddingLeft="@dimen/dis10"
-                    android:paddingRight="@dimen/dis10"
                     android:paddingTop="@dimen/dis20"
-                    >
-
+                    android:paddingRight="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis15">
 
                     <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                         android:id="@+id/img_shop_icon"
                         android:layout_width="@dimen/dis70"
                         android:layout_height="@dimen/dis70"
-                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_gravity="center_horizontal"
                         android:scaleType="fitXY"
                         android:src="@mipmap/default_goods"
                         app:riv_border_color="@color/white"
                         app:riv_border_width="@dimen/dis0"
-                        app:riv_corner_radius="8dp"
-                        />
-
+                        app:riv_corner_radius="8dp"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -117,16 +107,16 @@
                             android:id="@+id/tv_store_detail_collect"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentTop="true"
                             android:layout_marginTop="@dimen/dis5"
                             android:background="@drawable/shape_corner_size_"
                             android:gravity="center"
-                            android:paddingBottom="@dimen/dis3"
                             android:paddingLeft="@dimen/dis8"
-                            android:paddingRight="@dimen/dis8"
                             android:paddingTop="@dimen/dis3"
+                            android:paddingRight="@dimen/dis8"
+                            android:paddingBottom="@dimen/dis3"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"/>
 
@@ -134,74 +124,32 @@
                             android:id="@+id/shop_detail_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
                             android:layout_alignTop="@+id/tv_store_detail_collect"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis3"
                             android:paddingTop="@dimen/dis3"
+                            android:paddingBottom="@dimen/dis3"
                             android:text=""
                             android:textColor="@color/white"
                             android:textSize="@dimen/font14"/>
-
 
                         <TextView
                             android:id="@+id/shop_dispatch_tv_publicity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
                             android:layout_below="@id/shop_detail_name"
+                            android:layout_alignParentLeft="true"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:ellipsize="end"
                             android:maxLines="1"
-                            android:paddingBottom="@dimen/dis5"
                             android:paddingTop="@dimen/dis5"
+                            android:paddingBottom="@dimen/dis5"
                             android:text=""
                             android:textColor="@color/white"
                             android:textSize="@dimen/font12"/>
-
-
                     </RelativeLayout>
-
-                    <!--<TextView
-                          android:id="@+id/shop_tv_services"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_alignParentLeft="true"
-                          android:layout_below="@+id/shop_dispatch_tv_publicity"
-                          android:layout_toLeftOf="@+id/shop_rl_info"
-                          android:layout_toStartOf="@+id/shop_rl_info"
-                          android:ellipsize="end"
-                          android:maxLines="2"
-                          android:paddingBottom="@dimen/dis5"
-                          android:paddingTop="@dimen/dis3"
-                          android:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
-                          android:textColor="@color/white"
-                          android:textSize="@dimen/font13"/>
-
-                      <RelativeLayout
-
-                          android:id="@+id/shop_rl_info"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_alignBottom="@+id/shop_tv_services"
-                          android:layout_alignParentEnd="true"
-                          android:layout_alignParentRight="true"
-                          android:layout_marginBottom="3dp"
-                          android:gravity="center"
-                          android:paddingBottom="@dimen/dis8"
-                          android:paddingLeft="@dimen/dis15"
-                          android:paddingRight="@dimen/dis15"
-                          android:paddingTop="@dimen/dis8">
-
-                          <ImageView
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:background="@mipmap/jiantou"
-                              android:gravity="right"
-                              android:textColor="@color/white"/>
-                      </RelativeLayout>-->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -218,10 +166,10 @@
                             android:layout_alignParentRight="true"
                             android:layout_marginBottom="3dp"
                             android:gravity="center"
-                            android:paddingBottom="@dimen/dis5"
                             android:paddingLeft="@dimen/dis10"
+                            android:paddingTop="@dimen/dis5"
                             android:paddingRight="@dimen/dis10"
-                            android:paddingTop="@dimen/dis5">
+                            android:paddingBottom="@dimen/dis5">
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -242,15 +190,10 @@
                             android:textColor="@color/white"
                             android:textSize="@dimen/font13"
                             android:visibility="visible"/>
-
-
                     </RelativeLayout>
                 </RelativeLayout>
-
-
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
-
 
         <FrameLayout
             android:id="@+id/fl_frag"
@@ -258,14 +201,13 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_home_random"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="onClick"
             android:src="@drawable/ic_arrow_upward_black_24dp"
             app:backgroundTint="#c3ffffff"
@@ -273,6 +215,4 @@
             app:layout_behavior="com.yj.cosmetics.behavior.ScrollAwareFABBehavior"
             tools:ignore="OnClick"/>
     </android.support.design.widget.CoordinatorLayout>
-
 </RelativeLayout>
-    <!--</LinearLayout>-->

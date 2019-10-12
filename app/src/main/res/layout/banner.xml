@@ -34,10 +34,10 @@
             android:layout_margin="8dp"
             android:background="@drawable/black_background"
             android:gravity="center"
-            android:paddingBottom="@dimen/dis7"
             android:paddingLeft="@dimen/dis15"
-            android:paddingRight="@dimen/dis15"
             android:paddingTop="@dimen/dis7"
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis7"
             android:text="1/1"
             android:textColor="#ffffff"
             android:visibility="gone"/>

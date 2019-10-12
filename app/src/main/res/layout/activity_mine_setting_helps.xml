@@ -7,7 +7,6 @@
 
     <include layout="@layout/titlebar_layout"/>
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis50"
@@ -25,8 +24,8 @@
             android:id="@+id/mine_setting_helps_help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dis18"
-            android:layout_marginTop="@dimen/dis18">
+            android:layout_marginTop="@dimen/dis18"
+            android:layout_marginBottom="@dimen/dis18">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,12 +44,11 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dis15"
-                android:drawablePadding="@dimen/dis10"
                 android:drawableRight="@mipmap/next_center_order"
+                android:drawablePadding="@dimen/dis10"
                 android:text="前往我的客服"
                 android:textColor="@color/C64_64_64"
                 android:textSize="@dimen/font15"/>
-
         </RelativeLayout>
     </com.yj.cosmetics.widget.MaterialRippleLayout>
 
@@ -68,8 +66,8 @@
             android:id="@+id/mine_setting_helps_suggestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dis18"
-            android:layout_marginTop="@dimen/dis18">
+            android:layout_marginTop="@dimen/dis18"
+            android:layout_marginBottom="@dimen/dis18">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,14 +87,11 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dis15"
-                android:drawablePadding="@dimen/dis10"
                 android:drawableRight="@mipmap/next_center_order"
+                android:drawablePadding="@dimen/dis10"
                 android:text="功能异常或建议"
                 android:textColor="@color/C64_64_64"
                 android:textSize="@dimen/font15"/>
-
         </RelativeLayout>
     </com.yj.cosmetics.widget.MaterialRippleLayout>
-
-
 </LinearLayout>

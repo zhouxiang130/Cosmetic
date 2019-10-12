@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:orientation="horizontal"
-    >
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_corner_black_radius1"
         android:paddingLeft="@dimen/dis1"
-        android:paddingRight="@dimen/dis1"
-        >
+        android:paddingRight="@dimen/dis1">
 
         <TextView
             android:id="@+id/tv_hour_decade"
@@ -24,24 +22,20 @@
             android:layout_marginLeft="1dp"/>
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/colon_hour"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text=": "
         android:textColor="@color/C10_10_10"
-        android:textSize="@dimen/font10"
-
-        />
+        android:textSize="@dimen/font10"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_corner_black_radius1"
         android:paddingLeft="@dimen/dis1"
-        android:paddingRight="@dimen/dis1"
-        >
+        android:paddingRight="@dimen/dis1">
 
         <TextView
             android:id="@+id/tv_min_decade"
@@ -53,24 +47,20 @@
             android:layout_marginLeft="1dp"/>
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/colon_minute"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text=": "
         android:textColor="@color/C10_10_10"
-        android:textSize="@dimen/font10"
-        />
-
+        android:textSize="@dimen/font10"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_corner_black_radius1"
         android:paddingLeft="@dimen/dis1"
-        android:paddingRight="@dimen/dis1"
-        >
+        android:paddingRight="@dimen/dis1">
 
         <TextView
             android:id="@+id/tv_sec_decade"
@@ -81,5 +71,4 @@
             style="@style/CountDownTimerViewStyle"
             android:layout_marginLeft="1dp"/>
     </LinearLayout>
-
 </LinearLayout>

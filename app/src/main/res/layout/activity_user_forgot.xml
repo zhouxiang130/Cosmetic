@@ -5,7 +5,6 @@
               android:background="@color/white"
               android:orientation="vertical">
 
-
     <include layout="@layout/titlebar_layout"/>
 
     <ScrollView
@@ -22,9 +21,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv1"
@@ -55,8 +52,8 @@
                     android:digits="0123456789"
                     android:inputType="number"
                     android:maxLength="11"
-                    android:paddingBottom="@dimen/dis20"
                     android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -71,9 +68,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/user_forgot_tv_send"
@@ -83,10 +78,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
                     android:background="@drawable/shape_corner_e8_radius12"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingLeft="@dimen/dis14"
-                    android:paddingRight="@dimen/dis14"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingRight="@dimen/dis14"
+                    android:paddingBottom="@dimen/dis5"
                     android:text="获取"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font14"/>
@@ -122,8 +117,8 @@
                     android:background="@null"
                     android:digits="0123456789"
                     android:inputType="number"
-                    android:paddingBottom="@dimen/dis20"
                     android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -138,9 +133,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv3"
@@ -172,8 +165,8 @@
                     android:background="@null"
                     android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
                     android:inputType="textPassword"
-                    android:paddingBottom="@dimen/dis20"
                     android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -188,9 +181,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv4"
@@ -222,13 +213,11 @@
                     android:background="@null"
                     android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
                     android:inputType="textPassword"
-                    android:paddingBottom="@dimen/dis20"
                     android:paddingTop="@dimen/dis20"
+                    android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-
-                    />
+                    android:textSize="@dimen/font15"/>
             </RelativeLayout>
 
             <View
@@ -243,8 +232,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis40"
                 android:layout_marginLeft="@dimen/dis15"
-                android:layout_marginRight="@dimen/dis15"
                 android:layout_marginTop="@dimen/dis32"
+                android:layout_marginRight="@dimen/dis15"
                 android:background="@drawable/shape_corner_e8_radius2"
                 android:text="提交"
                 android:textColor="@color/white"

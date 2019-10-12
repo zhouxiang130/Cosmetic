@@ -11,14 +11,13 @@
         android:background="@color/C45_1F_84"
         android:orientation="vertical">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp">
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
 
             <View
                 android:layout_width="0dp"
@@ -50,7 +49,6 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dis0.5"
                 android:layout_weight="1"/>
-
         </LinearLayout>
 
         <TextView
@@ -75,9 +73,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:text="本活动最终解释权归菲梵仙子商城所有"
                 android:textColor="@color/white"
                 android:textSize="@dimen/dis9"/>
@@ -87,12 +85,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
+                android:paddingBottom="20dp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/dis9"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

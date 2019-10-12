@@ -3,9 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@color/white"
-              android:orientation="vertical"
-    >
-
+              android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,12 +14,11 @@
         android:paddingLeft="@dimen/dis10"
         android:paddingRight="@dimen/dis10">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/dis10"
             android:paddingTop="@dimen/dis10"
+            android:paddingBottom="@dimen/dis10"
             android:text="退款原因"
             android:textColor="@color/black_color1"
             android:textSize="@dimen/font16"/>
@@ -30,10 +27,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/dis160"
-            />
-
-
+            android:minHeight="@dimen/dis160"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -51,6 +45,4 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font16"/>
     </RelativeLayout>
-    <!--android:background="@drawable/shape_corner_e8_radius55"-->
-
 </LinearLayout>

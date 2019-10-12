@@ -12,8 +12,7 @@
         android:layout_width="@dimen/dis80"
         android:layout_height="@dimen/dis80"
         android:layout_marginTop="@dimen/dis75"
-        android:src="@mipmap/success_pay"
-        />
+        android:src="@mipmap/success_pay"/>
 
     <TextView
         android:id="@+id/pay_result_tv_state"
@@ -43,8 +42,7 @@
         android:background="@drawable/shape_corner_e8_radius2"
         android:text="继续购物"
         android:textColor="@color/white"
-        android:textSize="@dimen/font17"
-        />
+        android:textSize="@dimen/font17"/>
 
     <Button
         android:id="@+id/pay_result_btn_order"
@@ -56,7 +54,5 @@
         android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"
         android:text="订单详情"
         android:textColor="@color/CE8_3C_3C"
-        android:textSize="@dimen/font17"
-        />
-
+        android:textSize="@dimen/font17"/>
 </LinearLayout>

@@ -190,7 +190,6 @@
                 android:paddingRight="@dimen/dis5"
                 android:paddingBottom="@dimen/dis5">
 
-                <!--android:background="@drawable/shape_corner_nine"-->
                 <LinearLayout
                     android:id="@+id/ll_all_buttom"
                     android:layout_width="match_parent"
@@ -239,7 +238,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp">
-            <!--android:visibility="gone"-->
 
             <RelativeLayout
                 android:layout_width="wrap_content"

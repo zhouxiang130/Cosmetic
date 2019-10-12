@@ -5,7 +5,6 @@
               android:background="@color/white"
               android:orientation="vertical">
 
-
     <include layout="@layout/titlebar_layout"/>
 
     <ScrollView
@@ -20,12 +19,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv1"
@@ -33,8 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis15"
-                    android:src="@mipmap/profile"
-                    />
+                    android:src="@mipmap/profile"/>
 
                 <TextView
                     android:id="@+id/third_login_tv_tel"
@@ -45,8 +40,7 @@
                     android:layout_toRightOf="@id/user_regist_tv1"
                     android:text="请输入注册手机号"
                     android:textColor="@color/C88_88_88"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
 
                 <EditText
                     android:id="@+id/third_login_et_tel"
@@ -64,8 +58,7 @@
                     android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
             </RelativeLayout>
 
             <View
@@ -77,9 +70,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/third_login_tvsend"
@@ -95,8 +86,7 @@
                     android:paddingBottom="@dimen/dis5"
                     android:text="获取"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/user_regist_tv2"
@@ -104,8 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis15"
-                    android:src="@mipmap/code_id"
-                    />
+                    android:src="@mipmap/code_id"/>
 
                 <TextView
                     android:id="@+id/third_login_tv_verify"
@@ -116,8 +105,7 @@
                     android:layout_toRightOf="@id/user_regist_tv2"
                     android:text="请输入验证码"
                     android:textColor="@color/C88_88_88"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
 
                 <EditText
                     android:id="@+id/third_login_et_verify"
@@ -135,8 +123,7 @@
                     android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
             </RelativeLayout>
 
             <View
@@ -148,9 +135,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv3"
@@ -158,8 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis15"
-                    android:src="@mipmap/lock"
-                    />
+                    android:src="@mipmap/lock"/>
 
                 <TextView
                     android:id="@+id/third_login_tv_pwd"
@@ -170,8 +154,7 @@
                     android:layout_toRightOf="@id/user_regist_tv3"
                     android:text="请设置登录密码"
                     android:textColor="@color/C88_88_88"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
 
                 <EditText
                     android:id="@+id/third_login_et_pwd"
@@ -188,8 +171,7 @@
                     android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
             </RelativeLayout>
 
             <View
@@ -201,9 +183,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/user_regist_tv4"
@@ -211,8 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dis15"
-                    android:src="@mipmap/lock"
-                    />
+                    android:src="@mipmap/lock"/>
 
                 <TextView
                     android:id="@+id/third_login_tv_invite"
@@ -239,8 +218,7 @@
                     android:paddingBottom="@dimen/dis20"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
             </RelativeLayout>
 
             <View
@@ -260,8 +238,7 @@
                 android:background="@drawable/shape_corner_e8_radius2"
                 android:text="同意协议并注册"
                 android:textColor="@color/white"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <LinearLayout
                 android:id="@+id/user_regist_ll_bottom"

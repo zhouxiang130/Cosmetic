@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,11 +18,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis12"
                 android:paddingLeft="@dimen/dis15"
+                android:paddingTop="@dimen/dis12"
                 android:paddingRight="@dimen/dis15"
-                android:paddingTop="@dimen/dis12">
-
+                android:paddingBottom="@dimen/dis12">
 
                 <TextView
                     android:id="@+id/manage_address_tv1"
@@ -32,7 +30,6 @@
                     android:text="收货人 :  "
                     android:textColor="@color/C1E_1E_1E"
                     android:textSize="@dimen/font15"/>
-
 
                 <TextView
                     android:id="@+id/manage_address_tel"
@@ -84,10 +81,10 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:focusable="true"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingLeft="@dimen/dis10"
+                    android:paddingTop="@dimen/dis10"
                     android:paddingRight="@dimen/dis12"
-                    android:paddingTop="@dimen/dis10">
+                    android:paddingBottom="@dimen/dis10">
 
                     <CheckBox
                         android:id="@+id/manage_address_cb"
@@ -131,18 +128,15 @@
                     android:text="编辑"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font12"/>
-
             </RelativeLayout>
         </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/rl_address_masking"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/C8d_ce_ce_ce"
-            android:visibility="visible"
-            android:layout_height="match_parent">
-
+            android:visibility="visible">
         </RelativeLayout>
-
     </FrameLayout>
 </LinearLayout>

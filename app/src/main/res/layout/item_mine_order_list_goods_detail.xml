@@ -10,14 +10,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/dis10"
-        android:paddingTop="@dimen/dis10">
+        android:paddingTop="@dimen/dis10"
+        android:paddingBottom="@dimen/dis10">
 
         <RelativeLayout
             android:id="@+id/order_list_goods_detial_rl1"
             android:layout_width="@dimen/dis65"
-            android:layout_height="@dimen/dis65"
-            android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+            android:layout_height="@dimen/dis65">
 
             <ImageView
                 android:id="@+id/item_order_goods_iv"
@@ -25,8 +24,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/dis4"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/default_goods"
-                />
+                android:src="@mipmap/default_goods"/>
 
             <TextView
                 android:id="@+id/item_order_goods_tv_state"
@@ -35,13 +33,12 @@
                 android:layout_alignParentBottom="true"
                 android:background="@color/C8A_00_00_00"
                 android:gravity="center"
-                android:paddingBottom="@dimen/dis3"
                 android:paddingTop="@dimen/dis3"
+                android:paddingBottom="@dimen/dis3"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font13"
                 android:textStyle="bold"
                 android:visibility="gone"/>
-
         </RelativeLayout>
 
         <LinearLayout
@@ -63,8 +60,8 @@
                 android:id="@+id/item_order_goods_tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="-1dp"
                 android:layout_marginLeft="@dimen/dis3"
+                android:layout_marginBottom="-1dp"
                 android:layout_toRightOf="@id/item_settle_tv1"
                 android:textColor="@color/C10_10_10"
                 android:textSize="@dimen/font13"/>
@@ -87,10 +84,10 @@
             android:id="@+id/item_order_goods_tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_below="@id/item_order_goods_tv_title"
-            android:layout_marginBottom="@dimen/dis5"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/dis5"
+            android:layout_marginBottom="@dimen/dis5"
             android:textColor="@color/C64_64_64"
             android:textSize="@dimen/font12"/>
 
@@ -100,32 +97,27 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/item_order_goods_tv_title"
             android:layout_marginLeft="@dimen/dis18"
-            android:layout_marginRight="@dimen/dis15"
             android:layout_marginTop="@dimen/dis5"
+            android:layout_marginRight="@dimen/dis15"
             android:layout_toLeftOf="@id/item_order_goods_tv_number"
             android:layout_toRightOf="@id/order_list_goods_detial_rl1"
             android:textColor="@color/C85_85_85"
             android:textSize="@dimen/font12"/>
 
-
         <TextView
             android:id="@+id/pay_bottom_drawback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_below="@id/item_order_goods_tv_number"
+            android:layout_alignParentRight="true"
             android:background="@drawable/shape_corner_c0_stroke1_white_radius5"
-            android:paddingBottom="@dimen/dis5"
             android:paddingLeft="@dimen/dis10"
-            android:paddingRight="@dimen/dis10"
             android:paddingTop="@dimen/dis5"
+            android:paddingRight="@dimen/dis10"
+            android:paddingBottom="@dimen/dis5"
             android:text="退 款"
             android:textColor="@color/C64_64_64"
             android:textSize="@dimen/font12"
-            android:visibility="gone"
-
-            />
-
+            android:visibility="gone"/>
     </RelativeLayout>
-
 </LinearLayout>

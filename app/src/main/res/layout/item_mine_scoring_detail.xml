@@ -8,24 +8,22 @@
         android:id="@+id/item_account_profit_v1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis8"
-        android:background="@color/CF8_F9_FB"
-        />
+        android:background="@color/CF8_F9_FB"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:paddingBottom="@dimen/dis10"
         android:paddingLeft="@dimen/dis15"
         android:paddingTop="@dimen/dis12"
-        >
+        android:paddingBottom="@dimen/dis10">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginRight="@dimen/dis15"
             android:gravity="right"
             android:orientation="vertical">
@@ -36,8 +34,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:textColor="@color/CE8_3C_3C"
-                android:textSize="@dimen/font18"
-                />
+                android:textSize="@dimen/font18"/>
 
             <TextView
                 android:id="@+id/item_scoring_detial_time"
@@ -47,9 +44,7 @@
                 android:layout_marginTop="@dimen/dis5"
                 android:maxLines="1"
                 android:textColor="@color/C64_64_64"
-                android:textSize="@dimen/font11"
-                />
-
+                android:textSize="@dimen/font11"/>
         </LinearLayout>
 
         <TextView
@@ -72,8 +67,7 @@
             android:maxLines="1"
             android:textColor="@color/C64_64_64"
             android:textSize="@dimen/font11"
-            android:visibility="gone"
-            />
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/item_scoring_detial_content"
@@ -84,15 +78,11 @@
             android:layout_marginTop="@dimen/dis10"
             android:maxLines="1"
             android:textColor="@color/C64_64_64"
-            android:textSize="@dimen/font11"
-            />
-
-
+            android:textSize="@dimen/font11"/>
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE7_E7_E7"
-        />
+        android:background="@color/CE7_E7_E7"/>
 </LinearLayout>

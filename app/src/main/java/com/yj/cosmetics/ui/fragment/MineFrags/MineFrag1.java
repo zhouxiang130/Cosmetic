@@ -57,8 +57,6 @@ import butterknife.Unbinder;
  */
 
 public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
-
-	private static final String TAG = "MineFrag";
 	@BindView(R.id.frag_mine_tv_info)
 	TextView fragMineTvInfo;
 	@BindView(R.id.frag_mine_login_iv)
@@ -71,7 +69,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	TextView mineNewTvTel;
 	@BindView(R.id.frag_mine_account_money)
 	TextView fragMineAccountMoney;
-
 	@BindView(R.id.frag_mine_tv_score)
 	TextView fragMineTvScore;
 	@BindView(R.id.frag_mine_tv_pay_num)
@@ -459,8 +456,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 		if (!TextUtils.isEmpty(data.getServiceTel())) {
 			mUtils.saveServiceTel(data.getServiceTel());
 		}
-		Log.i(TAG, "userMoney-----------------------: " + data.getUserMoney());
-
 		if (data != null) {
 			fragMineAccountMoney.setText(data.getUserMoney());
 			fragMineTvScore.setText(data.getUserScore());
@@ -538,7 +533,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 			} else {
 				fragMineTvInfo.setText(i + "");
 			}
-
 		} else {
 			fragMineTvInfo.setVisibility(View.GONE);
 		}

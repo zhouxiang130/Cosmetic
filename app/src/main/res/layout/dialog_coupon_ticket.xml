@@ -7,7 +7,6 @@
                 android:paddingLeft="@dimen/dis5"
                 android:paddingRight="@dimen/dis5">
 
-
     <RelativeLayout
         android:id="@+id/integral_rl_title_all"
         android:layout_width="match_parent"
@@ -20,8 +19,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:paddingBottom="10dp"
             android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
@@ -29,14 +28,14 @@
             android:id="@+id/integral_ll_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/integral_tv_title"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/integral_tv_title"
             android:layout_centerVertical="true"
             android:orientation="horizontal"
-            android:paddingBottom="8dp"
             android:paddingLeft="8dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
 
             <ImageView
                 android:id="@+id/integral_iv_cancel"
@@ -45,7 +44,6 @@
                 android:background="@drawable/ic_close_black_24dp"/>
         </LinearLayout>
     </RelativeLayout>
-
 
     <LinearLayout
         android:id="@+id/view_line"
@@ -61,24 +59,22 @@
             android:background="#E4E4E4"/>
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/integral_scrollView_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/view_line"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
         android:paddingLeft="10dp"
+        android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:paddingTop="10dp">
+        android:paddingBottom="10dp">
 
         <FrameLayout
             android:id="@+id/mine_coupon_fl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            >
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/mine_coupon_iv_background"
@@ -111,17 +107,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="￥"
-                            android:textColor="@color/white"
-                            />
+                            android:textColor="@color/white"/>
 
                         <TextView
                             android:id="@+id/mine_sign_text_ticket_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=""
-                            android:textStyle="bold"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/dis25"/>
+                            android:textSize="@dimen/dis25"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/mine_sign_text_ticket_rebate"
@@ -129,8 +124,7 @@
                             android:layout_height="wrap_content"
                             android:text=""
                             android:textColor="@color/white"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </LinearLayout>
 
                     <TextView
@@ -139,16 +133,14 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/line_aaa"
                         android:layout_centerHorizontal="true"
+                        android:gravity="center"
                         android:maxLines="2"
                         android:paddingLeft="@dimen/dis10"
-                        android:gravity="center"
                         android:paddingRight="@dimen/dis10"
                         android:text=""
                         android:textColor="@color/white"
                         android:textSize="@dimen/dis11"/>
-
                 </RelativeLayout>
-
 
                 <FrameLayout
                     android:layout_width="0dp"
@@ -177,14 +169,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:background="@drawable/shape_corner_oval_two"
-                                android:paddingBottom="2dp"
                                 android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
                                 android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
                                 android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/dis11"/>
-
 
                             <TextView
                                 android:id="@+id/mine_sign_text_ticket_class_content"
@@ -195,16 +186,14 @@
                                 android:ellipsize="end"
                                 android:maxLength="12"
                                 android:maxLines="1"
-                                android:paddingBottom="2dp"
                                 android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
                                 android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
                                 android:text=""
                                 android:textColor="@color/C10_10_10"
                                 android:textSize="@dimen/dis11"/>
-
                         </RelativeLayout>
-
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -224,7 +213,6 @@
                                 android:textColor="@color/C99_99_99"
                                 android:textSize="@dimen/dis10"/>
 
-
                             <TextView
                                 android:id="@+id/mine_coupon_text_receive"
                                 android:layout_width="wrap_content"
@@ -234,15 +222,14 @@
                                 android:layout_centerVertical="true"
                                 android:background="@drawable/shape_corner_e8_stroke0_5_radius16"
                                 android:gravity="center"
-                                android:paddingBottom="2dp"
                                 android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
                                 android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
                                 android:text="立即领取"
                                 android:textColor="@color/CE8_3C_3C"
                                 android:textSize="@dimen/dis10"
                                 android:visibility="gone"/>
-
                         </RelativeLayout>
 
                         <LinearLayout
@@ -253,21 +240,18 @@
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis1"
-                                android:layout_weight="0.2"
-                                />
+                                android:layout_weight="0.2"/>
 
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis1"
                                 android:layout_weight="5"
-                                android:background="@color/CE4_E4_E4"
-                                />
+                                android:background="@color/CE4_E4_E4"/>
 
                             <View
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/dis1"
-                                android:layout_weight="0.2"
-                                />
+                                android:layout_weight="0.2"/>
                         </LinearLayout>
 
                         <RelativeLayout
@@ -288,20 +272,9 @@
                                 android:paddingLeft="5dp"
                                 android:paddingTop="2dp"
                                 android:text=""
-                                android:visibility="gone"
                                 android:textColor="@color/C99_99_99"
-                                android:textSize="@dimen/dis10"/>
-
-                            <!--<LinearLayout-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_alignParentEnd="true"-->
-                            <!--android:layout_alignParentRight="true"-->
-                            <!--android:layout_centerVertical="true"-->
-                            <!--android:gravity="center"-->
-                            <!--android:orientation="vertical"-->
-                            <!--android:paddingBottom="5dp"-->
-                            <!--android:paddingTop="5dp">-->
+                                android:textSize="@dimen/dis10"
+                                android:visibility="gone"/>
 
                             <ImageView
                                 android:id="@+id/mine_coupon_iv_indicate"
@@ -310,14 +283,12 @@
                                 android:layout_alignParentRight="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="10dp"
-                                android:visibility="gone"
                                 android:background="@mipmap/youhuiquan_zhankai"
                                 android:paddingLeft="5dp"
-                                android:paddingRight="5dp"/>
-                            <!--</LinearLayout>-->
+                                android:paddingRight="5dp"
+                                android:visibility="gone"/>
                         </RelativeLayout>
                     </LinearLayout>
-
 
                     <ImageView
                         android:id="@+id/mine_coupon_iv_ticket_deadline"
@@ -326,8 +297,6 @@
                         android:layout_gravity="center|right"
                         android:background="@mipmap/youhuiquan_yishiyong"
                         android:visibility="gone"/>
-
-
                 </FrameLayout>
             </LinearLayout>
         </FrameLayout>
@@ -336,9 +305,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp">
-
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <EditText
                 android:id="@+id/mine_coupon_et_phone"
@@ -354,15 +322,14 @@
         </LinearLayout>
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@id/integral_scrollView_"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/integral_tv_yes"
@@ -374,6 +341,5 @@
             android:text="分享"
             android:textColor="#ffffff"
             android:textSize="16sp"/>
-
     </LinearLayout>
 </RelativeLayout>

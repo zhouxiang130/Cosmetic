@@ -13,9 +13,7 @@
         android:background="@color/white"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/dis20"
-        >
-
+        android:paddingBottom="@dimen/dis20">
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,8 +21,7 @@
             android:layout_marginTop="@dimen/dis45"
             android:text="期望总额度调整至（元）"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font12"
-            />
+            android:textSize="@dimen/font12"/>
 
         <EditText
             android:id="@+id/mine_scoring_post_etmoney"
@@ -36,9 +33,7 @@
             android:inputType="number"
             android:textColor="@color/C10_10_10"
             android:textColorHint="@color/C64_64_64"
-            android:textSize="@dimen/font36"
-
-            />
+            android:textSize="@dimen/font36"/>
 
         <View
             android:layout_width="@dimen/dis180"
@@ -53,8 +48,7 @@
             android:layout_marginTop="@dimen/dis22"
             android:text="当前总额度0元"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font14"
-            />
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/mine_scoring_post_num"
@@ -63,24 +57,19 @@
             android:layout_marginTop="@dimen/dis5"
             android:text="（调整以100为单位）"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font12"
-
-            />
+            android:textSize="@dimen/font12"/>
 
         <Button
             android:id="@+id/mine_scoring_post_btnconfirm"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis40"
             android:layout_marginLeft="@dimen/dis15"
-            android:layout_marginRight="@dimen/dis15"
             android:layout_marginTop="@dimen/dis34"
+            android:layout_marginRight="@dimen/dis15"
             android:background="@drawable/shape_corner_e8_radius2"
             android:text="确认调整"
             android:textColor="@color/white"
-            android:textSize="@dimen/font15"
-
-            />
-
+            android:textSize="@dimen/font15"/>
     </LinearLayout>
 
     <TextView
@@ -97,12 +86,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dis15"
-        android:layout_marginRight="@dimen/dis15"
         android:layout_marginTop="@dimen/dis10"
+        android:layout_marginRight="@dimen/dis15"
         android:lineSpacingExtra="@dimen/dis5"
         android:text=""
         android:textColor="@color/C85_85_85"
         android:textSize="@dimen/font12"/>
-
-
 </LinearLayout>

@@ -21,7 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/CF5_F5_F5"/>
-
         </com.yj.cosmetics.widget.ProgressLayout>
     </RelativeLayout>
 </LinearLayout>

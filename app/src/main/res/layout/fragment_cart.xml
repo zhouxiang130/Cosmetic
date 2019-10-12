@@ -31,7 +31,8 @@
             android:id="@+id/frag_cart_rl_edit"
             android:layout_width="@dimen/dis60"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/frag_cart_tv_edit"
@@ -105,7 +106,6 @@
                 android:textColor="@color/C7E_8F_9E"
                 android:textSize="@dimen/font11"/>
         </RelativeLayout>
-
     </LinearLayout>
 
     <RelativeLayout
@@ -118,8 +118,7 @@
             android:layout_height="@dimen/dis50"
             android:layout_alignParentBottom="true"
             android:background="@color/white"
-            android:visibility="visible"
-            >
+            android:visibility="visible">
 
             <RelativeLayout
                 android:layout_width="0dp"
@@ -181,6 +180,9 @@
                     android:layout_height="match_parent"
                     android:layout_alignBottom="@id/frag_cart_tv1"
                     android:layout_toRightOf="@id/frag_cart_tv1"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:maxLines="1"
                     android:text="0"
                     android:textColor="@color/red"
                     android:textSize="@dimen/font18"
@@ -190,8 +192,7 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                >
+                android:layout_weight="0.8">
 
                 <TextView
                     android:id="@+id/frag_cart_tv_solve"
@@ -209,10 +210,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:background="@drawable/shape_corner_e8_radius16"
-                    android:paddingBottom="@dimen/dis8"
                     android:paddingLeft="@dimen/dis16"
-                    android:paddingRight="@dimen/dis16"
                     android:paddingTop="@dimen/dis8"
+                    android:paddingRight="@dimen/dis16"
+                    android:paddingBottom="@dimen/dis8"
                     android:text="删除商品"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font14"
@@ -235,8 +236,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recyclerView"
@@ -244,17 +244,14 @@
                         android:layout_height="wrap_content"
                         android:background="@color/white"
                         android:nestedScrollingEnabled="false"
-                        android:visibility="gone"
-                        >
-
+                        android:visibility="gone">
                     </android.support.v7.widget.RecyclerView>
 
                     <RelativeLayout
                         android:id="@+id/frag_cart_rl_nomore"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        >
+                        android:background="@color/white">
 
                         <ImageView
                             android:id="@+id/frag_cart_iv1"
@@ -271,8 +268,8 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/frag_cart_iv1"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="@dimen/dis32"
                             android:layout_marginTop="@dimen/dis22"
+                            android:layout_marginBottom="@dimen/dis32"
                             android:text="购物车还没有商品哦"
                             android:textColor="@color/C64_64_64"
                             android:textSize="@dimen/font12"/>
@@ -289,8 +286,8 @@
                         android:layout_height="wrap_content"
                         android:background="@color/white"
                         android:gravity="center_horizontal"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingTop="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis18"
                         android:text="猜你喜欢"
                         android:textColor="@color/C10_10_10"
                         android:textSize="@dimen/font15"/>
@@ -304,11 +301,10 @@
                         android:listSelector="@color/white"
                         android:nestedScrollingEnabled="false"
                         android:numColumns="3"
-                        android:paddingBottom="@dimen/dis18"
                         android:paddingLeft="@dimen/dis15"
                         android:paddingRight="@dimen/dis15"
+                        android:paddingBottom="@dimen/dis18"
                         android:verticalSpacing="@dimen/dis14">
-
                     </com.yj.cosmetics.widget.WrapContentGridView>
                 </LinearLayout>
             </com.yj.cosmetics.widget.ProgressLayout>

@@ -28,16 +28,15 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis75"
-                    android:layout_marginBottom="@dimen/dis12"
                     android:layout_marginLeft="@dimen/dis15"
+                    android:layout_marginTop="@dimen/dis12"
                     android:layout_marginRight="@dimen/dis15"
-                    android:layout_marginTop="@dimen/dis12">
+                    android:layout_marginBottom="@dimen/dis12">
 
                     <RelativeLayout
                         android:id="@+id/mine_logical_detial_rl1"
                         android:layout_width="@dimen/dis75"
-                        android:layout_height="@dimen/dis75"
-                        android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+                        android:layout_height="@dimen/dis75">
 
                         <ImageView
                             android:id="@+id/logical_detial_iv1"
@@ -45,8 +44,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="@dimen/dis4"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/default_goods"
-                            />
+                            android:src="@mipmap/default_goods"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -78,30 +76,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_toRightOf="@id/logical_detial_tv1"
-                            android:paddingRight="@dimen/dis10"
                             android:paddingTop="@dimen/dis5"
+                            android:paddingRight="@dimen/dis10"
                             android:textColor="@color/C64_83_A6"
                             android:textSize="@dimen/font13"/>
-
-                        <!--<TextView-->
-                        <!--android:id="@+id/logical_detial_tv3"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_above="@id/logical_detial_tv1"-->
-                        <!--android:visibility="gone"-->
-                        <!--android:text="承运： "-->
-                        <!--android:textColor="@color/C64_64_64"-->
-                        <!--android:textSize="@dimen/font12"/>-->
-
-                        <!--<TextView-->
-                        <!--android:id="@+id/logical_detial_tv_name"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_above="@id/logical_detial_tv1"-->
-                        <!--android:layout_toRightOf="@id/logical_detial_tv3"-->
-                        <!--android:textColor="@color/C64_64_64"-->
-                        <!--android:visibility="gone"-->
-                        <!--android:textSize="@dimen/font13"/>-->
 
                         <TextView
                             android:id="@+id/logical_detial_tv2"
@@ -122,7 +100,6 @@
                             android:layout_toRightOf="@id/logical_detial_tv2"
                             android:textColor="@color/C64_64_64"
                             android:textSize="@dimen/font12"/>
-
                     </RelativeLayout>
                 </RelativeLayout>
 
@@ -134,9 +111,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis15"
-                    android:layout_marginRight="@dimen/dis15"
                     android:layout_marginTop="@dimen/dis15"
+                    android:layout_marginRight="@dimen/dis15"
+                    android:layout_marginBottom="@dimen/dis15"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -144,9 +121,7 @@
                         android:layout_height="@dimen/dis15"
                         android:layout_marginLeft="@dimen/dis79"
                         android:layout_marginTop="@dimen/dis3"
-                        android:background="@mipmap/location_fill_w"
-
-                        />
+                        android:background="@mipmap/location_fill_w"/>
 
                     <TextView
                         android:id="@+id/logical_detial_tv_address"
@@ -165,15 +140,14 @@
                     android:layout_centerVertical="true"
                     android:visibility="gone">
 
-
                     <TextView
                         android:id="@+id/tv_wuliu_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:paddingBottom="15dp"
                         android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
                         android:text="暂无物流配送信息,请稍后查询."
                         android:textSize="@dimen/font14"/>
 
@@ -183,7 +157,6 @@
                         android:layout_above="@+id/tv_wuliu_info"
                         android:layout_centerHorizontal="true"
                         android:background="@mipmap/img_wuliu"/>
-
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -202,15 +175,14 @@
                 android:layout_centerVertical="true"
                 android:visibility="gone">
 
-
                 <TextView
                     android:id="@+id/textview_wuliu_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:paddingBottom="15dp"
                     android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
                     android:text="暂无物流配送信息,请稍后查询."
                     android:textSize="@dimen/font14"/>
 
@@ -220,9 +192,7 @@
                     android:layout_above="@+id/textview_wuliu_info"
                     android:layout_centerHorizontal="true"
                     android:background="@mipmap/img_wuliu"/>
-
             </RelativeLayout>
         </RelativeLayout>
     </com.yj.cosmetics.widget.ProgressLayout>
-
 </LinearLayout>

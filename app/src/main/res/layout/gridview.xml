@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <com.yj.cosmetics.widget.WrapContentGridView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:horizontalSpacing="@dimen/dis25"
+    android:listSelector="@color/white"
     android:nestedScrollingEnabled="false"
     android:numColumns="5"
-    android:verticalSpacing="@dimen/dis8"
     android:paddingLeft="@dimen/dis15"
     android:paddingTop="@dimen/dis12"
     android:paddingRight="@dimen/dis15"
-    android:horizontalSpacing="@dimen/dis25"
-    android:listSelector="@color/white"
-    >
-
+    android:verticalSpacing="@dimen/dis8">
 </com.yj.cosmetics.widget.WrapContentGridView>

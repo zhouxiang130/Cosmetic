@@ -14,7 +14,6 @@
         android:fillViewport="true"
         android:scrollbars="none">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,24 +23,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
                 android:layout_marginTop="@dimen/dis6"
-                android:background="@color/CE7_E7_E7"
-                />
+                android:background="@color/CE7_E7_E7"/>
 
             <RelativeLayout
                 android:id="@+id/mine_account_withdraw_rl_change"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:padding="@dimen/dis15"
-                >
+                android:padding="@dimen/dis15">
 
                 <ImageView
                     android:id="@+id/withdraw_iv1"
                     android:layout_width="@dimen/dis32"
                     android:layout_height="@dimen/dis32"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/alipay_cash"
-                    />
+                    android:src="@mipmap/alipay_cash"/>
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_account"
@@ -50,8 +46,7 @@
                     android:layout_marginLeft="@dimen/dis15"
                     android:layout_toRightOf="@id/withdraw_iv1"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font15"
-                    />
+                    android:textSize="@dimen/font15"/>
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_name"
@@ -62,8 +57,7 @@
                     android:layout_toRightOf="@id/withdraw_iv1"
                     android:textColor="@color/C4B_4B_4B"
                     android:textSize="@dimen/font12"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -77,21 +71,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
                 android:layout_marginBottom="@dimen/dis6"
-                android:background="@color/CE7_E7_E7"
-                />
+                android:background="@color/CE7_E7_E7"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
-                android:background="@color/CE7_E7_E7"
-                />
+                android:background="@color/CE7_E7_E7"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:paddingLeft="@dimen/dis15"
-                >
+                android:paddingLeft="@dimen/dis15">
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_tv1"
@@ -100,8 +91,7 @@
                     android:layout_marginTop="@dimen/dis20"
                     android:text="余额提现"
                     android:textColor="@color/C4B_4B_4B"
-                    android:textSize="@dimen/font12"
-                    />
+                    android:textSize="@dimen/font12"/>
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_tv_money"
@@ -121,8 +111,7 @@
                     android:layout_marginTop="@dimen/dis28"
                     android:text="￥"
                     android:textColor="@color/C4B_4B_4B"
-                    android:textSize="@dimen/font28"
-                    />
+                    android:textSize="@dimen/font28"/>
 
                 <EditText
                     android:id="@+id/mine_account_withdraw_etmoney"
@@ -136,19 +125,17 @@
                     android:inputType="number"
                     android:textColor="@color/C10_10_10"
                     android:textColorHint="@color/C10_10_10"
-                    android:textSize="@dimen/font28"
-                    />
+                    android:textSize="@dimen/font28"/>
 
                 <View
                     android:id="@+id/mine_account_withdraw_v1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
                     android:layout_below="@id/mine_account_withdraw_etmoney"
-                    android:layout_marginBottom="@dimen/dis12"
-                    android:layout_marginRight="@dimen/dis15"
                     android:layout_marginTop="@dimen/dis15"
-                    android:background="@color/CE7_E7_E7"
-                    />
+                    android:layout_marginRight="@dimen/dis15"
+                    android:layout_marginBottom="@dimen/dis12"
+                    android:background="@color/CE7_E7_E7"/>
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_rest"
@@ -158,33 +145,29 @@
                     android:layout_marginBottom="@dimen/dis15"
                     android:text="可提现余额￥0.0"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font12"
-                    />
+                    android:textSize="@dimen/font12"/>
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_tv_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_below="@id/mine_account_withdraw_v1"
-                    android:layout_marginBottom="@dimen/dis5"
+                    android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
+                    android:layout_marginBottom="@dimen/dis5"
                     android:paddingLeft="@dimen/dis10"
                     android:paddingRight="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="全部提现"
                     android:textColor="@color/CE8_3C_3C"
-                    android:textSize="@dimen/font12"
-                    />
+                    android:textSize="@dimen/font12"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dis10"
-                android:background="@color/white"
-
-                >
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/mine_account_withdraw_tvSend"
@@ -194,10 +177,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis30"
                     android:background="@drawable/shape_corner_e8_radius12"
-                    android:paddingBottom="@dimen/dis4"
                     android:paddingLeft="@dimen/dis12"
-                    android:paddingRight="@dimen/dis12"
                     android:paddingTop="@dimen/dis4"
+                    android:paddingRight="@dimen/dis12"
+                    android:paddingBottom="@dimen/dis4"
                     android:text="获取"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font14"/>
@@ -212,14 +195,12 @@
                     android:layout_toLeftOf="@id/mine_account_withdraw_tvSend"
                     android:background="@null"
                     android:hint="请输入验证码"
-                    android:paddingBottom="@dimen/dis15"
                     android:paddingTop="@dimen/dis15"
+                    android:paddingBottom="@dimen/dis15"
                     android:singleLine="true"
                     android:textColor="@color/C40_40_40"
                     android:textColorHint="@color/CA8_A8_A8"
-                    android:textSize="@dimen/font14"
-
-                    />
+                    android:textSize="@dimen/font14"/>
             </RelativeLayout>
 
             <Button
@@ -227,13 +208,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis40"
                 android:layout_marginLeft="@dimen/dis20"
-                android:layout_marginRight="@dimen/dis20"
                 android:layout_marginTop="@dimen/dis60"
+                android:layout_marginRight="@dimen/dis20"
                 android:background="@drawable/shape_corner_e8_radius2"
                 android:text="立即提现"
                 android:textColor="@color/white"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
         </LinearLayout>
     </ScrollView>
 
@@ -241,8 +221,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dis20"
-        android:layout_marginRight="@dimen/dis20"
         android:layout_marginTop="@dimen/dis20"
+        android:layout_marginRight="@dimen/dis20"
         android:gravity="left"
         android:orientation="horizontal">
 
@@ -261,23 +241,6 @@
             android:lineSpacingExtra="@dimen/dis5"
             android:text=""
             android:textColor="@color/C88_88_88"
-            android:textSize="@dimen/font12"
-            />
-
-        <!--正常工作日申请提现，次日到账。如遇周末或节假日则顺延到下个工作日-->
+            android:textSize="@dimen/font12"/>
     </LinearLayout>
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center_horizontal"-->
-    <!--android:layout_marginLeft="@dimen/dis15"-->
-    <!--android:layout_marginRight="@dimen/dis15"-->
-    <!--android:layout_marginTop="@dimen/dis5"-->
-    <!--android:text="节假日则顺延到下个工作日"-->
-    <!--android:textColor="@color/C88_88_88"-->
-    <!--android:textSize="@dimen/font12"-->
-    <!--/>-->
-
-
 </LinearLayout>

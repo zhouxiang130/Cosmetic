@@ -18,20 +18,18 @@
             android:paddingLeft="@dimen/dis15"
             android:paddingRight="@dimen/dis15">
 
-
             <RelativeLayout
                 android:id="@+id/refund_detial_rl_good_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis15"
-                >
+                android:paddingBottom="@dimen/dis15">
 
                 <TextView
                     android:id="@+id/refund_tv_good_status_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="货物状态"
                     android:textColor="@color/black_color1"
                     android:textSize="@dimen/font14"/>
@@ -45,8 +43,8 @@
                     android:layout_toRightOf="@+id/refund_tv_good_status_title"
                     android:gravity="center"
                     android:padding="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="*"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font14"/>
@@ -59,14 +57,13 @@
                     android:background="@drawable/shape_corner_c0_stroke1_transparent_radius5"
                     android:drawableRight="@drawable/ic_expand_more_black_24dp"
                     android:gravity="center_vertical"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingLeft="@dimen/dis8"
-                    android:paddingRight="@dimen/dis8"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingRight="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis5"
                     android:text="请选择货物状态"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
 
             <View
@@ -78,15 +75,14 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dis15"
-                >
+                android:paddingBottom="@dimen/dis15">
 
                 <TextView
                     android:id="@+id/refund_tv_cause_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="退款原因"
                     android:textColor="@color/black_color1"
                     android:textSize="@dimen/font14"/>
@@ -100,8 +96,8 @@
                     android:layout_toRightOf="@+id/refund_tv_cause_title"
                     android:gravity="center"
                     android:padding="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="*"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font14"/>
@@ -114,14 +110,13 @@
                     android:background="@drawable/shape_corner_c0_stroke1_transparent_radius5"
                     android:drawableRight="@drawable/ic_expand_more_black_24dp"
                     android:gravity="center_vertical"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingLeft="@dimen/dis8"
-                    android:paddingRight="@dimen/dis8"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingRight="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis5"
                     android:text="请选择退款原因"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
 
             <View
@@ -134,15 +129,14 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:paddingBottom="@dimen/dis15"
-                >
+                android:paddingBottom="@dimen/dis15">
 
                 <TextView
                     android:id="@+id/refund_tv_price_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="退款金额"
                     android:textColor="@color/black_color1"
                     android:textSize="@dimen/font14"/>
@@ -157,8 +151,8 @@
                     android:layout_toRightOf="@+id/refund_tv_price_title"
                     android:gravity="center"
                     android:padding="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="*"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font14"/>
@@ -173,12 +167,12 @@
                     android:layout_toRightOf="@+id/refund_tv_price_title_"
                     android:gravity="center"
                     android:padding="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text=""
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font12"/>
-                <!--来了 总得见上你一面吧-->
+
                 <EditText
                     android:id="@+id/refund_tv_price"
                     android:layout_width="match_parent"
@@ -187,13 +181,12 @@
                     android:background="@drawable/shape_corner_c0_stroke1_transparent_radius5"
                     android:gravity="center_vertical"
                     android:hint=""
-                    android:paddingBottom="@dimen/dis8"
                     android:paddingLeft="@dimen/dis8"
-                    android:paddingRight="@dimen/dis8"
                     android:paddingTop="@dimen/dis8"
+                    android:paddingRight="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis8"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
 
             <View
@@ -212,12 +205,11 @@
                     android:id="@+id/refund_et_explain_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="退款说明"
                     android:textColor="@color/black_color1"
                     android:textSize="@dimen/font14"/>
-
 
                 <EditText
                     android:id="@+id/refund_et_explain"
@@ -227,13 +219,12 @@
                     android:background="@drawable/shape_corner_c0_stroke1_transparent_radius5"
                     android:gravity="center|left|top"
                     android:hint="请填写退款说明，退款处理更快捷"
-                    android:paddingBottom="@dimen/dis8"
                     android:paddingLeft="@dimen/dis8"
-                    android:paddingRight="@dimen/dis8"
                     android:paddingTop="@dimen/dis8"
+                    android:paddingRight="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis8"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
 
             <View
@@ -241,21 +232,19 @@
                 android:layout_height="@dimen/dis0.5"
                 android:background="@color/CE7_E7_E7"/>
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:paddingBottom="@dimen/dis15"
-                >
+                android:paddingBottom="@dimen/dis15">
 
                 <TextView
                     android:id="@+id/refund_et_phone_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="联系电话"
                     android:textColor="@color/black_color1"
                     android:textSize="@dimen/font14"/>
@@ -269,8 +258,8 @@
                     android:layout_toRightOf="@+id/refund_et_phone_title"
                     android:gravity="center"
                     android:padding="@dimen/dis5"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="*"
                     android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font14"/>
@@ -285,20 +274,18 @@
                     android:hint="请输入您的手机号码"
                     android:inputType="phone"
                     android:maxLength="11"
-                    android:paddingBottom="@dimen/dis8"
                     android:paddingLeft="@dimen/dis8"
-                    android:paddingRight="@dimen/dis8"
                     android:paddingTop="@dimen/dis8"
+                    android:paddingRight="@dimen/dis8"
+                    android:paddingBottom="@dimen/dis8"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font14"/>
-
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis0.5"
                 android:background="@color/CE7_E7_E7"/>
-
 
             <RelativeLayout
                 android:id="@+id/rl_img_gild"
@@ -338,8 +325,8 @@
                                 android:id="@+id/judge_show_offer1"
                                 android:layout_width="@dimen/dis60"
                                 android:layout_height="@dimen/dis60"
-                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:scaleType="centerCrop"
                                 app:riv_corner_radius="@dimen/dis2"/>
@@ -366,8 +353,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer1_rl1"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -404,8 +390,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer2_rl2"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -442,8 +427,7 @@
                         android:layout_height="@dimen/dis68"
                         android:layout_marginLeft="@dimen/dis15"
                         android:layout_toRightOf="@id/judge_offer3_rl3"
-                        android:visibility="gone"
-                        >
+                        android:visibility="gone">
 
                         <RelativeLayout
                             android:layout_width="@dimen/dis60"
@@ -479,12 +463,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rl_img_gild"
-                    android:paddingBottom="@dimen/dis10"
                     android:paddingTop="@dimen/dis10"
+                    android:paddingBottom="@dimen/dis10"
                     android:text="上传凭证，最多4张"
                     android:textColor="@color/C99_99_99"
                     android:textSize="@dimen/font12"/>
-
             </RelativeLayout>
         </LinearLayout>
 
@@ -493,5 +476,4 @@
             android:layout_height="@dimen/dis140"
             android:background="@color/CF8_F8_F8"/>
     </LinearLayout>
-
 </LinearLayout>

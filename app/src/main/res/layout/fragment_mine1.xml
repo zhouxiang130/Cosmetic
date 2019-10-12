@@ -24,7 +24,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis215">
@@ -61,7 +60,6 @@
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font8"
                             android:visibility="gone"/>
-
                     </RelativeLayout>
 
                     <LinearLayout
@@ -87,7 +85,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal">
 
-
                                 <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                                     android:id="@+id/frag_mine_login_iv"
                                     android:layout_width="@dimen/dis65"
@@ -97,8 +94,7 @@
                                     android:src="@mipmap/default_avatar"
                                     app:riv_border_color="@color/white"
                                     app:riv_border_width="@dimen/dis1"
-                                    app:riv_corner_radius="360dp"
-                                    />
+                                    app:riv_corner_radius="360dp"/>
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -106,11 +102,8 @@
                                     android:layout_alignRight="@id/frag_mine_login_iv"
                                     android:layout_alignBottom="@id/frag_mine_login_iv"
                                     android:background="@mipmap/bj"/>
-
-
                             </RelativeLayout>
                         </FrameLayout>
-
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -137,8 +130,7 @@
                                     android:paddingTop="5dp"
                                     android:text="点击登录"
                                     android:textColor="@color/white"
-                                    android:textSize="@dimen/font18"
-                                    />
+                                    android:textSize="@dimen/font18"/>
 
                                 <TextView
                                     android:id="@+id/mine_new_tv_tel"
@@ -152,11 +144,9 @@
                                     android:text=""
                                     android:textColor="@color/CEB_CD_82"
                                     android:textSize="@dimen/font11"/>
-
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-
                 </RelativeLayout>
             </LinearLayout>
 
@@ -179,8 +169,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:orientation="vertical"
-                        >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/frag_mine_account_money"
@@ -200,7 +189,6 @@
                             android:text="账户余额 （元）"
                             android:textColor="@color/black"
                             android:textSize="@dimen/font14"/>
-
                     </LinearLayout>
 
                     <View
@@ -214,8 +202,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:orientation="vertical"
-                        >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/frag_mine_tv_score"
@@ -225,8 +212,7 @@
                             android:paddingBottom="5dp"
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
-                            android:textSize="@dimen/font18"
-                            />
+                            android:textSize="@dimen/font18"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -235,8 +221,7 @@
                             android:drawablePadding="@dimen/dis6"
                             android:text="积分总额"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/font14"
-                            />
+                            android:textSize="@dimen/font14"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -254,8 +239,7 @@
                 <RelativeLayout
                     android:id="@+id/frag_mine_order_all"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dis50"
-                    >
+                    android:layout_height="@dimen/dis50">
 
                     <TextView
                         android:id="@+id/mine_info_tv"
@@ -278,8 +262,7 @@
                         android:gravity="center"
                         android:text="查看全部"
                         android:textColor="@color/C64_64_64"
-                        android:textSize="@dimen/font12"
-                        />
+                        android:textSize="@dimen/font12"/>
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
@@ -291,22 +274,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis75"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <com.yj.cosmetics.widget.MaterialRippleLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_order_pay"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/frag_mine_tv1"
@@ -317,8 +297,7 @@
                             android:drawablePadding="@dimen/dis8"
                             android:text="待付款"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_pay_num"
@@ -330,24 +309,21 @@
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
 
                 <com.yj.cosmetics.widget.MaterialRippleLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_order_send"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/frag_mine_tv2"
@@ -358,8 +334,7 @@
                             android:drawablePadding="@dimen/dis8"
                             android:text="待发货"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_send_num"
@@ -371,25 +346,21 @@
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
-                >
 
                 <com.yj.cosmetics.widget.MaterialRippleLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_order_get"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/frag_mine_tv3"
@@ -400,8 +371,7 @@
                             android:drawablePadding="@dimen/dis8"
                             android:text="待收货"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_get_num"
@@ -413,25 +383,21 @@
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
-                >
 
                 <com.yj.cosmetics.widget.MaterialRippleLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_order_judge"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/frag_mine_tv4"
@@ -442,8 +408,7 @@
                             android:drawablePadding="@dimen/dis8"
                             android:text="待评价"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_judge_num"
@@ -455,26 +420,22 @@
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
-                >
 
                 <com.yj.cosmetics.widget.MaterialRippleLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:visibility="gone"
-                    >
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_order_drawback"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <TextView
                             android:id="@+id/frag_mine_tv5"
@@ -485,8 +446,7 @@
                             android:drawablePadding="@dimen/dis8"
                             android:text="退款"
                             android:textColor="@color/C10_10_10"
-                            android:textSize="@dimen/font12"
-                            />
+                            android:textSize="@dimen/font12"/>
 
                         <TextView
                             android:id="@+id/frag_mine_tv_drawback_num"
@@ -498,13 +458,10 @@
                             android:text="0"
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font11"
-                            android:visibility="gone"
-                            />
+                            android:visibility="gone"/>
                     </RelativeLayout>
                 </com.yj.cosmetics.widget.MaterialRippleLayout>
-                >
             </LinearLayout>
-
 
             <View
                 android:layout_width="match_parent"
@@ -521,12 +478,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-
                     <RelativeLayout
                         android:id="@+id/frag_mine_md"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:paddingTop="10dp"
@@ -550,12 +505,10 @@
                         android:layout_height="match_parent"
                         android:background="@color/CE7_E7_E7"/>
 
-
                     <RelativeLayout
                         android:id="@+id/frag_mine_sjrz"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:paddingTop="10dp"
@@ -573,12 +526,6 @@
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font15"/>
                     </RelativeLayout>
-
-                    <!--<RelativeLayout-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--&gt;-->
 
                     <View
                         android:layout_width="@dimen/dis0.5"
@@ -605,7 +552,6 @@
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font15"/>
                     </RelativeLayout>
-
                 </LinearLayout>
 
                 <View
@@ -616,8 +562,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/frag_mine_collection"
@@ -645,7 +590,6 @@
                         android:layout_height="match_parent"
                         android:background="@color/CE7_E7_E7"/>
 
-
                     <LinearLayout
                         android:id="@+id/frag_mine_online_service"
                         android:layout_width="0dp"
@@ -665,12 +609,6 @@
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font15"/>
                     </LinearLayout>
-
-                    <!--<RelativeLayout-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--&gt;-->
 
                     <View
                         android:layout_width="@dimen/dis0.5"
@@ -696,7 +634,6 @@
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font15"/>
 
-
                         <TextView
                             android:id="@+id/frag_mine_tv_coustom_service_msg_num"
                             android:layout_width="@dimen/dis16"
@@ -711,7 +648,6 @@
                             android:textColor="@color/white"
                             android:textSize="@dimen/font11"
                             android:visibility="gone"/>
-
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -723,8 +659,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_contact"
@@ -752,7 +687,6 @@
                         android:layout_height="match_parent"
                         android:background="@color/CE7_E7_E7"/>
 
-
                     <RelativeLayout
                         android:id="@+id/frag_mine_rl_about"
                         android:layout_width="0dp"
@@ -778,7 +712,6 @@
                         android:layout_width="@dimen/dis0.5"
                         android:layout_height="match_parent"
                         android:background="@color/CE7_E7_E7"/>
-
 
                     <RelativeLayout
                         android:layout_width="0dp"

@@ -19,27 +19,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis180"
-        android:background="@color/CE8_3C_3C"
-        >
+        android:background="@color/CE8_3C_3C">
 
         <ImageView
             android:id="@+id/mine_scoring_iv1"
             android:layout_width="@dimen/dis45"
             android:layout_height="@dimen/dis50"
-            android:layout_marginLeft="13dp"
             android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
             android:background="@mipmap/integral"
             android:scaleType="centerCrop"
             android:visibility="gone"/>
-
-        <!--<LinearLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_marginLeft="@dimen/dis15"-->
-        <!--android:orientation="vertical"-->
-        <!--&gt;-->
 
         <TextView
             android:id="@+id/mine_scoring_tv_score"
@@ -53,21 +43,13 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font21"/>
 
-        <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="23dp"-->
-        <!--android:layout_toLeftOf="@id/mine_scoring_tv_score"-->
-        <!--android:paddingRight="@dimen/dis8"-->
-        <!--android:src="@mipmap/jifen"/>-->
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mine_scoring_tv_score"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="5dp"
             android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="当前积分"
             android:textColor="@color/white"
             android:textSize="@dimen/font12"/>
@@ -75,16 +57,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingBottom="5dp"
             android:paddingLeft="20dp"
+            android:paddingTop="5dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp">
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/mine_scoring_tv_confirm"
@@ -93,8 +75,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_corner_oval"
                 android:gravity="center"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="提升额度"
                 android:textColor="@color/CE8_3C_3C"
                 android:textSize="@dimen/font15"/>
@@ -111,15 +93,12 @@
                 android:layout_weight="1"
                 android:background="@drawable/shape_corner_oval"
                 android:gravity="center"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="申请记录"
                 android:textColor="@color/CE8_3C_3C"
                 android:textSize="@dimen/font15"/>
-
-
         </LinearLayout>
-        <!--</LinearLayout>-->
 
         <TextView
             android:id="@+id/mine_scoring_tv_rule"
@@ -130,8 +109,8 @@
             android:layout_marginRight="@dimen/dis18"
             android:drawableLeft="@mipmap/ts_jif"
             android:drawablePadding="@dimen/dis10"
-            android:paddingBottom="@dimen/dis10"
             android:paddingTop="@dimen/dis10"
+            android:paddingBottom="@dimen/dis10"
             android:text="积分规则"
             android:textColor="@color/white"
             android:textSize="@dimen/font12"
@@ -142,7 +121,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis6"
         android:background="@color/CE7_E7_E7"/>
-
 
     <RelativeLayout
         android:id="@+id/mine_scoring_detial_rl_title"
@@ -164,23 +142,6 @@
             app:tabTextAppearance="@style/CustomTabLayoutText13"
             app:tabTextColor="@color/C40_40_40">
         </android.support.design.widget.TabLayout>
-        <!--<com.ogaclejapan.smarttablayout.SmartTabLayout
-            android:id="@+id/mine_order_tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:stl_customTabTextLayoutId="@layout/item_custom_tab"
-            app:stl_titleOffset="auto_center"
-            app:stl_indicatorColor="@color/T40_text_color"
-            app:stl_indicatorThickness="@dimen/dis2"
-            app:stl_indicatorGravity="bottom"
-            app:stl_indicatorWidth="auto"
-            app:stl_indicatorCornerRadius="@dimen/dis2"
-            app:stl_overlineThickness="0dp"
-            app:stl_underlineThickness="0dp"
-            app:stl_dividerThickness="0dp"
-            app:stl_clickable="true"
-            app:stl_indicatorInterpolation="smart"
-            />-->
     </RelativeLayout>
 
     <View
@@ -193,8 +154,5 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </android.support.v4.view.ViewPager>
-
-
 </LinearLayout>

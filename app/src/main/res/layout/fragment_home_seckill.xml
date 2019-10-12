@@ -6,7 +6,6 @@
               android:background="@color/CED_F1_F4"
               android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +20,6 @@
                 android:id="@+id/xrecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
             </com.jcodecraeer.xrecyclerview.XRecyclerView>
         </com.yj.cosmetics.widget.ProgressLayout>
 
@@ -29,10 +27,10 @@
             android:id="@+id/home_seckill_iv_cart"
             android:layout_width="@dimen/dis40"
             android:layout_height="@dimen/dis40"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/dis20"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="@dimen/dis20"
+            android:layout_marginBottom="@dimen/dis20"
             android:scaleType="centerCrop"
             android:src="@mipmap/cart_light_dark"
             android:visibility="gone"/>
@@ -41,10 +39,10 @@
             android:id="@+id/home_seckill_iv_top"
             android:layout_width="@dimen/dis40"
             android:layout_height="@dimen/dis40"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/dis20"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="@dimen/dis20"
+            android:layout_marginBottom="@dimen/dis20"
             android:src="@mipmap/upd_fl"
             android:visibility="gone"/>
     </RelativeLayout>

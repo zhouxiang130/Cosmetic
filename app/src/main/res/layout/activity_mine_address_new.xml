@@ -7,7 +7,6 @@
 
     <include layout="@layout/titlebar_layout"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,8 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dis48"
-            >
+            android:layout_height="@dimen/dis48">
 
             <TextView
                 android:id="@+id/address_new_tv1"
@@ -32,8 +30,7 @@
                 android:layout_marginLeft="@dimen/dis15"
                 android:text="收  货  人 : "
                 android:textColor="@color/C1E_1E_1E"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <EditText
                 android:id="@+id/address_new_etName"
@@ -48,8 +45,7 @@
                 android:paddingRight="@dimen/dis10"
                 android:textColor="@color/C1E_1E_1E"
                 android:textColorHint="@color/CAA_AA_AA"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <View
                 android:layout_width="match_parent"
@@ -60,8 +56,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dis48"
-            >
+            android:layout_height="@dimen/dis48">
 
             <TextView
                 android:id="@+id/address_new_tv2"
@@ -72,8 +67,7 @@
                 android:maxLength="11"
                 android:text="手机号码 : "
                 android:textColor="@color/C1E_1E_1E"
-                android:textSize="@dimen/font14"
-                />
+                android:textSize="@dimen/font14"/>
 
             <EditText
                 android:id="@+id/address_new_tel"
@@ -91,9 +85,7 @@
                 android:singleLine="true"
                 android:textColor="@color/C1E_1E_1E"
                 android:textColorHint="@color/CAA_AA_AA"
-                android:textSize="@dimen/font14"
-
-                />
+                android:textSize="@dimen/font14"/>
 
             <View
                 android:layout_width="match_parent"
@@ -104,14 +96,12 @@
 
         <com.yj.cosmetics.widget.MaterialRippleLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/address_new_area"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dis48"
-                >
+                android:layout_height="@dimen/dis48">
 
                 <TextView
                     android:id="@+id/address_new_tv3"
@@ -122,8 +112,7 @@
                     android:layout_marginTop="@dimen/dis12"
                     android:text="收货地区 : "
                     android:textColor="@color/C1E_1E_1E"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <ImageView
                     android:id="@+id/address_new_iv1"
@@ -132,8 +121,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
-                    android:src="@drawable/more_next"
-                    />
+                    android:src="@drawable/more_next"/>
 
                 <TextView
                     android:id="@+id/address_new_address"
@@ -149,8 +137,7 @@
                     android:hint="请选择"
                     android:maxLines="1"
                     android:textColorHint="@color/CAA_AA_AA"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -163,17 +150,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/dis48"
-            >
+            android:minHeight="@dimen/dis48">
 
             <AutoCompleteTextView
                 android:id="@+id/address_new_etDetial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dis8"
                 android:layout_marginLeft="@dimen/dis5"
-                android:layout_marginRight="@dimen/dis5"
                 android:layout_marginTop="@dimen/dis18"
+                android:layout_marginRight="@dimen/dis5"
+                android:layout_marginBottom="@dimen/dis8"
                 android:background="@null"
                 android:gravity="start"
                 android:hint="详细地址"
@@ -182,21 +168,17 @@
                 android:paddingLeft="@dimen/dis10"
                 android:paddingRight="@dimen/dis10"
                 android:textColorHint="@color/CAA_AA_AA"
-                android:textSize="@dimen/font14"
-                />
-
+                android:textSize="@dimen/font14"/>
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis6"
-            android:background="@color/CED_F1_F4"
-            />
+            android:background="@color/CED_F1_F4"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -205,8 +187,7 @@
                 android:layout_marginLeft="@dimen/dis15"
                 android:text="设为默认地址"
                 android:textColor="@color/C40_40_40"
-                android:textSize="@dimen/font12"
-                />
+                android:textSize="@dimen/font12"/>
 
             <RelativeLayout
                 android:id="@+id/address_new_checkrl"
@@ -216,11 +197,10 @@
                 android:layout_marginRight="@dimen/dis5"
                 android:clickable="true"
                 android:focusable="true"
-                android:paddingBottom="@dimen/dis18"
                 android:paddingLeft="@dimen/dis15"
-                android:paddingRight="@dimen/dis10"
                 android:paddingTop="@dimen/dis18"
-                >
+                android:paddingRight="@dimen/dis10"
+                android:paddingBottom="@dimen/dis18">
 
                 <CheckBox
                     android:id="@+id/address_new_cb"
@@ -228,33 +208,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:button="@drawable/selector_checkbox_address"
-                    android:clickable="false"
-                    />
+                    android:clickable="false"/>
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--&gt;-->
-
-        <!--<Button-->
-            <!--android:id="@+id/address_news_save"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dis50"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:background="@drawable/btn_enable_background"-->
-            <!--android:enabled="false"-->
-            <!--android:text="保存"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:textSize="@dimen/font17"-->
-            <!--/>-->
-
-        <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dis4"-->
-            <!--android:layout_above="@id/address_news_save"-->
-            <!--android:background="@mipmap/projection_b"/>-->
-    <!--</RelativeLayout>-->
 </LinearLayout>

@@ -5,21 +5,17 @@
               android:layout_height="wrap_content"
               android:background="@drawable/shape_corner_shade"
               android:gravity="center_vertical"
-              android:orientation="vertical"
-    >
+              android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/title_fm"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dis45"
-
-        >
+        android:layout_height="@dimen/dis45">
 
         <LinearLayout
             android:id="@+id/title_ll_back"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/title_ll_iv"
@@ -30,10 +26,7 @@
                 android:contentDescription="@null"
                 android:focusable="false"
                 android:paddingRight="5dp"
-                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
-                />
-            <!--android:paddingLeft="15dp"-->
-            <!--android:src="@mipmap/return_x"-->
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
         </LinearLayout>
 
         <TextView
@@ -42,16 +35,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font16"
-            />
-        <!--android:rotation="90"-->
+            android:textSize="@dimen/font16"/>
+
         <RelativeLayout
             android:id="@+id/title_rl_next"
             android:layout_width="@dimen/dis102"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:visibility="gone"
-            >
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/title_tv_next"
@@ -62,9 +53,7 @@
                 android:layout_marginRight="@dimen/dis15"
                 android:text=""
                 android:textColor="@color/C64_64_64"
-                android:textSize="@dimen/font13"
-                />
-            <!--android:rotation="90"-->
+                android:textSize="@dimen/font13"/>
         </RelativeLayout>
     </FrameLayout>
 
@@ -72,6 +61,5 @@
         android:id="@+id/title_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-
         android:background="@color/CE7_E7_E7"/>
 </LinearLayout>

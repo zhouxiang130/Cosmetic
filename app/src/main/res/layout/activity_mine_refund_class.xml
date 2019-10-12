@@ -25,25 +25,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:paddingBottom="@dimen/dis8"
                 android:paddingLeft="@dimen/dis15"
-                android:paddingRight="@dimen/dis15"
                 android:paddingTop="@dimen/dis8"
-                >
-
+                android:paddingRight="@dimen/dis15"
+                android:paddingBottom="@dimen/dis8">
 
                 <RelativeLayout
                     android:id="@+id/rl_refund_class_good_info"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis95"
-                    android:paddingBottom="@dimen/dis5"
-                    android:paddingTop="@dimen/dis5">
+                    android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5">
 
                     <RelativeLayout
                         android:id="@+id/order_list_goods_detial_rl1"
                         android:layout_width="@dimen/dis75"
-                        android:layout_height="@dimen/dis75"
-                        android:background="@drawable/shape_corner_dc_stroke1_white_radius2">
+                        android:layout_height="@dimen/dis75">
 
                         <ImageView
                             android:id="@+id/item_order_goods_iv"
@@ -51,8 +48,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="@dimen/dis4"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/default_goods"
-                            />
+                            android:src="@mipmap/default_goods"/>
                     </RelativeLayout>
 
                     <LinearLayout
@@ -74,8 +70,8 @@
                             android:id="@+id/item_order_goods_tv_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="-1dp"
                             android:layout_marginLeft="@dimen/dis3"
+                            android:layout_marginBottom="-1dp"
                             android:layout_toRightOf="@id/item_settle_tv1"
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font13"/>
@@ -98,10 +94,10 @@
                         android:id="@+id/item_order_goods_tv_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
                         android:layout_below="@id/item_order_goods_tv_title"
-                        android:layout_marginBottom="@dimen/dis5"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="@dimen/dis5"
+                        android:layout_marginBottom="@dimen/dis5"
                         android:textColor="@color/C64_64_64"
                         android:textSize="@dimen/font12"/>
 
@@ -111,16 +107,13 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/item_order_goods_tv_title"
                         android:layout_marginLeft="@dimen/dis18"
-                        android:layout_marginRight="@dimen/dis15"
                         android:layout_marginTop="@dimen/dis5"
+                        android:layout_marginRight="@dimen/dis15"
                         android:layout_toLeftOf="@id/item_order_goods_tv_number"
                         android:layout_toRightOf="@id/order_list_goods_detial_rl1"
                         android:textColor="@color/C85_85_85"
                         android:textSize="@dimen/font12"/>
-
-
                 </RelativeLayout>
-
             </RelativeLayout>
 
             <View
@@ -165,7 +158,6 @@
                         android:text="未收到货（包含未签收）或卖家协商同意前提下"
                         android:textSize="@dimen/font12"/>
 
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -173,9 +165,7 @@
                         android:layout_centerVertical="true"
                         android:padding="@dimen/dis5"
                         android:src="@mipmap/nex_p"/>
-
                 </RelativeLayout>
-
             </com.yj.cosmetics.widget.MaterialRippleLayout>
 
             <View
@@ -192,12 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:padding="@dimen/dis10"
-                    >
-                    <!--android:paddingLeft="@dimen/dis10"-->
-                    <!--android:paddingRight="@dimen/dis10"-->
-                    <!--android:paddingTop="@dimen/dis5"-->
-                    <!--android:paddingBottom="@dimen/dis5"-->
+                    android:padding="@dimen/dis10">
 
                     <ImageView
                         android:id="@+id/icon_tuikuan_img"
@@ -226,7 +211,6 @@
                         android:text="已收到货，需要退掉已收到的货物"
                         android:textSize="@dimen/font12"/>
 
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -234,7 +218,6 @@
                         android:layout_centerVertical="true"
                         android:padding="@dimen/dis5"
                         android:src="@mipmap/nex_p"/>
-
                 </RelativeLayout>
             </com.yj.cosmetics.widget.MaterialRippleLayout>
         </LinearLayout>

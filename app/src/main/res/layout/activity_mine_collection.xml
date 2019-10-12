@@ -8,7 +8,6 @@
 
     <include layout="@layout/titlebar_layout"/>
 
-
     <RelativeLayout
         android:id="@+id/mine_order_title"
         android:layout_width="match_parent"
@@ -41,21 +40,5 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </com.yj.cosmetics.widget.NoScrollViewPager>
-
-
-    <!--<com.yj.robust.widget.ProgressLayout-->
-    <!--android:id="@+id/progress_layout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--ptr:progressLayoutDefStyle="@style/ProgressLayout">-->
-
-    <!--<com.yj.robust.widget.CustomXrecyclerView.SwipeHorXRecyclerView-->
-    <!--android:id="@id/xrecyclerView"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--/>-->
-
-    <!--</com.yj.robust.widget.ProgressLayout>-->
 </LinearLayout>

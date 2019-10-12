@@ -5,23 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <include
         android:id="@+id/include"
         layout="@layout/titlebar_layout"/>
-
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
 
             <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
                 android:id="@+id/tv_number_plate"
@@ -29,11 +24,10 @@
                 android:layout_height="@dimen/dis75"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/dis34"
                 android:layout_marginTop="@dimen/dis34"
+                android:layout_marginBottom="@dimen/dis34"
                 android:scaleType="fitXY"
-                android:src="@mipmap/store_head"
-                />
+                android:src="@mipmap/store_head"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -50,9 +44,7 @@
                     android:text="商家名称"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/user_regist_et_tel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -62,8 +54,8 @@
                     android:gravity="right"
                     android:hint="请输入店铺名称（建议少于10个字）"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -90,9 +82,7 @@
                     android:text="店铺地址"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_store_loc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -102,21 +92,18 @@
                     android:gravity="right"
                     android:hint="请选择所在区"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
-
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -133,9 +120,7 @@
                     android:text="详细地址"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_store_detail_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,8 +130,8 @@
                     android:gravity="right"
                     android:hint="请输入详细地址"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -156,16 +141,13 @@
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis45"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15">
-
 
                 <TextView
                     android:id="@+id/tv_business_licence"
@@ -176,9 +158,7 @@
                     android:text="营业执照"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_business_licence"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -188,8 +168,8 @@
                     android:gravity="right"
                     android:hint=""
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -199,16 +179,13 @@
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis45"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15">
-
 
                 <TextView
                     android:id="@+id/tv_store_detail"
@@ -219,9 +196,7 @@
                     android:text="店铺简介"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_store_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -231,8 +206,8 @@
                     android:gravity="right"
                     android:hint="请输入店铺简介"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -242,7 +217,6 @@
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -250,7 +224,6 @@
                 android:layout_height="@dimen/dis45"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15">
-
 
                 <TextView
                     android:id="@+id/tv_store_lead_official"
@@ -260,7 +233,6 @@
                     android:layout_centerInParent="true"
                     android:text="店铺负责人"
                     android:textSize="@dimen/font14"/>
-
 
                 <EditText
                     android:id="@+id/et_store_lead_official"
@@ -272,8 +244,8 @@
                     android:gravity="right"
                     android:hint="请输入负责人名称"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -292,7 +264,6 @@
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15">
 
-
                 <TextView
                     android:id="@+id/tv_lead_official_phone"
                     android:layout_width="wrap_content"
@@ -302,9 +273,7 @@
                     android:text="负责人电话"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_lead_official_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -314,8 +283,8 @@
                     android:gravity="right"
                     android:hint="请输入联系方式"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -325,16 +294,13 @@
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis45"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15">
-
 
                 <TextView
                     android:id="@+id/tv_ID_card"
@@ -345,9 +311,7 @@
                     android:text="身份证号"
                     android:textSize="@dimen/font14"/>
 
-
                 <EditText
-
                     android:id="@+id/et_ID_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -357,8 +321,8 @@
                     android:gravity="right"
                     android:hint="请输入身份证号"
                     android:inputType="text"
-                    android:paddingBottom="@dimen/dis5"
                     android:paddingTop="@dimen/dis5"
+                    android:paddingBottom="@dimen/dis5"
                     android:singleLine="true"
                     android:textColor="@color/C10_10_10"
                     android:textSize="@dimen/font15"/>
@@ -368,26 +332,20 @@
                     android:layout_height="@dimen/dis0.5"
                     android:layout_alignParentBottom="true"
                     android:background="@color/CE4_E4_E4"/>
-
             </RelativeLayout>
-
 
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginLeft="@dimen/dis15"
-                android:layout_marginRight="@dimen/dis15"
                 android:layout_marginTop="28dp"
+                android:layout_marginRight="@dimen/dis15"
                 android:background="@drawable/button_mian_bg"
                 android:enabled="false"
                 android:text="提交申请"
                 android:textColor="@color/white"
-                android:textSize="@dimen/font14"
-                />
-
-
+                android:textSize="@dimen/font14"/>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

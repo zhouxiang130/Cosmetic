@@ -18,32 +18,29 @@
             android:layout_width="@dimen/dis136"
             android:layout_height="@dimen/dis136"
             android:scaleType="centerCrop"
-            android:src="@mipmap/default_goods"
-            />
+            android:src="@mipmap/default_goods"/>
 
         <TextView
             android:id="@+id/home_hot_tv_title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dis10"
-            android:layout_marginRight="@dimen/dis10"
             android:layout_marginTop="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis10"
             android:maxLines="1"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font14"
-            />
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/home_hot_tv_content1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dis15"
-            android:layout_marginRight="@dimen/dis15"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis15"
             android:maxLines="1"
             android:textColor="@color/C85_85_85"
-            android:textSize="@dimen/font12"
-            />
+            android:textSize="@dimen/font12"/>
 
         <TextView
             android:id="@+id/home_hot_tv_price1"
@@ -51,8 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dis12"
             android:textColor="@color/CE8_3C_3C"
-            android:textSize="@dimen/font14"
-            />
+            android:textSize="@dimen/font14"/>
     </LinearLayout>
 
     <LinearLayout
@@ -68,32 +64,29 @@
             android:layout_width="@dimen/dis136"
             android:layout_height="@dimen/dis136"
             android:scaleType="centerCrop"
-            android:src="@mipmap/default_goods"
-            />
+            android:src="@mipmap/default_goods"/>
 
         <TextView
             android:id="@+id/home_hot_tv_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dis10"
-            android:layout_marginRight="@dimen/dis10"
             android:layout_marginTop="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis10"
             android:maxLines="1"
             android:textColor="@color/C10_10_10"
-            android:textSize="@dimen/font14"
-            />
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/home_hot_tv_content2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dis15"
-            android:layout_marginRight="@dimen/dis15"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis15"
             android:maxLines="1"
             android:textColor="@color/C85_85_85"
-            android:textSize="@dimen/font12"
-            />
+            android:textSize="@dimen/font12"/>
 
         <TextView
             android:id="@+id/home_hot_tv_price2"
@@ -101,7 +94,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dis12"
             android:textColor="@color/CE8_3C_3C"
-            android:textSize="@dimen/font14"
-            />
+            android:textSize="@dimen/font14"/>
     </LinearLayout>
 </LinearLayout>

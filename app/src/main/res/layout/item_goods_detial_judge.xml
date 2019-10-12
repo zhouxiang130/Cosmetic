@@ -4,21 +4,22 @@
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/goods_detial_judge_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis18"
+        android:text="评论（0）"
+        android:textColor="@color/C85_85_85"
+        android:textSize="@dimen/font15"/>
+
     <LinearLayout
         android:id="@+id/goods_detial_judge_ll_yes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/goods_detial_judge_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dis15"
-            android:layout_marginTop="@dimen/dis18"
-            android:text="评论（0）"
-            android:textColor="@color/C85_85_85"
-            android:textSize="@dimen/font11"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"

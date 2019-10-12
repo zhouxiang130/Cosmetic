@@ -23,8 +23,7 @@
                 android:id="@+id/order_detial_payll"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dis50"
-                android:layoutDirection="rtl"
-                >
+                android:layoutDirection="rtl">
 
                 <TextView
                     android:id="@+id/order_detial_pay"
@@ -39,8 +38,7 @@
                     android:paddingBottom="@dimen/dis10"
                     android:text="立即支付"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/font14"
-                    />
+                    android:textSize="@dimen/font14"/>
 
                 <TextView
                     android:id="@+id/order_detial_delete"
@@ -56,10 +54,7 @@
                     android:paddingBottom="@dimen/dis10"
                     android:text="取消订单"
                     android:textColor="@color/C40_40_40"
-                    android:textSize="@dimen/font14"
-                    />
-
-
+                    android:textSize="@dimen/font14"/>
             </RelativeLayout>
         </RelativeLayout>
 
@@ -87,8 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@mipmap/bgr_p"
-                        android:scaleType="centerCrop"
-                        />
+                        android:scaleType="centerCrop"/>
 
                     <ImageView
                         android:id="@+id/order_detial_iv_state"
@@ -99,7 +93,6 @@
                         android:scaleType="centerCrop"
                         android:src="@mipmap/news_fill_z"
                         android:visibility="gone"/>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -128,7 +121,6 @@
                             android:text="请进行付款"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font13"/>
-
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -136,7 +128,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis5"
                     android:background="@color/CF6_F8_F9"/>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,8 +153,6 @@
                             android:text="订单还没有完成支付，快去结算吧"
                             android:textColor="@color/C64_64_64"
                             android:textSize="@dimen/font13"/>
-
-
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -216,7 +205,6 @@
                             android:layout_toRightOf="@id/order_detial_iv1"
                             android:textColor="@color/C88_88_88"
                             android:textSize="@dimen/font12"/>
-
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -293,7 +281,6 @@
                     android:layout_height="@dimen/dis5"
                     android:background="@color/CF6_F8_F9"/>
 
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis5"
@@ -306,7 +293,6 @@
                     android:background="@color/white"
                     android:paddingTop="@dimen/dis5"
                     android:paddingBottom="@dimen/dis5">
-
 
                     <RelativeLayout
                         android:id="@+id/frag_mine_shop_detail"
@@ -354,11 +340,9 @@
                             android:layout_toEndOf="@+id/frag_mine_shop_name"
                             android:layout_toRightOf="@+id/frag_mine_shop_name"
                             android:background="@mipmap/nex_p"/>
-
                     </RelativeLayout>
 
                     <View
-
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dis0.5"
                         android:layout_below="@id/frag_mine_shop_detail"
@@ -371,10 +355,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/frag_mine_shop_detail">
-
                     </android.support.v7.widget.RecyclerView>
-
-
                 </RelativeLayout>
 
                 <View
@@ -414,7 +395,6 @@
                             android:textColor="@color/CE8_3C_3C"
                             android:textSize="@dimen/font13"/>
                     </RelativeLayout>
-
 
                     <RelativeLayout
                         android:id="@+id/order_detial_rl_sendcost"
@@ -497,7 +477,6 @@
                         android:layout_height="@dimen/dis0.5"
                         android:background="@color/CEE_F2_F5"/>
 
-
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -519,7 +498,6 @@
                             android:textColor="@color/CC8_3C_3C"
                             android:textSize="@dimen/font13"/>
                     </RelativeLayout>
-
                 </LinearLayout>
 
                 <View

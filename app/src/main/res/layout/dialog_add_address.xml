@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,33 +12,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/dis5"
             android:layout_marginTop="@dimen/dis15"
+            android:layout_marginBottom="@dimen/dis5"
             android:text="选择地区"
             android:textColor="@color/C1E_1E_1E"
-            android:textSize="@dimen/font15" />
+            android:textSize="@dimen/font15"/>
 
         <RelativeLayout
             android:id="@+id/dialog_address_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dis15"
-            android:paddingTop="@dimen/dis15"
-            android:paddingBottom="@dimen/dis5"
-            android:paddingRight="@dimen/dis15"
+            android:layout_alignParentRight="true"
             android:clickable="true"
             android:focusable="true"
-            android:layout_alignParentRight="true">
+            android:paddingLeft="@dimen/dis15"
+            android:paddingTop="@dimen/dis15"
+            android:paddingRight="@dimen/dis15"
+            android:paddingBottom="@dimen/dis5">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/seat_close" />
+                android:src="@drawable/seat_close"/>
         </RelativeLayout>
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
         android:background="@color/CE9_EC_ED"/>
+
     <LinearLayout
         android:id="@+id/rg"
         android:layout_width="match_parent"
@@ -58,7 +61,7 @@
             android:singleLine="true"
             android:text="选择"
             android:textColor="@color/C40_40_40"
-            android:textSize="@dimen/font14" />
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/dialog_address_city"
@@ -72,7 +75,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="@color/C40_40_40"
-            android:textSize="@dimen/font14" />
+            android:textSize="@dimen/font14"/>
 
         <TextView
             android:id="@+id/dialog_address_district"
@@ -86,21 +89,20 @@
             android:singleLine="true"
             android:text=""
             android:textColor="@color/C40_40_40"
-            android:textSize="@dimen/font14" />
+            android:textSize="@dimen/font14"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE9_EC_ED" />
+        android:background="@color/CE9_EC_ED"/>
 
     <ListView
         android:id="@+id/dialog_lv_city"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis310"
         android:divider="@null"
-        android:listSelector="@color/CE7_E7_E7"
-        />
+        android:listSelector="@color/CE7_E7_E7"/>
 
     <HorizontalScrollView
         android:id="@+id/dialog_address_scrollview"
@@ -112,7 +114,6 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>

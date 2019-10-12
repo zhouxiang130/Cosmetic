@@ -1,97 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/CF8_F9_FB"
-    >
+              android:orientation="vertical">
+
     <include layout="@layout/titlebar_layout"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis150"
-        android:background="@drawable/integral_bg"
-        >
+        android:background="@drawable/integral_bg">
+
         <ImageView
             android:id="@+id/mine_scoring_iv1"
             android:layout_width="@dimen/dis45"
             android:layout_height="@dimen/dis50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@mipmap/integral"
-            android:scaleType="centerCrop"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="13dp" />
+            android:scaleType="centerCrop"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_toRightOf="@id/mine_scoring_iv1"
-            android:layout_marginLeft="@dimen/dis15"
             android:layout_centerVertical="true"
-            >
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_toRightOf="@id/mine_scoring_iv1"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/mine_scoring_tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0积分"
-                android:textSize="@dimen/font17"
                 android:textColor="@color/white"
-                />
+                android:textSize="@dimen/font17"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="当前积分"
-                android:textSize="@dimen/font12"
                 android:textColor="@color/white"
-                />
+                android:textSize="@dimen/font12"/>
         </LinearLayout>
+
         <TextView
             android:id="@+id/mine_scoring_tv_rule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="积分规则"
-            android:textSize="@dimen/font12"
-            android:textColor="@color/white"
-            android:drawableLeft="@mipmap/ts_jif"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:drawablePadding="@dimen/dis10"
             android:layout_marginRight="@dimen/dis18"
+            android:drawableLeft="@mipmap/ts_jif"
+            android:drawablePadding="@dimen/dis10"
             android:paddingTop="@dimen/dis10"
             android:paddingBottom="@dimen/dis10"
-
-            />
-
-
+            android:text="积分规则"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font12"/>
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis38"
-        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dis15"
         android:background="@color/CF6_F8_F9"
         android:gravity="center_vertical"
-        android:layout_marginLeft="@dimen/dis15"
-        >
+        android:orientation="horizontal">
+
         <RelativeLayout
             android:layout_width="@dimen/dis12"
             android:layout_height="@dimen/dis12"
-            android:background="@drawable/shape_round360_e83_stroke0_5_trans"
-            >
+            android:background="@drawable/shape_round360_e83_stroke0_5_trans">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/jf_hdt"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:src="@mipmap/jf_hdt"/>
         </RelativeLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="积分可通过邀请好友和购物来获得"
-            android:textSize="@dimen/font12"
-            android:textColor="@color/C64_64_64"
             android:layout_marginLeft="@dimen/dis5"
-            />
+            android:text="积分可通过邀请好友和购物来获得"
+            android:textColor="@color/C64_64_64"
+            android:textSize="@dimen/font12"/>
     </LinearLayout>
+
     <com.yj.cosmetics.widget.MaterialRippleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -100,25 +99,27 @@
             android:id="@+id/mine_scoring_rl_detial"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis50"
-            android:background="@color/white"
-            >
+            android:background="@color/white">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis18"
                 android:text="积分明细"
-                android:layout_centerVertical="true"
                 android:textColor="@color/C64_64_64"
-                android:textSize="@dimen/font13" />
+                android:textSize="@dimen/font13"/>
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/next_center_order"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/dis15"/>
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:src="@mipmap/next_center_order"/>
         </RelativeLayout>
     </com.yj.cosmetics.widget.MaterialRippleLayout>
+
     <com.yj.cosmetics.widget.MaterialRippleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -127,40 +128,41 @@
             android:id="@+id/mine_scoring_rl_accord"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis50"
-            android:background="@color/white"
-            >
+            android:background="@color/white">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis18"
                 android:text="申请记录"
-                android:layout_centerVertical="true"
                 android:textColor="@color/C64_64_64"
-                android:textSize="@dimen/font13" />
+                android:textSize="@dimen/font13"/>
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/next_center_order"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/dis15"/>
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dis15"
+                android:src="@mipmap/next_center_order"/>
         </RelativeLayout>
     </com.yj.cosmetics.widget.MaterialRippleLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE7_E7_E7" />
+        android:background="@color/CE7_E7_E7"/>
+
     <Button
         android:id="@+id/mine_scoring_btn_confirm"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis40"
         android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis50"
         android:layout_marginRight="@dimen/dis15"
         android:background="@drawable/shape_corner_e8_radius2"
         android:text="提升额度"
-        android:textSize="@dimen/font14"
         android:textColor="@color/white"
-        android:layout_marginTop="@dimen/dis50"
-        />
+        android:textSize="@dimen/font14"/>
 </LinearLayout>

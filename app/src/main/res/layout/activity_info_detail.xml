@@ -13,11 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dis8"
         android:background="@color/white"
-        android:paddingBottom="@dimen/dis12"
         android:paddingLeft="@dimen/dis15"
         android:paddingTop="@dimen/dis12"
-        android:textColor="@color/C64_64_64"
-        />
+        android:paddingBottom="@dimen/dis12"
+        android:textColor="@color/C64_64_64"/>
 
     <View
         android:layout_width="match_parent"
@@ -29,8 +28,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:padding="@dimen/dis15"
-        >
+        android:padding="@dimen/dis15">
 
         <TextView
             android:id="@+id/info_detial_tv_state"
@@ -48,6 +46,4 @@
             android:textColor="@color/C64_64_64"
             android:textSize="@dimen/font14"/>
     </LinearLayout>
-
-
 </LinearLayout>

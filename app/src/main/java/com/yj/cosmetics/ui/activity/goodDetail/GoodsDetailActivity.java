@@ -92,8 +92,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		CustomSizeDialogViewGroup.OnGroupItemClickListener, GoodsDetailContentAdapter.showDialogTicket
 //		,GoodDetail_contract.View
 {
-
-	private static final String TAG = "GoodsDetailActivity";
 	@BindView(R.id.recyclerView_title)
 	RecyclerView recyclerViewTitle;
 	@BindView(R.id.recyclerView_content)
@@ -404,7 +402,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 /*		mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 			@Override
 			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-
 			}
 
 			@Override
@@ -417,7 +414,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	@TargetApi(21)
 	private void setTopColor(int color) {
 		if (Build.VERSION.SDK_INT >= 21) {
-			Log.e(TAG, "setTopColor: " + color);
 			vHead.setBackgroundColor(color);
 		}
 	}
@@ -442,7 +438,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 			TicketDialog = new GoodDetailTicketDialogs(anotherRef);
 		}
 		TicketDialog.setCustomDialog(type, proDetailCoupon, mUtils.getUid());
-
 		if (!TicketDialog.isShowing()) {
 			TicketDialog.show();
 		}
@@ -470,14 +465,10 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		super.onResume();
 	}
 
-	@OnClick({R.id.goods_detial_buy,
-			R.id.goods_detial_rl_like,
-			R.id.goods_detial_rlcart,
-			R.id.goods_detial_add,
-			R.id.goods_detial_rl_return,
-			R.id.goods_detial_rl_share,
-			R.id.goods_detial_custom_service,
-			R.id.goods_detial_store})
+	@OnClick({R.id.goods_detial_buy, R.id.goods_detial_rl_like,
+			R.id.goods_detial_rlcart, R.id.goods_detial_add,
+			R.id.goods_detial_rl_return, R.id.goods_detial_rl_share,
+			R.id.goods_detial_custom_service, R.id.goods_detial_store})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.goods_detial_buy:
@@ -537,7 +528,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 				Intent intent = new Intent(GoodsDetailActivity.this, StoreDetailActivity.class);
 				intent.putExtra("shopId", data.getData().getShopId());
 				startActivity(intent);
-
 				break;
 		}
 	}
@@ -546,11 +536,9 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	 * 设置抢购提示
 	 */
 	private void setAsynrRemind() {
-
 		Map<String, String> map = new HashMap<>();
 		map.put("userId", mUtils.getUid());
 		map.put("productId", productId);
-
 		LogUtils.i("传输的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/rushToBuyReminding")
 				.addParams("data", URLBuilder.format(map))
@@ -593,10 +581,8 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		userInfo.setUid(mUtils.getUid());
 		userInfo.setTel(mUtils.getTel());
 		userInfo.setRealname(mUtils.getUserName());
-		Log.i(TAG, "doCustomServices: " + mUtils.getTel() + "------" + mUtils.getUserName() + "---" + URLBuilder.getUrl(mUtils.getAvatar()));
 		userInfo.setUname(mUtils.getUserName());
 		userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
-
 		if (data != null) {
 			//咨询信息设置
 			//@TODO  SP 存储需要咨询商品的
@@ -608,7 +594,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 			customServices.doCustomServices(preferencesUtil);
 		}
 	}
-
 
 	//设置广播获取新收到的信息和未读消息数
 	class MyReceiver extends BroadcastReceiver {

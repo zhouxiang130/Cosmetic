@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:background="@color/white"
               android:orientation="vertical"
               android:paddingBottom="@dimen/dis8">
@@ -17,27 +17,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingBottom="@dimen/dis8"
         android:paddingLeft="@dimen/dis10"
-        android:paddingRight="@dimen/dis15"
         android:paddingTop="@dimen/dis8"
-        >
-        <!---->
-        <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:gravity="center_vertical"-->
-        <!--android:orientation="horizontal">-->
+        android:paddingRight="@dimen/dis15"
+        android:paddingBottom="@dimen/dis8">
 
         <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
             android:id="@+id/frag_mine_shop_iv"
             android:layout_width="@dimen/dis28"
             android:layout_height="@dimen/dis28"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
-
             app:riv_border_color="@color/white"
             app:riv_border_width="@dimen/dis1"
             app:riv_corner_radius="360dp"/>
@@ -63,56 +55,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:visibility="gone"
             android:layout_toEndOf="@+id/frag_mine_shop_name"
             android:layout_toRightOf="@+id/frag_mine_shop_name"
-            android:background="@mipmap/nex_p"/>
-
-
-        <!--</LinearLayout>-->
+            android:background="@mipmap/nex_p"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/pay_header_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:text="待付款"
             android:textColor="@color/C10_10_10"
             android:textSize="@dimen/font12"/>
-
     </RelativeLayout>
-
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="@dimen/dis8"-->
-        <!--android:paddingLeft="@dimen/dis15"-->
-        <!--android:paddingRight="@dimen/dis15"-->
-        <!--android:paddingTop="@dimen/dis12"-->
-        <!--android:visibility="gone"-->
-        <!--&gt;-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/pay_header_head"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="订单号 :  "-->
-            <!--android:textColor="@color/C64_64_64"-->
-            <!--android:textSize="@dimen/font12"/>-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/pay_header_state"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:text="待付款"-->
-            <!--android:textColor="@color/C10_10_10"-->
-            <!--android:textSize="@dimen/font12"-->
-            <!--android:visibility="gone"/>-->
-    <!--</RelativeLayout>-->
 
     <View
         android:layout_width="match_parent"
@@ -120,37 +78,29 @@
         android:layout_marginLeft="@dimen/dis15"
         android:layout_marginRight="@dimen/dis15"
         android:background="@color/CEE_F2_F5"/>
-    <!--<android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
 
-    </android.support.v7.widget.RecyclerView>-->
     <com.yj.cosmetics.widget.WrapContentGridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:listSelector="@color/transparent"
         android:nestedScrollingEnabled="false"
-        android:numColumns="1"
-        >
-    </com.yj.cosmetics.widget.WrapContentGridView>
+        android:numColumns="1"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
         android:layout_marginLeft="@dimen/dis15"
-        android:layout_marginRight="@dimen/dis15"
         android:layout_marginTop="@dimen/dis6"
+        android:layout_marginRight="@dimen/dis15"
         android:background="@color/CEE_F2_F5"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dis8"
         android:layout_marginLeft="@dimen/dis10"
         android:layout_marginTop="@dimen/dis12"
+        android:layout_marginBottom="@dimen/dis8"
         android:gravity="center_vertical">
 
         <ImageView
@@ -165,7 +115,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/pay_bottom_tv2"
             android:layout_toRightOf="@id/refund_img_icon"
             android:paddingLeft="@dimen/dis4"
             android:paddingRight="@dimen/dis4"
@@ -178,7 +127,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/pay_bottom_tv2"
             android:layout_toRightOf="@id/pay_bottom_num"
             android:paddingLeft="@dimen/dis4"
             android:paddingRight="@dimen/dis4"
@@ -194,20 +142,17 @@
         android:layout_marginRight="@dimen/dis15"
         android:background="@color/CEE_F2_F5"/>
 
-
     <LinearLayout
         android:id="@+id/pay_bottom_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dis4"
-            android:layoutDirection="rtl"
-            >
+            android:layoutDirection="rtl">
 
             <TextView
                 android:id="@+id/pay_bottom_pay"
@@ -215,15 +160,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/dis15"
                 android:background="@drawable/btn_enable_radius55_background"
-                android:paddingBottom="@dimen/dis5"
                 android:paddingLeft="@dimen/dis8"
-                android:paddingRight="@dimen/dis8"
                 android:paddingTop="@dimen/dis5"
+                android:paddingRight="@dimen/dis8"
+                android:paddingBottom="@dimen/dis5"
                 android:text="立即支付"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font12"
-                android:visibility="gone"
-                />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/pay_bottom_check"
@@ -232,16 +176,13 @@
                 android:layout_marginRight="@dimen/dis10"
                 android:layout_toLeftOf="@id/pay_bottom_pay"
                 android:background="@drawable/shape_corner_e8_stroke0_5_radius16"
-                android:paddingBottom="@dimen/dis5"
                 android:paddingLeft="@dimen/dis8"
-                android:paddingRight="@dimen/dis8"
                 android:paddingTop="@dimen/dis5"
+                android:paddingRight="@dimen/dis8"
+                android:paddingBottom="@dimen/dis5"
                 android:text="查看详情"
                 android:textColor="@color/CE8_3C_3C"
-                android:textSize="@dimen/font12"
-                />
+                android:textSize="@dimen/font12"/>
         </RelativeLayout>
     </LinearLayout>
-
-
 </LinearLayout>

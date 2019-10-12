@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent"/>
 
     <RelativeLayout
         android:id="@+id/rl_use"
@@ -18,10 +16,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dis15"
-        android:paddingBottom="@dimen/dis10"
         android:paddingLeft="@dimen/dis50"
-        android:paddingRight="@dimen/dis50"
         android:paddingTop="@dimen/dis25"
-        >
+        android:paddingRight="@dimen/dis50"
+        android:paddingBottom="@dimen/dis10">
     </RelativeLayout>
 </RelativeLayout>

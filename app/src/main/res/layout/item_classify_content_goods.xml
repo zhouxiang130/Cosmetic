@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis75"
             android:scaleType="centerCrop"
-            android:src="@mipmap/default_goods"
-            />
+            android:src="@mipmap/default_goods"/>
 
         <TextView
             android:id="@+id/classify_content_goods_tv"
@@ -29,7 +28,4 @@
             android:textColor="@color/C10_10_10"
             android:textSize="@dimen/font12"/>
     </LinearLayout>
-
-
-
 </LinearLayout>

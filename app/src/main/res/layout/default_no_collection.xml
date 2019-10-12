@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        >
+        android:background="@color/white">
+
         <ImageView
             android:id="@+id/no_collection_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dis80"
-            android:background="@mipmap/nocollection"
-            />
-       <!-- <TextView
-            android:id="@+id/no_collection_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="没有收藏"
-            android:textSize="@dimen/font12"
-            android:textColor="@color/C85_85_85"
-            android:layout_below="@id/no_collection_iv"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dis15"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点击屏幕进行浏览"
-            android:textSize="@dimen/font12"
-            android:textColor="@color/C85_85_85"
-            android:layout_below="@id/no_collection_tv"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dis3"/>-->
+            android:background="@mipmap/nocollection"/>
     </RelativeLayout>
 </LinearLayout>

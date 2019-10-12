@@ -5,17 +5,16 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-
     <LinearLayout
         android:id="@+id/mine_ll_coupon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
-        android:paddingBottom="5dp"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
         android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:visibility="gone">
 
         <RelativeLayout
@@ -33,17 +32,13 @@
                 android:textColor="@color/C66_66_66"
                 android:textSize="@dimen/dis13"/>
 
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="@mipmap/nex_p"/>
-
-
         </RelativeLayout>
     </LinearLayout>
-
 
     <com.yj.cosmetics.widget.ProgressLayout
         android:id="@+id/progress_layout"
@@ -54,9 +49,6 @@
         <com.jcodecraeer.xrecyclerview.XRecyclerView
             android:id="@+id/xrecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent"/>
     </com.yj.cosmetics.widget.ProgressLayout>
-
-
 </LinearLayout>

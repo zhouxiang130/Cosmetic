@@ -11,12 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:paddingBottom="@dimen/dis15"
         android:paddingTop="@dimen/dis15"
+        android:paddingBottom="@dimen/dis15"
         android:text="1592323232"
         android:textSize="@dimen/font16"/>
-
-
 </LinearLayout>
 
 

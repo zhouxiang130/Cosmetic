@@ -266,7 +266,6 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 
 
 	private void doAsyncGetData() {
-
 		Map<String, String> map = new HashMap<>();
 //		map.put("orderBy", orderby);
 		map.put("pageNum", pageNum + "");
@@ -284,14 +283,8 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 
 			@Override
 			public ShopListEntity parseNetworkResponse(Response response) throws Exception {
-//				Headers headers = response.headers();
-//				Log.i(TAG, "headers.toString(): " + headers.toString());
-//				List<String> cookies = headers.values("Set-Cookie");
-//				String session = cookies.get(0);
-//				Log.d(TAG, "onResponse-size: " + cookies);
-//				String s = session.substring(0, session.indexOf(";"));
-//				Log.i(TAG, "shopList>>>>>>>>>>>>session is  :" + s);
 				String json = response.body().string().trim();
+				LogUtils.i("shopList -- json的值" + json);
 				return new Gson().fromJson(json, ShopListEntity.class);
 			}
 
@@ -446,7 +439,6 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 
 
 	private void loadMoreData() {
-
 		Map<String, String> map = new HashMap<>();
 //		map.put("orderBy", orderby);
 		map.put("pageNum", pageNum + "");
@@ -470,12 +462,10 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 			}
 
 			@Override
-
 			public void onResponse(ShopListEntity response) {
 				if (response != null && response.getCode().equals(response.HTTP_OK)) {
 					//返回值为200 说明请求成功
 					if (response.getData() != null && response.getData().getShopArray().size() != 0) {
-
 						shopArray.addAll(response.getData().getShopArray());
 						mAdapter.notifyDataSetChanged();
 						mRecyclerView.setPullRefreshEnabled(true);

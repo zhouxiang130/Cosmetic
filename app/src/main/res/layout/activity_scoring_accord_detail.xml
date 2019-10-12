@@ -1,287 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/CF8_F8_F8"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F8_F8"
+              android:orientation="vertical">
 
-    <include layout="@layout/titlebar_layout" />
+    <include layout="@layout/titlebar_layout"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis95"
-        android:orientation="vertical"
+        android:background="@drawable/jfx_bg"
         android:gravity="center"
-        android:background="@drawable/jfx_bg">
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/scoring_accord_detial_tv_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="等待审核中"
-            android:textSize="@dimen/font14"
-            android:textColor="@color/white"/>
-        <!--<TextView
-            android:id="@+id/scoring_accord_detial_tv_resttime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="还剩下4天12时36分"
-            android:textSize="@dimen/font12"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/dis15"/>-->
+            android:textSize="@dimen/font14"/>
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="当前状态"
-        android:textSize="@dimen/font13"
-        android:paddingLeft="@dimen/dis15"
-        android:paddingBottom="@dimen/dis12"
-        android:textColor="@color/C52_52_52"
-        android:paddingTop="@dimen/dis12"
         android:background="@color/white"
-        />
+        android:paddingLeft="@dimen/dis15"
+        android:paddingTop="@dimen/dis12"
+        android:paddingBottom="@dimen/dis12"
+        android:text="当前状态"
+        android:textColor="@color/C52_52_52"
+        android:textSize="@dimen/font13"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
         android:background="@color/CE4_E4_E4"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/dis18"
-        android:paddingBottom="@dimen/dis20"
-        >
+        android:paddingBottom="@dimen/dis20">
+
         <LinearLayout
             android:id="@+id/scoring_accord_detial_ll1"
             android:layout_width="@dimen/dis55"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginLeft="@dimen/dis40"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/scoring_accord_detial_iv1"
                 android:layout_width="@dimen/dis18"
                 android:layout_height="@dimen/dis18"
-                android:src="@mipmap/tongguo_jfx"
-                />
+                android:src="@mipmap/tongguo_jfx"/>
+
             <TextView
                 android:id="@+id/scoring_accord_detial_tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="提交申请"
-                android:textSize="@dimen/font12"
                 android:layout_marginTop="@dimen/dis10"
-                android:textColor="@color/CE8_3C_3C"/>
+                android:text="提交申请"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font12"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="您的申请已提交成功"
-                android:textSize="@dimen/font10"
-                android:textColor="@color/C52_52_52"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dis4"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/dis2"
-                />
+                android:text="您的申请已提交成功"
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font10"/>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/scoring_accord_detial_ll2"
             android:layout_width="@dimen/dis55"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/scoring_accord_detial_iv2"
                 android:layout_width="@dimen/dis18"
                 android:layout_height="@dimen/dis18"
-                android:src="@mipmap/shenh_jfx"
-                />
+                android:src="@mipmap/shenh_jfx"/>
+
             <TextView
                 android:id="@+id/scoring_accord_detial_tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="等待审核"
-                android:textSize="@dimen/font12"
                 android:layout_marginTop="@dimen/dis10"
-                android:textColor="@color/C52_52_52"/>
+                android:text="等待审核"
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font12"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="您的申请正在审核"
-                android:textSize="@dimen/font10"
-                android:textColor="@color/C52_52_52"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dis4"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/dis2"
-                />
+                android:text="您的申请正在审核"
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font10"/>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/scoring_accord_detial_ll3"
             android:layout_width="@dimen/dis55"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/dis45"
             android:gravity="center_horizontal"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/scoring_accord_detial_iv3"
                 android:layout_width="@dimen/dis18"
                 android:layout_height="@dimen/dis18"
-                android:src="@mipmap/shenh_jfx"
-                />
+                android:src="@mipmap/shenh_jfx"/>
+
             <TextView
                 android:id="@+id/scoring_accord_detial_tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="申请成功"
-                android:textSize="@dimen/font12"
                 android:layout_marginTop="@dimen/dis10"
-                android:textColor="@color/C52_52_52"/>
+                android:text="申请成功"
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font12"/>
+
             <TextView
                 android:id="@+id/scoring_accord_detial_tv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="您的申请已经成功"
-                android:textSize="@dimen/font10"
-                android:textColor="@color/C52_52_52"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dis4"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/dis2"
-                />
+                android:text="您的申请已经成功"
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font10"/>
         </LinearLayout>
+
         <View
             android:id="@+id/scoring_accord_detial_v1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis0.5"
-            android:background="@color/CE8_3C_3C"
+            android:layout_marginLeft="@dimen/dis8"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis8"
             android:layout_toLeftOf="@id/scoring_accord_detial_ll2"
             android:layout_toRightOf="@id/scoring_accord_detial_ll1"
-            android:layout_marginLeft="@dimen/dis8"
-            android:layout_marginRight="@dimen/dis8"
-            />
+            android:background="@color/CE8_3C_3C"/>
+
         <View
             android:id="@+id/scoring_accord_detial_v2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis0.5"
-            android:background="@color/CE4_E4_E4"
+            android:layout_marginLeft="@dimen/dis8"
             android:layout_marginTop="@dimen/dis8"
+            android:layout_marginRight="@dimen/dis8"
             android:layout_toLeftOf="@id/scoring_accord_detial_ll3"
             android:layout_toRightOf="@id/scoring_accord_detial_ll2"
-            android:layout_marginLeft="@dimen/dis8"
-            android:layout_marginRight="@dimen/dis8"
-            />
+            android:background="@color/CE4_E4_E4"/>
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@color/white"
-        android:padding="@dimen/dis15"
-        >
+        android:orientation="vertical"
+        android:padding="@dimen/dis15">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="申请额度"
-                android:textSize="@dimen/font13"
                 android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font13"/>
 
-                />
             <TextView
                 android:id="@+id/scoring_accord_detial_tv_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/font13"
-                android:textColor="@color/CE8_3C_3C"
                 android:layout_alignParentRight="true"
-                />
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font13"/>
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis0.5"
-            android:background="@color/CE4_E4_E4"
             android:layout_marginTop="@dimen/dis15"
+            android:background="@color/CE4_E4_E4"/>
 
-            />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dis15"
-            >
+            android:layout_marginTop="@dimen/dis15">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="申请积分"
-                android:textSize="@dimen/font13"
                 android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font13"/>
 
-                />
             <TextView
                 android:id="@+id/scoring_accord_detial_tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/font13"
-                android:textColor="@color/C52_52_52"
                 android:layout_alignParentRight="true"
-                />
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font13"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dis15"
-            >
+            android:layout_marginTop="@dimen/dis15">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="申请时间"
-                android:textSize="@dimen/font13"
                 android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font13"/>
 
-                />
             <TextView
                 android:id="@+id/scoring_accord_detial_tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/font13"
-                android:textColor="@color/C52_52_52"
                 android:layout_alignParentRight="true"
-                />
+                android:textColor="@color/C52_52_52"
+                android:textSize="@dimen/font13"/>
         </RelativeLayout>
-       <!-- <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dis15"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="申请编号"
-                android:textSize="@dimen/font13"
-                android:textColor="@color/C52_52_52"
-
-                />
-            <TextView
-                android:id="@+id/scoring_accord_detial_tv_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="14521155214586544111"
-                android:textSize="@dimen/font13"
-                android:textColor="@color/C52_52_52"
-                android:layout_alignParentRight="true"
-                />
-        </RelativeLayout>-->
-
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE4_E4_E4"
-
-        />
+        android:background="@color/CE4_E4_E4"/>
 </LinearLayout>

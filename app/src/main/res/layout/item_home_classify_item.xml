@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/home_classify_ll_all"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="@dimen/dis15">
+        android:layout_marginBottom="@dimen/dis15"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,15 +17,13 @@
             android:background="@color/CF7_F9_FA"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/dis12"
-            android:paddingTop="@dimen/dis12">
+            android:paddingTop="@dimen/dis12"
+            android:paddingBottom="@dimen/dis12">
 
             <View
                 android:layout_width="@dimen/dis15"
                 android:layout_height="@dimen/dis1"
-                android:background="@color/CAA_AA_AA"
-
-                />
+                android:background="@color/CAA_AA_AA"/>
 
             <TextView
                 android:id="@+id/home_classify_item_tv_head"
@@ -34,22 +32,20 @@
                 android:layout_marginLeft="@dimen/dis10"
                 android:layout_marginRight="@dimen/dis10"
                 android:textColor="@color/C10_10_10"
-                android:textSize="@dimen/font15" />
+                android:textSize="@dimen/font15"/>
 
             <View
                 android:layout_width="@dimen/dis15"
                 android:layout_height="@dimen/dis1"
-                android:background="@color/CAA_AA_AA"
-
-                />
+                android:background="@color/CAA_AA_AA"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dis18"
-            android:layout_marginRight="@dimen/dis18"
             android:layout_marginTop="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis18"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -66,25 +62,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis95"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/default_goods"
-                    />
+                    android:src="@mipmap/default_goods"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_title1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis10"
                     android:layout_marginTop="@dimen/dis12"
+                    android:layout_marginBottom="@dimen/dis10"
                     android:maxLines="1"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font13" />
+                    android:textSize="@dimen/font13"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_price1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/CE8_3C_3C"
-                    android:textSize="@dimen/font14" />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
 
             <LinearLayout
@@ -101,25 +96,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis95"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/default_goods"
-                    />
+                    android:src="@mipmap/default_goods"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis10"
                     android:layout_marginTop="@dimen/dis12"
+                    android:layout_marginBottom="@dimen/dis10"
                     android:maxLines="1"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font13" />
+                    android:textSize="@dimen/font13"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_price2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/CE8_3C_3C"
-                    android:textSize="@dimen/font14" />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
 
             <LinearLayout
@@ -135,25 +129,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dis95"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/default_goods"
-                    />
+                    android:src="@mipmap/default_goods"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_title3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dis10"
                     android:layout_marginTop="@dimen/dis12"
+                    android:layout_marginBottom="@dimen/dis10"
                     android:maxLines="1"
                     android:textColor="@color/C10_10_10"
-                    android:textSize="@dimen/font13" />
+                    android:textSize="@dimen/font13"/>
 
                 <TextView
                     android:id="@+id/home_classify_item_tv_price3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/CE8_3C_3C"
-                    android:textSize="@dimen/font14" />
+                    android:textSize="@dimen/font14"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -164,12 +157,12 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/dis12"
             android:background="@drawable/shape_corner_e8_radius2"
-            android:paddingBottom="@dimen/dis3"
             android:paddingLeft="@dimen/dis6"
-            android:paddingRight="@dimen/dis6"
             android:paddingTop="@dimen/dis3"
+            android:paddingRight="@dimen/dis6"
+            android:paddingBottom="@dimen/dis3"
             android:text="查看更多"
             android:textColor="@color/white"
-            android:textSize="@dimen/font10" />
+            android:textSize="@dimen/font10"/>
     </LinearLayout>
 </LinearLayout>

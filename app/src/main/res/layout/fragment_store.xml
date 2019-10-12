@@ -4,17 +4,20 @@
     xmlns:ptr="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical">
+
         <View
             android:id="@+id/frag_store_v_head"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dis24"
             android:background="@drawable/shape_corner_shade"
             android:visibility="gone"/>
+
         <LinearLayout
             android:id="@+id/frag_store_rl_top"
             android:layout_width="match_parent"
@@ -23,6 +26,7 @@
             android:background="@drawable/shape_corner_shade"
             android:gravity="center"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:id="@+id/frag_store_locinfo"
                 android:layout_width="wrap_content"
@@ -34,6 +38,7 @@
                 android:layout_marginRight="@dimen/dis5"
                 android:gravity="center"
                 android:visibility="gone">
+
                 <ImageView
                     android:id="@+id/frag_store_info_iv"
                     android:layout_width="wrap_content"
@@ -41,6 +46,7 @@
                     android:padding="@dimen/dis3"
                     android:scaleType="centerCrop"
                     android:src="@mipmap/dingwei"/>
+
                 <TextView
                     android:id="@+id/frag_store_tv_info"
                     android:layout_width="@dimen/dis40"
@@ -57,6 +63,7 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/font15"
                     ptr:ignore="EllipsizeMaxLines"/>
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -64,16 +71,18 @@
                     android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
                     android:visibility="visible"/>
             </LinearLayout>
+
             <RelativeLayout
                 android:id="@+id/frag_store_rl_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/dis8"
-                android:layout_marginRight="@dimen/dis10"
                 android:layout_marginLeft="@dimen/dis10"
                 android:layout_marginTop="@dimen/dis8"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_marginBottom="@dimen/dis8"
                 android:layout_toRightOf="@id/frag_store_locinfo"
                 android:background="@drawable/shape_corner_ed_radius16">
+
                 <ImageView
                     android:id="@+id/frag_store_iv_search"
                     android:layout_width="wrap_content"
@@ -95,21 +104,25 @@
                     android:textSize="@dimen/font12"/>
             </RelativeLayout>
         </LinearLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/frag_store_rl_top">
+
             <com.yj.cosmetics.widget.ProgressLayout
                 android:id="@+id/progress_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
                 <com.jcodecraeer.xrecyclerview.XRecyclerView
                     android:id="@+id/xrecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/id"
                     android:background="@color/Cf7_f7_f7"/>
+
                 <View
                     android:id="@+id/home_vline"
                     android:layout_width="match_parent"

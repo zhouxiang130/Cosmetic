@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/CF8_F8_F8">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F8_F8"
+              android:orientation="vertical">
 
     <include layout="@layout/titlebar_layout"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
-        android:background="@color/CE7_E7_E7"
         android:layout_marginTop="@dimen/dis8"
-        />
+        android:background="@color/CE7_E7_E7"/>
+
     <EditText
         android:id="@+id/mine_personal_confirm_pwd"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis50"
         android:background="@color/white"
-        android:hint="请输入登录密码"
-        android:textSize="@dimen/font13"
         android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
-        android:textColor="@color/C64_64_64"
-        android:singleLine="true"
+        android:hint="请输入登录密码"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/dis15"
+        android:singleLine="true"
+        android:textColor="@color/C64_64_64"
         android:textColorHint="@color/C64_64_64"
-        />
+        android:textSize="@dimen/font13"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis0.5"
@@ -34,11 +36,11 @@
         android:id="@+id/mine_personal_confirm_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis40"
+        android:layout_marginLeft="@dimen/dis15"
+        android:layout_marginTop="@dimen/dis22"
+        android:layout_marginRight="@dimen/dis15"
         android:background="@drawable/shape_corner_e8_radius2"
         android:text="提交"
-        android:textSize="@dimen/font14"
         android:textColor="@color/white"
-        android:layout_marginLeft="@dimen/dis15"
-        android:layout_marginRight="@dimen/dis15"
-        android:layout_marginTop="@dimen/dis22"/>
+        android:textSize="@dimen/font14"/>
 </LinearLayout>
