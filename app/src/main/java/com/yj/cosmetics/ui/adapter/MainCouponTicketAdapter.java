@@ -24,9 +24,6 @@ import butterknife.ButterKnife;
  */
 
 public class MainCouponTicketAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-
-	private static final String TAG = "MineCouponDetailAdapter";
 	private final List<CouponListEntity.DataBean.UserPossessionBean.CouponsBean> coupons;
 	private Activity mContext;
 	CouponDetialClickListener mItemClickListener;

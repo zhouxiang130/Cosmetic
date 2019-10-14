@@ -67,8 +67,7 @@
             android:name="com.yj.cosmetics.ui.activity.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppWelcome"
-            >
+            android:theme="@style/AppWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -557,14 +556,5 @@
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="44ce0e70b6a1908dc6495b99"/> <!-- </>值来自开发者平台取得的AppKey -->
-        <!-- 此处定义和智齿客服断开链接的静态广播 用于接收通知栏的点击事件 -->
-        <receiver
-            android:name="com.yj.cosmetics.broadcastreceiver.outLineReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.yj.robust.coustomServices_"/>
-            </intent-filter>
-        </receiver>
     </application>
 </manifest>

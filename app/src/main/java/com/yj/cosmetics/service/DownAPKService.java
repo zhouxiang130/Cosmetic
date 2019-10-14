@@ -18,7 +18,6 @@ import android.os.IBinder;
 import android.os.Vibrator;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.util.FileUtils;
@@ -50,8 +49,6 @@ import okhttp3.Call;
  */
 
 public class DownAPKService extends Service {
-
-	private static final String TAG = "DownAPKService";
 	String appName, updateType, target, url;
 	File downloadfile;
 	private boolean change = false;
@@ -132,7 +129,7 @@ public class DownAPKService extends Service {
 		try {
 			long fileSize = FileUtils.getFileSize(downloadfile);
 			String fileSizes = FileUtils.FormetFileSize(fileSize);
-			Log.i(TAG, "onClick: " + " fileSizes : " + fileSizes + " fileSize: " + fileSize);
+			LogUtils.e("onClick: " + " fileSizes : " + fileSizes + " fileSize: " + fileSize);
 			return fileSize;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -238,7 +235,7 @@ public class DownAPKService extends Service {
 			destDir.mkdirs();
 		}
 		downloadfile = new File(destDir, appName);
-		Log.i(TAG, "initAPKDir:>>>>>>>>>>>>>> " + downloadfile.getPath());
+		LogUtils.e("initAPKDir:>>>>>>>>>>>>>> " + downloadfile.getPath());
 		if (!downloadfile.exists()) {
 			//文件不存在,创建
 			LogUtils.i("我在文件不存在中");

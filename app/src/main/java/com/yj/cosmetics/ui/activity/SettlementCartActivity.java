@@ -6,7 +6,6 @@ import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
@@ -57,14 +56,10 @@ import okhttp3.Response;
  */
 
 public class SettlementCartActivity extends BaseActivity {
-
-	public static final String TAG = "SettlementCartActivity";
-
 	@BindView(R.id.recyclerView)
 	RecyclerView mRecyclerView;
 	@BindView(R.id.goods_detial_ticket)
 	RelativeLayout rlTicket;
-
 	@BindView(R.id.settlement_cart_bottom)
 	RelativeLayout rlBottom;
 	@BindView(R.id.settlement_cart_solve)
@@ -120,7 +115,6 @@ public class SettlementCartActivity extends BaseActivity {
 	private IWXAPI api;
 	private static final int SDK_PAY_FLAG = 1001;
 
-
 	private Handler mHandler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
@@ -130,7 +124,7 @@ public class SettlementCartActivity extends BaseActivity {
 					PayResult payResult = new PayResult((Map<String, String>) msg.obj);
 					//同步获取结果
 					String resultInfo = payResult.getResult();
-					Log.i("Pay", "Pay:" + resultInfo);
+					LogUtils.i("Pay:" + resultInfo);
 					String resultStatus = payResult.getResultStatus();
 					// 判断resultStatus 为9000则代表支付成功
 					if (TextUtils.equals(resultStatus, "9000")) {
@@ -289,7 +283,7 @@ public class SettlementCartActivity extends BaseActivity {
 					tickPic_ = 0;
 					countTicketPic();
 				}
-				Log.i(TAG, "TicketDialog111111 ---- checkedPosition  " + checkedPosition + " userCouponId :" + userCouponId);
+				LogUtils.e("TicketDialog111111 ---- checkedPosition  " + checkedPosition + " userCouponId :" + userCouponId);
 				TicketDialog.dismiss();
 			}
 		});

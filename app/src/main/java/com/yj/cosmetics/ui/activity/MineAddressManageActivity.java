@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -47,25 +46,20 @@ import okhttp3.Response;
  */
 
 public class MineAddressManageActivity extends BaseActivity {
-
-	private static final String TAG = "MineAddressManageActivity";
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
 	@BindView(R.id.address_manage_ll)
 	LinearLayout llNomore;
-
 	@BindView(R.id.item_mine_manage_confirm)
 	Button btnConfirm;
-
 	ManageAddressAdapter mAdapter;
 	List<AddressEntity.DataBean.ListBean> mList;
 	Intent intent;
 	private boolean isFinish = false;
 	private String state, cartIdObj, shopId, productId;
 	CustomProgressDialog mDialog;
-
 
 	@Override
 	protected int getContentView() {
@@ -81,8 +75,7 @@ public class MineAddressManageActivity extends BaseActivity {
 		cartIdObj = getIntent().getStringExtra("cartIdObj");
 		shopId = getIntent().getStringExtra("shopId");
 		productId = getIntent().getStringExtra("productId");
-		Log.i(TAG, "initView: productId  " + productId);
-
+		LogUtils.e("initView: productId  " + productId);
 		if (!TextUtils.isEmpty(state)) {
 			intent = new Intent();
 			if (state.equals("choose")) {
@@ -91,8 +84,6 @@ public class MineAddressManageActivity extends BaseActivity {
 				setResult(Variables.NEW_ADDRESS, intent);
 			}
 		}
-
-
 		mDialog = new CustomProgressDialog(this);
 		LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 		layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -102,7 +93,6 @@ public class MineAddressManageActivity extends BaseActivity {
 		mRecyclerView.setLoadingMoreEnabled(false);
 		mAdapter = new ManageAddressAdapter(this, mList, mUtils, mRecyclerView, llNomore);
 		mRecyclerView.setAdapter(mAdapter);
-
 		mAdapter.setOnItemClickListener(new ManageAddressAdapter.ManageAddressClickListener() {
 			@Override
 			public void onItemClick(View view, int postion) {
@@ -138,7 +128,6 @@ public class MineAddressManageActivity extends BaseActivity {
 		});
 	}
 
-
 	private void doAsynUpDefaultAddress(String addressId) {
 		Map<String, String> map = new HashMap<>();
 		map.put("addressId", addressId);
@@ -147,6 +136,7 @@ public class MineAddressManageActivity extends BaseActivity {
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + URLBuilder.defaultAddressToIndex).tag(this)
 				.addParams(Key.data, URLBuilder.format(map))
 				.build().execute(new Utils.MyResultCallback<NormalEntity>() {
+
 			@Override
 			public void inProgress(float progress) {
 				super.inProgress(progress);

@@ -18,12 +18,10 @@ import butterknife.ButterKnife;
  */
 
 public class StoreTelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
 	private final ShopDetailEntity datas;
 	private int flag = 0;
 	private Context mContext;
 	SpendDetialClickListener mItemClickListener;
-	private String TAG = "MineCollectionAdapter";
 
 	public StoreTelAdapter(Context mContext, ShopDetailEntity datas) {
 		this.mContext = mContext;

@@ -10,7 +10,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -171,10 +170,10 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 				int size = 0;
 				for (int i = 0; i < entity.size(); i++) {
 					size += entity.get(i).getmSelected().size();
-					Log.e("-0-", "size的值" + size);
+					LogUtils.i("size的值" + size);
 				}
 				if (size == 0) {
-					Log.e("-0-", "我进入到没传图片了");
+					LogUtils.i("我进入到没传图片了");
 					doAsyncPost();
 					return;
 				}
@@ -188,7 +187,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 						data.setPosition(i);
 						data.setImgPosition(x);
 						data.setImg(new File(path));
-						Log.e("-0-", "path的值" + path);
+						LogUtils.i("path的值" + path);
 						Luban.get(PostJudgeGoodsActivity.this)
 								.load(new File(path))
 								.putGear(Luban.THIRD_GEAR)
@@ -203,21 +202,21 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 
 									@Override
 									public void onError(Throwable e) {
-										Log.e("-0-", "我鲁班onError了" + e);
+										LogUtils.e("我鲁班onError了" + e);
 										rlPost.setEnabled(true);
 										ToastUtils.showToast(PostJudgeGoodsActivity.this, "图片已损坏,请重新选取");
 									}
 
 									@Override
 									public void onJudgeSuccess(JudgeGoodsData data) {
-										Log.e("-0-", "data的position" + data.getPosition());
-										Log.e("-0-", "data的imgPosition" + data.getImgPosition());
-										Log.e("-0-", "file的值" + data.getScaledImg().getAbsolutePath());
+										LogUtils.e("data的position" + data.getPosition());
+										LogUtils.e("data的imgPosition" + data.getImgPosition());
+										LogUtils.e("file的值" + data.getScaledImg().getAbsolutePath());
 										mScaledData.add(data);
 										if (mScaledData.size() == count) {
 											Collections.sort(mScaledData);
 											for (int i = 0; i < mScaledData.size(); i++) {
-												Log.e("-0-", "position的值" + mScaledData.get(i).getPosition() + ".....imgPosition的值" + mScaledData.get(i).getImgPosition() + "...img" + mScaledData.get(i).getScaledImg());
+												LogUtils.e("position的值" + mScaledData.get(i).getPosition() + ".....imgPosition的值" + mScaledData.get(i).getImgPosition() + "...img" + mScaledData.get(i).getScaledImg());
 												entity.get(mScaledData.get(i).getPosition()).getmImage().add(mScaledData.get(i).getScaledImg());
 											}
 											count = 0;
@@ -295,7 +294,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 			@Override
 			public JudgeGoodsDataEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.e("-0-", "json的值" + json);
+				LogUtils.e("json的值" + json);
 				return new Gson().fromJson(json, JudgeGoodsDataEntity.class);
 			}
 
@@ -313,7 +312,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.e("-0-", "网络请求失败 获取轮播图错误" + e);
+				LogUtils.e("网络请求失败 获取轮播图错误" + e);
 
 				if (call.isCanceled()) {
 					call.cancel();
@@ -377,7 +376,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 			@Override
 			public NormalEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.e("1-0-", "jj" + json);
+				LogUtils.e("jj" + json);
 				return new Gson().fromJson(json, NormalEntity.class);
 			}
 
@@ -407,7 +406,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 				if (call.isCanceled()) {
 					call.cancel();
 				} else {
-					Log.e("-0-", "故障" + e);
+					LogUtils.e("故障" + e);
 					ToastUtils.showToast(PostJudgeGoodsActivity.this, "网络故障,请稍后再试");
 				}
 				rlPost.setEnabled(true);
@@ -472,7 +471,6 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.i("wangshu", response.body().string());
             }
         });
     }
@@ -493,7 +491,6 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.i("wangshu",response.body().string());
             }
         });
     }*/
@@ -529,12 +526,10 @@ public class PostJudgeGoodsActivity extends BaseActivity {
             public void onResponse(Call call, final Response response)
                     throws IOException {
                 final String data = response.body().string();
-//                Log.i(TAG, "上传照片成功-->" + data);
                 call.cancel();// 上传成功取消请求释放内存
             }
             @Override
             public void onFailure(Call call, final IOException e) {
-//                Log.i(TAG, "上传失败-->" + e.getMessage());
                 call.cancel();// 上传失败取消请求释放内存
             }
 
@@ -564,10 +559,10 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 			case REQUEST_CODE_WRITE_EXTRONAL_STORAGE:
 				if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 					//用户同意授权
-					Log.e("-0-", "我进入到同意授权了");
+					LogUtils.e("我进入到同意授权了");
 					mAdapter.takePicture(takePosition, holder);
 				} else {
-					Log.e("-0-", "我在不同意授权");
+					LogUtils.e("我在不同意授权");
 					showDialog("为了您的正常使用,请允许相应权限");
 				}
 				break;
@@ -585,7 +580,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 		infoDialog.getTvConfirm().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Log.e("-0-", "我confirm了");
+				LogUtils.e("我confirm了");
 				PermissionUtils.getAppDetailSettingIntent(PostJudgeGoodsActivity.this);
 				infoDialog.dismiss();
 			}
@@ -593,7 +588,7 @@ public class PostJudgeGoodsActivity extends BaseActivity {
 		infoDialog.getTvCancel().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Log.e("-0-", "我cancel了");
+				LogUtils.e("我cancel了");
 				PermissionUtils.getAppDetailSettingIntent(PostJudgeGoodsActivity.this);
 				infoDialog.dismiss();
 			}

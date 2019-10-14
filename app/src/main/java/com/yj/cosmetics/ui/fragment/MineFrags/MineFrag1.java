@@ -1,10 +1,7 @@
 package com.yj.cosmetics.ui.fragment.MineFrags;
 
 import android.Manifest;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -29,21 +26,31 @@ import com.yj.cosmetics.ui.activity.MineOrderActivity;
 import com.yj.cosmetics.ui.activity.MinePersonalDataActivity;
 import com.yj.cosmetics.ui.activity.MineSettingActivity;
 import com.yj.cosmetics.ui.activity.MyFreeOrderActivity;
-import com.yj.cosmetics.ui.activity.MyStoreCheckInActivity;
 import com.yj.cosmetics.ui.activity.NormalWebViewActivity;
 import com.yj.cosmetics.ui.activity.mineAccount.MineAccount2Activity;
 import com.yj.cosmetics.ui.activity.mineRefundList.MineRefundListActivity;
 import com.yj.cosmetics.ui.activity.mineScoring.MineScoring1Activity;
 import com.yj.cosmetics.util.AuthorUtils;
 import com.yj.cosmetics.util.IntentUtils;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
+import com.yj.cosmetics.util.Utils;
 import com.yj.cosmetics.widget.Dialog.CustomNormalContentDialog;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
+import com.zhy.http.okhttp.OkHttpUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import okhttp3.Call;
+import okhttp3.Response;
 
 /**
  * Created by Suo on 2017/11/18.
@@ -272,8 +279,7 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 				break;*/
 			case R.id.frag_mine_contact:
 				if (mUtils.isLogin()) {
-					setCallDialog();
-					mineFragView.showCallDialog(mDialog);
+					doAsyncGetNumber();
 				} else {
 					IntentUtils.IntentToLogin(getActivity());
 				}
@@ -297,12 +303,77 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 		}
 	}
 
-	private void setCallDialog() {
-		if (mDialog == null) {
-			mDialog = new CustomNormalContentDialog(getActivity());
-		}
+	private void doAsyncGetNumber() {
+		Map<String, String> map = new HashMap<>();
+		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/seachTel")
+				.addParams("data", URLBuilder.format(map))
+				.tag(this).build().execute(new Utils.MyResultCallback<String>() {
+
+			@Override
+			public String parseNetworkResponse(Response response) throws Exception {
+				String json = response.body().string().trim();
+				LogUtils.e("json==" + json);
+				return json;
+			}
+
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject jsonObject = new JSONObject(response);
+					serviceTel = jsonObject.getString("msg");
+					setCallDialog();
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+			@Override
+			public void onError(Call call, Exception e) {
+				super.onError(call, e);
+			}
+		});
 	}
 
+	private void setCallDialog() {
+		if (mDialog == null) {
+			mDialog = new CustomNormalContentDialog(getContext());
+		}
+		if (TextUtils.isEmpty(serviceTel)) {
+			ToastUtils.showToast(getContext(), "无法获取联系电话，请检查网络稍后再试");
+			return;
+		}
+		if (!mDialog.isShowing()) {
+			mDialog.show();
+		}
+		mDialog.getTvTitle().setText("客服热线");
+		if (!TextUtils.isEmpty(serviceTel)) {
+			mDialog.getTvContent().setText("拨打" + serviceTel + "热线，联系官方客服");
+		} else if (!TextUtils.isEmpty(mUtils.getServiceTel())) {
+			mDialog.getTvContent().setText("拨打" + mUtils.getServiceTel() + "热线，联系官方客服");
+		}
+		mDialog.getTvConfirm().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if (new AuthorUtils(getContext()).checkPermissions(needPermissions)) {
+					setActionCall(serviceTel);
+				}
+				dismissDialog();
+			}
+		});
+		mDialog.getTvCancel().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				dismissDialog();
+			}
+		});
+	}
+
+	public void dismissDialog() {
+		if (mDialog != null) {
+			mDialog.dismiss();
+		}
+	}
 
 	@Override
 	public void isNoLogin() {
@@ -386,7 +457,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	@Override
 	public void setDatas(MineEntity.MineData data) {
 		preferencesUtil.setValue("userType", data.getUserType());
-		mineFragView.setServiceTel(data.getServiceTel());
 		if (!TextUtils.isEmpty(data.getUpintegral())) {
 			upintegral = data.getUpintegral();
 		}
@@ -483,6 +553,9 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		mineFragView.dismissDialog(mDialog);
+		if (mDialog != null) {
+			mDialog.dismiss();
+			mDialog = null;
+		}
 	}
 }

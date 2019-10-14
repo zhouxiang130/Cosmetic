@@ -25,12 +25,10 @@ import com.yj.cosmetics.R;
  * hei hei hei
  */
 public class SwitchView extends View {
-
     private static final int STATE_SWITCH_ON = 4;
     private static final int STATE_SWITCH_ON2 = 3;
     private static final int STATE_SWITCH_OFF2 = 2;
     private static final int STATE_SWITCH_OFF = 1;
-
     private final AccelerateInterpolator interpolator = new AccelerateInterpolator(2);
     private final Paint paint = new Paint();
     private final Path sPath = new Path();
@@ -38,10 +36,8 @@ public class SwitchView extends View {
     private final RectF bRectF = new RectF();
     private float sAnim, bAnim;
     private RadialGradient shadowGradient;
-
     protected float ratioAspect = 0.68f; // (0,1]
     protected float animationSpeed = 0.1f; // (0,1]
-
     private int state;
     private int lastState;
     private boolean isCanVisibleDrawing = false;
@@ -53,18 +49,15 @@ public class SwitchView extends View {
     protected int colorShadow;
     protected boolean hasShadow;
     protected boolean isOpened;
-
     private float sRight;
     private float sCenterX, sCenterY;
     private float sScale;
-
     private float bOffset;
     private float bRadius, bStrokeWidth;
     private float bWidth;
     private float bLeft;
     private float bRight;
     private float bOnLeftX, bOn2LeftX, bOff2LeftX, bOffLeftX;
-
     private float shadowReservedHeight;
 
     public SwitchView(Context context) {
@@ -75,10 +68,8 @@ public class SwitchView extends View {
     public SwitchView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setLayerType(LAYER_TYPE_SOFTWARE, null);
-
         final int DEFAULT_COLOR_PRIMARY = 0xFF4BD763;
         final int DEFAULT_COLOR_PRIMARY_DARK = 0xFF3AC652;
-
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwitchView);
         colorPrimary = a.getColor(R.styleable.SwitchView_primaryColor, DEFAULT_COLOR_PRIMARY);
         colorPrimaryDark = a.getColor(R.styleable.SwitchView_primaryColorDark, DEFAULT_COLOR_PRIMARY_DARK);
@@ -91,7 +82,6 @@ public class SwitchView extends View {
         state = isOpened ? STATE_SWITCH_ON : STATE_SWITCH_OFF;
         lastState = state;
         a.recycle();
-
         if (colorPrimary == DEFAULT_COLOR_PRIMARY && colorPrimaryDark == DEFAULT_COLOR_PRIMARY_DARK) {
             try {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -180,7 +170,6 @@ public class SwitchView extends View {
                 resultWidth = Math.min(resultWidth, widthSize);
             }
         }
-
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int resultHeight;
@@ -198,13 +187,10 @@ public class SwitchView extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-
         isCanVisibleDrawing = w > getPaddingLeft() + getPaddingRight() && h > getPaddingTop() + getPaddingBottom();
-
         if (isCanVisibleDrawing) {
             int actuallyDrawingAreaWidth = w - getPaddingLeft() - getPaddingRight();
             int actuallyDrawingAreaHeight = h - getPaddingTop() - getPaddingBottom();
-
             int actuallyDrawingAreaLeft;
             int actuallyDrawingAreaRight;
             int actuallyDrawingAreaTop;
@@ -222,17 +208,14 @@ public class SwitchView extends View {
                 actuallyDrawingAreaTop = getPaddingTop();
                 actuallyDrawingAreaBottom = getHeight() - getPaddingBottom();
             }
-
             shadowReservedHeight = (int) ((actuallyDrawingAreaBottom - actuallyDrawingAreaTop) * 0.07f);
             float sLeft = actuallyDrawingAreaLeft;
             float sTop = actuallyDrawingAreaTop + shadowReservedHeight;
             sRight = actuallyDrawingAreaRight;
             float sBottom = actuallyDrawingAreaBottom - shadowReservedHeight;
-
             float sHeight = sBottom - sTop;
             sCenterX = (sRight + sLeft) / 2;
             sCenterY = (sBottom + sTop) / 2;
-
             bLeft = sLeft;
             bWidth = sBottom - sTop;
             bRight = sLeft + bWidth;
@@ -245,7 +228,6 @@ public class SwitchView extends View {
             bOffLeftX = sLeft;
             bOff2LeftX = bOffLeftX + bOffset;
             sScale = 1 - bStrokeWidth / sHeight;
-
             sPath.reset();
             RectF sRectF = new RectF();
             sRectF.top = sTop;
@@ -257,14 +239,12 @@ public class SwitchView extends View {
             sRectF.right = sRight;
             sPath.arcTo(sRectF, 270, 180);
             sPath.close();
-
             bRectF.left = bLeft;
             bRectF.right = bRight;
             bRectF.top = sTop + bStrokeWidth / 2;  // bTop = sTop
             bRectF.bottom = sBottom - bStrokeWidth / 2; // bBottom = sBottom
             float bCenterX = (bRight + bLeft) / 2;
             float bCenterY = (sBottom + sTop) / 2;
-
             int red = colorShadow >> 16 & 0xFF;
             int green = colorShadow >> 8 & 0xFF;
             int blue = colorShadow & 0xFF;
@@ -337,17 +317,14 @@ public class SwitchView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (!isCanVisibleDrawing) return;
-
         paint.setAntiAlias(true);
         final boolean isOn = (state == STATE_SWITCH_ON || state == STATE_SWITCH_ON2);
         // Draw background
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(isOn ? colorPrimary : colorOff);
         canvas.drawPath(sPath, paint);
-
         sAnim = sAnim - animationSpeed > 0 ? sAnim - animationSpeed : 0;
         bAnim = bAnim - animationSpeed > 0 ? bAnim - animationSpeed : 0;
-
         final float dsAnim = interpolator.getInterpolation(sAnim);
         final float dbAnim = interpolator.getInterpolation(bAnim);
         // Draw background animation
@@ -381,7 +358,6 @@ public class SwitchView extends View {
         paint.setColor(isOn ? colorPrimaryDark : colorOffDark);
         canvas.drawPath(bPath, paint);
         canvas.restore();
-
         paint.reset();
         if (sAnim > 0 || bAnim > 0) invalidate();
     }
@@ -394,7 +370,6 @@ public class SwitchView extends View {
                     return true;
                 case MotionEvent.ACTION_UP:
                     lastState = state;
-
                     bAnim = 1;
                     if (state == STATE_SWITCH_OFF) {
                         refreshState(STATE_SWITCH_OFF2);
@@ -403,7 +378,6 @@ public class SwitchView extends View {
                         refreshState(STATE_SWITCH_ON2);
                         listener.toggleToOff(this);
                     }
-
                     if (mOnClickListener != null) {
                         mOnClickListener.onClick(this);
                     }

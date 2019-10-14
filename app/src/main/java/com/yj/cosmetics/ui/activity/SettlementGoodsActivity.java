@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -55,9 +54,6 @@ import okhttp3.Response;
  */
 
 public class SettlementGoodsActivity extends BaseActivity {
-
-	public static final String TAG = "SettlementGoodsActivity";
-
 	@BindView(R.id.settlement_goods_address)
 	RelativeLayout rlAddress;
 	@BindView(R.id.settlement_goods_new_address)
@@ -299,7 +295,7 @@ public class SettlementGoodsActivity extends BaseActivity {
 					countTicketPic();
 
 				}
-				Log.i(TAG, "TicketDialog22222222 ---- checkedPosition  " + checkedPosition + " userCouponId :" + userCouponId);
+				LogUtils.e("TicketDialog22222222 ---- checkedPosition  " + checkedPosition + " userCouponId :" + userCouponId);
 				TicketDialog.dismiss();
 			}
 		});

@@ -13,7 +13,6 @@ import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -62,8 +61,6 @@ import okhttp3.Response;
  */
 
 public class UserLoginActivity extends BaseActivity {
-
-	private static final String TAG = "UserLoginActivity";
 	@BindView(R.id.user_login_tv_password)
 	TextView tvPass;
 	@BindView(R.id.user_login_tv_username)
@@ -74,10 +71,8 @@ public class UserLoginActivity extends BaseActivity {
 	EditText etPass;
 	@BindView(R.id.user_login_show_password)
 	ImageView ivPassword;
-
 	@BindView(R.id.title_ll_iv)
 	ImageView title_ll_iv;
-
 	//	@BindView(R.id.title_view)
 //	View vLine;
 	@BindView(R.id.user_login_btnLogin)
@@ -88,15 +83,11 @@ public class UserLoginActivity extends BaseActivity {
 	LinearLayout llBottom;
 	@BindView(R.id.user_login_ll_top)
 	LinearLayout llTop;
-
 	private String openId;
 	private String name;
 	private String icon;
-
-	final String FLAG_BUNDLE = "Flag_Bundle";
 	final int TAG_SMS = 0x11;
 	final int NET_ERROR = 0x88;
-
 	CustomProgressDialog mDialog;
 	private String jump;
 	private PlatformDb platDB;
@@ -362,7 +353,7 @@ public class UserLoginActivity extends BaseActivity {
 			});
 		} catch (Exception e) {
 			e.printStackTrace();
-			Log.e(TAG, "doAsyncLogin: " + e.toString());
+			LogUtils.e("doAsyncLogin: " + e.toString());
 		}
 	}
 
@@ -500,7 +491,7 @@ public class UserLoginActivity extends BaseActivity {
 		runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				Log.i(TAG, "run: " + name + "imgUrl" + imgUrl);
+				LogUtils.e("run: " + name + "imgUrl" + imgUrl);
 			}
 		});
 	}
@@ -617,7 +608,7 @@ public class UserLoginActivity extends BaseActivity {
 				name = platDB.getUserName();
 				openId = arg2.get("unionid").toString();
 				LogUtils.e("全部返回值" + arg2);
-				Log.e(TAG, "openId." + openId + "..........");
+				LogUtils.e("openId." + openId + "..........");
 				LogUtils.e("token" + token + ".....gender" + gender + ".....icon" + icon + ".....id" + id + ".....name" + name);
 				LogUtils.e(".icon的值" + icon + "..........");
 				LogUtils.e("weixin  UnionId>>>>> " + openId);

@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -19,13 +18,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 import com.yj.cosmetics.MyApplication;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
-import com.yj.cosmetics.base.Key;
-import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.model.NormalEntity;
 import com.yj.cosmetics.ui.fragment.CartFrag.CartFrag;
 import com.yj.cosmetics.ui.fragment.ClassifyFrag;
 import com.yj.cosmetics.ui.fragment.HomeFrag.HomeFrag;
@@ -34,12 +29,8 @@ import com.yj.cosmetics.ui.fragment.StoreFrag.StoreFrag;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.PermissionUtils;
 import com.yj.cosmetics.util.ToastUtils;
-import com.yj.cosmetics.util.Utils;
-import com.zhy.http.okhttp.OkHttpUtils;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -299,17 +290,17 @@ public class MainActivity extends BaseActivity {
 							//这里可以往 SharePreference 里写一个成功设置的状态。成功设置一次后，以后不必再次设置了。
 							//UserUtils.saveTagAlias(getHoldingActivity(), true);
 							logs = "Set tag and alias success极光推送别名设置成功";
-							Log.e("TAG", logs);
+							LogUtils.i(logs);
 							preferencesUtil.setBooleanValue("is_register_jpush_alias", false);
 							break;
 						case 6002:
 							//极低的可能设置失败 我设置过几百回 出现3次失败 不放心的话可以失败后继续调用上面那个方面 重连3次即可 记得return 不要进入死循环了...
 							logs = "Failed to set alias and tags due to timeout. Try again after 60s.极光推送别名设置失败，60秒后重试";
-							Log.e("TAG", logs);
+							LogUtils.i(logs);
 							break;
 						default:
 							logs = "极光推送设置失败，Failed with errorCode = " + code;
-							Log.e("TAG", logs);
+							LogUtils.i(logs);
 							break;
 					}
 				}

@@ -25,18 +25,13 @@ import java.util.List;
  */
 
 public class CustomRefundDialog extends Dialog {
-
-	private static final String TAG = " CustomSizeDialog ";
 	RefundDialogAdapter dialogAdapter;
 	private Activity context;
-
 	RecyclerView recyclerView;
 	TextView btnFinish;
-
 	private int count = 1;
 //	private LinearLayout llIntegralInfo;
 	/* private doCountClickListener doCountClickListener;*/
-
 	//为防止出错 将style的dialog随意指向了一个style 如有需要可自己创建
 	public CustomRefundDialog(Activity context) {
 		super(context, R.style.Goods_Size_Dialog);

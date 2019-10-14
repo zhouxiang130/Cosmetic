@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.util.LogUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +24,8 @@ import butterknife.ButterKnife;
  */
 
 public class PayDetailDialogAdapters extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private final String[] payMode;
 	private final Integer[] payIcon;
-
 	private Context mContext;
 	private int checkedPosition = -1;
 	private Map<Integer, Boolean> map = new HashMap<>();
@@ -67,7 +64,7 @@ public class PayDetailDialogAdapters extends RecyclerView.Adapter<RecyclerView.V
 				@Override
 				public void onClick(View v) {
 					boolean isChecked = ((ItemViewHolder) holder).refundCb.isChecked();
-					Log.i(TAG, "onBindViewHolder:---- " + isChecked + " checkedPosition : " + checkedPosition + " position : " + position);
+					LogUtils.e("onBindViewHolder:---- " + isChecked + " checkedPosition : " + checkedPosition + " position : " + position);
 					if (checkedPosition != position) {
 						if (!isChecked == true) {
 							map.clear();
@@ -80,7 +77,7 @@ public class PayDetailDialogAdapters extends RecyclerView.Adapter<RecyclerView.V
 							}
 						}
 					} else {
-						Log.i(TAG, "onClick: ------------------------------");
+						LogUtils.e("onClick: ------------------------------");
 //						((ItemViewHolder) holder).refundCb.setChecked(false);
 //						map.remove(position);
 //						if (map.size() == 0) {

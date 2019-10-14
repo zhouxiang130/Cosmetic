@@ -34,14 +34,11 @@ import java.util.List;
  */
 
 public class CustomSizeDialog extends Dialog {
-
-	private final String TAG = " CustomSizeDialog ";
 	SizeDialogAdapter dialogAdapter;
 	private Context context;
 	private GoodsEntitys.DataBeanX mData;
 	private List<GoodsSaleEntity.GoodsSaleData> mSale;
 	private CustomSizeDialogViewGroup.OnGroupItemClickListener listener;
-
 	RecyclerView recyclerView;
 	private View viewMinus;
 	private View viewAdd;
@@ -57,7 +54,6 @@ public class CustomSizeDialog extends Dialog {
 	private LinearLayout llClose;
 	private TextView tvDes;
 	private TextView tvLimit;
-
 	private int count = 1;
 	private String productMaxpurchase;
 	/* private doCountClickListener doCountClickListener;*/

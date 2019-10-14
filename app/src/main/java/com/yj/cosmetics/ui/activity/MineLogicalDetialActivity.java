@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -41,13 +40,11 @@ import okhttp3.Response;
 
 /**
  * Created by Suo on 2017/5/10.
- *
- *  物流信息界面
+ * <p>
+ * 物流信息界面
  */
 
 public class MineLogicalDetialActivity extends BaseActivity {
-
-	private static final String TAG = "MineLogicalDetialActivity";
 	@BindView(R.id.recyclerView)
 	RecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
@@ -183,8 +180,6 @@ public class MineLogicalDetialActivity extends BaseActivity {
 	}
 
 
-
-
 	private void setActionCall() {
 
 		Intent callIntent = new Intent();
@@ -216,10 +211,9 @@ public class MineLogicalDetialActivity extends BaseActivity {
 					//返回值为200 说明请求成功
 					LogicalDetailEntity.LogicalDetialData data = response.getData();
 					String code = response.getCode();
-					Log.i(TAG, "物流信息: " + code);
+					LogUtils.e("物流信息: " + code);
 					allWuliuInfo.setVisibility(View.VISIBLE);
 					setData(response.getData());
-
 				} else {
 					noWuliuInfo.setVisibility(View.VISIBLE);
 					allWuliuInfo.setVisibility(View.GONE);
@@ -236,7 +230,7 @@ public class MineLogicalDetialActivity extends BaseActivity {
 					mProgressLayout.showNetError(new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
-							if(mList != null && !mList.isEmpty()){
+							if (mList != null && !mList.isEmpty()) {
 								mList.clear();
 								mAdapter.notifyDataSetChanged();
 							}
@@ -252,8 +246,6 @@ public class MineLogicalDetialActivity extends BaseActivity {
 	}
 
 	private void setData(LogicalDetailEntity.LogicalDetialData data) {
-
-
 		tvNum.setText(data.getNu());
 		tvTel.setText(data.getTel());
 //		tvShop.setText(data.getOrderShipstyle());
@@ -294,7 +286,7 @@ public class MineLogicalDetialActivity extends BaseActivity {
 
 
 		Glide.with(getApplicationContext())
-				.load(URLBuilder.getUrl( data.getImg()))
+				.load(URLBuilder.getUrl(data.getImg()))
 				.error(R.mipmap.default_goods)
 				.centerCrop()
 				.into(ivHeader);

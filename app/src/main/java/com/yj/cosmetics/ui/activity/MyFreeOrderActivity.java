@@ -1,14 +1,11 @@
 package com.yj.cosmetics.ui.activity;
 
-import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
-import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.ui.adapter.MineOrderTabAdapter;
 import com.yj.cosmetics.ui.fragment.MyAccountListFrags;
 import com.yj.cosmetics.widget.NoScrollViewPager;

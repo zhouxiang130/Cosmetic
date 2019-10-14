@@ -3,7 +3,6 @@ package com.yj.cosmetics.ui.activity.couponReceive;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -36,8 +35,6 @@ import okhttp3.Response;
  */
 
 public class CouponReceiveActivity extends BaseActivity implements CouponReceive_contract.View {
-
-	private static final String TAG = "CouponReceiveActivity";
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
@@ -151,7 +148,7 @@ public class CouponReceiveActivity extends BaseActivity implements CouponReceive
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.i(TAG, "onError: " + e);
+				LogUtils.e("onError: " + e);
 				mRecyclerView.refreshComplete();
 				mRecyclerView.setPullRefreshEnabled(true);
 				if (call.isCanceled()) {

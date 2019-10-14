@@ -24,7 +24,6 @@ import com.google.gson.Gson;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-import com.tencent.mm.opensdk.utils.Log;
 import com.yj.cosmetics.MyApplication;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.Constant;
@@ -41,7 +40,6 @@ import com.yj.cosmetics.ui.activity.MineOrderActivity;
 import com.yj.cosmetics.ui.activity.MineOrderDetailActivity;
 import com.yj.cosmetics.ui.activity.PayResultActivity;
 import com.yj.cosmetics.ui.activity.PostJudgeGoodsActivity;
-import com.yj.cosmetics.ui.activity.SettlementGoodsActivity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
@@ -66,8 +64,6 @@ import cn.onekeyshare.OnekeyShare;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.sina.weibo.SinaWeibo;
-import cn.sharesdk.wechat.friends.Wechat;
-import cn.sharesdk.wechat.moments.WechatMoments;
 import okhttp3.Call;
 import okhttp3.Response;
 
@@ -76,9 +72,7 @@ import okhttp3.Response;
  */
 
 public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
 	private final int flag;
-	private String TAG = "MineOrderListAdapter";
 	private MineOrderActivity mContext;
 	List<MineOrderEntity.DataBean.UserOrderMapsBean> mList = new ArrayList<>();
 	MineOrderAllClickListener mItemClickListener;

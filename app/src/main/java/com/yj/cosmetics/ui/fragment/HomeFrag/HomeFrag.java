@@ -71,7 +71,6 @@ import okhttp3.Response;
  */
 
 public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
-	private static final String TAG = "HomeFrag";
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
@@ -86,7 +85,6 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 	TextView tvInfo;
 	@BindView(R.id.frag_home_locinfo)
 	LinearLayout homeLocinfo;
-
 	//	@BindView(R.id.frag_homes_tv_info)
 //	MarqueeTextView tvLoc;
 	@BindView(R.id.frag_home_v_head)
@@ -96,11 +94,9 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 	@BindView(R.id.frag_home_fab)
 	FloatingActionButton fab;
 
-
 	private HomeAdapter mAdapter;
 	MainCouponTicketAdapter mAdapters;
 	LinearLayoutManager layoutManager;
-
 	private HomeEntity.HomeData data;
 	private List<HomeListEntity.HomeListData.HomeListItem> mList;
 	private HomeFrag_Presenter presenter = new HomeFrag_Presenter(this);
@@ -251,7 +247,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			@Override
 			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
 				super.onScrolled(recyclerView, dx, dy);
-				Log.i(TAG, "onScrolled:>>>>> " + dx + "--------------------------" + dy);
+				LogUtils.i("onScrolled:>>>>> " + dx + "--------------------------" + dy);
 
 	/*            //在这里做颜色渐变的操作
 	            tempY += dy;
@@ -355,14 +351,12 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 					builder.dismiss();
 				}
 			});
-
 			tvTicketOk.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					builder.dismiss();
 				}
 			});
-//			Log.i(TAG, "setRuleDialog: " + preferencesUtil.getValuesBoolean("isGetCoupon"));
 			/**
 			 * 	领取全部优惠券
 			 */
@@ -494,7 +488,6 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 	@TargetApi(21)
 	private void setTopColor(int color) {
 		if (Build.VERSION.SDK_INT >= 21) {
-//			Log.i(TAG, "setTopColor: " + color);
 			vHead.setBackgroundColor(color);
 		}
 	}
@@ -542,7 +535,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (data != null) {
-			Log.i(TAG, "onActivityResult: requestCode : "
+			LogUtils.i("onActivityResult: requestCode : "
 					+ requestCode
 					+ " resultCode : " + resultCode
 					+ " addressId: " + data.getExtras().getString("addressId")
@@ -554,22 +547,17 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			intent.setAction("cn.yj.robust.getAddInfo");
 			shopId = null;
 			if (data.getExtras().getString("latitude") != null && data.getExtras().getString("longitude") != null) {
-
 				String latitude = data.getExtras().getString("latitude");
 				String longitude = data.getExtras().getString("longitude");
 				String addressAreaDetail = data.getExtras().getString("addressAreaDetail");
-
-				Log.i(TAG, "onActivityResult: ----latitude:" + latitude + "----longitude: " + longitude);
-
+				LogUtils.i("onActivityResult: ----latitude:" + latitude + "----longitude: " + longitude);
 				intent.putExtra("latitude", latitude);
 				intent.putExtra("longitude", longitude);
 				intent.putExtra("addressAreaDetail", addressAreaDetail);
 				doAsyncGetLoction(addressAreaDetail, latitude, longitude);
-
-
 			} else {
 				String addressId = data.getExtras().getString("addressId");
-				Log.i(TAG, "onActivityResult: " + addressId);
+				LogUtils.i("onActivityResult: " + addressId);
 				intent.putExtra("addressId", addressId);
 				doAsyncGetAddressList(addressId);
 			}
@@ -579,7 +567,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 
 
 	/**
-	 * @TODO -------------------- 店铺点击地址之后通知首页数据刷新
+	 *店铺点击地址之后通知首页数据刷新
 	 */
 	class MyReceivers extends BroadcastReceiver {
 		@Override
@@ -591,29 +579,25 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 					String shopName = intent.getStringExtra("shopName");
 					shopId = intent.getStringExtra("shopId");
 //					String juli = intent.getStringExtra("juli");
-					Log.i(TAG, "onReceive: shopName>>>>>" + shopName + " shopId: " + shopId);
+					LogUtils.i("onReceive: shopName>>>>>" + shopName + " shopId: " + shopId);
 					refresh();
 					return;
 				}
-
-
 				if (intent.getStringExtra("latitude") != null && intent.getStringExtra("longitude") != null) {
 					String latitude = intent.getStringExtra("latitude");
 					String longitude = intent.getStringExtra("longitude");
 					String addressAreaDetail = intent.getStringExtra("addressAreaDetail");
-					Log.i(TAG, "onReceive: longitude>>>>>" + latitude + " longitude: " + longitude);
+					LogUtils.i("onReceive: longitude>>>>>" + latitude + " longitude: " + longitude);
 //					mRecyclerView.refresh();
-
 					doAsyncGetLoction(addressAreaDetail, latitude, longitude);
 				} else {
 					String addressId = intent.getStringExtra("addressId");
-					Log.e(TAG, "onReceive: " + addressId);
+					LogUtils.i("onReceive: " + addressId);
 					doAsyncGetAddressList(addressId);
 				}
 			}
 		}
 	}
-
 
 	private void doAsyncGetAddressList(String addressId) {
 		Map<String, String> map = new HashMap<>();
@@ -674,19 +658,15 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			@Override
 			public HomeEntity parseNetworkResponse(Response response) throws Exception {
 //				String s1 = response.toString();
-//				Log.i(TAG, "parseNetworkResponse: " + s1 );
 //				Headers headers = response.headers();
 //				List<String> cookies = headers.values("Set-Cookie");
 //				String session = cookies.get(0);
 //				Log.d(TAG, "onResponse-size: " + cookies);
 //				String s = session.substring(0, session.indexOf(";"));
-//				Log.i(TAG, "homePage>>>>>>>>>>>>session is  :" + s);
-
 				String json = response.body().string().trim();
 				LogUtils.i("doAsyncGetData -- json的值" + json);
 				HomeEntity homeEntity = new Gson().fromJson(json, HomeEntity.class);
-
-				Log.e(TAG, "parseNetworkResponse: getCity>>>" + homeEntity.getData().getCity() + " --- getShopName>> " + homeEntity.getData().getShopName());
+				LogUtils.i("parseNetworkResponse: getCity>>>" + homeEntity.getData().getCity() + " --- getShopName>> " + homeEntity.getData().getShopName());
 				if (homeEntity.getCode() != null && homeEntity.getCode().equals(homeEntity.HTTP_OK)) {
 					FileUtils.save2Local(1, json);
 				}
@@ -696,7 +676,6 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			@Override
 			public void onResponse(HomeEntity response) {
 				if (response != null && response.getCode().equals(response.HTTP_OK)) {
-//
 //					if (mUtils.getRefreshStore().equals("true")) {
 //						Intent intents = new Intent();
 //						intents.setAction("cn.yj.robust.getAddInfo");
@@ -704,8 +683,6 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 //						getActivity().sendBroadcast(intents);
 //						mUtils.saveRefreshStore("false");
 //					}
-
-
 					//返回值为200 说明请求成功
 					if (response.getData() != null) {
 						data = response.getData();
@@ -718,7 +695,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 						mAdapter.setData(data);
 //						mUtils.saveAddselect(data.getCity());
 //						data.getCity();//@TODO ---------------------------------(代码逻辑有问题，需求确定后再做修改)
-//						Log.e(TAG, "tvLoc.getText():>>>>> " + tvLoc.getText().toString().trim());
+//						LogUtils.i("tvLoc.getText():>>>>> " + tvLoc.getText().toString().trim());
 //						if (tvLoc.getText().toString().trim() == null) {
 //							if (tvLoc.getText().toString().trim().equals(""))
 //						if (data.getCity() != null)
@@ -737,7 +714,6 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 					mProgressLayout.showContent();
 					mRecyclerView.refreshComplete();
 					tempY = 0;
-
 					LogUtils.i("我挂了" + response.getMsg());
 					mProgressLayout.showNetError(new View.OnClickListener() {
 						@Override
@@ -749,14 +725,13 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 							mRecyclerView.refresh();
 						}
 					});
-
 				}
 			}
 
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.i(TAG, "onError: " + e);
+				LogUtils.i("onError: " + e);
 				LogUtils.i("doAsyncGetData ----我故障了--" + e);
 				String homejson1 = FileUtils.loadFromLocal(1);
 				if (call.isCanceled()) {
@@ -864,7 +839,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 				if (response != null && response.getCode().equals(response.HTTP_OK)) {
 					if (response.getData() != null && response.getData().getProducts() != null && response.getData().getProducts().size() != 0) {
 						mList.addAll(response.getData().getProducts());
-						Log.i(TAG, "mList.size(): " + mList.size());
+						LogUtils.i("mList.size(): " + mList.size());
 						mAdapter.notifyDataSetChanged();
 						mRecyclerView.loadMoreComplete();
 					} else if (response.getData().getProducts().size() == 0) {
@@ -1003,14 +978,14 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			@Override
 			public NormalEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.e(TAG, "sessionSaveLonLatName JSON>>>> : " + json);
+				LogUtils.i("sessionSaveLonLatName JSON>>>> : " + json);
 				return new Gson().fromJson(json, NormalEntity.class);
 			}
 
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.i("onResponse: " + response.getMsg());
 					preferencesUtil.setBooleanValue("isGetCoupon", false);
 					refresh();
 				} else {
@@ -1049,7 +1024,7 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.i("onResponse: " + response.getMsg());
 					preferencesUtil.setBooleanValue("isGetCoupon", false);
 				} else {
 
@@ -1088,13 +1063,12 @@ public class HomeFrag extends BaseFragment implements HomeFrag_Contract.View {
 								- hours * (1000 * 60 * 60) - minutes * (1000 * 60)) / 1000;
 						//并保存在商品time这个属性内
 						String finaltime = days + "天" + hours + "时" + minutes + "分" + second + "秒";
-//                        Log.i(TAG, "MyThread: "+ finaltime);
+//                       LogUtils.i("MyThread: "+ finaltime);
 						mRecommendActivitiesList.get(i).setFinalTime(finaltime);
 						mRecommendActivitiesList.get(i).setHours((int) hours_);
 						mRecommendActivitiesList.get(i).setMin((int) minutes);
 						mRecommendActivitiesList.get(i).setSec((int) second);
-
-						Log.i(TAG, "run: " + counttime + "-- days --" + days);
+						LogUtils.i("run: " + counttime + "-- days --" + days);
 						//如果时间差大于1秒钟,将每件商品的时间差减去一秒钟,
 						// 并保存在每件商品的counttime属性内
 						if (counttime > 1000) {

@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import android.widget.TextView;
 
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.GoodsSaleEntity;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.CustomViewGroup.CustomSizeDialogViewGroup;
 
 import java.util.ArrayList;
@@ -23,8 +23,6 @@ import butterknife.ButterKnife;
  */
 
 public class SizeDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private Context mContext;
 	private ArrayList<String> viewtexts = new ArrayList<>();
 	private CustomSizeDialogViewGroup.OnGroupItemClickListener listener;
@@ -51,9 +49,9 @@ public class SizeDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 	@Override
 	public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-		if(holder instanceof ItemViewHolder){
+		if (holder instanceof ItemViewHolder) {
 			((ItemViewHolder) holder).tvTitle.setText(mSale.get(position).getPropesName());
-			getNearlyLocation(((ItemViewHolder) holder).viewGroup,position);
+			getNearlyLocation(((ItemViewHolder) holder).viewGroup, position);
 		}
 	}
 
@@ -73,10 +71,11 @@ public class SizeDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 			ButterKnife.bind(this, itemView);
 		}
 	}
-	private void getNearlyLocation(CustomSizeDialogViewGroup mViewGroup, int position){
+
+	private void getNearlyLocation(CustomSizeDialogViewGroup mViewGroup, int position) {
 		//修改bug处 数据size 为 10 说明数据体没问题
-		Log.i(TAG, "getNearlyLocation: "+ mSale.get(position).getJsonArray().size());
-		mViewGroup.addItemViews(mSale.get(position).getJsonArray(), CustomSizeDialogViewGroup.TEV_MODE,position);
+		LogUtils.i("getNearlyLocation: " + mSale.get(position).getJsonArray().size());
+		mViewGroup.addItemViews(mSale.get(position).getJsonArray(), "TEVMODE", position);
 		mViewGroup.setGroupClickListener(listener);
 	}
 

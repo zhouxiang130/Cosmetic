@@ -15,16 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProgressLayout extends RelativeLayout {
-
 	private static final int defStyleAttr = R.attr.progressLayoutDefStyle;
 	private static final int NOT_SET = -1;
-
 	private static final String LOADING_TAG = "ProgressLayout.loading_tag";
 	private static final String NONE_TAG = "ProgressLayout.none_tag";
 	private static final String ERROR_TAG = "ProgressLayout.error_tag";
-
 	private LayoutInflater layoutInflater;
-
 	/*Some ViewGroup*/
 	private View loadingContainer;
 	private View noneContainer;
@@ -35,8 +31,6 @@ public class ProgressLayout extends RelativeLayout {
 	private View noInfoContainer;
 	private View noCollectionContainer;
 	private View noSearchContainer;
-
-
 	/*Some Id*/
 	private int loadingId;
 	private int noneId;
@@ -47,11 +41,9 @@ public class ProgressLayout extends RelativeLayout {
 	private int noCollectionId;
 	private int noSearchId;
 	private int noCouponId;
-
 	private List<View> contentViews = new ArrayList<>();
 
 	public enum LAYOUT_TYPE {
-
 		/**
 		 * 正在加载
 		 */
@@ -72,13 +64,11 @@ public class ProgressLayout extends RelativeLayout {
 		 * 加载失败
 		 */
 		FAILED,
-
 		NO_COMMENT,
 		/**
 		 *
 		 */
 		NO_CO,
-
 		NO_COLLECTION,
 		NO_INFO
 	}
@@ -101,36 +91,22 @@ public class ProgressLayout extends RelativeLayout {
 	}
 
 	private void init(Context context, AttributeSet attrs, int defStyleAttr) {
-
-		this.layoutInflater =
-				(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		TypedArray typedArray =
-				context.obtainStyledAttributes(attrs, R.styleable.ProgressLayout, defStyleAttr,
-						R.style.DefaultSmartStyle);
-
+		this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ProgressLayout, defStyleAttr,
+				R.style.DefaultSmartStyle);
 		if (typedArray == null) {
 			return;
 		}
-
 		try {
-			this.loadingId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_loading_layout, NOT_SET);
-			this.noneId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_none_content, NOT_SET);
-			this.networkErrorId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_network_content, NOT_SET);
-			this.failedId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_failed_content, NOT_SET);
-			this.noCommentId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_no_comments, NOT_SET);
-			this.noCollectionId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_no_collection, NOT_SET);
-			this.noInfoId =
-					typedArray.getResourceId(R.styleable.ProgressLayout_no_info, NOT_SET);
-			this.noSearchId
-					= typedArray.getResourceId(R.styleable.ProgressLayout_no_search,NOT_SET);
-			this.noCouponId
-					= typedArray.getResourceId(R.styleable.ProgressLayout_no_coupon,NOT_SET);
+			this.loadingId = typedArray.getResourceId(R.styleable.ProgressLayout_loading_layout, NOT_SET);
+			this.noneId = typedArray.getResourceId(R.styleable.ProgressLayout_none_content, NOT_SET);
+			this.networkErrorId = typedArray.getResourceId(R.styleable.ProgressLayout_network_content, NOT_SET);
+			this.failedId = typedArray.getResourceId(R.styleable.ProgressLayout_failed_content, NOT_SET);
+			this.noCommentId = typedArray.getResourceId(R.styleable.ProgressLayout_no_comments, NOT_SET);
+			this.noCollectionId = typedArray.getResourceId(R.styleable.ProgressLayout_no_collection, NOT_SET);
+			this.noInfoId = typedArray.getResourceId(R.styleable.ProgressLayout_no_info, NOT_SET);
+			this.noSearchId = typedArray.getResourceId(R.styleable.ProgressLayout_no_search, NOT_SET);
+			this.noCouponId = typedArray.getResourceId(R.styleable.ProgressLayout_no_coupon, NOT_SET);
 		} finally {
 			typedArray.recycle();
 		}
@@ -139,13 +115,10 @@ public class ProgressLayout extends RelativeLayout {
 	@Override
 	public void addView(View child, int index, ViewGroup.LayoutParams params) {
 		super.addView(child, index, params);
-
 		if (child.getTag() == null ||
 				(!child.getTag().equals(LOADING_TAG) && !child.getTag().equals(NONE_TAG) &&
 						!child.getTag().equals(ERROR_TAG))) {
-
 			this.contentViews.add(child);
-
 			if (!this.isInEditMode()) {
 				this.setContentVisibility(false);
 			}
@@ -153,9 +126,7 @@ public class ProgressLayout extends RelativeLayout {
 	}
 
 	public void showLoading() {
-
 		ProgressLayout.this.showLoadingView();
-
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
 		ProgressLayout.this.hideFailedView();
@@ -163,7 +134,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.LOADING;
 	}
 
@@ -172,9 +142,7 @@ public class ProgressLayout extends RelativeLayout {
 	}
 
 	public void showNone(OnClickListener retryListener) {
-
 		ProgressLayout.this.showNoneView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNetErrorView();
 		ProgressLayout.this.hideFailedView();
@@ -182,18 +150,14 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NONE;
 	}
-
-
 
 	public void showSearch() {
 		ProgressLayout.this.showSearch(null);
 	}
 
 	public void showSearch(OnClickListener retryListener) {
-
 		ProgressLayout.this.showNoSearchView(retryListener);
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNetErrorView();
@@ -202,7 +166,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NONE;
 	}
 
@@ -212,7 +175,6 @@ public class ProgressLayout extends RelativeLayout {
 	}
 
 	public void showNetError(OnClickListener retryListener) {
-
 		ProgressLayout.this.showNetErrorView(retryListener);
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
@@ -221,7 +183,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NETWORK_ERROR;
 	}
 
@@ -230,9 +191,7 @@ public class ProgressLayout extends RelativeLayout {
 	}
 
 	public void showFailed(OnClickListener retryListener) {
-
 		ProgressLayout.this.showFailedView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -240,12 +199,10 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.FAILED;
 	}
 
 	public void showContent() {
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -254,7 +211,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(true);
-
 		this.currentState = LAYOUT_TYPE.CONTENT;
 	}
 
@@ -264,7 +220,6 @@ public class ProgressLayout extends RelativeLayout {
 
 	public void showNoComments(OnClickListener retryListener) {
 		ProgressLayout.this.showNoCommentsView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -272,7 +227,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NO_COMMENT;
 	}
 
@@ -283,7 +237,6 @@ public class ProgressLayout extends RelativeLayout {
 
 	public void showNoCoupons(OnClickListener retryListener) {
 		ProgressLayout.this.showNoCouponView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -291,7 +244,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NO_COMMENT;
 	}
 
@@ -302,7 +254,6 @@ public class ProgressLayout extends RelativeLayout {
 
 	public void showNoCollection(OnClickListener retryListener) {
 		ProgressLayout.this.showNoCollectionView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -310,7 +261,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoInfoView();
 		ProgressLayout.this.hideNoCommentView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NO_COMMENT;
 	}
 
@@ -320,7 +270,6 @@ public class ProgressLayout extends RelativeLayout {
 
 	public void showNoInfo(OnClickListener retryListener) {
 		ProgressLayout.this.showNoInfoView(retryListener);
-
 		ProgressLayout.this.hideLoadingView();
 		ProgressLayout.this.hideNoneView();
 		ProgressLayout.this.hideNetErrorView();
@@ -328,7 +277,6 @@ public class ProgressLayout extends RelativeLayout {
 		ProgressLayout.this.hideNoCommentView();
 		ProgressLayout.this.hideNoCollectionView();
 		ProgressLayout.this.setContentVisibility(false);
-
 		this.currentState = LAYOUT_TYPE.NO_COMMENT;
 	}
 
@@ -340,21 +288,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * 显示正在加载界面
 	 */
 	private void showLoadingView() {
-
 		if (this.loadingContainer == null) {
-
 			if (loadingId == NOT_SET) {
 				throw new IllegalStateException(
 						"cannot call showLoadingView() when loadingId was NO_SET which value is -1");
 			}
-
-			this.loadingContainer =
-					this.layoutInflater.inflate(loadingId, ProgressLayout.this, false);
+			this.loadingContainer = this.layoutInflater.inflate(loadingId, ProgressLayout.this, false);
 			this.loadingContainer.setTag(LOADING_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) loadingContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(loadingContainer, layoutParams);
 		} else {
 			this.loadingContainer.setVisibility(VISIBLE);
@@ -368,22 +310,16 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoneView(OnClickListener retryListener) {
-
 		if (this.noneContainer == null) {
-
 			if (noneId == NOT_SET) {
 				throw new IllegalStateException(
 						"cannot call showNoneView() when noneId was NO_SET which value is -1");
 			}
-
 			this.noneContainer = this.layoutInflater.inflate(noneId, ProgressLayout.this, false);
 			this.noneContainer.setTag(NONE_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noneContainer.getLayoutParams();
 //            layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noneContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noneContainer.setClickable(true);
 				this.noneContainer.setOnClickListener(retryListener);
@@ -411,23 +347,17 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNetErrorView(OnClickListener retryListener) {
-
 		if (this.networkErrorContainer == null) {
-
 			if (networkErrorId == NOT_SET) {
 				throw new IllegalStateException(
 						"cannot call showNetErrorView() when networkErrorId was NO_SET which value is -1");
 			}
-
 			this.networkErrorContainer =
 					this.layoutInflater.inflate(networkErrorId, ProgressLayout.this, false);
 			this.networkErrorContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) networkErrorContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(networkErrorContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.networkErrorContainer.setClickable(true);
 				this.networkErrorContainer.setOnClickListener(retryListener);
@@ -444,23 +374,16 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoSearchView(OnClickListener retryListener) {
-
 		if (this.noSearchContainer == null) {
-
 			if (noSearchId == NOT_SET) {
 				throw new IllegalStateException(
 						"cannot call showNetErrorView() when networkErrorId was NO_SET which value is -1");
 			}
-
-			this.noSearchContainer =
-					this.layoutInflater.inflate(noSearchId, ProgressLayout.this, false);
+			this.noSearchContainer = this.layoutInflater.inflate(noSearchId, ProgressLayout.this, false);
 			this.noSearchContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noSearchContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noSearchContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noSearchContainer.setClickable(true);
 				this.noSearchContainer.setOnClickListener(retryListener);
@@ -477,22 +400,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showFailedView(OnClickListener retryListener) {
-
 		if (this.failedContainer == null) {
-
 			if (failedId == NOT_SET) {
-				throw new IllegalStateException(
-						"cannot call showFailedView() when failedId was NO_SET which value is -1");
+				throw new IllegalStateException("cannot call showFailedView() when failedId was NO_SET which value is -1");
 			}
-
 			this.failedContainer = this.layoutInflater.inflate(failedId, ProgressLayout.this, false);
 			this.failedContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) failedContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(failedContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.failedContainer.setClickable(true);
 				this.failedContainer.setOnClickListener(retryListener);
@@ -508,23 +424,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoCommentsView(OnClickListener retryListener) {
-
 		if (this.noCommentContainer == null) {
-
 			if (noCommentId == NOT_SET) {
-				throw new IllegalStateException(
-						"cannot call showFailedView() when failedId was NO_SET which value is -1");
+				throw new IllegalStateException("cannot call showFailedView() when failedId was NO_SET which value is -1");
 			}
-
-			this.noCommentContainer =
-					this.layoutInflater.inflate(noCommentId, ProgressLayout.this, false);
+			this.noCommentContainer = this.layoutInflater.inflate(noCommentId, ProgressLayout.this, false);
 			this.noCommentContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noCommentContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noCommentContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noCommentContainer.setClickable(true);
 				this.noCommentContainer.setOnClickListener(retryListener);
@@ -540,23 +448,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoCouponView(OnClickListener retryListener) {
-
 		if (this.noCouponContainer == null) {
-
 			if (noCouponId == NOT_SET) {
-				throw new IllegalStateException(
-						"cannot call showFailedView() when failedId was NO_SET which value is -1");
+				throw new IllegalStateException("cannot call showFailedView() when failedId was NO_SET which value is -1");
 			}
-
-			this.noCouponContainer =
-					this.layoutInflater.inflate(noCouponId, ProgressLayout.this, false);
+			this.noCouponContainer = this.layoutInflater.inflate(noCouponId, ProgressLayout.this, false);
 			this.noCouponContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noCouponContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noCouponContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noCouponContainer.setClickable(true);
 				this.noCouponContainer.setOnClickListener(retryListener);
@@ -573,23 +473,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoCollectionView(OnClickListener retryListener) {
-
 		if (this.noCollectionContainer == null) {
-
 			if (noCollectionId == NOT_SET) {
-				throw new IllegalStateException(
-						"cannot call showFailedView() when failedId was NO_SET which value is -1");
+				throw new IllegalStateException("cannot call showFailedView() when failedId was NO_SET which value is -1");
 			}
-
-			this.noCollectionContainer =
-					this.layoutInflater.inflate(noCollectionId, ProgressLayout.this, false);
+			this.noCollectionContainer = this.layoutInflater.inflate(noCollectionId, ProgressLayout.this, false);
 			this.noCollectionContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noCollectionContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noCollectionContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noCollectionContainer.setClickable(true);
 				this.noCollectionContainer.setOnClickListener(retryListener);
@@ -605,23 +497,15 @@ public class ProgressLayout extends RelativeLayout {
 	 * @param retryListener 点击事件回调
 	 */
 	private void showNoInfoView(OnClickListener retryListener) {
-
 		if (this.noInfoContainer == null) {
-
 			if (noInfoId == NOT_SET) {
-				throw new IllegalStateException(
-						"cannot call showFailedView() when failedId was NO_SET which value is -1");
+				throw new IllegalStateException("cannot call showFailedView() when failedId was NO_SET which value is -1");
 			}
-
-			this.noInfoContainer =
-					this.layoutInflater.inflate(noInfoId, ProgressLayout.this, false);
+			this.noInfoContainer = this.layoutInflater.inflate(noInfoId, ProgressLayout.this, false);
 			this.noInfoContainer.setTag(ERROR_TAG);
-
 			LayoutParams layoutParams = (LayoutParams) noInfoContainer.getLayoutParams();
 			layoutParams.addRule(CENTER_IN_PARENT);
-
 			ProgressLayout.this.addView(noInfoContainer, layoutParams);
-
 			if (retryListener != null) {
 				this.noInfoContainer.setClickable(true);
 				this.noInfoContainer.setOnClickListener(retryListener);
@@ -727,7 +611,6 @@ public class ProgressLayout extends RelativeLayout {
 	public boolean isNoInfo() {
 		return this.currentState == LAYOUT_TYPE.NO_INFO;
 	}
-
 
 	private void setContentVisibility(boolean visible) {
 		for (View contentView : contentViews) {

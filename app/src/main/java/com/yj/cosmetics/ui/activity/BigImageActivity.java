@@ -29,11 +29,8 @@ import butterknife.BindView;
  */
 
 public class BigImageActivity extends BaseActivity {
-
-	private static final String TAG = " BigImageActivity ";
 	@BindView(R.id.show_big_img_viewpager)
 	ViewPager bigImgViewPager;
-
 	@BindView(R.id.show_big_img_indicator)
 	LinearLayout bigImgIndicator;
 	private String postions;

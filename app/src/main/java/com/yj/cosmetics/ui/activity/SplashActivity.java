@@ -12,7 +12,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -49,20 +48,15 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
  * Created by Administrator on 2018/5/23 0023.
  */
 
-public class SplashActivity extends BaseActivity implements
-		ActivityCompat.OnRequestPermissionsResultCallback {
-	private static final String TAG = "SplashActivity";
+public class SplashActivity extends BaseActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 	@BindView(R.id.ll_splash)
 	RelativeLayout llContent;
 	@BindView(R.id.iv_splash_img)
 	ImageView ivSplash;
-
 	boolean isToRedirectToGuide = true;
-
 	private String oldVersion;
 	private String newVersion;
 	UpdateEntity.UpdateData data;
-
 	UpdateDialog updateDialog;
 	AlertDialog alertDialog;
 	private CustomNormalDialog infoDialog;
@@ -93,9 +87,7 @@ public class SplashActivity extends BaseActivity implements
 
 	@Override
 	protected void initView() {
-
 		mUtils.saveRefreshStore("true");
-
 		// 避免从桌面启动程序后，会重新实例化入口类的activity 实现当程序进入后台后 再次进入程序无需重新运行.
 		if (!this.isTaskRoot()) {
 			Intent intent = getIntent();
@@ -111,7 +103,6 @@ public class SplashActivity extends BaseActivity implements
 		updateDialog = new UpdateDialog(this);
 	}
 
-
 	@Override
 	protected void initData() {
 		doAsyncTaskUpdate();
@@ -120,16 +111,13 @@ public class SplashActivity extends BaseActivity implements
 		llContent.startAnimation(anim);
 		anim.setAnimationListener(new Animation.AnimationListener() {
 
-
 			@Override
 			public void onAnimationStart(Animation animation) {
-
 			}
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				if (!TextUtils.isEmpty(newVersion)) {
-
 					/**
 					 * 版本号对比
 					 *
@@ -139,7 +127,7 @@ public class SplashActivity extends BaseActivity implements
 					 * oldVersion < newVersion  return 1
 					 */
 
-					Log.e(TAG, "onAnimationEnd: newVersion>>>> " +
+					LogUtils.e("onAnimationEnd: newVersion>>>> " +
 							"" + newVersion + " oldVersion>>> " + oldVersion + " " +
 							" >>>>>> " + VersionUtils.compareVersions(newVersion, oldVersion));
 
@@ -268,7 +256,7 @@ public class SplashActivity extends BaseActivity implements
 						super.onError(call, e);
 
 //						String json = JsonUtils.getJson("datasss.txt", SplashActivity.this);
-//						Log.i(TAG, "initData: " + json);
+//						LogUtils.i("initData: " + json);
 //						data = new Gson().fromJson(json, UpdateEntity.class).getData();
 //						newVersion = data.getAppVersion();
 					}
@@ -363,7 +351,7 @@ public class SplashActivity extends BaseActivity implements
 			//判断服务是否开启 如果已经开启 不做操作 没有开启则开启服务进行下载
 			ToastUtils.showToast(SplashActivity.this, "正在进行后台下载");
 			Intent intent = new Intent(SplashActivity.this, DownAPKService.class);
-			Log.e(TAG, "getAppLink: " + URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
+			LogUtils.e("getAppLink: " + URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
 			mUtils.saveLink(URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
 			String urLs = URLBuilder.getURLs(data.getAppLink());
 			intent.putExtra("url", URLBuilder.getUrl(urLs));
@@ -385,7 +373,7 @@ public class SplashActivity extends BaseActivity implements
 						public void onClick(DialogInterface dialog, int which) {
 							Intent intent = new Intent(SplashActivity.this, DownAPKService.class);
 							mUtils.saveLink(URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
-							Log.e(TAG, "getAppLink: " + URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
+							LogUtils.e("getAppLink: " + URLBuilder.URLBaseHeader + URLBuilder.getURLs(data.getAppLink()));
 							String urLs = URLBuilder.getURLs(data.getAppLink());
 							intent.putExtra("url", URLBuilder.getUrl(urLs));
 							intent.putExtra("applen", data.getAppLen());
@@ -419,8 +407,8 @@ public class SplashActivity extends BaseActivity implements
 	}
 
 	/*
-	* 判断网络状态
-	* */
+	 * 判断网络状态
+	 * */
 	public static boolean isWifi(Context context) {
 		try {
 			ConnectivityManager cm = (ConnectivityManager) context
@@ -492,7 +480,7 @@ public class SplashActivity extends BaseActivity implements
 				} else {
 					changePage();
 				}
-				Log.e(TAG, "onRequestPermissionsResult: " + isNeedCheck);
+				LogUtils.e("onRequestPermissionsResult: " + isNeedCheck);
 				break;
 		}
 	}

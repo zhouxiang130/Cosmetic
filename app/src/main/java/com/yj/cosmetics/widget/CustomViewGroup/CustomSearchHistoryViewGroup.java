@@ -7,7 +7,6 @@ package com.yj.cosmetics.widget.CustomViewGroup;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -24,13 +23,6 @@ import java.util.ArrayList;
  * 这里是类似淘宝中商品尺寸按钮组（这里做了支持button,textview）
  */
 public class CustomSearchHistoryViewGroup<X extends TextView> extends ViewGroup {
-
-
-    public static final String BTN_MODE = "BTNMODE"; //按钮模式
-    public static final String TEV_MODE = "TEVMODE"; //文本模式
-
-    private static final String TAG = "IViewGroup";
-
     private int viewWidth;   //控件的宽度
     private int viewHeight;  //控件的高度
 
@@ -77,7 +69,7 @@ public class CustomSearchHistoryViewGroup<X extends TextView> extends ViewGroup 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         viewWidth = measureWidth(widthMeasureSpec);
         viewHeight = measureHeight(heightMeasureSpec);
-        Log.e(TAG, "onMeasure:" + viewWidth + ":" + viewHeight);
+        LogUtils.e("onMeasure:" + viewWidth + ":" + viewHeight);
         // 计算自定义的ViewGroup中所有子控件的大小
         measureChildren(widthMeasureSpec, heightMeasureSpec);
         // 设置自定义的控件MyViewGroup的大小
@@ -279,10 +271,10 @@ public class CustomSearchHistoryViewGroup<X extends TextView> extends ViewGroup 
     private void addItemView(String text, String mode) {
         X childView = null;
         switch (mode) {
-            case BTN_MODE:
+            case "BTNMODE":
                 childView = (X) new Button(mContext);
                 break;
-            case TEV_MODE:
+            case "TEVMODE":
                 childView = (X) new TextView(mContext);
                 break;
         }

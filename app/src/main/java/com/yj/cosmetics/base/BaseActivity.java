@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yj.cosmetics.MyApplication;
@@ -29,16 +28,11 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-
-
 	TextView tv;
 	TextView tvNext;
 	LinearLayout back;
 	View line;
 	LinearLayout title;
-	RelativeLayout rlNext;
-
-
 	public SharedPreferencesUtil preferencesUtil;
 	private ImageView llIv;
 

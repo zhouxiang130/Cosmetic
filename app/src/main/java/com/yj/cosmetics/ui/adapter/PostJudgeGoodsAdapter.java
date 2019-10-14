@@ -3,7 +3,6 @@ package com.yj.cosmetics.ui.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +34,6 @@ import io.valuesfeng.picker.engine.GlideEngine;
  */
 
 public class PostJudgeGoodsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "PostJudgeGoodsAdapter";
-
 	private PostJudgeGoodsActivity mContext;
 	CouponClickListener mItemClickListener;
 	List<JudgeGoodsDataEntity.DataBean> entity;
@@ -302,7 +298,7 @@ public class PostJudgeGoodsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 	}
 
 	public void glideImg(int position, JudgeGoodsViewHolder holder) {
-		Log.i(TAG, "glideImg: " + entity.get(position).getmSelected().get(0));
+		LogUtils.i("glideImg: " + entity.get(position).getmSelected().get(0));
 
 		for (int i = 0; i < entity.get(position).getmSelected().size(); i++) {
 			switch (i) {

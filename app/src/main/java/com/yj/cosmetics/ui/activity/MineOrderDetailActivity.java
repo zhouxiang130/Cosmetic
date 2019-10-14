@@ -3,6 +3,7 @@ package com.yj.cosmetics.ui.activity;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,15 +17,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.graphics.drawable.Drawable;
-
 import com.alipay.sdk.app.PayTask;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-import com.tencent.mm.opensdk.utils.Log;
 import com.yj.cosmetics.MyApplication;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
@@ -62,8 +60,6 @@ import cn.onekeyshare.OnekeyShare;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.sina.weibo.SinaWeibo;
-import cn.sharesdk.wechat.friends.Wechat;
-import cn.sharesdk.wechat.moments.WechatMoments;
 import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -75,7 +71,6 @@ import okhttp3.Response;
  */
 
 public class MineOrderDetailActivity extends BaseActivity {
-	private static final String TAG = "MineOrderDetailActivity";
 	@BindView(R.id.recyclerView_goods)
 	RecyclerView recyclerViewGoods;
 	//	@BindView(R.id.order_detial_iv_state)
@@ -676,12 +671,8 @@ public class MineOrderDetailActivity extends BaseActivity {
 		goodsAdapter.setProductState(data.getProductState());
 		goodsAdapter.setRefundType(data.getRefundType());
 		//getOrderMoney 总价  getOrderSendCosts 运费  //getOrderBalance 余额
-
-		android.util.Log.i(TAG, "setData:>>>>>>>>>>>> "
-				+ "OrderPaymoney : " + data.getOrderPaymoney()
-				+ " OrderSendCosts ： " + data.getOrderSendCosts()
-				+ " OrderBalance : " + data.getOrderBalance());
-
+		LogUtils.e("setData:>>>>>>>>>>>> " + "OrderPaymoney : " + data.getOrderPaymoney() +
+				" OrderSendCosts ： " + data.getOrderSendCosts() + " OrderBalance : " + data.getOrderBalance());
 		goodsAdapter.setOrderRefundPic(data.getOrderPaymoney(), data.getOrderSendCosts(), data.getOrderBalance());
 		goodsAdapter.notifyDataSetChanged();
 	}

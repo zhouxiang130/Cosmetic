@@ -30,7 +30,6 @@ import butterknife.BindView;
  */
 
 public class HomeSeckillActivity extends BaseActivity implements HomeSeckill_contract.View {
-	private static final String TAG = "HomeSeckillActivity";
 	@BindView(R.id.home_seckill_tablayout)
 	TabLayout tabLayout;
 	@BindView(R.id.viewpager)
@@ -73,9 +72,6 @@ public class HomeSeckillActivity extends BaseActivity implements HomeSeckill_con
 //		HomeSeckillFrag.instant().sendMessage(new HomeSeckillFrag.ICallBack() {
 //			@Override
 //			public void get_message_from_Fragment(String string) {
-//
-//				Log.i(TAG, "get_message_from_Fragment: "+ string);
-//
 //				Glide.with(HomeSeckillActivity.this)
 //						.load(URLBuilder.URLBaseHeader + string)
 //						.asBitmap()

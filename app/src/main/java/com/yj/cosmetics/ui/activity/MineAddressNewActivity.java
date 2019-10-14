@@ -43,7 +43,6 @@ import okhttp3.Response;
  */
 
 public class MineAddressNewActivity extends BaseActivity { //implements TextWatcher, Inputtips.InputtipsListener, PoiSearch.OnPoiSearchListener {
-	private static final String TAG = " MineAddressNewActivity ";
 	@BindView(R.id.address_new_address)
 	TextView tvAddress;
 	@BindView(R.id.address_new_cb)
@@ -511,7 +510,7 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 			aAdapter.notifyDataSetChanged();
 
 		} else {
-			Log.i(TAG, "onGetInputtips:>>>> " + rCode);
+			LogUtils.i("onGetInputtips:>>>> " + rCode);
 		}
 	}*/
 
@@ -564,7 +563,7 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 				ToastUtil.showToast(MineAddressNewActivity.this, "对不起，没有搜索到相关数据");
 			}
 		} else {
-			Log.i(TAG, "onPoiSearched: >>>>>>"+ rCode);
+			LogUtils.i("onPoiSearched: >>>>>>"+ rCode);
 		}
 
 	}

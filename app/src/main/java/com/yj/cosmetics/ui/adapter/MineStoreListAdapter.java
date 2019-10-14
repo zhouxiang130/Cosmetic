@@ -18,7 +18,6 @@ import com.google.gson.Gson;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-import com.tencent.mm.opensdk.utils.Log;
 import com.yj.cosmetics.MyApplication;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.Constant;
@@ -59,9 +58,7 @@ import okhttp3.Response;
  */
 
 public class MineStoreListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
 	private final int flag;
-	private String TAG = "MineOrderListAdapter";
 	private StoreDetailActivity mContext;
 	List<MineOrderEntity.DataBean.UserOrderMapsBean> mList = new ArrayList<>();
 	MineOrderAllClickListener mItemClickListener;
@@ -334,7 +331,7 @@ public class MineStoreListAdapter extends RecyclerView.Adapter<RecyclerView.View
 						break;
 				}
 
-				Log.i(TAG, "showPayDialog ---- checkedPosition  " + checkedPosition);
+				LogUtils.e("showPayDialog ---- checkedPosition  " + checkedPosition);
 				mineOrderPayDialog.dismiss();
 			}
 		});

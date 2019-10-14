@@ -1,7 +1,6 @@
 package com.yj.cosmetics.ui.adapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.SignInEntity;
 import com.yj.cosmetics.ui.activity.mineSignIn.MineSignInActivity;
+import com.yj.cosmetics.util.LogUtils;
 
 import java.util.List;
 
@@ -23,8 +23,6 @@ import butterknife.ButterKnife;
  */
 
 public class MineSignInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "MineSignInAdapter";
 	//	private final List<String> mData;
 	private List<SignInEntity.DataBean.SignListBean> mData;
 	private MineSignInActivity mContext;
@@ -55,15 +53,13 @@ public class MineSignInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 	@Override
 	public int getItemViewType(int position) {
-		Log.e(TAG, "getItemViewType: " + position);
+		LogUtils.i("getItemViewType: " + position);
 		return 0;
 	}
 
 	@Override
 	public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-
-		Log.i(TAG, "onBindViewHolder: " + position + " >>>>> " + mData.get(position).getContent() + " >>>>>>  " + mData.size());
-
+		LogUtils.i("onBindViewHolder: " + position + " >>>>> " + mData.get(position).getContent() + " >>>>>>  " + mData.size());
 		if (holder instanceof ProfitViewHolder) {
 			if (position == 0) {
 				((ProfitViewHolder) holder).llLine.setPadding(0, 30, 0, 0);
@@ -74,7 +70,6 @@ public class MineSignInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 			} else {
 				((ProfitViewHolder) holder).buttomLine.setVisibility(View.GONE);
 			}
-
 			String isSign = mData.get(position).getIsSign();
 			if (!isSign.equals("0")) {
 				mContext.setPosition(position);
@@ -82,7 +77,6 @@ public class MineSignInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 				((ProfitViewHolder) holder).tvTicketClass.setBackgroundResource(R.drawable.shape_corner_oval_three);
 				((ProfitViewHolder) holder).ivTicketClass.setBackgroundResource(R.mipmap.qd_jl_true);
 			}
-
 			switch (mData.get(position).getType()) {//1折扣券 2代金券3：兑换券 4：积分券5： 金额券
 				case "1":
 					((ProfitViewHolder) holder).tvTicketPriceIntegral.setVisibility(View.GONE);
@@ -111,8 +105,6 @@ public class MineSignInAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 			((ProfitViewHolder) holder).tvTicketPriceStandard.setText(mData.get(position).getIntro());
 			((ProfitViewHolder) holder).tvTicketClassContent.setText(mData.get(position).getName());
 			((ProfitViewHolder) holder).tvTicketClassContents.setText(mData.get(position).getContent());
-
-
 		}
 	}
 

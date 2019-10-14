@@ -11,18 +11,16 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.widget.ImageView;
 
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.util.LogUtils;
 
 
 /**
  * Created by Suo on 2016/4/12.
  * 图片圆形工具
  */
-public class RoundedImageView extends ImageView {
-    public static final String TAG = "RoundedImageView";
+public class RoundedImageView extends android.support.v7.widget.AppCompatImageView {
     public static final float DEFAULT_RADIUS = 0f;
     public static final float DEFAULT_BORDER_WIDTH = 0f;
     public static final Shader.TileMode DEFAULT_TILE_MODE = Shader.TileMode.CLAMP;
@@ -232,7 +230,7 @@ public class RoundedImageView extends ImageView {
             try {
                 d = rsrc.getDrawable(mResource);
             } catch (Exception e) {
-                Log.w(TAG, "Unable to find resource: " + mResource, e);
+                LogUtils.e("Unable to find resource: " + mResource, e);
                 // Don't try again.
                 mResource = 0;
             }

@@ -3,7 +3,6 @@ package com.yj.cosmetics.ui.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +37,6 @@ import okhttp3.Response;
  */
 
 public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "JudgeAdapter";
 	private String uid = null;
 	private Activity mContext;
 	List<CouponReceiveEntity.DataBean.CouponsBean> mList;
@@ -84,7 +81,7 @@ public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.View
 
 		int contentSize = getContentSize();
 
-		Log.i(TAG, "getItemViewType: " + contentSize + " ----- position : " + position);
+		LogUtils.e("getItemViewType: " + contentSize + " ----- position : " + position);
 		if (HEAD_COUNT != 0 && position == 0) { // 头部
 			return 0;
 		} else if (FOOT_COUNT != 0 && position == contentSize - 1) { // 尾部
@@ -106,7 +103,7 @@ public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.View
 	@Override
 	public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
 		if (holder instanceof CouponReceiveHolder) {
-			Log.i(TAG, "onBindViewHolder: " + position);
+			LogUtils.e("onBindViewHolder: " + position);
 			if (position <= mList.size() - 1) {
 				((CouponReceiveHolder) holder).tvTicketTime.setText(mList.get(position).getDate());
 				((CouponReceiveHolder) holder).tvTicketContent.setText(mList.get(position).getCouponName());
@@ -139,7 +136,7 @@ public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.View
 				}
 
 				conditionLimitnum = mList.get(position).getConditionLimitnum();
-				Log.i(TAG, "onBindViewHolder: " + conditionLimitnum + " position : " + position);
+				LogUtils.e("onBindViewHolder: " + conditionLimitnum + " position : " + position);
 //				if (conditionLimitnum == 0) {
 //					((CouponReceiveHolder) holder).tvReceive.setText("已领取");
 //					((CouponReceiveHolder) holder).tvReceive.setTextColor(mContext.getResources().getColor(R.color.C99_99_99));
@@ -153,7 +150,7 @@ public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.View
 					@Override
 					public void onClick(View view) {
 						conditionLimitnum = mList.get(position).getConditionLimitnum();
-						Log.i(TAG, "onClick: " + conditionLimitnum);
+						LogUtils.e("onClick: " + conditionLimitnum);
 						if (conditionLimitnum == 0) {
 							((CouponReceiveHolder) holder).tvReceive.setText("已领取");
 							((CouponReceiveHolder) holder).tvReceive.setTextColor(mContext.getResources().getColor(R.color.C99_99_99));
@@ -244,7 +241,7 @@ public class CouponReceiveAdapter extends RecyclerView.Adapter<RecyclerView.View
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.e("onResponse: " + response.getMsg());
 					conditionLimitnum--;
 					mList.get(position).setConditionLimitnum(conditionLimitnum);
 					notifyDataSetChanged();

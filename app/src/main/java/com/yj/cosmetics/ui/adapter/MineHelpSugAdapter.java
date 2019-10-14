@@ -33,8 +33,6 @@ import io.valuesfeng.picker.engine.GlideEngine;
  */
 
 public class MineHelpSugAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "MineHelpSugAdapter";
 	private List<HelpSugEntity.JudgeGoodsItem> entity = null;
 	private MineHelpSugActivity mContext;
 	CouponClickListener mItemClickListener;

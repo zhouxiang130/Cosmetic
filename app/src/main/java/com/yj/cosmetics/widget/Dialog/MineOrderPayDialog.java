@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,18 +23,12 @@ import com.yj.cosmetics.ui.adapter.PayDetailDialogAdapters;
  */
 
 public class MineOrderPayDialog extends Dialog {
-
-	private static final String TAG = " CustomSizeDialog ";
 	PayDetailDialogAdapters dialogAdapter;
 	private Activity context;
-
 	RecyclerView recyclerView;
 	private Button btnBuy;
-
 	private TextView tvTitle;
-
 	/* private doCountClickListener doCountClickListener;*/
-
 	//为防止出错 将style的dialog随意指向了一个style 如有需要可自己创建
 	public MineOrderPayDialog(Activity context) {
 		super(context, R.style.Goods_Size_Dialog);

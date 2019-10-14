@@ -1,14 +1,11 @@
 package com.yj.cosmetics.ui.activity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewOutlineProvider;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -216,7 +213,7 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 				history.add(result[i]);
 			}
 			LogUtils.i("history的长度" + history.size());
-			hintHistory.addItemViews(history, CustomSearchHistoryViewGroup.TEV_MODE);
+			hintHistory.addItemViews(history, "TEVMODE");
 			hintHistory.setGroupClickListener(this);
 		}
 	}
@@ -261,7 +258,7 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 						for (int i = 0; i < response.getData().size(); i++) {
 							text.add(response.getData().get(i).getKey());
 						}
-						hintHots.addItemViews(text, CustomSearchHotViewGroup.TEV_MODE);
+						hintHots.addItemViews(text,"TEVMODE");
 						hintHots.setGroupClickListener(SearchActivity.this);
 					}
 				} else {

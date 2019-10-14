@@ -1,7 +1,5 @@
 package com.yj.cosmetics.ui.activity.mineSignIn;
 
-import android.util.Log;
-
 import com.google.gson.Gson;
 import com.yj.cosmetics.base.Key;
 import com.yj.cosmetics.base.URLBuilder;
@@ -21,8 +19,6 @@ import okhttp3.Response;
  */
 
 public class MineSign_Presenter implements MineSign_contract.Presenter {
-
-	private static final String TAG = "MineSignInActivity";
 	private MineSign_contract.View mView = null;
 
 	public MineSign_Presenter(MineSign_contract.View view) {
@@ -69,7 +65,7 @@ public class MineSign_Presenter implements MineSign_contract.Presenter {
 			@Override
 			public void onResponse(SignInEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.e("onResponse: " + response.getMsg());
 					SignInEntity.DataBean data = response.getData();
 					mView.setSignInData(data);
 				} else {

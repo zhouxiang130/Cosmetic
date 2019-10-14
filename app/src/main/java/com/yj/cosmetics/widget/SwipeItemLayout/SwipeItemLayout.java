@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -13,6 +12,8 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
+
+import com.yj.cosmetics.util.LogUtils;
 
 /**
  * Author： liyi
@@ -372,7 +373,7 @@ public class SwipeItemLayout extends ViewGroup {
 
         void startScroll(int startX,int endX){
             if(startX!=endX){
-                Log.e("scroll - startX - endX",""+startX+" "+endX);
+                LogUtils.e(""+startX+" "+endX);
                 setTouchMode(Mode.FLING);
                 mAbort = false;
                 mScrollToLeft = endX<startX;
@@ -382,7 +383,7 @@ public class SwipeItemLayout extends ViewGroup {
         }
 
         void startFling(int startX,int xVel){
-            Log.e("fling - startX",""+startX);
+            LogUtils.e(""+startX);
 
             if(xVel>mMinVelocity && startX!=0) {
                 startScroll(startX, 0);
@@ -414,11 +415,11 @@ public class SwipeItemLayout extends ViewGroup {
 
         @Override
         public void run() {
-            Log.e("abort", Boolean.toString(mAbort));
+            LogUtils.e( Boolean.toString(mAbort));
             if(!mAbort){
                 boolean more = mScroller.computeScrollOffset();
                 int curX = mScroller.getCurrX();
-                Log.e("curX",""+curX);
+                LogUtils.e(""+curX);
 
                 boolean atEdge = trackMotionScroll(curX-mScrollOffset);
                 if(more && !atEdge) {

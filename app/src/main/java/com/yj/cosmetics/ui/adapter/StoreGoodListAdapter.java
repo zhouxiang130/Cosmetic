@@ -1,25 +1,19 @@
 package com.yj.cosmetics.ui.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.model.CartsEntity;
 import com.yj.cosmetics.model.ShopListEntity;
-import com.yj.cosmetics.util.ToastUtils;
 
 import java.util.List;
 
@@ -31,9 +25,6 @@ import butterknife.ButterKnife;
  */
 
 public class StoreGoodListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-
-	private static String TAG = "MineRefundListGoodsDetailAdapterss";
 	private int pos = 0;
 	private Activity mContext;
 	List<ShopListEntity.DataBean.ShopArrayBean.ProductlistBean> mList;

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.OrderDetailEntity;
 import com.yj.cosmetics.ui.activity.mineRefundClass.MineRefundClassActivity;
+import com.yj.cosmetics.util.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,6 @@ import butterknife.ButterKnife;
  */
 
 public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-	private static final String TAG = "MineOrderListGoodsDetailAdapter";
 	private String flag = null;
 	private String orderId = null;
 	private Context mContext;
@@ -115,7 +114,7 @@ public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<Recycl
 //					} else {
 //						string = format + "";
 //					}
-					Log.i(TAG, "onBindViewHolder: " + string);
+					LogUtils.e("onBindViewHolder: " + string);
 				} else if (orderState.equals("3")) {
 					// 待收货  总价 + 余额 - 运费
 					//	* @param orderMoney 总价
@@ -139,7 +138,7 @@ public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<Recycl
 //					} else {
 //						string = format + "";
 //					}
-//					Log.i(TAG, "onBindViewHolder: " + string);
+//					LogUtils.i("onBindViewHolder: " + string);
 				} else {
 					((InnerGoodsViewHolder) holder).tvDrawBack.setVisibility(View.GONE);
 				}
@@ -149,7 +148,7 @@ public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<Recycl
 			((InnerGoodsViewHolder) holder).tvDrawBack.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Log.i(TAG, "onClick: orderId ------- " + orderId + "   format>>>>>>  " /*+ format*/ + "flag : " + flag);
+					LogUtils.e("onClick: orderId ------- " + orderId + "   format>>>>>>  " /*+ format*/ + "flag : " + flag);
 					Intent intent = new Intent(mContext, MineRefundClassActivity.class);
 					intent.putExtra("mList", mList.get(position));
 //						intent.putExtra("Money", format);

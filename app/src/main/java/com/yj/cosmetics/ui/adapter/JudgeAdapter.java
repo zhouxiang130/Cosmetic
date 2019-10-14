@@ -27,8 +27,6 @@ import butterknife.ButterKnife;
  */
 
 public class JudgeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "JudgeAdapter";
 	private Context mContext;
 	List<GoodsCommentEntity.GoodsCommentData.GoodsCommentList> mList;
 	SpendDetialClickListener mItemClickListener;
@@ -114,7 +112,7 @@ public class JudgeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 			}
 //            if (mList.get(position).getCommentImg() != null && mList.get(position).getCommentImg().size() > 0) {
 //                ((CouponReceiveHolder) holder).scrollGridView.setVisibility(View.VISIBLE);
-//                Log.i(TAG, "onBindViewHolder: " + position + " ====  " + mList.get(position).getCommentImg().size());
+//                LogUtils.i("onBindViewHolder: " + position + " ====  " + mList.get(position).getCommentImg().size());
 //                judgeImgParamsAdapter judgeImgParamsAdapter = new judgeImgParamsAdapter(mContext, mList.get(position).getCommentImg());
 //                ((CouponReceiveHolder) holder).scrollGridView.setAdapter(judgeImgParamsAdapter);
 //            } else {
@@ -188,7 +186,7 @@ public class JudgeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 //                scrollGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //                    @Override
 //                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                        Log.i(TAG, "onItemClick--------------: " + position);
+//                       LogUtils.i("onItemClick--------------: " + position);
 //                        mListener.onItemClick(view, getPosition(), position);
 //                    }
 //                });

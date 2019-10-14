@@ -10,7 +10,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -445,7 +444,7 @@ public class UserRegistActivity extends BaseActivity {
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
-			Log.e(TAG, "doAsyncRegister: " + e.toString());
+			LogUtils.e("doAsyncRegister: " + e.toString());
 		}
 	}
 

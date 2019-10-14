@@ -28,8 +28,6 @@ import butterknife.ButterKnife;
  */
 
 public class GoodsDetialJudgeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "GoodsDetialJudgeAdapter ";
 	private Context mContext;
 	List<GoodsCommentEntity.GoodsCommentData.GoodsCommentList> mList;
 	SpendDetialClickListener mItemClickListener;
@@ -42,7 +40,6 @@ public class GoodsDetialJudgeAdapter extends RecyclerView.Adapter<RecyclerView.V
 	public void setOnItemClickListener(SpendDetialClickListener listener) {
 		this.mItemClickListener = listener;
 	}
-
 
 	@Override
 	public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

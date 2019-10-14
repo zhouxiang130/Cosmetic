@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -177,12 +176,10 @@ public class MineRefundListGoodsDetailAdapterss extends RecyclerView.Adapter<Rec
 	private void setButtonIsShow(CartItemViewHolder holder) {
 		if (isShow) {
 			//可编辑
-//							Log.i(TAG, "onBindViewHolder: " + holder);
 			holder.tvNum.setVisibility(View.GONE);
 			holder.rlDelete.setVisibility(View.VISIBLE);
 		} else {
 			//不可编辑
-//							Log.i(TAG, "onBindViewHolder: " + holder);
 			holder.tvNum.setVisibility(View.VISIBLE);
 			holder.rlDelete.setVisibility(View.GONE);
 		}

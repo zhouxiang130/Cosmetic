@@ -1,14 +1,10 @@
 package com.yj.cosmetics.ui.fragment;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,11 +46,10 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2017/11/18.
  *
- * @TODO 个人中心
+ * 个人中心
  */
 
 public class MineFrag extends BaseFragment {
-	private static final String TAG = "MineFrag";
 	@BindView(R.id.frag_mine_login_iv)
 	RoundedImageView ivLogin;
 	@BindView(R.id.mine_new_tv_login)
@@ -110,7 +105,7 @@ public class MineFrag extends BaseFragment {
 		}
 
 
-		Log.i(TAG, "onResume: " + " 头像信息： " + mUtils.getAvatar());
+		LogUtils.e("onResume: " + " 头像信息： " + mUtils.getAvatar());
 		if (!TextUtils.isEmpty(mUtils.getAvatar())) {
 			LogUtils.i("avatar的值" + mUtils.getAvatar());
 			Glide.with(getActivity().getApplicationContext())
@@ -413,7 +408,7 @@ public class MineFrag extends BaseFragment {
 		if (!TextUtils.isEmpty(data.getServiceTel())) {
 			mUtils.saveServiceTel(data.getServiceTel());
 		}
-		Log.i(TAG, "userMoney-----------------------: " + data.getUserMoney());
+		LogUtils.e("userMoney----: " + data.getUserMoney());
 		tvMoney.setText(data.getUserMoney());
 		tvScore.setText(data.getUserScore());
 		if (!TextUtils.isEmpty(data.getOrderpay())) {

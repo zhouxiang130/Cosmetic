@@ -25,8 +25,6 @@ import butterknife.ButterKnife;
  */
 
 public class HotRecommAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "HotRecommAdapter";
 	private Activity mContext;
 	List<HomeEntity.HomeData.HomeHot> mList;
 	ProfitDetialClickListener mItemClickListener;

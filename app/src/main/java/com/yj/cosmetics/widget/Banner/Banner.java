@@ -6,7 +6,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,6 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.Banner.listener.OnBannerListener;
 import com.yj.cosmetics.widget.Banner.loader.ImageLoaderInterface;
 import com.yj.cosmetics.widget.Banner.view.BannerViewPager;
@@ -33,7 +33,6 @@ import static android.support.v4.view.ViewPager.OnPageChangeListener;
 import static android.support.v4.view.ViewPager.PageTransformer;
 
 public class Banner extends FrameLayout implements OnPageChangeListener {
-	public String tag = "banner";
 	private int mIndicatorMargin = BannerConfig.PADDING_SIZE;
 	private int mIndicatorWidth;
 	private int mIndicatorHeight;
@@ -141,7 +140,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 			mScroller.setDuration(scrollTime);
 			mField.set(viewPager, mScroller);
 		} catch (Exception e) {
-			Log.e(tag, e.getMessage());
+			LogUtils.e(e.getMessage());
 		}
 	}
 
@@ -180,7 +179,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 		try {
 			setPageTransformer(true, transformer.newInstance());
 		} catch (Exception e) {
-			Log.e(tag, "Please set the PageTransformer class");
+			LogUtils.e("Please set the PageTransformer class");
 		}
 		return this;
 	}
@@ -330,7 +329,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 	private void setImageList(List<?> imagesUrl) {
 		if (imagesUrl == null || imagesUrl.size() <= 0) {
 			bannerDefaultImage.setVisibility(VISIBLE);
-			Log.e(tag, "The image data set is empty.");
+			LogUtils.e("The image data set is empty.");
 			return;
 		}
 		bannerDefaultImage.setVisibility(GONE);
@@ -356,7 +355,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 			if (imageLoader != null)
 				imageLoader.displayImage(context, url, imageView);
 			else
-				Log.e(tag, "Please set images loader.");
+				LogUtils.e("Please set images loader.");
 		}
 	}
 
@@ -453,7 +452,6 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 		public void run() {
 			if (count > 1 && isAutoPlay) {
 				currentItem = currentItem % (count + 1) + 1;
-//                Log.i(tag, "curr:" + currentItem + " count:" + count);
 				if (currentItem == 1) {
 					viewPager.setCurrentItem(currentItem, false);
 					handler.post(task);
@@ -467,7 +465,6 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-//        Log.i(tag, ev.getAction() + "--" + isAutoPlay);
 		if (isAutoPlay) {
 			int action = ev.getAction();
 			if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL
@@ -513,7 +510,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 //                view.setOnClickListener(new OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
-//                        Log.e(tag, "你正在使用旧版点击事件接口，下标是从1开始，" +
+//                        LogUtils.e("你正在使用旧版点击事件接口，下标是从1开始，" +
 //                                "为了体验请更换为setOnBannerListener，下标从0开始计算");
 //                        bannerListener.OnBannerClick(position);
 //                    }
@@ -542,7 +539,6 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 		if (mOnPageChangeListener != null) {
 			mOnPageChangeListener.onPageScrollStateChanged(state);
 		}
-//        Log.i(tag,"currentItem: "+currentItem);
 		switch (state) {
 			case 0://No operation
 				if (currentItem == 0) {

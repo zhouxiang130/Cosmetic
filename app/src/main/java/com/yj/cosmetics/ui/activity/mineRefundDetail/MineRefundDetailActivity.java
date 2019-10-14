@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -16,7 +15,6 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
-import com.yj.cosmetics.base.Constant;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.MineRefundDetailEntity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
@@ -30,7 +28,6 @@ import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
 import com.yj.cosmetics.widget.WrapContentGridView;
 import com.zhy.http.okhttp.OkHttpUtils;
 
-import java.lang.ref.SoftReference;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,15 +43,10 @@ import okhttp3.Response;
  */
 
 public class MineRefundDetailActivity extends BaseActivity {
-
-
-	private static final String TAG = "MineRefundDetailActivity";
 	@BindView(R.id.refound_detial_tv_state)
 	TextView refoundDetialTvState;
 	@BindView(R.id.refound_detial_tv_state_time)
 	TextView refoundDetialTvStateTime;
-
-
 	@BindView(R.id.refound_detial_tv_normal_price)
 	TextView refoundDetialTvNormalPrice;
 	@BindView(R.id.refound_detial_tv_normal_price_)
@@ -129,6 +121,7 @@ public class MineRefundDetailActivity extends BaseActivity {
 		switch (view.getId()) {
 			case R.id.refund_detail_rl_kefu:
 				//TODO 变成打电话
+				Toast.makeText(this, "暂无客服联系方式", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.refund_detail_rl_rexian:
 

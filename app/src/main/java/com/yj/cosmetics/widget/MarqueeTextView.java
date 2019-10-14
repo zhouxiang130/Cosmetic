@@ -9,7 +9,7 @@ import android.widget.TextView;
  * Created by Administrator on 2018/9/21 0021.
  */
 
-public class MarqueeTextView extends TextView {
+public class MarqueeTextView extends android.support.v7.widget.AppCompatTextView {
 
 	public MarqueeTextView(Context context) {
 		this(context, null);

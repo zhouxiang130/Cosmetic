@@ -4,18 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
+import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.AccountListEntity;
 import com.yj.cosmetics.ui.activity.StoreFellInDetailActivity;
 import com.yj.cosmetics.ui.adapter.MyAccListAdapter;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.Utils;
 import com.yj.cosmetics.widget.ProgressLayout;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -164,7 +164,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 		} else {
 			urls = URLBuilder.searchUserBill;
 		}
-		Log.i(TAG, "传递的json值: " + URLBuilder.format(map));
+		LogUtils.e("传递的json值: " + URLBuilder.format(map));
 
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + urls)
 				.addParams("data", URLBuilder.format(map))
@@ -173,7 +173,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 			@Override
 			public AccountListEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.e(TAG, "json的值1==" + json);
+				LogUtils.e("json的值1==" + json);
 				AccountListEntity shopListEntity = new Gson().fromJson(json, AccountListEntity.class);
 				return shopListEntity;
 			}
@@ -190,7 +190,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 						setNoneList();
 					}
 				} else {
-					Log.i(TAG, "我挂了" + response.getMsg());
+					LogUtils.e("我挂了" + response.getMsg());
 					showNetError();
 				}
 				setRefreshComplete();
@@ -221,8 +221,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 		} else {
 			urls = URLBuilder.searchUserBill;
 		}
-
-		Log.i(TAG, "loadMoreData: " + URLBuilder.format(map));
+		LogUtils.e("loadMoreData: " + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + urls)
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<AccountListEntity>() {
@@ -230,7 +229,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 			@Override
 			public AccountListEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
-				Log.e(TAG, "json的值2==" + json);
+				LogUtils.e("json的值2==" + json);
 				AccountListEntity shopListEntity = new Gson().fromJson(json, AccountListEntity.class);
 				return shopListEntity;
 			}
@@ -252,7 +251,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 						setNoneList();
 					}
 				} else {
-					Log.i(TAG, "我挂了" + response.getMsg());
+					LogUtils.e("我挂了" + response.getMsg());
 //					mView.showNetError();
 				}
 			}
@@ -280,7 +279,7 @@ public class MyAccountListFrags extends LazyLoadFragment {
 		if (dataList != null && dataList.size() != 0) {
 			mProgressLayout.showContent();
 			shopListAdapter.setData(data);
-		}else {
+		} else {
 			setNoneList();
 		}
 	}

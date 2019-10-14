@@ -6,7 +6,6 @@ import android.text.InputType;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +41,6 @@ import io.valuesfeng.picker.engine.GlideEngine;
  */
 
 public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "MineHelpSugAdapter";
 	private String Money = null;
 	private List<String> refund_dialog_desc = null;
 	private List<RefundListEntity.DataBean> refundDialogDesc = null;
@@ -143,45 +140,35 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 				@Override
 				public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 					String s = charSequence + "";
-					Log.i(TAG, "onTextChanged: " + s);
-
+					LogUtils.e("onTextChanged: " + s);
 					if (s != null && !s.equals("") && !TextUtils.isEmpty(s)) {
-
 						boolean positiveInteger = isPositiveInteger(s);
-						Log.i(TAG, "onTextChanged:  positiveInteger  " + positiveInteger);
+						LogUtils.e("onTextChanged:  positiveInteger  " + positiveInteger);
 						if (!positiveInteger) {
 							Toast.makeText(mContext, "请输入的是数字", Toast.LENGTH_SHORT).show();
 							return;
 						}
-
 						entity.get(position).setPrice(charSequence + "");
-
-
 //						Pattern p =  Pattern.compile("/^[0-9]+([.]{1}[0-9]{1,2})?$/");
 //						Matcher m = p.matcher(s);
 //						if (m.matches()) {
 //							Toast.makeText(mContext, "输入的是数字", Toast.LENGTH_SHORT).show();
 //						}
-//
 //						 p  = Pattern.compile("[a-zA-Z]");
 //						Matcher m = p.matcher(s);
 //						if (m.matches()) {
 //							Toast.makeText(mContext, "输入的是字母", Toast.LENGTH_SHORT).show();
 //						}
-//
 //						 p = Pattern.compile("[\u4e00-\u9fa5]");
 //						m = p.matcher(s);
 //						if (m.matches()) {
 //							Toast.makeText(mContext, "输入的是汉字", Toast.LENGTH_SHORT).show();
 //						}
 					}
-
 //					if (Money.equals(s)) {
 //						((JudgeGoodsViewHolder) holder).tvPrice.setTextColor(mContext.getResources().getColor(R.color.red));
 //					} else {
 //						((JudgeGoodsViewHolder) holder).tvPrice.setTextColor(mContext.getResources().getColor(R.color.C99_99_99));
-
-
 //					}
 				}
 
@@ -219,8 +206,6 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 				public void afterTextChanged(Editable editable) {
 				}
 			});
-
-
 			((JudgeGoodsViewHolder) holder).ivOffer1.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
@@ -257,8 +242,6 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 					}
 				}
 			});
-
-
 			((JudgeGoodsViewHolder) holder).ivClose1.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
@@ -392,14 +375,10 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 
 
 	public class JudgeGoodsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
-
 		@BindView(R.id.refund_detail_good_status_line)
 		View refundViewLine;
-
 		@BindView(R.id.refund_detial_rl_good_status)
 		RelativeLayout refundRlGoodStatus;
-
 		@BindView(R.id.refund_tv_good_status)
 		TextView tvGoodStatus;
 		@BindView(R.id.refund_tv_cause)
@@ -412,8 +391,6 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 		EditText tvReason;
 		@BindView(R.id.refund_et_phone)
 		EditText tvPhone;
-
-
 		@BindView(R.id.judge_show_offer1)
 		RoundedImageView ivOffer1;
 		@BindView(R.id.judge_show_offer2)
@@ -422,7 +399,6 @@ public class MineRefundDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 		RoundedImageView ivOffer3;
 		@BindView(R.id.judge_show_offer4)
 		RoundedImageView ivOffer4;
-
 		@BindView(R.id.judge_show_offer1close)
 		ImageView ivClose1;
 		@BindView(R.id.judge_show_offer2close)

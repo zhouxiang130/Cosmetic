@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.SettlementsCartEntity;
+import com.yj.cosmetics.util.LogUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +25,6 @@ import butterknife.ButterKnife;
  */
 
 public class TicketDetailDialogAdapters extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private List<SettlementsCartEntity.DataBean.CouponsBean> Coupon;
 	private Context mContext;
 	private int checkedPosition = -1;
@@ -62,7 +60,7 @@ public class TicketDetailDialogAdapters extends RecyclerView.Adapter<RecyclerVie
 				@Override
 				public void onClick(View v) {
 					boolean isChecked = ((ItemViewHolder) holder).refundCb.isChecked();
-					Log.i(TAG, "onBindViewHolder:---- " + isChecked + " checkedPosition : " + checkedPosition + " position : " + position);
+					LogUtils.i("onBindViewHolder:---- " + isChecked + " checkedPosition : " + checkedPosition + " position : " + position);
 					if (checkedPosition != position) {
 						if (!isChecked == true) {
 							map.clear();
@@ -74,8 +72,8 @@ public class TicketDetailDialogAdapters extends RecyclerView.Adapter<RecyclerVie
 								checkedPosition = -1; //-1 代表一个都未选择
 							}
 						}
-					}else {
-						Log.i(TAG, "onClick: ------------------------------");
+					} else {
+						LogUtils.i("onClick: ------------------------------");
 						((ItemViewHolder) holder).refundCb.setChecked(false);
 						map.remove(position);
 						if (map.size() == 0) {

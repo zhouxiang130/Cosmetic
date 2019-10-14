@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.CartsEntity;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
 
 import java.util.ArrayList;
@@ -32,14 +32,10 @@ import butterknife.ButterKnife;
 public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 		implements MineRefundListGoodsDetailAdapterss.CheckInterface,
 		MineRefundListGoodsDetailAdapterss.ModifyCountInterface, MineRefundListGoodsDetailAdapterss.ProfitDetialClickListener {
-
-	private static final String TAG = "CartListAdapter";
 	private Context mContext;
 	List<CartsEntity.DataBean.ProCartsBean> mList;
 	private String limit;
 	List<MineRefundListGoodsDetailAdapterss> mAdapters;
-
-
 	ProfitDetialClickListener mItemClickListener;
 	ProductDetailClickListener mListener;
 	private CheckInterface checkInterface;
@@ -162,7 +158,7 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 				((CartItemViewHolder) holder).cbCheck.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
-						Log.i(TAG, "onClick: " + pos + ">>>>>>>" + mList.get(pos).getShopProArray().size());
+						LogUtils.e("onClick: " + pos + ">>>>>>>" + mList.get(pos).getShopProArray().size());
 						checkInterfaces.checkGroup(pos, ((CheckBox) view).isChecked());//向外暴露接口
 					}
 				});

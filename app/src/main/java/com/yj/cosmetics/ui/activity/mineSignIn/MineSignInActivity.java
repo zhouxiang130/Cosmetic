@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -46,70 +45,53 @@ import okhttp3.Response;
 
 /**
  * Created by Administrator on 2018/6/5 0005.
- *
+ * <p>
  * 签到界面 2.0新增加的页面
  */
 
 public class MineSignInActivity extends BaseActivity implements MineSign_contract.View {
-
-
-	private static final String TAG = "MineSignInActivity";
 	@BindView(R.id.mine_sign_ll_rule)
 	LinearLayout mineSignLlRule;
 	@BindView(R.id.title_ll_iv)
 	ImageView ivTitleIcon;
-
 	@BindView(R.id.mine_sign_text_dayNum)
 	TextView mineSignTextDayNum;
-
 	@BindView(R.id.mine_sign_cb_day1)
 	CheckBox mineSignCbDay1;
 	@BindView(R.id.mine_sign_text_day1)
 	TextView mineSignTextDay1;
 	@BindView(R.id.mine_sign_text_sign)
 	TextView mineSignTextSign;
-
 	@BindView(R.id.mine_sign_cb_day2)
 	CheckBox mineSignCbDay2;
 	@BindView(R.id.mine_sign_text_day2)
 	TextView mineSignTextDay2;
-
 	@BindView(R.id.mine_sign_cb_day3)
 	CheckBox mineSignCbDay3;
 	@BindView(R.id.mine_sign_text_day3)
 	TextView mineSignTextDay3;
-
 	@BindView(R.id.mine_sign_cb_day4)
 	CheckBox mineSignCbDay4;
 	@BindView(R.id.mine_sign_text_day4)
 	TextView mineSignTextDay4;
-
 	@BindView(R.id.mine_sign_cb_day5)
 	CheckBox mineSignCbDay5;
 	@BindView(R.id.mine_sign_text_day5)
 	TextView mineSignTextDay5;
-
 	@BindView(R.id.mine_sign_cb_day6)
 	CheckBox mineSignCbDay6;
 	@BindView(R.id.mine_sign_text_day6)
 	TextView mineSignTextDay6;
-
 	@BindView(R.id.mine_sign_cb_day7)
 	CheckBox mineSignCbDay7;
 	@BindView(R.id.mine_sign_text_day7)
 	TextView mineSignTextDay7;
-
 	@BindView(R.id.mRecyclerView)
 	RecyclerView mRecyclerView;
-
 	private CheckBox[] checkBoxesa = null;
-
 	private TextView[] TextViews = null;
-
-	private MineSign_contract.Presenter presenter = new MineSign_Presenter(this);
 	private MineSignInAdapter mAdapter;
 	private List<SignInEntity.DataBean.SignListBean> mData;
-
 	private CustomProgressDialog mDialog;
 	private int days;
 	private String signRule;
@@ -277,26 +259,22 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 			public void onResponse(SignInEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
 //					days = response.getData().getSignDay().getDays();
-					Log.i(TAG, "onResponse: " + response.getMsg());
-					Log.e(TAG, "onResponse: " +response.getData().getSignList().size());
+					LogUtils.i("onResponse: " + response.getMsg());
+					LogUtils.i("onResponse: " + response.getData().getSignList().size());
 					mData.addAll(response.getData().getSignList());
 					mAdapter.notifyDataSetChanged();
 					setData(response.getData());
 				} else {
-
 				}
 				dismissDialog();
 			}
 		});
 	}
 
-
 	private void setData(SignInEntity.DataBean data) {
-
 		days = Integer.parseInt(data.getSignDay().getDays());
 		signRule = data.getSignDay().getSignRule();
 		setCheckTexts();
-
 		mineSignTextDayNum.setText(data.getSignDay().getDays());
 		if (data.getSignDay().getIsSign().equals("1")) {
 			mineSignTextSign.setText("已签到");
@@ -309,7 +287,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 		}
 	}
 
-
 	private void setCheckTexts() {
 		for (int i = 0; i < days; i++) {
 			checkBoxesa[i].setChecked(true);
@@ -318,7 +295,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 			TextViews[i].setTextColor(getResources().getColor(R.color.CFF_BD_30));
 		}
 	}
-
 
 	public void doAsyncGetSignIns(String uid) {
 		final Map<String, String> map = new HashMap<>();
@@ -335,7 +311,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 				if (call.isCanceled()) {
 					call.cancel();
 				} else {
-
 				}
 				dismissDialog();
 			}
@@ -365,7 +340,7 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.e("onResponse: " + response.getMsg());
 					Toast.makeText(MineSignInActivity.this, "签到成功", Toast.LENGTH_SHORT).show();
 				} else {
 					Toast.makeText(MineSignInActivity.this, "签到失败", Toast.LENGTH_SHORT).show();
@@ -384,7 +359,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 
 
 	private void setRuleDialog() {
-
 		if (signRule != null && !signRule.equals("")) {
 			View pview = LayoutInflater.from(this).inflate(R.layout.dialog_integral_info, null);
 			LinearLayout llCancel = (LinearLayout) pview.findViewById(R.id.integral_ll_cancel);
@@ -399,7 +373,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 					builder.dismiss();
 				}
 			});
-
 			tvYes.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -407,7 +380,6 @@ public class MineSignInActivity extends BaseActivity implements MineSign_contrac
 
 				}
 			});
-
 		}
 	}
 

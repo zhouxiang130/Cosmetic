@@ -29,7 +29,6 @@ import butterknife.ButterKnife;
  */
 
 public class MineCouponActivity extends BaseActivity implements MineCoupon_Contract.View {
-	private static final String TAG = "MineCouponActivity";
 	@BindView(R.id.mine_scoring_detial_tablayout)
 	TabLayout tabLayout;
 	@BindView(R.id.title_view)
@@ -91,7 +90,6 @@ public class MineCouponActivity extends BaseActivity implements MineCoupon_Contr
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //		String result = data.getExtras().getString("result");//得到新Activity 关闭后返回的数据
-//		Log.i(TAG, "onActivityResult>>>>>>>>>>>>>");
 		doFragRefresh();
 	}
 

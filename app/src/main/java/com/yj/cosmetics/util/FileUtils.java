@@ -1,7 +1,6 @@
 package com.yj.cosmetics.util;
 
 import android.os.Environment;
-import android.util.Log;
 
 import com.yj.cosmetics.MyApplication;
 
@@ -24,7 +23,6 @@ public class FileUtils {
 
 	private static final String ROOT = "wendi";
 	public static final String CACHE = "cache";
-	private static final String TAG = "FileUtils";
 
 	public static File getDir(String dir) {
 		// sd   不存在   /data/data/包名/cache/cache
@@ -49,7 +47,6 @@ public class FileUtils {
 			file.mkdirs();
 		}
 		return file;
-
 	}
 
 
@@ -96,13 +93,10 @@ public class FileUtils {
 	 * @return
 	 */
 	public static String loadFromLocal(int index) {
-
 		//     当前时间  >  过期时间   过期    不再 获取
 		//     当前时间  < 过期时间   没有过期   获取本地数据
 		File dir = FileUtils.getCache();
 		File file = new File(dir, "home_" + index);
-
-
 		FileReader fr;
 		BufferedReader br;
 		StringWriter sw;
@@ -110,7 +104,7 @@ public class FileUtils {
 			fr = new FileReader(file);
 			br = new BufferedReader(fr);
 			long outofDate = Long.parseLong(br.readLine());
-			Log.i(TAG, "loadFromLocal: " + System.currentTimeMillis() + ">>>>" + outofDate);
+			LogUtils.e("loadFromLocal: " + System.currentTimeMillis() + ">>>>" + outofDate);
 //			if (System.currentTimeMillis() > outofDate) {
 //				//  过期
 //				return null;
@@ -131,8 +125,6 @@ public class FileUtils {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-
 		return null;
 	}
 
@@ -153,13 +145,12 @@ public class FileUtils {
 	}
 
 
-
 	/**
 	 * 获取指定文件大小
 	 *
-	 * @param f
+	 * @param
 	 * @return
-	 * @throws Exception
+	 * @throws
 	 */
 	public static long getFileSize(File file) throws Exception {
 		long size = 0;
@@ -169,18 +160,17 @@ public class FileUtils {
 			size = fis.available();
 		} else {
 			file.createNewFile();
-			Log.e("获取文件大小", "文件不存在!");
+			LogUtils.e("文件不存在!");
 		}
 		return size;
 	}
-
 
 	/**
 	 * 获取指定文件夹
 	 *
 	 * @param f
 	 * @return
-	 * @throws Exception
+	 * @throws
 	 */
 	public static long getFileSizes(File f) throws Exception {
 		long size = 0;
@@ -193,11 +183,7 @@ public class FileUtils {
 			}
 		}
 		return size;
-
-
 	}
-
-
 
 	//flie：要删除的文件夹的所在位置
 	public static void deleteFile(File file) {
@@ -212,8 +198,6 @@ public class FileUtils {
 			file.delete();
 		}
 	}
-
-
 
 	/**
 	 * 转换文件大小
@@ -239,6 +223,4 @@ public class FileUtils {
 		}
 		return fileSizeString;
 	}
-
-
 }

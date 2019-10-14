@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -45,8 +44,6 @@ import okhttp3.Response;
  */
 
 public class locAddressActivity extends BaseActivity implements StoreAddressAdapter.Interfaces {
-
-	private static final String TAG = "locAddressActivity";
 	@BindView(R.id.title_rl_next)
 	RelativeLayout reLayout;
 	@BindView(R.id.title_tv_next)
@@ -56,9 +53,7 @@ public class locAddressActivity extends BaseActivity implements StoreAddressAdap
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
 	StoreAddressAdapter mAdapter;
-
 	List<AddressEntity.DataBean.ListBean> mList;
-
 	private String address;
 	private String latitude;
 	private String longitude;
@@ -130,7 +125,7 @@ public class locAddressActivity extends BaseActivity implements StoreAddressAdap
 
 				String addressId = mList.get(position - 4).getAddressId();
 				String addressAreaDetail = mList.get(position - 4).getAddressDetail();
-				Log.e(TAG, "onItemClick: " + addressId);
+				LogUtils.i("onItemClick: " + addressId);
 				//数据是使用Intent返回
 				Intent intent = new Intent();
 				//把返回数据存入Intent
@@ -215,7 +210,7 @@ public class locAddressActivity extends BaseActivity implements StoreAddressAdap
 					againLoc();
 //					checkPermissions(needPermissions);
 				}
-				Log.e(TAG, "onRequestPermissionsResult: " + isNeedCheck);
+				LogUtils.i("onRequestPermissionsResult: " + isNeedCheck);
 				break;
 		}
 	}
@@ -293,7 +288,6 @@ public class locAddressActivity extends BaseActivity implements StoreAddressAdap
 	}
 
 
-
 	private void doAsyncGetLoction(String address, String latitude, String longitude) {
 		Map<String, String> map = new HashMap<>();
 		map.put("address", address);
@@ -318,7 +312,7 @@ public class locAddressActivity extends BaseActivity implements StoreAddressAdap
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.i("onResponse: " + response.getMsg());
 					preferencesUtil.setBooleanValue("isGetCoupon", false);
 				} else {
 				}

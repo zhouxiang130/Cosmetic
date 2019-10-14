@@ -99,7 +99,6 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 					((CollectionViewHolder) holder).mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 						@Override
 						public void onItemClick(AdapterView<?> parent, View view, int positions, long id) {
-//						Log.i(TAG, "onItemClick: " + mData.get(position).getProductlist().get(positions).getProduct_id());
 							IntentUtils.IntentToGoodsDetial(mContext, mList.get(position).getProductlist().get(positions).getProduct_id());
 						}
 					});

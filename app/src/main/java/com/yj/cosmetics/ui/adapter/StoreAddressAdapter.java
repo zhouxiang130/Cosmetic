@@ -23,12 +23,8 @@ import butterknife.ButterKnife;
  */
 
 public class StoreAddressAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "StoreAddressAdapter";
 	private String locCity = null;
-
 	private Context mContext;
-
 	AddressClickListener mItemClickListener;
 	LocAddressClickListener mAddInterfaces;
 	private Interfaces Interfaces;

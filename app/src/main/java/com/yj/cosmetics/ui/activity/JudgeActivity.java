@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -37,8 +36,6 @@ import okhttp3.Response;
  */
 
 public class JudgeActivity extends BaseActivity {
-
-	private static final String TAG = "JudgeActivity";
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
@@ -48,9 +45,7 @@ public class JudgeActivity extends BaseActivity {
 	@BindView(R.id.title_layout)
 	LinearLayout llTop;
 	JudgeAdapter mAdapter;
-
 	List<GoodsCommentEntity.GoodsCommentData.GoodsCommentList> mList;
-
 	private String proId, sproductId;
 	private int page = 1;
 
@@ -75,7 +70,7 @@ public class JudgeActivity extends BaseActivity {
 		mAdapter.setOnItemClickListener(new JudgeAdapter.SpendDetialClickListener() {
 			@Override
 			public void onItemClick(View view, int postion, int postions) {
-				Log.i(TAG, "onItemClick: " + postions);
+				LogUtils.e("onItemClick: " + postions);
 				Intent intent = new Intent(JudgeActivity.this, BigImageActivity.class);
 				intent.putExtra("postion", postion + "");
 				intent.putExtra("postions", postions + "");

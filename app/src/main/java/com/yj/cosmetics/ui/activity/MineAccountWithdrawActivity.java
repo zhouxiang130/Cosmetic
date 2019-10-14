@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -46,8 +45,6 @@ import static java.lang.Float.parseFloat;
  */
 
 public class MineAccountWithdrawActivity extends BaseActivity {
-
-	private static final String TAG = "MineAccountWithdrawActivity";
 	@BindView(R.id.mine_account_withdraw_account)
 	TextView tvAccount;
 	@BindView(R.id.mine_account_withdraw_name)
@@ -68,22 +65,16 @@ public class MineAccountWithdrawActivity extends BaseActivity {
 	Button btnConfirm;
 	@BindView(R.id.scrollView)
 	ScrollView mScrollView;
-
 	CustomProgressDialog mDialog;
 	private CustomPostDialog postDialog;
-
 	private String balance;
 	private String alipayId;
-
 	private boolean isScroll = false;
-
 	boolean isSend = false;
 	boolean isNetError = false;
-
 	final int TAG_SMS = 0x11;
 	private SMSThread mThread;
 	private int countTime = 60;
-
 	private Handler mHandler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
@@ -212,7 +203,7 @@ public class MineAccountWithdrawActivity extends BaseActivity {
 						return;
 					}
 					Float.parseFloat(upintegral);
-					Log.i(TAG, "onClick: " + (Float.parseFloat(upintegral) - 1));
+					LogUtils.e("onClick: " + (Float.parseFloat(upintegral) - 1));
 					if (want <= (Float.parseFloat(upintegral) - 1)) {
 						ToastUtils.showToast(getApplicationContext(), "提现金额不能小于" + upintegral + ",请努力赚钱吧!");
 						return;

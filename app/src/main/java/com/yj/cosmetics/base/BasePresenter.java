@@ -6,7 +6,7 @@ package com.yj.cosmetics.base;
  */
 public interface BasePresenter {
 
-    void subscribe();
+	void subscribe();
 
-    void unsubscribe();
+	void unsubscribe();
 }

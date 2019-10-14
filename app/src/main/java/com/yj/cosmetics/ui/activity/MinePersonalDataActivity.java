@@ -47,8 +47,6 @@ import okhttp3.Response;
  */
 
 public class MinePersonalDataActivity extends BaseActivity {
-
-	private static final String TAG = "MinePersonalDataActivity";
 	@BindView(R.id.mine_personal_iv_header)
 	RoundedImageView ivHeader;
 	@BindView(R.id.mine_personal_tv_name)
@@ -59,7 +57,6 @@ public class MinePersonalDataActivity extends BaseActivity {
 	TextView tvAlipay;
 	@BindView(R.id.mine_personal_tv_leaguer)
 	TextView tvLeaguer;
-
 	CustomProgressDialog loadingDialog;
 	private CustomNormalDialog infoDialog;
 

@@ -7,7 +7,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +31,7 @@ import com.yj.cosmetics.ui.activity.NormalWebViewActivity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
 import com.yj.cosmetics.util.DensityUtil;
 import com.yj.cosmetics.util.IntentUtils;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.UserUtils;
 import com.yj.cosmetics.util.WindowDisplayManager;
 import com.yj.cosmetics.widget.CustomHintView;
@@ -48,8 +48,6 @@ import butterknife.ButterKnife;
  * Created by Suo on 2017/4/12.
  */
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	public static final String TAG = "HomeAdapter";
 	private LinearLayoutManager layoutManager = null;
 	//	private GridLayoutManager gridLayoutManager = null;
 	private UserUtils mUtils = null;
@@ -257,7 +255,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 			});
 			((BannerViewHolder) holder).mRollPagerView.setHintView(new CustomHintView(mContext,
 					R.drawable.shape_round360_e83, R.drawable.shape_round360_e83_stroke0_5_trans, DensityUtil.dip2px(mContext, mContext.getResources().getDimension(R.dimen.dis6))));
-			Log.i(TAG, "getBannerList: size ---- " + data.getBanner().size());
+			LogUtils.i("getBannerList: size ---- " + data.getBanner().size());
 			if (data.getBanner().size() > 1) {
 				((BannerViewHolder) holder).mRollPagerView.setAnimationDurtion(1000);
 			}
@@ -290,7 +288,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 					.into(((ImageViewHolder) holder).ivNewGoods);
 
 			if (data.getShopName() != null) {
-				Log.e(TAG, "getShopName:>>>>>> " + data.getShopName());
+				LogUtils.i("getShopName:>>>>>> " + data.getShopName());
 				((ImageViewHolder) holder).tvStoreInfo.setText(data.getShopName());
 			} else {
 				((ImageViewHolder) holder).tvStoreInfo.setText("暂无店铺");
@@ -359,7 +357,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 			if (data.getProductClassifyList() != null) {
 
 				int pageCount = (int) Math.ceil(data.getProductClassifyList().size() * 1.0 / pageSize);
-				Log.i(TAG, "onBindViewHolder: " + pageCount);
+				LogUtils.i("onBindViewHolder: " + pageCount);
 				for (int i = 0; i < pageCount; i++) {
 					// 每个页面都是inflate出一个新实例
 					WrapContentGridView gridView = (WrapContentGridView) inflater.inflate(R.layout.gridview, ((GridViewHolder) holder).mViewpager, false);
@@ -569,9 +567,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 			} else {
 				pos = position - 7;
 			}
-
-			Log.i(TAG, "ItemViewHolder: position : ---" + position + " ---- pos  : " + pos);
-
+			LogUtils.i("ItemViewHolder: position : ---" + position + " ---- pos  : " + pos);
 			((ItemViewHolder) holder).tvTitle.setText(mList.get(pos).getProduct_name());
 			((ItemViewHolder) holder).tvContent.setText(mList.get(pos).getProduct_abstract());
 			((ItemViewHolder) holder).tvPrice.setText("￥" + mList.get(pos).getProduct_current());

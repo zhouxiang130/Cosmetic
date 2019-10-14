@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +73,7 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 	private List<ShopListEntity.DataBean.ShopArrayBean> shopArray = new ArrayList<>();
 
 	private String latitude, longitude, orderby;
-//	private MyReceiver myReceiver;
+	//	private MyReceiver myReceiver;
 	private String addressAreaDetail;
 
 	@Nullable
@@ -104,14 +103,14 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 		mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
 		mRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallClipRotate);
 //		mRecyclerView.setLoadingMoreEnabled(false);
-		mAdapter = new StoreAdapter(getActivity(),shopArray);
+		mAdapter = new StoreAdapter(getActivity(), shopArray);
 		mRecyclerView.setAdapter(mAdapter);
 		mAdapter.setViewInterfaces(this);
 		mAdapter.setOnItemClickListener(new StoreAdapter.ShopListClickListener() {
 			@Override
 			public void onItemClick(View view, int postion) {
 				Intent intent = new Intent(getContext(), StoreDetailActivity.class);
-				intent.putExtra("shopId", shopArray.get(postion-1).getShopId());
+				intent.putExtra("shopId", shopArray.get(postion - 1).getShopId());
 				startActivity(intent);
 			}
 		});
@@ -191,7 +190,7 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 				break;
 			case R.id.frag_store_rl_search:
 				intent = new Intent(getContext(), SearchActivity.class);
-				intent.putExtra("storeList","1");
+				intent.putExtra("storeList", "1");
 				startActivity(intent);
 				break;
 		}
@@ -336,7 +335,7 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 //			@Override
 //			public void onResponse(NormalEntity response) {
 //				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-//					Log.i(TAG, "onResponse: " + response.getMsg());
+//					LogUtils.i("onResponse: " + response.getMsg());
 //					preferencesUtil.setBooleanValue("isGetCoupon", false);
 //				} else {
 //				}
@@ -462,11 +461,6 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-//		Log.e(TAG, "onActivityResult: " +
-//				"addressAreaDetail " + data.getExtras().getString("addressAreaDetail")
-//				+ " latitude " + data.getExtras().getString("latitude") +
-//				" longitude " + data.getExtras().getString("longitude"));
-
 		if (data != null) {
 			mUtils.saveAddselect(data.getExtras().getString("addressAreaDetail"));
 			Intent intent = new Intent();

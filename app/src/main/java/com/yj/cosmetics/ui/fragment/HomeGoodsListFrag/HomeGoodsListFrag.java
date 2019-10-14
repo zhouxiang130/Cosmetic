@@ -13,7 +13,7 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.function.RecyclerSpace;
+import com.yj.cosmetics.widget.RecyclerSpace;
 import com.yj.cosmetics.model.GoodsListEntity;
 import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
 import com.yj.cosmetics.ui.adapter.HomeGoodsListAdapter;
@@ -40,12 +40,11 @@ import static com.yj.cosmetics.ui.adapter.HomeGoodsListAdapter.SPAN_COUNT_TWO;
  */
 
 public class HomeGoodsListFrag extends LazyLoadFragment {
-
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
-//	@BindView(R.id.goods_list_tv_default)
+	//	@BindView(R.id.goods_list_tv_default)
 //	TextView tvDefault;
 //	@BindView(R.id.goods_list_tv_count)
 //	TextView tvCount;
@@ -61,29 +60,22 @@ public class HomeGoodsListFrag extends LazyLoadFragment {
 //	TextView tvInfo;
 //	@BindView(R.id.goods_list_ll_pr)
 //	LinearLayout goods_list_ll_pr;
-
 	private String countTag = "default";
 	private String priceTag = "default";
-
 	private String orderby = "recommend";
 	private String classifyId;
 	private String type;
 	private String name;
 	private String TAG = null;
 	private GridLayoutManager gridLayoutManager;
-
 	HomeGoodsListAdapter mAdapter;
 	List<GoodsListEntity.DataBean.ProductListBean> mList;
-
 	private String productIds;
 	//	private int flag;
 	private int pageNum = 1;
 	private static HomeGoodsListFrag fragment;
 	private String shopId = null;
-
-
 	//    CustomProgressDialog mDialog;
-
 
 	public static HomeGoodsListFrag instant(String shopId, String classifyId, String type, String name, String TAG, String productIds) {
 		if (fragment == null) {
@@ -456,7 +448,6 @@ public class HomeGoodsListFrag extends LazyLoadFragment {
 			}
 		}
 	}
-
 
 
 	private void doRequestData() {

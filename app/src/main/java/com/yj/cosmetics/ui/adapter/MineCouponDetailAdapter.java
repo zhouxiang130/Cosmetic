@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,9 +40,6 @@ import okhttp3.Response;
  */
 
 public class MineCouponDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-
-	private static final String TAG = "MineCouponDetailAdapter";
 	private String uid = null;
 	private Activity mContext;
 	List<CouponListDataEntity.DataBean.ListBean> mList;
@@ -58,7 +54,7 @@ public class MineCouponDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
 		this.mList = mList;
 		this.flag = flag;
 		this.uid = uid;
-		Log.i(TAG, "onBindViewHolder: " + flag);
+		LogUtils.e("onBindViewHolder: " + flag);
 	}
 
 	public void setOnItemClickListener(CouponDetialClickListener listener) {

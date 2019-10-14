@@ -28,7 +28,7 @@ public class GoodsBannerAdapter extends CustomLoopPagerAdapter {
 	private Context context;
 
 
-	public GoodsBannerAdapter(CustomRollPagerView viewPager, List<String> stringList, Context context, String tag) {
+	public GoodsBannerAdapter(CustomRollPagerView viewPager, List<String> stringList, Context context) {
 		super(viewPager);
 		this.stringList = stringList;
 		this.context = context;

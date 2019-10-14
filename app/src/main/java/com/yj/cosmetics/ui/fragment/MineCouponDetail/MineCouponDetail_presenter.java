@@ -1,6 +1,5 @@
 package com.yj.cosmetics.ui.fragment.MineCouponDetail;
 
-import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -26,9 +25,6 @@ import okhttp3.Response;
  */
 
 public class MineCouponDetail_presenter implements MineCouponDetail_contract.Presenter {
-
-
-	private static final String TAG = "MineCouponDetail_presenter";
 	private MineCouponDetail_contract.View mView = null;
 	private int pageNum = 1;
 
@@ -66,7 +62,7 @@ public class MineCouponDetail_presenter implements MineCouponDetail_contract.Pre
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.i(TAG, "onError: " + e);
+				LogUtils.e("onError: " + e);
 				mRecyclerView.refreshComplete();
 				if (call.isCanceled()) {
 					call.cancel();

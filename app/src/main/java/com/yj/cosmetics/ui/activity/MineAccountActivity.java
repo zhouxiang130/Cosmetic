@@ -1,7 +1,6 @@
 package com.yj.cosmetics.ui.activity;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,13 +31,10 @@ import okhttp3.Response;
  */
 
 public class MineAccountActivity extends BaseActivity {
-
-    private static final String TAG = "MineAccountActivity";
     @BindView(R.id.mine_Lifting_tv_money)
     TextView tvMoney;
     @BindView(R.id.mine_account_all_money)
     TextView tvAllMoney;
-
     CustomProgressDialog mDialog;
     private String upintegral;
 
@@ -143,7 +139,7 @@ public class MineAccountActivity extends BaseActivity {
         });
     }
     private void setData(AccountEntity.AccountData data){
-        Log.i(TAG, "setData: "+ data.getUserMoney());
+        LogUtils.e("setData: "+ data.getUserMoney());
         tvMoney.setText(data.getUserMoney());
         tvAllMoney.setText("￥"+data.getBackmoney());
     }

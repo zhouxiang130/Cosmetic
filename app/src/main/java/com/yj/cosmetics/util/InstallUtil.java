@@ -15,15 +15,12 @@ import java.io.File;
 
 public class InstallUtil {
 
-
-	private static final String TAG = "InstallUtil";
-
 	public static  Intent startInstallAct(Context context, File downloadfile ){
 		Intent install = new Intent(Intent.ACTION_VIEW);
 		install.addCategory(Intent.CATEGORY_DEFAULT);
 		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
 			Uri contentUri = FileProvider.getUriForFile(context, "com.yj.robust.file_provider", downloadfile);
-			Log.e(TAG, "initAPKDir run:>>>" + contentUri);
+			LogUtils.i("initAPKDir run:>>>" + contentUri);
 			install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 			install.setDataAndType(contentUri, "application/vnd.android.package-archive");
@@ -33,5 +30,4 @@ public class InstallUtil {
 		}
 		return install;
 	}
-
 }

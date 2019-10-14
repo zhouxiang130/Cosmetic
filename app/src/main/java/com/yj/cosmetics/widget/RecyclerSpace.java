@@ -1,4 +1,4 @@
-package com.yj.cosmetics.function;
+package com.yj.cosmetics.widget;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -8,22 +8,21 @@ import android.support.annotation.ColorRes;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
+
+import com.yj.cosmetics.util.LogUtils;
 
 /**
  * Created by Administrator on 2018/5/28 0028.
  */
 
 public class RecyclerSpace extends RecyclerView.ItemDecoration {
-	private static String TAG = "RecyclerSpace";
 	private int space;
 	private int color = -1;
 	private Drawable mDivider;
 	private Paint mPaint;
 	private int type;
 	private int positions = 0;
-
 
 	public int getColor() {
 		return color;
@@ -76,7 +75,7 @@ public class RecyclerSpace extends RecyclerView.ItemDecoration {
 				}
 			} else {
 				int position = parent.getLayoutManager().getPosition(view);
-				Log.i(TAG, "getItemOffsets: " + position);
+				LogUtils.e("getItemOffsets: " + position);
 				if (positions > position) {
 					return;
 				}
@@ -174,7 +173,6 @@ public class RecyclerSpace extends RecyclerView.ItemDecoration {
 					mDivider.draw(canvas);
 				}
 				if (mPaint != null) {
-//					Log.i(TAG, "drawGrideview:111111111111111111 " + "left: " + left +" top : " +top + " right : "+  right +" bottom : "  + bottom);
 					canvas.drawRect(left, top, right, bottom, mPaint);
 				}
 			}
@@ -188,7 +186,6 @@ public class RecyclerSpace extends RecyclerView.ItemDecoration {
 					mDivider.draw(canvas);
 				}
 				if (mPaint != null) {
-//					Log.i(TAG, "drawGrideview:222222222 " + "left: " + left +" top : " +top + " right : "+  right +" bottom : "  + bottom);
 					canvas.drawRect(left, top, right, bottom, mPaint);
 				}
 			} else {

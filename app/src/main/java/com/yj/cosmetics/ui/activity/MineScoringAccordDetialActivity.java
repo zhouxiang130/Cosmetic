@@ -1,6 +1,5 @@
 package com.yj.cosmetics.ui.activity;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,7 +27,6 @@ import okhttp3.Response;
  */
 
 public class MineScoringAccordDetialActivity extends BaseActivity {
-	private static final String TAG = "MineScoringAccordDetialActivity";
 	@BindView(R.id.scoring_accord_detial_tv_state)
 	TextView tvState;
 	@BindView(R.id.scoring_accord_detial_tv_money)
@@ -82,7 +80,7 @@ public class MineScoringAccordDetialActivity extends BaseActivity {
 
 			@Override
 			public void onError(Call call, Exception e) {
-				Log.i(TAG, "onError: "+ e);
+				LogUtils.e("onError: "+ e);
 				super.onError(call, e);
 				if (call.isCanceled()) {
 					call.cancel();

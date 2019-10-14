@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -98,7 +97,7 @@ public class HomeSeckillFrag extends LazyLoadFragment {
 			@Override
 			public void onItemClick(View view, int postion) {
 //				if (flag == 0) {
-//					Log.e(TAG, "onItemClick: " +  postion);
+//					LogUtils.i("onItemClick: " +  postion);
 //				} else {
 					IntentUtils.IntentToGoodsDetial(getActivity(), mList.get(postion - 2).getProduct_id());
 //				}
@@ -338,7 +337,7 @@ public class HomeSeckillFrag extends LazyLoadFragment {
 								- hours * (1000 * 60 * 60) - minutes * (1000 * 60)) / 1000;
 						//并保存在商品time这个属性内
 						String finaltime = days + "天" + hours + "时" + minutes + "分" + second + "秒";
-						Log.i(TAG, "run: " + finaltime);
+						LogUtils.e("run: " + finaltime);
 						mRecommendActivitiesList.get(i).setFinalTime(finaltime);
 						mRecommendActivitiesList.get(i).setHours((int) hours_);
 						mRecommendActivitiesList.get(i).setMin((int) minutes);

@@ -2,7 +2,6 @@ package com.yj.cosmetics.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +33,6 @@ import okhttp3.Response;
  */
 
 public class TicketDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private String uid = null;
 	private GoodsEntity.GoodsData.ProDetailCouponBean proDetailCoupon;
 	private Context mContext;
@@ -100,22 +97,18 @@ public class TicketDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 				((ItemViewHolder) holder).tvReceive.setEnabled(false);
 				return;
 			}
-
 			((ItemViewHolder) holder).tvReceive.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-
 					conditionLimitnum = proDetailCoupon.getCoupons().get(position).getConditionLimitnum();
-					Log.i(TAG, "onClick: " + conditionLimitnum);
+					LogUtils.i("onClick: " + conditionLimitnum);
 					if (conditionLimitnum == 0) {
-
 						((ItemViewHolder) holder).tvReceive.setText("已领取");
 						((ItemViewHolder) holder).tvReceive.setTextColor(mContext.getResources().getColor(R.color.C99_99_99));
 						((ItemViewHolder) holder).tvReceive.setBackgroundResource(R.drawable.shape_corner_e8_stroke0_5_radius17);
 						((ItemViewHolder) holder).tvReceive.setEnabled(false);
 						Toast.makeText(mContext, "您领取已达上限", Toast.LENGTH_SHORT).show();
 						return;
-
 					} else {
 						conditionLimitnum--;
 						doAsyncGetCoupon(position, proDetailCoupon);
@@ -154,11 +147,10 @@ public class TicketDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 			@Override
 			public void onResponse(NormalEntity response) {
 				if (response != null && response.HTTP_OK.equals(response.getCode())) {
-					Log.i(TAG, "onResponse: " + response.getMsg());
+					LogUtils.i("onResponse: " + response.getMsg());
 					mList.getCoupons().get(position).setConditionLimitnum(conditionLimitnum);
 					Toast.makeText(mContext, "领取成功", Toast.LENGTH_SHORT).show();
 				} else {
-
 				}
 			}
 		});
@@ -170,7 +162,6 @@ public class TicketDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 	}
 
 	class ItemViewHolder extends RecyclerView.ViewHolder {
-
 		@BindView(R.id.mine_sign_text_ticket_price_symbol)
 		TextView tvPrice;
 		@BindView(R.id.mine_sign_text_ticket_price)
@@ -190,11 +181,9 @@ public class TicketDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 		@BindView(R.id.mine_coupon_iv_background)
 		ImageView ivBackground;
 
-
 		public ItemViewHolder(View itemView) {
 			super(itemView);
 			ButterKnife.bind(this, itemView);
 		}
 	}
-
 }

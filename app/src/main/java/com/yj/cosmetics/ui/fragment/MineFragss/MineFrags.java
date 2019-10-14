@@ -9,7 +9,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ import com.google.gson.Gson;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseFragment;
-import com.yj.cosmetics.base.Constant;
 import com.yj.cosmetics.base.Key;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.MineEntity;
@@ -33,7 +31,6 @@ import com.yj.cosmetics.widget.Dialog.CustomNormalContentDialog;
 import com.yj.cosmetics.widget.ProgressLayout;
 import com.zhy.http.okhttp.OkHttpUtils;
 
-import java.lang.ref.SoftReference;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,9 +45,6 @@ import okhttp3.Response;
  */
 
 public class MineFrags extends BaseFragment {
-
-
-	private static final String TAG = "MineFrags";
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
 	@BindView(R.id.xrecyclerView)
@@ -198,7 +192,7 @@ public class MineFrags extends BaseFragment {
 				if (isNeedCheck) {
 					setActionCall();
 				}
-				Log.e(TAG, "onRequestPermissionsResult: " + isNeedCheck);
+				LogUtils.i("onRequestPermissionsResult: " + isNeedCheck);
 				break;
 		}
 	}

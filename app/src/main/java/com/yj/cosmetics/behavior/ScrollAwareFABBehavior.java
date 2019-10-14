@@ -15,7 +15,7 @@ import android.view.View;
  * Created by yulu on 2018/3/4.
  */
 
-public class ScrollAwareFABBehavior extends FloatingActionButton.Behavior{
+public class ScrollAwareFABBehavior extends FloatingActionButton.Behavior {
 
 	/**
 	 * 因为是在XML中使用app:layout_behavior定义静态的这种行为,

@@ -15,10 +15,10 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import android.util.Log;
 import android.widget.ImageView;
 
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.util.LogUtils;
 
 
 /**
@@ -26,9 +26,7 @@ import com.yj.cosmetics.R;
  *
  */
 public class RoundedDrawable extends Drawable {
-    public static final String TAG = "RoundedDrawable";
     public static final int DEFAULT_BORDER_COLOR = Color.blue(R.color.white);
-
     private final RectF mBounds = new RectF();
     private final RectF mDrawableRect = new RectF();
     private final RectF mBitmapRect = new RectF();
@@ -39,12 +37,10 @@ public class RoundedDrawable extends Drawable {
     private final RectF mBorderRect = new RectF();
     private final Paint mBorderPaint;
     private final Matrix mShaderMatrix = new Matrix();
-
     private BitmapShader mBitmapShader;
     private Shader.TileMode mTileModeX = Shader.TileMode.CLAMP;
     private Shader.TileMode mTileModeY = Shader.TileMode.CLAMP;
     private boolean mRebuildShader = true;
-
     private float mCornerRadius = 0;
     private boolean mOval = false;
     private float mBorderWidth = 0;
@@ -118,7 +114,7 @@ public class RoundedDrawable extends Drawable {
             drawable.draw(canvas);
         } catch (Exception e) {
             e.printStackTrace();
-            Log.w(TAG, "Failed to create bitmap from drawable!");
+            LogUtils.w("Failed to create bitmap from drawable!");
             bitmap = null;
         }
 

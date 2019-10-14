@@ -3,28 +3,21 @@ package com.yj.cosmetics.ui.activity.goodDetail;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -50,6 +43,7 @@ import com.yj.cosmetics.ui.activity.SettlementGoodsActivity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
 import com.yj.cosmetics.ui.adapter.GoodsDetailContentAdapter;
 import com.yj.cosmetics.ui.adapter.GoodsDetialTitleAdapter;
+import com.yj.cosmetics.util.AuthorUtils;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
@@ -137,7 +131,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	final int Failed = 0x99;
 	private int mHeight;
 
-
 	//计算过后的商品高度和评论高度
 	public int goodsHeight;
 	public int judgeHeight;
@@ -159,6 +152,11 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	private boolean isClick = false;
 	private String productId, sproductId;
 	//	private String newDate;
+	protected String[] needPermissions = {
+			Manifest.permission.CALL_PHONE
+	};
+	private String serviceTel;
+	CustomNormalContentDialog mDialog;
 	private MyThread myThread;
 	public static final int VISIBLE = 0x00000000;
 	private Handler handler = new Handler() {
@@ -289,9 +287,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 //			@Override
 //			public void onScrolled(RecyclerView recyclerView, int scrollX, int scrollY) {
 //				super.onScrolled(recyclerView, scrollX, scrollY);
-//
-//
-//				Log.e(TAG, "onScrolled: " + scrollY);
 //				if (!isClick) {
 //					if (scrollY < goodsHeight) {
 //						mTitleAdapter.mPosition = 0;
@@ -308,10 +303,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 //						mTitleAdapter.notifyDataSetChanged();
 //					}
 //				}
-//
 //				if (scrollY <= 0) {
-//
-//					Log.i(TAG, "onScrollChange1111: " + "<<<<<<<<<<<<<<<= 0");
 //					//顶部图处于最顶部，标题栏透明
 //					setTopColor(Color.argb(0, 255, 255, 255));
 //					rlTitleAll.setBackgroundColor(Color.argb(0, 255, 255, 255));
@@ -319,7 +311,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 //					recyclerViewTitle.setVisibility(View.GONE);
 //
 //				} else if (scrollY > 0 && scrollY < mHeight) {
-//					Log.i(TAG, "onScrollChange1111: " + "> 0 < mHeight ");
 //					//滑动过程中，渐变
 //					float scale = (float) scrollY / mHeight;//算出滑动距离比例
 //					float alpha = (255 * scale);//得到透明度
@@ -328,7 +319,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 //					vLine.setVisibility(View.GONE);
 //					recyclerViewTitle.setVisibility(View.VISIBLE);
 //				} else {
-//					Log.i(TAG, "onScrollChange1111: " + "---------------------------");
 //					//过顶部图区域，标题栏定色
 //					rlTitleAll.setBackgroundColor(Color.argb(255, 255, 255, 255));
 //					setTopColor(Color.argb(255, 0, 0, 0));
@@ -506,13 +496,96 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 				break;
 			//联系客服
 			case R.id.goods_detial_custom_service:
-				//TODO 改成打电话
+				doAsyncGetNumber();
 				break;
 			case R.id.goods_detial_store:
 				Intent intent = new Intent(GoodsDetailActivity.this, StoreDetailActivity.class);
 				intent.putExtra("shopId", data.getData().getShopId());
 				startActivity(intent);
 				break;
+		}
+	}
+
+	private void doAsyncGetNumber() {
+		Map<String, String> map = new HashMap<>();
+		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/seachTel")
+				.addParams("data", URLBuilder.format(map))
+				.tag(this).build().execute(new Utils.MyResultCallback<String>() {
+
+			@Override
+			public String parseNetworkResponse(Response response) throws Exception {
+				String json = response.body().string().trim();
+				LogUtils.e("json==" + json);
+				return json;
+			}
+
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject jsonObject = new JSONObject(response);
+					serviceTel = jsonObject.getString("msg");
+					setCallDialog();
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+			@Override
+			public void onError(Call call, Exception e) {
+				super.onError(call, e);
+			}
+		});
+	}
+
+
+	private void setCallDialog() {
+		if (mDialog == null) {
+			mDialog = new CustomNormalContentDialog(this);
+		}
+		if (TextUtils.isEmpty(serviceTel)) {
+			ToastUtils.showToast(this, "无法获取联系电话，请检查网络稍后再试");
+			return;
+		}
+		if (!mDialog.isShowing()) {
+			mDialog.show();
+		}
+		mDialog.getTvTitle().setText("客服热线");
+		if (!TextUtils.isEmpty(serviceTel)) {
+			mDialog.getTvContent().setText("拨打" + serviceTel + "热线，联系官方客服");
+		} else if (!TextUtils.isEmpty(mUtils.getServiceTel())) {
+			mDialog.getTvContent().setText("拨打" + mUtils.getServiceTel() + "热线，联系官方客服");
+		}
+		mDialog.getTvConfirm().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if (new AuthorUtils(GoodsDetailActivity.this).checkPermissions(needPermissions)) {
+					setActionCall(serviceTel);
+				}
+				dismissDialog();
+			}
+		});
+		mDialog.getTvCancel().setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				dismissDialog();
+			}
+		});
+	}
+
+	public void dismissDialog() {
+		if (mDialog != null) {
+			mDialog.dismiss();
+		}
+	}
+
+	private void setActionCall(String serviceTel) {
+		//拨打电话
+		if (serviceTel != null) {
+			Intent callIntent = new Intent();
+			callIntent.setAction(Intent.ACTION_CALL);
+			callIntent.setData(Uri.parse("tel:" + serviceTel));
+			startActivity(callIntent);
 		}
 	}
 
@@ -1451,7 +1524,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 //				- hours * (1000 * 60 * 60) - minutes * (1000 * 60)) / 1000;
 //		//并保存在商品time这个属性内
 //		String finaltime = days + "天" + hours + "时" + minutes + "分" + second + "秒";
-////		Log.i(TAG, "dealWithTimer: " + finaltime);
 //		data.setHours((int) hours_);
 //		data.setMin((int) minutes);
 //		data.setSec((int) second);
@@ -1479,6 +1551,10 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	protected void onDestroy() {
 		dismissDialog2();
 		dismissDialog3();
+		if (mDialog != null) {
+			mDialog.dismiss();
+			mDialog = null;
+		}
 		if (myThread != null) {
 			myThread.endThread = true;
 			myThread = null;

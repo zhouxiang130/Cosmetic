@@ -22,8 +22,6 @@ import butterknife.ButterKnife;
  */
 
 public class RefundDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private final List<String> refund_dialog_desc;
 	private Context mContext;
 	private Map<Integer, Boolean> map = new HashMap<>();

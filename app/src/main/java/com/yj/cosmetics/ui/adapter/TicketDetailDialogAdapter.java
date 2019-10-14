@@ -24,8 +24,6 @@ import butterknife.ButterKnife;
  */
 
 public class TicketDetailDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "SizeDialogAdapter";
 	private List<SettlementGoodsEntity.SettlementGoodsData.CouponsBean> proDetailCoupon;
 	private Context mContext;
 	private int checkedPosition = -1;

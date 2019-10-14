@@ -1,13 +1,8 @@
 package com.yj.cosmetics.ui.adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +17,8 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.ShopListEntity;
 import com.yj.cosmetics.model.StoreClassEntity;
-import com.yj.cosmetics.model.StoreListEntity;
-import com.yj.cosmetics.ui.MainActivity;
-import com.yj.cosmetics.ui.activity.sotreList.StoreListActivity;
 import com.yj.cosmetics.util.IntentUtils;
-import com.yj.cosmetics.widget.CustomLinearLayoutManager;
-import com.yj.cosmetics.widget.RoundedImageView.RoundedDrawable;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
-import com.yj.cosmetics.widget.WrapContentGridView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +31,6 @@ import butterknife.ButterKnife;
  */
 
 public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "StoreAdapter";
 	private List<ShopListEntity.DataBean.ShopArrayBean> mData = null;
 	//	private List<StoreListEntity.DataBean.ProductClassifyListBean> mList = null;
 	private Activity mContext;
@@ -239,7 +226,7 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 		/*	if (mData.get(pos).getReceipt() != null && !mData.get(pos).getReceipt().equals("")) {
 				if (mData.get(pos).getReceipt().equals("1")) {
-					Log.i(TAG, "Receipt:>>>>>>> " + mData.get(pos).getReceipt());
+					LogUtils.i("Receipt:>>>>>>> " + mData.get(pos).getReceipt());
 					if (mData.get(pos).getDeliveryDistanceType().equals("1")) {
 						((StoreItemViewHolder) viewHolder).tvStoreStates.setVisibility(View.GONE);
 					} else {
@@ -280,7 +267,7 @@ public class StoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 				((StoreItemViewHolder) viewHolder).mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view, int positions, long id) {
-//						Log.i(TAG, "onItemClick: " + mData.get(position).getProductlist().get(positions).getProduct_id());
+//						LogUtils.i("onItemClick: " + mData.get(position).getProductlist().get(positions).getProduct_id());
 						IntentUtils.IntentToGoodsDetial(mContext, mData.get(position).getProductlist().get(positions).getProduct_id());
 					}
 				});

@@ -24,18 +24,12 @@ import com.yj.cosmetics.ui.adapter.TicketDetailDialogAdapters;
  */
 
 public class SettlementCartTicketDialog extends Dialog {
-
-	private static final String TAG = " CustomSizeDialog ";
 	TicketDetailDialogAdapters dialogAdapter;
 	private Activity context;
-
 	RecyclerView recyclerView;
 	private Button btnBuy;
-
 	private int count = 1;
-
 	/* private doCountClickListener doCountClickListener;*/
-
 	//为防止出错 将style的dialog随意指向了一个style 如有需要可自己创建
 	public SettlementCartTicketDialog(Activity context) {
 		super(context, R.style.Goods_Size_Dialog);

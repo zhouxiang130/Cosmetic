@@ -7,7 +7,6 @@ import android.graphics.Paint;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jude.rollviewpager.OnItemClickListener;
-import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.R;
+import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.GoodsCommentEntity;
 import com.yj.cosmetics.model.GoodsEntitys;
 import com.yj.cosmetics.ui.activity.BigImageActivity;
@@ -56,7 +55,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 	private int halfScreenHeight;
 	private int size;
 	private static WebView mWebView;
-
 
 	public GoodsDetailContentAdapter(GoodsDetailActivity mContext, GoodsEntitys.DataBeanX data, GoodsCommentEntity.GoodsCommentData mJudge) {
 		this.mContext = mContext;
@@ -112,7 +110,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		}
 	}
 
-
 	@SuppressLint("LongLogTag")
 	@Override
 	public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
@@ -127,7 +124,7 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 				((BannerViewHolder) holder).mBanner.setHintView(null);
 				((BannerViewHolder) holder).mBanner.setAnimationDurtion(3000);
 //				LogUtils.i("轮播图长度======" + data.getJsodetimgs().size());
-				mBannerAdapter = new GoodsBannerAdapter(((BannerViewHolder) holder).mBanner, data.getData().getJsodetimgs(), mContext, "1");
+				mBannerAdapter = new GoodsBannerAdapter(((BannerViewHolder) holder).mBanner, data.getData().getJsodetimgs(), mContext);
 				((BannerViewHolder) holder).mBanner.setAdapter(mBannerAdapter);
 				((BannerViewHolder) holder).mBanner.setScrollChangeListener(mContext);
 
@@ -138,22 +135,15 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 				} else {
 					((BannerViewHolder) holder).llTag.setVisibility(View.GONE);
 				}
-
-
 //				((CollectionViewHolder) holder).tvOp.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 //				((BannerViewHolder) holder).tvTicketContent.setText(data.getData().getProDetailCoupon().getCouponName());
-//
 //				((BannerViewHolder) holder).tvIntegralContent.setText("购买可得" + data.getConsumerBackscore() + "积分");
-//
 //				int CouponsSize = data.getData().getProDetailCoupon().getCoupons().size();
-
 //				if (CouponsSize == 0) {
 //					((BannerViewHolder) holder).rlTicket.setVisibility(View.GONE);
 //				} else {
 //					((BannerViewHolder) holder).rlTicket.setVisibility(View.VISIBLE);
 //				}
-
-
 				((BannerViewHolder) holder).rlTicket.setOnClickListener(new View.OnClickListener() {//优惠券
 					@Override
 					public void onClick(View view) {
@@ -161,7 +151,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 						showDialogTicket.showDialogs(1, data);
 					}
 				});
-
 				((BannerViewHolder) holder).rlIntegral.setOnClickListener(new View.OnClickListener() {//积分
 					@Override
 					public void onClick(View view) {
@@ -169,19 +158,15 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 						showDialogTicket.showDialogs(2, data);
 					}
 				});
-
 				((BannerViewHolder) holder).rlShow.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
 						showDetialInterface.showDetial(position);
 					}
 				});
-
-
 				if (!TextUtils.isEmpty(style)) {
 					((BannerViewHolder) holder).tvStyle.setText(style);
 				}
-//				Log.i(TAG, "ConsumerBackscore: " + data.getConsumerBackscore());
 //				if (data.getProductTimelimit().equals("2")) {
 //					//秒杀
 //					((BannerViewHolder) holder).rlSeckill.setVisibility(View.VISIBLE);
@@ -207,11 +192,9 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 //						((BannerViewHolder) holder).pb.setSecondaryProgress(Math.round(Float.parseFloat(data.getSold())));
 //						LogUtils.i("小时=====" + data.getHours() + "======分钟===" + data.getMin() + "=====秒====" + data.getSec());
 //						if (data.getHours() < 0 || data.getMin() < 0 || data.getSec() < 0) {
-//
 //						} else {
 //							((BannerViewHolder) holder).timer.setTime(data.getHours(), data.getMin(), data.getSec());
 //							((BannerViewHolder) holder).timer.start();
-//
 //						}
 //					}
 //				} else {
@@ -248,13 +231,11 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 			}
 			mContext.BannerHeight = ((BannerViewHolder) holder).mBanner.getHeight();
 			mContext.goodsHeight = ((BannerViewHolder) holder).llTop.getHeight();
-
 			LogUtils.i("goodsHeight的值======" + mContext.goodsHeight
 					+ " BannerHeight的值: " + mContext.BannerHeight
 					+ " halfScreenHeight: " + halfScreenHeight
 					+ " ((BannerViewHolder) holder).llTop.getHeight(): " + ((BannerViewHolder) holder).llTop.getHeight()
 			);
-
 		} else if (holder instanceof JudgeViewHolder) {
 			if (mJudge != null) {
 				size = mJudge.getCommArray().size();
@@ -569,8 +550,6 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 //					return -1;
 //				}
 //			});
-
-//			Log.i(TAG, "shouldInterceptRequest: " + url);
 //			if (ADFilterTool.hasNotAd(url)) {
 //				return super.shouldInterceptRequest(view, url);
 //			} else {

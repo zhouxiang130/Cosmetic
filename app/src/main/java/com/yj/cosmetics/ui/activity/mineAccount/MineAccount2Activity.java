@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,6 +22,7 @@ import com.yj.cosmetics.ui.activity.MineAccountCostActivity;
 import com.yj.cosmetics.ui.activity.MineAccountWithdrawActivity;
 import com.yj.cosmetics.ui.adapter.AccountProfitAdapter;
 import com.yj.cosmetics.util.IntentUtils;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;
 import com.yj.cosmetics.widget.ProgressLayout;
@@ -41,8 +41,6 @@ import butterknife.OnClick;
  */
 
 public class MineAccount2Activity extends BaseActivity implements MineAccount_contract.View {
-
-	private static final String TAG = "MineAccount2Activity";
 	@BindView(R.id.title_layout)
 	LinearLayout lyTitle;
 	@BindView(R.id.mine_Lifting_tv_money)
@@ -53,22 +51,16 @@ public class MineAccount2Activity extends BaseActivity implements MineAccount_co
 	RelativeLayout reLayout;
 	@BindView(R.id.title_ll_iv)
 	ImageView ivTitleIcon;
-
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
-
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
-
-
 	AccountProfitAdapter mAdapter;
 	List<AccountProfitEntity.AccountProfitData> mList;
 	private int pageNum = 1;
-
 	CustomProgressDialog mDialog;
 	private MineAccount_contract.Presenter mineAccPresenter = new MineAccount_Presenter(this);
 	private String upintegral;
-
 
 	@Override
 	protected int getContentView() {
@@ -236,7 +228,7 @@ public class MineAccount2Activity extends BaseActivity implements MineAccount_co
 
 	@Override
 	public void setDatas(AccountEntity.AccountData data) {
-		Log.i(TAG, "setData: " + data.getUserMoney());
+		LogUtils.e("setData: " + data.getUserMoney());
 		tvMoney.setText(data.getUserMoney());
 		tvAllMoney.setText("￥" + data.getBackmoney());
 	}

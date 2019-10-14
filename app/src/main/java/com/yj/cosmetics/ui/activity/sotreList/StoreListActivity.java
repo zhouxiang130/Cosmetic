@@ -3,8 +3,6 @@ package com.yj.cosmetics.ui.activity.sotreList;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,7 +16,6 @@ import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.ShopListEntity;
 import com.yj.cosmetics.model.StoreListEntity;
 import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
-import com.yj.cosmetics.ui.adapter.SearchStoreListAdapter;
 import com.yj.cosmetics.ui.adapter.StoreAdapter;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
@@ -41,8 +38,6 @@ import okhttp3.Response;
  */
 
 public class StoreListActivity extends BaseActivity {
-
-	private static final String TAG = "StoreListActivity";
 	@BindView(R.id.store_list_tv_default)
 	TextView storeListTvDefault;
 	@BindView(R.id.store_list_ll_default)
@@ -66,7 +61,7 @@ public class StoreListActivity extends BaseActivity {
 	private int pageNum = 0;
 	private List<ShopListEntity.DataBean.ShopArrayBean> shopArray = new ArrayList<>();
 	private List<StoreListEntity.DataBean.ProductClassifyListBean> mList = new ArrayList<>();
-//	private SearchStoreListAdapter mAdapter;
+	//	private SearchStoreListAdapter mAdapter;
 	private StoreAdapter mAdapter;
 
 	@Override
@@ -163,9 +158,9 @@ public class StoreListActivity extends BaseActivity {
 					//返回值为200 说明请求成功
 					if (response.getData() != null) {
 						shopArray.clear();
-						if (response.getData().getShopArray()==null||response.getData().getShopArray().size()==-0){
+						if (response.getData().getShopArray() == null || response.getData().getShopArray().size() == -0) {
 							setNoneList();
-						}else {
+						} else {
 							shopArray.addAll(response.getData().getShopArray());
 							mProgressLayout.showContent();
 						}
@@ -193,7 +188,7 @@ public class StoreListActivity extends BaseActivity {
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
-				Log.i(TAG, "onError: " + e);
+				LogUtils.i("onError: " + e);
 				mRecyclerView.refreshComplete();
 				LogUtils.i("doAsyncGetData ----我故障了--" + e);
 				if (call.isCanceled()) {

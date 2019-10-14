@@ -25,14 +25,10 @@ import java.util.List;
  */
 
 public class SettlementGoodsTicketDialog extends Dialog {
-
-	private static final String TAG = " CustomSizeDialog ";
 	TicketDetailDialogAdapter dialogAdapter;
 	private Activity context;
-
 	RecyclerView recyclerView;
 	private Button btnBuy;
-
 	private int count = 1;
 
 	/* private doCountClickListener doCountClickListener;*/

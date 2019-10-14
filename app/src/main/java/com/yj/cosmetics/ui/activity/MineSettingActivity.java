@@ -55,7 +55,6 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
  */
 
 public class MineSettingActivity extends BaseActivity {
-	private static final String TAG = "MineSettingActivity";
 	@BindView(R.id.mine_setting_version)
 	TextView tvVersion;
 	@BindView(R.id.mine_setting_cache)
@@ -240,7 +239,7 @@ public class MineSettingActivity extends BaseActivity {
 							 * oldVersion < newVersion  return 1
 							 */
 
-							Log.e(TAG, "onAnimationEnd: newVersion>>>> " +
+							LogUtils.i("onAnimationEnd: newVersion>>>> " +
 									"" + newVersion + " oldVersion>>> " + oldVersion + " " +
 									" >>>>>> " + VersionUtils.compareVersions(newVersion, oldVersion));
 
@@ -360,7 +359,7 @@ public class MineSettingActivity extends BaseActivity {
 						ToastUtils.showToast(MineSettingActivity.this, "正在进行后台下载");
 						Intent intent = new Intent(MineSettingActivity.this, DownAPKService.class);
 
-						Log.e(TAG, "getAppLink: " + URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
+						LogUtils.i("getAppLink: " + URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
 						mUtils.saveLink(URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
 						String urLs = URLBuilder.getURLs(data.getAppLink());
 						intent.putExtra("url", URLBuilder.getUrl(urLs));
@@ -381,8 +380,7 @@ public class MineSettingActivity extends BaseActivity {
 									@Override
 									public void onClick(DialogInterface dialog, int which) {
 										Intent intent = new Intent(MineSettingActivity.this, DownAPKService.class);
-
-										Log.e(TAG, "getAppLink: " + URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
+										LogUtils.i("getAppLink: " + URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
 										mUtils.saveLink(URLBuilder.getUrl(URLBuilder.getURLs(data.getAppLink())));
 										String urLs = URLBuilder.getURLs(data.getAppLink());
 										intent.putExtra("url", URLBuilder.getUrl(urLs));

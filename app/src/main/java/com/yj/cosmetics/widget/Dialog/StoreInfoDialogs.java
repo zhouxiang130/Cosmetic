@@ -30,12 +30,7 @@ import com.yj.cosmetics.widget.MTextView;
 
 
 public class StoreInfoDialogs extends Dialog {
-
-	private static final String TAG = " StoreInfoDialogs ";
-
 	private Context context;
-
-
 	private int count = 1;
 	private LinearLayout llIntegralInfo;
 	private TextView tvCancel;

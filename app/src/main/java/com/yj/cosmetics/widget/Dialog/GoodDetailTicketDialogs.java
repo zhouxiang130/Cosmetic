@@ -26,8 +26,6 @@ import com.yj.cosmetics.util.LogUtils;
  */
 
 public class GoodDetailTicketDialogs extends Dialog {
-
-	private static final String TAG = " CustomSizeDialog ";
 	TicketDialogAdapter dialogAdapter;
 	private Activity context;
 

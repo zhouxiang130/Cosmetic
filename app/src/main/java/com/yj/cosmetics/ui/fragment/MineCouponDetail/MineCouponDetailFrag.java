@@ -3,7 +3,6 @@ package com.yj.cosmetics.ui.fragment.MineCouponDetail;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,6 +14,7 @@ import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.model.CouponListDataEntity;
 import com.yj.cosmetics.ui.activity.couponReceive.CouponReceiveActivity;
 import com.yj.cosmetics.ui.adapter.MineCouponDetailAdapter;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.widget.ProgressLayout;
 
@@ -145,7 +145,7 @@ public class MineCouponDetailFrag extends LazyLoadFragment implements MineCoupon
 	@Override
 	public void initDatas(int UserPossession) {
 
-		Log.i(TAG, "initDatas: " + UserPossession);
+		LogUtils.e("initDatas: " + UserPossession);
 
 		if (UserPossession != 0) {
 			if (flag == 0) {

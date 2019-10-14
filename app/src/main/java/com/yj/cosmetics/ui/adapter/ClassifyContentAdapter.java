@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +19,7 @@ import com.yj.cosmetics.model.ClassifyContentEntity;
 import com.yj.cosmetics.ui.activity.HomeGoodsListActivity;
 import com.yj.cosmetics.ui.activity.NormalWebViewActivity;
 import com.yj.cosmetics.util.IntentUtils;
+import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
 
 import butterknife.BindView;
@@ -30,8 +30,6 @@ import butterknife.ButterKnife;
  */
 
 public class ClassifyContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-	private static final String TAG = "ClassifyContentAdapter";
 	private Context mContext;
 	private ClassifyContentEntity.ClassifyContentData data;
 	SpendDetialClickListener mItemClickListener;
@@ -44,7 +42,6 @@ public class ClassifyContentAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 	public void setOnItemClickListener(SpendDetialClickListener listener) {
 		this.mItemClickListener = listener;
 	}
-
 
 	@Override
 	public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -77,7 +74,7 @@ public class ClassifyContentAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 			gridManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
 				@Override
 				public int getSpanSize(int position) {
-					Log.i(TAG, "getSpanSize: " + position);
+					LogUtils.e("getSpanSize: " + position);
 					if (position == 0) {
 						return 3;
 					} else {
@@ -120,7 +117,7 @@ public class ClassifyContentAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 				}
 			});
 		} else if (holder instanceof ContentViewHolder) {
-			Log.i(TAG, "getProductClassifys: " + data.getProductClassifys().size() + " ----position :>>>>>>>" + position);
+			LogUtils.e("getProductClassifys: " + data.getProductClassifys().size() + " ----position :>>>>>>>" + position);
 			if (data.getProductClassifys() != null && data.getProductClassifys().size() > 0) {
 //				if (position < data.getProductClassifys().size()) {
 				((ContentViewHolder) holder).tvTitle.setText(data.getProductClassifys().get(position - 1).getClassify_name());
