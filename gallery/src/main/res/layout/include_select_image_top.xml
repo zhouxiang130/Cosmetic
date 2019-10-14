@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rl_top"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/top_bg">
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/top_bg">
 
     <ImageView
         android:id="@+id/btn_back"
@@ -13,7 +13,7 @@
         android:paddingLeft="17dp"
         android:paddingRight="20dp"
         android:scaleType="center"
-        android:src="@drawable/gallery_back" />
+        android:src="@drawable/gallery_back"/>
 
     <LinearLayout
         android:id="@+id/selectFold"
@@ -32,7 +32,7 @@
             android:layout_gravity="center_vertical"
             android:text="选择"
             android:textColor="#d6d6d6"
-            android:textSize="14dp" />
+            android:textSize="14dp"/>
 
         <ImageView
             android:id="@+id/gallery_tip"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/gallery_down" />
+            android:src="@drawable/gallery_down"/>
     </LinearLayout>
 
     <Button
@@ -51,14 +51,13 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
         android:background="@null"
-        android:minHeight="1dp"
         android:minWidth="1dp"
-        android:paddingBottom="5dp"
+        android:minHeight="1dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
         android:text="确定(3/4)"
         android:textColor="#d6d6d6"
-        android:textSize="14dp" />
-
+        android:textSize="14dp"/>
 </RelativeLayout>

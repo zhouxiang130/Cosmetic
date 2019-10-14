@@ -1,12 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <include
         android:id="@+id/top_layout"
         layout="@layout/include_select_image_top"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize" />
+        android:layout_height="?android:attr/actionBarSize"/>
 
     <GridView
         android:id="@+id/gridView"
@@ -19,7 +19,7 @@
         android:numColumns="3"
         android:padding="4dip"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="4dip" />
+        android:verticalSpacing="4dip"/>
 
     <FrameLayout
         android:id="@+id/listViewParent"
@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:background="#55666666"
             android:divider="@null"
-            android:dividerHeight="0dp" />
+            android:dividerHeight="0dp"/>
     </FrameLayout>
-
 </RelativeLayout>
