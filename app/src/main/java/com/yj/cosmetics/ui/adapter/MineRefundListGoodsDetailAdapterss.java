@@ -28,10 +28,6 @@ import butterknife.ButterKnife;
  */
 
 public class MineRefundListGoodsDetailAdapterss extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-
-	private static String TAG = "MineRefundListGoodsDetailAdapterss";
-//	private String receipt = null;
 	private int pos = 0;
 	private Context mContext;
 	List<CartsEntity.DataBean.ProCartsBean.ShopProArrayBean> mList;
@@ -120,13 +116,11 @@ public class MineRefundListGoodsDetailAdapterss extends RecyclerView.Adapter<Rec
 					//判断是否在编辑状态下
 					if (isShow) {
 						//可编辑
-						Log.i(TAG, "onBindViewHolder: " + holder);
 						((CartItemViewHolder) holder).llManage.setVisibility(View.VISIBLE);
 						((CartItemViewHolder) holder).tvNum.setVisibility(View.GONE);
 						((CartItemViewHolder) holder).rlDelete.setVisibility(View.VISIBLE);
 					} else {
 						//不可编辑
-						Log.i(TAG, "onBindViewHolder: " + holder);
 						((CartItemViewHolder) holder).llManage.setVisibility(View.GONE);
 						((CartItemViewHolder) holder).tvNum.setVisibility(View.VISIBLE);
 						((CartItemViewHolder) holder).rlDelete.setVisibility(View.GONE);

@@ -42,7 +42,7 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2017/5/10.
  *
- * @TODO 物流信息界面
+ *  物流信息界面
  */
 
 public class MineLogicalDetialActivity extends BaseActivity {

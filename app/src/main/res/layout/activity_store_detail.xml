@@ -47,7 +47,7 @@
                 android:layout_marginLeft="@dimen/dis5"
                 android:layout_toRightOf="@id/frag_store_iv_search"
                 android:singleLine="true"
-                android:text="搜索商家，商品名称"
+                android:text="搜索 商品名称"
                 android:textColor="@color/C64_64_64"
                 android:textSize="@dimen/font12"/>
         </RelativeLayout>

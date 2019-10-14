@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +17,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.api.enumtype.SobotChatTitleDisplayMode;
-import com.sobot.chat.api.model.Information;
-import com.sobot.chat.utils.ZhiChiConstant;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseFragment;
 import com.yj.cosmetics.base.URLBuilder;
@@ -109,7 +104,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	@Override
 	protected void initData() {
 		mineFragView.subscribe();
-		regReceiver();
 	}
 
 
@@ -122,7 +116,7 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 
 	@OnClick({R.id.frag_mine_info, /*R.id.frag_mine_login_iv,*/ R.id.frag_mine_login_,/* R.id.frag_mine_head_img,*/ R.id.frag_mine_login_ll, R.id.frag_mine_account, R.id.frag_mine_scoring,
 			R.id.frag_mine_order_all, R.id.frag_mine_order_pay, R.id.frag_mine_order_send, R.id.frag_mine_order_get, R.id.frag_mine_order_judge, R.id.frag_mine_order_drawback,
-			R.id.frag_mine_md, R.id.frag_mine_sjrz, R.id.frag_mine_address, R.id.frag_mine_collection, R.id.frag_mine_online_service, /*R.id.frag_mine_coustom_service,*/ R.id.frag_mine_contact,
+			R.id.frag_mine_md, R.id.frag_mine_sjrz, R.id.frag_mine_address, R.id.frag_mine_collection, /*R.id.frag_mine_coustom_service,*/ R.id.frag_mine_contact,
 			R.id.frag_mine_rl_setting, R.id.frag_mine_rl_about})
 	public void onViewClicked(View view) {
 		switch (view.getId()) {
@@ -269,16 +263,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 					IntentUtils.IntentToLogin(getActivity());
 				}
 				break;
-			case R.id.frag_mine_online_service://在线客服
-				if (mUtils.isLogin()) {
-//					Intent intentCoupon = new Intent(getActivity(), MineCouponActivity.class);
-//					startActivity(intentCoupon);
-
-					mineFragView.doCustomServices();
-				} else {
-					IntentUtils.IntentToLogin(getActivity());
-				}
-				break;
 		/*	case R.id.frag_mine_coustom_service:
 				if (mUtils.isLogin()) {
 					mineFragView.doCustomServices();
@@ -295,12 +279,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 				}
 				break;
 			case R.id.frag_mine_rl_setting:
-
-//				Intent intent = new Intent(getActivity(),MineRefundClassActivity.class);
-//				intent.putExtra("mList", mList.get(position));
-//				intent.putExtra("Money", mList.get(position).getMoney());
-//				startActivity(intent);
-
 				if (mUtils.isLogin()) {
 					Intent intentSetting = new Intent(getActivity(), MineSettingActivity.class);
 					startActivity(intentSetting);
@@ -322,35 +300,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	private void setCallDialog() {
 		if (mDialog == null) {
 			mDialog = new CustomNormalContentDialog(getActivity());
-		}
-	}
-
-
-	private MyReceiver receiver;//广播
-
-	private void regReceiver() {
-		//注册广播获取新收到的信息和未读消息数
-		if (receiver == null) {
-			receiver = new MyReceiver();
-		}
-		IntentFilter filter = new IntentFilter();
-		filter.addAction(ZhiChiConstant.sobot_unreadCountBrocast);
-		getActivity().registerReceiver(receiver, filter);
-	}
-
-	//设置广播获取新收到的信息和未读消息数
-	class MyReceiver extends BroadcastReceiver {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			int noReadNum = intent.getIntExtra("noReadCount", 0);
-			String content = intent.getStringExtra("content");
-			//未读消息数
-			if (noReadNum != 0) {
-//				tvCoustomNum.setVisibility(View.VISIBLE);
-//				tvCoustomNum.setText(noReadNum + "");
-			}
-			//新消息内容
-			com.sobot.chat.utils.LogUtils.i("新消息内容:" + content);
 		}
 	}
 
@@ -432,18 +381,6 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 				}
 				break;
 		}
-	}
-
-
-	@Override
-	public void setSobotApi(Information userInfo) {
-		//设置标题显示模式
-		SobotApi.setChatTitleDisplayMode(getActivity().getApplicationContext(), SobotChatTitleDisplayMode.values()[0], "");
-		//设置是否开启消息提醒
-		SobotApi.setNotificationFlag(getActivity().getApplicationContext(), true, R.mipmap.logo, R.mipmap.logo);
-		SobotApi.hideHistoryMsg(getActivity().getApplicationContext(), 0);
-		SobotApi.setEvaluationCompletedExit(getActivity().getApplicationContext(), false);
-		SobotApi.startSobotChat(getActivity(), userInfo);
 	}
 
 	@Override
@@ -547,7 +484,5 @@ public class MineFrag1 extends BaseFragment implements MineFrag_contract.View {
 	public void onDestroy() {
 		super.onDestroy();
 		mineFragView.dismissDialog(mDialog);
-		getActivity().unregisterReceiver(receiver);
 	}
-
 }

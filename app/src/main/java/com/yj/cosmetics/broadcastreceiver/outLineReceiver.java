@@ -8,7 +8,7 @@ import android.util.Log;
 import com.yj.cosmetics.util.SharedPreferencesUtil;
 
 /**
- * @TODO 定义客服在断开连接广播
+ * @定义客服在断开连接广播
  */
 public class outLineReceiver extends BroadcastReceiver {
 
@@ -21,7 +21,6 @@ public class outLineReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		// TODO: This method is called when the BroadcastReceiver is receiving
 		// an Intent broadcast.
 //		throw new UnsupportedOperationException("Not yet implemented");
 		String info = intent.getStringExtra("info");

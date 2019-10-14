@@ -51,7 +51,7 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2018/3/22.
  *
- * @TODO 立即支付
+ *  立即支付
  */
 
 public class SettlementGoodsActivity extends BaseActivity {
@@ -248,7 +248,7 @@ public class SettlementGoodsActivity extends BaseActivity {
 				chooseIntent.putExtra("productId", proId);
 				startActivityForResult(chooseIntent, Variables.CHOOSE_ADDRESS);
 				break;
-			case R.id.goods_detial_ticket://@TODO 选择使用优惠券-----------------
+			case R.id.goods_detial_ticket://选择使用优惠券
 				if (data != null) {
 					if (data.getCoupons().size() != 0) {
 						showDialogTicket(data);
@@ -314,7 +314,6 @@ public class SettlementGoodsActivity extends BaseActivity {
 	// total = 0,  //  总价    //rest = 0;  余额  // tickPic_ 优惠券
 
 	//tvTotal 最后的总价TextView
-	//@TODO ---------------------------------------------------------------
 	public void countTicketPic() {
 //		rest - tickPic
 		if (data != null) {

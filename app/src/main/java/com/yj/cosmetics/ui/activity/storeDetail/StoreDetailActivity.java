@@ -42,55 +42,27 @@ import okhttp3.Response;
 /**
  * Created by Administrator on 2018/7/25 0025.
  *
- * @TODO 店铺详情界面 3.0界面
+ *  店铺详情界面 3.0界面
  */
 
 public class StoreDetailActivity extends BaseActivity {
-
-	private static final String TAG = "StoreDetailActivity";
-	//	@BindView(R.id.title_ll_iv)
-//	ImageView ivTitleIcon;
 	@BindView(R.id.tv_store_detail_collect)
 	TextView tvCollect;
-
 	@BindView(R.id.img_shop_icon)
 	RoundedImageView shopIcon;
 	@BindView(R.id.shop_detail_name)
 	TextView tvShopName;
-	//	@BindView(R.id.shop_dispatch_tv_money)
-//	TextView tvDispatch;
 	@BindView(R.id.shop_dispatch_tv_publicity)
 	TextView tvPublicity;
-	//	@BindView(R.id.shop_rl_info)
-//	RelativeLayout rlInfo;
-//	@BindView(R.id.shop_tv_services)
-//	TextView tvServices;
 	@BindView(R.id.tv_store_depict)
 	TextView tvDepict;
-
-//	@BindView(R.id.tv_store_states)
-//	TextView tvStoteStates;
-
-	//
-//	@BindView(R.id.iv_store_banner)
-//	RelativeLayout storeBanner;
 	@BindView(R.id.fl_frag)
 	FrameLayout flFrag;
-//	@BindView(R.id.tl_home_toolbar)
-//	Toolbar tlHomeToolbar;
-
 	@BindView(R.id.appbar)
 	AppBarLayout appBarLayout;
-	//	@BindView(R.id.shop_order_tablayout)
-//	TabLayout tabLayout;
-//	@BindView(R.id.viewpager)
-//	ViewPager mViewpager;
 	@BindView(R.id.fab_home_random)
 	FloatingActionButton floatButtom;
 	public ShopDetailEntity datas;
-
-	private List<String> mTitle = new ArrayList<>();
-	private List<Fragment> mFragment = new ArrayList<>();
 	private String shopId;
 
 	@Override
@@ -101,59 +73,12 @@ public class StoreDetailActivity extends BaseActivity {
 
 	@Override
 	protected void initView() {
-//		transTitle();
-//		ivTitleIcon.setImageResource(R.drawable.ic_keyboard_arrow_left_white_24dp);
 		setTitleColor(getResources().getColor(R.color.white));
 		setTitleBackground(getResources().getColor(R.color.transparent));
 		shopId = getIntent().getStringExtra("shopId");
-
-
-//		mTitle.add("商品列表");
-//		mTitle.add("店铺详情");
-
-//		mFragment.add(MineStoreFrag.instant(shopId));
-//		mFragment.add(MineStoreFrags.instant(shopId));
-
-
 		getSupportFragmentManager().beginTransaction().add(R.id.fl_frag, MineStoreFrag.instant(shopId)).commit();
-
 		doAsyncShopInfo();
-//		MineOrderTabAdapter adapter = new MineOrderTabAdapter(getSupportFragmentManager(), mTitle, mFragment);
-//		mViewpager.setAdapter(adapter);
-
-
 		floatButtom.setVisibility(View.VISIBLE);
-		//为TabLayout设置ViewPager
-//		tabLayout.setupWithViewPager(mViewpager);
-		//使用ViewPager的适配器
-		//忘了这句干啥的了. 如果使用过程中有问题.应该就是这句导致的.
-//		tabLayout.setTabsFromPagerAdapter(adapter);
-//		setFabDynamicState();
-
-
-//
-//		tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//			@Override
-//			public void onTabSelected(TabLayout.Tab tab) {
-//				int position = tab.getPosition();
-//				if (position == 1) {
-//					floatButtom.setVisibility(View.GONE);
-//				} else {
-//					floatButtom.setVisibility(View.VISIBLE);
-//				}
-//			}
-//
-//			@Override
-//			public void onTabUnselected(TabLayout.Tab tab) {
-//
-//			}
-//
-//			@Override
-//			public void onTabReselected(TabLayout.Tab tab) {
-//
-//			}
-//		});
-
 		floatButtom.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -162,58 +87,8 @@ public class StoreDetailActivity extends BaseActivity {
 		});
 	}
 
-
-	/**
-	 * 是否已经设置了沉浸式状态栏
-	 */
-	private boolean isSetupImmersive;
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-//		if (!isSetupImmersive) {
-//			setImmersiveStatus();
-//			isSetupImmersive = true;
-//		}
-	}
-
-
-	/**
-	 * 设置沉浸式状态栏
-	 */
-	private void setImmersiveStatus() {
-		View[] views = setImmersiveView();
-		if (views == null || views.length < 1) {
-			return;
-		}
-		StatusBarUtil.immersive(this);
-		for (View view : views) {
-			StatusBarUtil.setPaddingSmart(this, view);
-		}
-	}
-
-	protected View[] setImmersiveView() {
-		return new View[]{null, flFrag};
-	}
-
-
-	/**
-	 * 根据 CollapsingToolbarLayout 的折叠状态，设置 FloatingActionButton 的隐藏和显示
-	 */
-	private void setFabDynamicState() {
-		AppBarCollapsingStateHelper.with(appBarLayout)
-				.listener(new AppBarCollapsingStateHelper.DefaultAppBarStateListener() {
-					@Override
-					public void onChanging(boolean isBecomingExpanded) {
-
-					}
-				});
-	}
-
-
 	@Override
 	protected void initData() {
-//		mViewpager.setCurrentItem(getIntent().getIntExtra("page", 0));
 	}
 
 
@@ -229,7 +104,6 @@ public class StoreDetailActivity extends BaseActivity {
 				startActivity(intent);
 				break;
 			case R.id.tv_store_detail_collect:
-
 				if (mUtils.isLogin()) {
 					LogUtils.i("我进入网络操作了");
 					tvCollect.setClickable(false);

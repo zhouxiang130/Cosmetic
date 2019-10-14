@@ -59,17 +59,11 @@ public class CustomDialog extends Dialog {
 	}
 
 	private void startShare() {
-		// TODO Auto-generated method stub
-
 		showCustomUI(false);
 	}
 
-
-
 	private void showCustomUI(final boolean isDirectShare) {
-
 	}
-
 
 	/**
 	 * @param view                 布局View

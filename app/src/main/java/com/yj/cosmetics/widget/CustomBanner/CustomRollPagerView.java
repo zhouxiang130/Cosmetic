@@ -410,13 +410,11 @@ public class CustomRollPagerView extends RelativeLayout implements OnPageChangeL
 
     @Override
     public void onPageScrollStateChanged(int arg0) {
-        // TODO Auto-generated method stub
         mScrollChangeListener.onPageScrollStateChanged(arg0);
     }
 
     @Override
     public void onPageScrolled(int arg0, float arg1, int arg2) {
-        // TODO Auto-generated method stub
         mScrollChangeListener.onPageScrolled(arg0,arg1,arg2);
     }
 

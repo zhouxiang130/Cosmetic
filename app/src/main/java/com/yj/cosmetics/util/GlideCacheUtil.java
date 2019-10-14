@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 
 /**
  * Created by Administrator on 2018/5/17 0017.
- * @TODO 描述：Glide缓存工具类
+ * 描述：Glide缓存工具类
  */
 
 public class GlideCacheUtil {

@@ -20,7 +20,7 @@ import butterknife.BindView;
 /**
  * Created by Suo on 2018/3/30.
  *
- * @TODO 好物秒杀
+ *  好物秒杀
  */
 
 public class HomeSeckillActivity extends BaseActivity {

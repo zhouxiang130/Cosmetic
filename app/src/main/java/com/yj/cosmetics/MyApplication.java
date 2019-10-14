@@ -28,11 +28,9 @@ import cn.sharesdk.framework.ShareSDK;
  */
 
 public class MyApplication extends MultiDexApplication {
-
 	public static Stack<Activity> atyStack = new Stack<>();
 	public static MyApplication mApplication;
 	public static float ratio;
-
 	public static boolean orderDetial = true;
 	public static boolean orderListRefresh = false;
 	public static boolean orderlistReceiver = false;
@@ -51,41 +49,10 @@ public class MyApplication extends MultiDexApplication {
 		ToastUtils.init(this);
 		JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
 		JPushInterface.init(getApplicationContext());
-
 		mWxApi = WXAPIFactory.createWXAPI(this, null);
 		// 将该app注册到微信
 		mWxApi.registerApp(Constant.APP_ID);
-
-		// 我们可以从这里获得Tinker加载过程的信息
-//		if (BuildConfig.TINKER_ENABLE) {
-//			tinkerApplicationLike = TinkerPatchApplicationLike.getTinkerPatchApplicationLike();
-//
-//			// 初始化TinkerPatch SDK
-//			TinkerPatch.init(tinkerApplicationLike)
-//					.reflectPatchLibrary()
-//					.setPatchRollbackOnScreenOff(true)
-//					.setPatchRestartOnSrceenOff(true);
-//
-//			// 每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
-//			new FetchPatchHandler().fetchPatchWithInterval(3);
-//		}
-
-//		OkHttpClient okHttpClient = new OkHttpClient.Builder()
-//               .addInterceptor(new LoggerInterceptor("TAG"))
-//				.connectTimeout(10000L, TimeUnit.MILLISECONDS)
-//				.readTimeout(10000L, TimeUnit.MILLISECONDS)
-//				.build();
-//		OkHttpUtils.getInstance(okHttpClient);
 	}
-
-	/**
-	 * 获取上下文对象
-	 *
-	 * @return
-	 */
-//	public static Context getContext() {
-//		return MyApplication.getContext();
-//	}
 
 	@Override
 	protected void attachBaseContext(Context base) {

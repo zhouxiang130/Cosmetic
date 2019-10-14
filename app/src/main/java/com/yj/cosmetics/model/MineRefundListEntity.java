@@ -83,8 +83,8 @@ public class MineRefundListEntity {
 			private int orderId;
 			private String orderNum;
 			private int returnId;
-			private int returnState;//@TODO 1待处理 2退款成功 3退款驳回
-			private int returnType; //@TODO 退款类型（1：仅退款2：退货并退款）
+			private int returnState;//@ 1待处理 2退款成功 3退款驳回
+			private int returnType; //@ 退款类型（1：仅退款2：退货并退款）
 			private String shopImg;
 			private String shopName;
 			private String shopId;

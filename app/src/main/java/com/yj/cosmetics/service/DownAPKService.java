@@ -88,7 +88,7 @@ public class DownAPKService extends Service {
 			}
 			url = intent.getStringExtra("url");
 			updateType = intent.getStringExtra("updateType");
-			appLen = intent.getStringExtra("applen");//@TODO 后台文件大小
+			appLen = intent.getStringExtra("applen");//@ 后台文件大小
 			appName = url.substring(url.lastIndexOf("/") + 1);
 //			appName ="wendi_new.apk";
 			LogUtils.i("url的值" + url);
@@ -98,7 +98,7 @@ public class DownAPKService extends Service {
 			stopSelf();
 		}
 
-		//@TODO 判断文件是否存在,此处还要判断文件夹是否创建，apk包大小和服务器包是否相等
+		//@ 判断文件是否存在,此处还要判断文件夹是否创建，apk包大小和服务器包是否相等
 		if (initAPKDir()) {
 			if (Integer.parseInt(appLen) == getApkSize()) {//比对服务器文件大小和本地文件大小
 				//文件存在（文件为完整apk安装包）
@@ -150,8 +150,8 @@ public class DownAPKService extends Service {
 		LogUtils.i("我开始升级了");
 		//文件不存在,此处需要处理强制更新和不强制更新的问题
 		/**
-		 * @TODO 1. 强制更新 顶部通知条取消掉，改为 本页面下载进度条
-		 *   @TODO 2.  非强制更新    显示顶部通知条
+		 * @ 1. 强制更新 顶部通知条取消掉，改为 本页面下载进度条
+		 *   @ 2.  非强制更新    显示顶部通知条
 		 */
 		createNotificationChannel(false);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -336,7 +336,7 @@ public class DownAPKService extends Service {
 
 								File newFile = new File(destDir, appName);
 								file.renameTo(newFile);
-								//@TODO -------------------------------------------下载完成之后，通过Intent 开启安装界面；
+								//@下载完成之后，通过Intent 开启安装界面；
 								//提升读写权限  防止解析apk失败
 								String command = "chmod " + "777" + " " + newFile;
 								Runtime runtime = Runtime.getRuntime();

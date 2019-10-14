@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Administrator on 2018/6/7 0007.
  *
- * @TODO 我的优惠券 2.0版本的添加页面
+ * @ 我的优惠券 2.0版本的添加页面
  */
 
 public class MineCouponActivity extends BaseActivity implements MineCoupon_Contract.View {
@@ -114,7 +114,6 @@ public class MineCouponActivity extends BaseActivity implements MineCoupon_Contr
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// TODO: add setContentView(...) invocation
 		ButterKnife.bind(this);
 	}
 }

@@ -14,9 +14,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.api.enumtype.SobotChatTitleDisplayMode;
-import com.sobot.chat.api.model.Information;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.Constant;
@@ -45,7 +42,7 @@ import okhttp3.Response;
 /**
  * Created by Administrator on 2018/6/15 0015.
  *
- * @TODO 退款详情 2.0添加页面
+ * @退款详情 2.0添加页面
  */
 
 public class MineRefundDetailActivity extends BaseActivity {
@@ -99,7 +96,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	WrapContentGridView gridView;
 
 	private String returnId;
-	private Information userInfo;
 	CustomNormalContentDialog mDialog;
 
 	/**
@@ -120,7 +116,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	protected void initView() {
 		setTitleText("退款详情");
 		returnId = getIntent().getStringExtra("returnId");
-		userInfo = new Information();
 	}
 
 	@Override
@@ -133,7 +128,7 @@ public class MineRefundDetailActivity extends BaseActivity {
 	public void onViewClicked(View view) {
 		switch (view.getId()) {
 			case R.id.refund_detail_rl_kefu:
-				doCustomServices();
+				//TODO 变成打电话
 				break;
 			case R.id.refund_detail_rl_rexian:
 
@@ -212,32 +207,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	public void dismissDialog(CustomNormalContentDialog mDialog) {
 		if (mDialog != null) {
 			mDialog.dismiss();
-		}
-	}
-
-	public void doCustomServices() {
-		//用户信息设置
-		//设置用户自定义字段
-		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-		userInfo.setUid(mUtils.getUid());
-		userInfo.setTel(mUtils.getTel());
-		userInfo.setUname(mUtils.getUserName());
-		if (mUtils.getAvatar()!=null){
-			userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
-		}
-		SoftReference<String> appkeySR = new SoftReference<>(Constant.ZC_appkey);
-		String appkey = appkeySR.get();
-		if (!TextUtils.isEmpty(appkey)) {
-			userInfo.setAppkey(appkey);
-			//设置标题显示模式
-			SobotApi.setChatTitleDisplayMode(getApplication(), SobotChatTitleDisplayMode.values()[0], "");
-			//设置是否开启消息提醒
-			SobotApi.setNotificationFlag(getApplication(), true, R.mipmap.logo, R.mipmap.logo);
-			SobotApi.hideHistoryMsg(getApplication(), 0);
-			SobotApi.setEvaluationCompletedExit(getApplication(), false);
-			SobotApi.startSobotChat(getApplication(), userInfo);
-		} else {
-			Log.i(TAG, "doCustomServices: " + "app_key 不能为空");
 		}
 	}
 
@@ -349,8 +318,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 		} else {
 			ivMore.setVisibility(View.GONE);
 		}
-
-		//@TODO  -------------------------
 		Glide.with(MineRefundDetailActivity.this)
 				.load(URLBuilder.getUrl(datas.getData().getShopImg()))
 				.error(R.mipmap.default_goods)

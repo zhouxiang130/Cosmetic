@@ -57,17 +57,12 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
 /**
  * Created by Administrator on 2018/6/13 0013.
  *
- * @TODO 退款填写界面 2.0 添加页面
+ * @ 退款填写界面 2.0 添加页面
  */
 
 public class MineRefundDetailTableActivity extends BaseActivity {
-
-
-	private static final String TAG = "MineRefundDetailTableActivity";
-
 	@BindView(R.id.recyclerView)
 	RecyclerView mRecyclerView;
-
 	//	@BindView(R.id.refund_tv_commit)
 //	TextView tvCommit;
 	@BindView(R.id.ll_view)
@@ -119,11 +114,10 @@ public class MineRefundDetailTableActivity extends BaseActivity {
 		rlNext.setVisibility(View.VISIBLE);
 		tvNext.setText("提交");
 
-		refund_detial_tag = Integer.parseInt(getIntent().getStringExtra("REFUND_DETIAL_TAG"));//@TODO　（1：仅退款2：退货并退款）
+		refund_detial_tag = Integer.parseInt(getIntent().getStringExtra("REFUND_DETIAL_TAG"));//@（1：仅退款2：退货并退款）
 		Money = getIntent().getStringExtra("Money");
 		orderId = getIntent().getStringExtra("orderId");
 		flag = getIntent().getStringExtra("flag");
-		Log.i(TAG, "initView:orderId>>>>>>> " + orderId);
 		LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 		layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 		mRecyclerView.setLayoutManager(layoutManager);
@@ -166,7 +160,6 @@ public class MineRefundDetailTableActivity extends BaseActivity {
 	@Override
 	protected void initData() {
 		String json = JsonUtils.getJson("find.txt", this);
-		Log.i(TAG, "initData: " + json);
 		RefundDetailEntity refundDetailEntity = new Gson().fromJson(json, RefundDetailEntity.class);
 		setData(refundDetailEntity);
 	}
@@ -317,31 +310,22 @@ public class MineRefundDetailTableActivity extends BaseActivity {
 					Toast.makeText(this, "请选择退款类型", Toast.LENGTH_SHORT).show();
 					return;
 				}
-
-				Log.i(TAG, "onViewClicked: productState -- : " + goodStatus + " handlingWay : " + cause + " 价钱 : " + price + " 理由: " + reason + " 电话号码: " + phone);
-
 				price = entity.get(position).getPrice();
 				if (price.equals("")) {
 
 					Toast.makeText(this, "请输入退款价格", Toast.LENGTH_SHORT).show();
 					return;
 				}
-				Log.i(TAG, "onViewClicked: productState -- : " + goodStatus + " handlingWay : " + cause + " 价钱 : " + price + " 理由: " + reason + " 电话号码: " + phone);
 				reason = entity.get(position).getReason();
 				phone = entity.get(position).getPhone();
 				if (phone.equals("")) {
 					Toast.makeText(this, "请输入电话号码", Toast.LENGTH_SHORT).show();
 					return;
 				}
-				Log.i(TAG, "onViewClicked: productState -- : " + goodStatus + " handlingWay : " + cause + " 价钱 : " + price + " 理由: " + reason + " 电话号码: " + phone);
 				if (!MatchUtils.isValidPhoneNumber(phone)) {
 					ToastUtils.showToast(this, "请输入正确的手机号码");
 					return;
 				}
-
-
-				Log.i(TAG, "onViewClicked: productState -- : " + goodStatus + " handlingWay : " + cause + " 价钱 : " + price + " 理由: " + reason + " 电话号码: " + phone);
-
 				int size = 0;
 				for (int i = 0; i < entity.size(); i++) {
 					size += entity.get(i).getmSelected().size();
@@ -416,7 +400,7 @@ public class MineRefundDetailTableActivity extends BaseActivity {
 
 		map.put("userId", mUtils.getUid());
 		map.put("returnType", refund_detial_tag + "");
-		if (refund_detial_tag == 1) {//@TODO 仅退款
+		if (refund_detial_tag == 1) {//仅退款
 			map.put("productState", productState + "");
 		}
 		if (handlingWay.equals("0")) {

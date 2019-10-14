@@ -16,10 +16,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.api.enumtype.SobotChatTitleDisplayMode;
-import com.sobot.chat.api.model.Information;
-import com.sobot.chat.utils.ZhiChiConstant;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseFragment;
 import com.yj.cosmetics.base.Key;
@@ -84,7 +80,6 @@ public class MineFrag extends BaseFragment {
 
 	public static final int VISIBLE = 0x00000000;
 	private String contactTel;
-	private Information userInfo;
 	CustomNormalContentDialog mDialog;
 	private String userType;
 	private String upintegral;
@@ -94,12 +89,6 @@ public class MineFrag extends BaseFragment {
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View view = createView(inflater.inflate(R.layout.fragment_mine, container, false));
 		return view;
-	}
-
-	@Override
-	protected void initData() {
-		userInfo = new Information();
-		regReceiver();
 	}
 
 	@Override
@@ -194,7 +183,7 @@ public class MineFrag extends BaseFragment {
 					if (visibility == VISIBLE) {
 						tvCoustomNum.setVisibility(View.GONE);
 					}
-					doCustomServices();
+
 				} else {
 					IntentUtils.IntentToLogin(getActivity());
 				}
@@ -305,67 +294,6 @@ public class MineFrag extends BaseFragment {
 				break;
 		}
 	}
-
-	private void doCustomServices() {
-		//用户信息设置
-		//设置用户自定义字段
-		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-		userInfo.setUid(mUtils.getUid());
-		userInfo.setTel(mUtils.getTel());
-//		userInfo.setRealname(mUtils.getUserName());
-		userInfo.setUname(mUtils.getUserName());
-		userInfo.setFace(URLBuilder.URLBaseHeader + mUtils.getAvatar());//头像
-
-
-//		userInfo.setEmail(DemoSPUtil.getStringData(SobotDemoActivity.this, "sobot_email", ""));//Email
-//		userInfo.setUname(DemoSPUtil.getStringData(SobotDemoActivity.this, "person_uName", ""));//用户姓名
-//		userInfo.setRemark(DemoSPUtil.getStringData(SobotDemoActivity.this, "sobot_reMark", ""));//备注信息
-//		userInfo.setQq(DemoSPUtil.getStringData(SobotDemoActivity.this, "sobot_qq", ""));
-//		userInfo.setVisitTitle(DemoSPUtil.getStringData(SobotDemoActivity.this, "sobot_visitTitle", ""));
-//		userInfo.setVisitUrl(DemoSPUtil.getStringData(SobotDemoActivity.this, "sobot_visitUrl", ""));
-		String appkey = "1add5fe6182c48fbb2c9d5c41211bfe6";
-		if (!TextUtils.isEmpty(appkey)) {
-			userInfo.setAppkey(appkey);
-			//设置标题显示模式
-			SobotApi.setChatTitleDisplayMode(getActivity().getApplicationContext(), SobotChatTitleDisplayMode.values()[0], "");
-			//设置是否开启消息提醒
-			SobotApi.setNotificationFlag(getActivity().getApplicationContext(), true, R.mipmap.logo, R.mipmap.logo);
-			SobotApi.hideHistoryMsg(getActivity().getApplicationContext(), 0);
-			SobotApi.setEvaluationCompletedExit(getActivity().getApplicationContext(), false);
-			SobotApi.startSobotChat(getActivity(), userInfo);
-		} else {
-			Log.i(TAG, "doCustomServices: " + "app_key 不能为空");
-		}
-	}
-
-	private MyReceiver receiver;//广播
-
-	private void regReceiver() {
-		//注册广播获取新收到的信息和未读消息数
-		if (receiver == null) {
-			receiver = new MyReceiver();
-		}
-		IntentFilter filter = new IntentFilter();
-		filter.addAction(ZhiChiConstant.sobot_unreadCountBrocast);
-		getActivity().registerReceiver(receiver, filter);
-	}
-
-	//设置广播获取新收到的信息和未读消息数
-	class MyReceiver extends BroadcastReceiver {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			int noReadNum = intent.getIntExtra("noReadCount", 0);
-			String content = intent.getStringExtra("content");
-			//未读消息数
-			if (noReadNum != 0) {
-				tvCoustomNum.setVisibility(View.VISIBLE);
-				tvCoustomNum.setText(noReadNum + "");
-			}
-			//新消息内容
-			com.sobot.chat.utils.LogUtils.i("新消息内容:" + content);
-		}
-	}
-
 
 	private void showCallDialog() {
 		if (TextUtils.isEmpty(contactTel) && TextUtils.isEmpty(mUtils.getServiceTel())) {
@@ -526,6 +454,10 @@ public class MineFrag extends BaseFragment {
 	public void onDestroy() {
 		super.onDestroy();
 		dismissDialog();
-		getActivity().unregisterReceiver(receiver);
+	}
+
+	@Override
+	protected void initData() {
+
 	}
 }

@@ -170,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dis15"
-                        android:text="求助反馈"
+                        android:text="意见反馈"
                         android:textColor="@color/C1E_1E_1E"
                         android:textSize="@dimen/font15"/>
 

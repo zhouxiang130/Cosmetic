@@ -26,7 +26,7 @@ import butterknife.BindView;
 /**
  * Created by Suo on 2018/3/30.
  *
- * @TODO 好物秒杀(2.0版面修改页面)
+ * @ 好物秒杀(2.0版面修改页面)
  */
 
 public class HomeSeckillActivity extends BaseActivity implements HomeSeckill_contract.View {

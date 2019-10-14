@@ -150,7 +150,6 @@ public class JudgeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 		ImageView iv2;
 		@BindView(R.id.goods_judge_iv3)
 		ImageView iv3;
-		//@TODO---------------------------
 //        @BindView(R.id.view_charge)
 //        NoScrollGridView scrollGridView;
 

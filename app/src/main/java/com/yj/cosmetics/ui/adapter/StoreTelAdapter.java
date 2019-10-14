@@ -68,7 +68,7 @@ public class StoreTelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 			super(itemView);
 			ButterKnife.bind(this, itemView);
 			this.mListener = listener;
-			//@TODO 布局文件 添加点击事件
+			//布局文件 添加点击事件
 			itemView.setOnClickListener(this);
 		}
 

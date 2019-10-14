@@ -75,7 +75,6 @@ public class RecyclerSpace extends RecyclerView.ItemDecoration {
 					outRect.set(0, space, 0, space);
 				}
 			} else {
-				//@TODO -------------------------------------------------------
 				int position = parent.getLayoutManager().getPosition(view);
 				Log.i(TAG, "getItemOffsets: " + position);
 				if (positions > position) {

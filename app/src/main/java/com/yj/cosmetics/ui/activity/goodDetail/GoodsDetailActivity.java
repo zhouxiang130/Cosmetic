@@ -1,17 +1,22 @@
 package com.yj.cosmetics.ui.activity.goodDetail;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +24,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,13 +33,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.sobot.chat.api.model.Information;
-import com.sobot.chat.utils.ZhiChiConstant;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.broadcastreceiver.MyReceiver;
-import com.yj.cosmetics.function.CustomServices;
 import com.yj.cosmetics.model.GoodsCommentEntity;
 import com.yj.cosmetics.model.GoodsEntity;
 import com.yj.cosmetics.model.GoodsEntitys;
@@ -54,11 +56,15 @@ import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.util.Utils;
 import com.yj.cosmetics.widget.CustomBanner.CustomRollPagerView;
 import com.yj.cosmetics.widget.CustomViewGroup.CustomSizeDialogViewGroup;
+import com.yj.cosmetics.widget.Dialog.CustomNormalContentDialog;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;
 import com.yj.cosmetics.widget.Dialog.CustomShareDialog;
 import com.yj.cosmetics.widget.Dialog.CustomSizeDialog;
 import com.yj.cosmetics.widget.Dialog.GoodDetailTicketDialogs;
 import com.zhy.http.okhttp.OkHttpUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.lang.ref.SoftReference;
 import java.text.SimpleDateFormat;
@@ -70,9 +76,9 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.onekeyshare.OnekeyShare;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
-
 import cn.sharesdk.sina.weibo.SinaWeibo;
 import cn.sharesdk.tencent.qq.QQ;
 import cn.sharesdk.wechat.friends.Wechat;
@@ -80,12 +86,11 @@ import cn.sharesdk.wechat.moments.WechatMoments;
 import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
-import cn.onekeyshare.OnekeyShare;
 
 /**
  * Created by Suo on 2018/3/16.
  *
- * @TODO 商品详情界面
+ * @ 商品详情界面
  */
 
 public class GoodsDetailActivity extends BaseActivity implements CustomRollPagerView.ScrollChangeListener, GoodsDetailContentAdapter.ShowDetialInterface,
@@ -142,29 +147,20 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	GoodsDetailContentAdapter mAdapter;
 	private CustomProgressDialog loadingDialog;
 	CustomShareDialog shareDialog;
-
 	CustomSizeDialog dialog;
 	GoodDetailTicketDialogs TicketDialog;
-	private MyReceiver receiver;//广播
-
 	LinearLayoutManager layoutManager;
-
 	private List<String> mTitleList;
 	private GoodsEntitys.DataBeanX data;
 	private ShareEntity.ShareData shareData;
 	private GoodsCommentEntity.GoodsCommentData mJudge;
 	private List<GoodsSaleEntity.GoodsSaleData> mSale;
 	public List<SaleStyleEntity> mStyle = new ArrayList<>();
-	private Information userInfo;
-
 	private boolean isClick = false;
 	private String productId, sproductId;
-
 	//	private String newDate;
 	private MyThread myThread;
-
 	public static final int VISIBLE = 0x00000000;
-
 	private Handler handler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
@@ -211,13 +207,10 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 
 	@Override
 	protected void initView() {
-		userInfo = new Information();
 		mTitleList = new ArrayList<>();
 		productId = getIntent().getStringExtra("productId");
 		sproductId = getIntent().getStringExtra("sproductId");
-		regReceiver();
 		final LinearLayoutManager titlelayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
 		recyclerViewTitle.setLayoutManager(titlelayoutManager);
 		mTitleAdapter = new GoodsDetialTitleAdapter(this, mTitleList);
 		recyclerViewTitle.setAdapter(mTitleAdapter);
@@ -513,16 +506,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 				break;
 			//联系客服
 			case R.id.goods_detial_custom_service:
-				//判断用户是否登录 ，未登录 先去登录
-				if (mUtils.isLogin()) {
-					int visibility = tvMessageNum.getVisibility();
-					if (visibility == VISIBLE) {
-						tvMessageNum.setVisibility(View.GONE);
-					}
-					doCustomServices();
-				} else {
-					IntentUtils.IntentToLogin(this);
-				}
+				//TODO 改成打电话
 				break;
 			case R.id.goods_detial_store:
 				Intent intent = new Intent(GoodsDetailActivity.this, StoreDetailActivity.class);
@@ -574,27 +558,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		});
 	}
 
-	private void doCustomServices() {
-		//用户信息设置
-		//设置用户自定义字段
-		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-		userInfo.setUid(mUtils.getUid());
-		userInfo.setTel(mUtils.getTel());
-		userInfo.setRealname(mUtils.getUserName());
-		userInfo.setUname(mUtils.getUserName());
-		userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
-		if (data != null) {
-			//咨询信息设置
-			//@TODO  SP 存储需要咨询商品的
-			preferencesUtil.setValue("product_name", data.getData().getProductName());
-			preferencesUtil.setValue("Product_abstract", data.getData().getProductAbstract());
-			preferencesUtil.setValue("product_listimg", data.getData().getProductListimg());
-			preferencesUtil.setValue("product_url", data.getData().getProductUrl());
-			CustomServices customServices = new CustomServices(this);
-			customServices.doCustomServices(preferencesUtil);
-		}
-	}
-
 	//设置广播获取新收到的信息和未读消息数
 	class MyReceiver extends BroadcastReceiver {
 		@Override
@@ -607,20 +570,9 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 				tvMessageNum.setText(noReadNum + "");
 			}
 			//新消息内容
-			com.sobot.chat.utils.LogUtils.i("新消息内容:" + content);
+			LogUtils.i("新消息内容:" + content);
 		}
 	}
-
-	private void regReceiver() {
-		//注册广播获取新收到的信息和未读消息数
-		if (receiver == null) {
-			receiver = new MyReceiver();
-		}
-		IntentFilter filter = new IntentFilter();
-		filter.addAction(ZhiChiConstant.sobot_unreadCountBrocast);
-		registerReceiver(receiver, filter);
-	}
-
 
 	public Button getBtnBuy() {
 		return btnBuy;
@@ -933,7 +885,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 			map.put("proId", productId);
 		}
 
-		//@TODO 额外增加一个字段：sproductId 3.0
+		//@ 额外增加一个字段：sproductId 3.0
 		if (sproductId != null) {
 			map.put("sproductId", sproductId);
 		}
@@ -1054,7 +1006,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		Map<String, String> map = new HashMap<>();
 		map.put("proId", productId);
 		map.put("pro", pro);
-		//@TODO 额外增加一个字段：sproductId 3.0
+		//@ 额外增加一个字段：sproductId 3.0
 		if (sproductId != null) {
 			map.put("sproductId", sproductId);
 		}
@@ -1121,7 +1073,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		map.put("proId", productId);
 		map.put("pro", pro);
 
-		//@TODO 额外增加一个字段：shopId
+		//@ 额外增加一个字段：shopId
 		if (data.getData().getProductId() != null) {
 			map.put("shopId", data.getData().getProductId());
 		}
@@ -1527,8 +1479,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	protected void onDestroy() {
 		dismissDialog2();
 		dismissDialog3();
-
-		unregisterReceiver(receiver);
 		if (myThread != null) {
 			myThread.endThread = true;
 			myThread = null;

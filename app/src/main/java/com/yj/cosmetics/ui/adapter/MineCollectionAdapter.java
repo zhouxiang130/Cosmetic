@@ -204,7 +204,7 @@ public class MineCollectionAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 			super(itemView);
 			ButterKnife.bind(this, itemView);
 			this.mListener = listener;
-			//@TODO 布局文件 添加点击事件
+			//布局文件 添加点击事件
 			mllall.setOnClickListener(this);
 			rlCollStore.setOnClickListener(this);
 		}

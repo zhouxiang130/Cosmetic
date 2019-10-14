@@ -1,6 +1,5 @@
 package com.yj.cosmetics.ui.fragment.MineFrags;
 
-import com.sobot.chat.api.model.Information;
 import com.yj.cosmetics.base.BasePresenter;
 import com.yj.cosmetics.base.BaseView;
 import com.yj.cosmetics.model.MineEntity;
@@ -15,7 +14,6 @@ import com.yj.cosmetics.widget.Dialog.CustomNormalContentDialog;
 public interface MineFrag_contract {
 
 	interface View extends BaseView {
-
 
 		void isNoLogin();
 
@@ -32,20 +30,15 @@ public interface MineFrag_contract {
 		void showToast(String s);
 
 		void setCallPhone(String serviceTel);
-
-		void setSobotApi(Information userInfo);
 	}
 
 	interface Presenter extends BasePresenter {
-
 
 		void setMineHeadInfo(UserUtils mUtils);
 
 		void setServiceTel(String serviceTel);
 
 		void showCallDialog(CustomNormalContentDialog mDialog);
-
-		void doCustomServices();
 
 		void dismissDialog(CustomNormalContentDialog mDialog);
 	}

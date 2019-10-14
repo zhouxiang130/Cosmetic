@@ -87,18 +87,13 @@ public class MineRefundListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 			});
 //			((OrderGoodsViewHolder) holder).tvOrderNum.setText("订单号 :  " + mList.get(position).getOrderNum());
 //			((OrderGoodsViewHolder) holder).tvState.setText(mList.get(position).getOrderStateName());
-
-
-			//@TODO  -------------------------
 			Glide.with(mContext)
 					.load(URLBuilder.getUrl( mList.get(position).getShopImg()))
 					.error(R.mipmap.default_goods)
 					.centerCrop()
 					.into(((OrderGoodsViewHolder) holder).shopIv);
-
 			((OrderGoodsViewHolder) holder).shopName.setText(mList.get(position).getShopName());
 			((OrderGoodsViewHolder) holder).tvStates.setVisibility(View.INVISIBLE);
-
 			if (mList.get(position).getShopId() != null) {
 				((OrderGoodsViewHolder) holder).ivMore.setVisibility(View.VISIBLE);
 				((OrderGoodsViewHolder) holder).shopDetail.setOnClickListener(new View.OnClickListener() {
@@ -112,18 +107,14 @@ public class MineRefundListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 			} else {
 				((OrderGoodsViewHolder) holder).ivMore.setVisibility(View.GONE);
 			}
-
-			//@TODO  returnState 1待处理 2退款成功 3退款驳回
-			//@TODO  returnType 退款类型（1：仅退款 2：退货并退款）
-
+			//returnState 1待处理 2退款成功 3退款驳回
+			//returnType 退款类型（1：仅退款 2：退货并退款）
 			if (mList.get(position).getReturnType() == 1) {
 				((OrderGoodsViewHolder) holder).tvType.setText("仅退款");
 				((OrderGoodsViewHolder) holder).ivIcon.setImageResource(R.mipmap.jintuikuan);
-
 			} else {
 				((OrderGoodsViewHolder) holder).tvType.setText("退货并退款");
 				((OrderGoodsViewHolder) holder).ivIcon.setImageResource(R.mipmap.tuikauntuihuo);
-
 			}
 			switch (mList.get(position).getReturnState()) {
 				case 1:
@@ -136,7 +127,6 @@ public class MineRefundListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 					((OrderGoodsViewHolder) holder).tvState.setText("退款驳回");
 					break;
 			}
-
 			//待评价
 			((OrderGoodsViewHolder) holder).llBottom.setVisibility(View.VISIBLE);
 			((OrderGoodsViewHolder) holder).tvBottomLeft.setText("查看详情");
@@ -147,7 +137,6 @@ public class MineRefundListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 				}
 			});
 		}
-
 	}
 
 	@Override

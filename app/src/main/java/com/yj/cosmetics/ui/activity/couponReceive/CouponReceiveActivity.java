@@ -32,7 +32,7 @@ import okhttp3.Response;
 /**
  * Created by Administrator on 2018/6/8 0008.
  *
- * @TODO 领券中心 2.0添加页面
+ * @领券中心 2.0添加页面
  */
 
 public class CouponReceiveActivity extends BaseActivity implements CouponReceive_contract.View {

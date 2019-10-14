@@ -37,7 +37,7 @@ import butterknife.OnClick;
 /**
  * Created by Suo on 2018/3/12.
  *
- * @TODO 个人中心我的账户  账户余额 2.0修改界面
+ * @个人中心我的账户  账户余额 2.0修改界面
  */
 
 public class MineAccount2Activity extends BaseActivity implements MineAccount_contract.View {

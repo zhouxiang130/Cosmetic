@@ -103,7 +103,7 @@ public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<Recycl
 						((InnerGoodsViewHolder) holder).tvDrawBack.setVisibility(View.GONE);
 					}
 					//getOrderMoney 总价  getOrderSendCosts 运费  //getOrderBalance 余额
-					//@TODO 待发货  应付价格 + 余额
+					// 待发货  应付价格 + 余额
 					float orderMoney_ = Float.parseFloat(orderMoney);//应付价格
 //					float orderbalance_ = Float.parseFloat(orderbalance);//余额
 //					format = new DecimalFormat("0.00").format(orderMoney_ + orderbalance_);
@@ -117,7 +117,7 @@ public class MineOrderListGoodsDetailAdapter extends RecyclerView.Adapter<Recycl
 //					}
 					Log.i(TAG, "onBindViewHolder: " + string);
 				} else if (orderState.equals("3")) {
-					//@TODO 待收货  总价 + 余额 - 运费
+					// 待收货  总价 + 余额 - 运费
 					//	* @param orderMoney 总价
 					//	 * @param orderSendCosts 余额
 					//	 * @param orderbalance 运费

@@ -71,7 +71,7 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2017/5/9.
  *
- * @TODO 商品订单詳情页面
+ *  商品订单詳情页面
  */
 
 public class MineOrderDetailActivity extends BaseActivity {
@@ -319,7 +319,6 @@ public class MineOrderDetailActivity extends BaseActivity {
 					doJudge();
 				} else {
 					//立即支付
-					//@TODO  增加分类支付-------------------------
 					showPayDialog(oid, payMode, payIcon, data.getOrderPaymoney());
 //					if (!TextUtils.isEmpty(data.getOrderPayStyle())) {}
 				}
@@ -626,9 +625,6 @@ public class MineOrderDetailActivity extends BaseActivity {
 		} else {
 			llDelivesTime.setVisibility(View.GONE);
 		}
-
-		//@TODO  -------------------------
-
 		if (data.getShopImg() != null) {
 			Glide.with(MineOrderDetailActivity.this)
 					.load(URLBuilder.getUrl(data.getShopImg()))
@@ -708,7 +704,6 @@ public class MineOrderDetailActivity extends BaseActivity {
 		});
 	}
 
-	//@TODO ---------
 	private void QuickOrder() {
 		if (QuickeOrderDialog == null) {
 			QuickeOrderDialog = new QuickeOrderDialog(this);

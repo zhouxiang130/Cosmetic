@@ -191,7 +191,7 @@
                 <LinearLayout
                     android:id="@+id/frag_mine_scoring"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/sobot_pic_img_width"
+                    android:layout_height="@dimen/dis50"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">

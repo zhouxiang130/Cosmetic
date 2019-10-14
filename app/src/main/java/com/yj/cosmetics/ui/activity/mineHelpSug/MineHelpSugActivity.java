@@ -66,7 +66,6 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
  */
 
 public class MineHelpSugActivity extends BaseActivity {
-	private static final String TAG = "MineHelpSugActivity";
 	@BindView(R.id.recyclerView)
 	RecyclerView mRecyclerView;
 	@BindView(R.id.title_rl_next)
@@ -82,7 +81,6 @@ public class MineHelpSugActivity extends BaseActivity {
 	private MineHelpSugAdapter.JudgeGoodsViewHolder holder;
 	public int takePosition;
 	private CustomProgressDialog mDialog;
-
 	private Intent resultIntent;
 	MineHelpSugAdapter mAdapter;
 	private int count = 0;
@@ -100,8 +98,6 @@ public class MineHelpSugActivity extends BaseActivity {
 		setTitleText("意见反馈");
 		rlPost.setVisibility(View.VISIBLE);
 		tvPost.setText("提交");
-//		tvPost.setTextColor(getResources().getColor(R.color.CE8_3C_3C));
-
 		LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 		layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 		mRecyclerView.setLayoutManager(layoutManager);
@@ -109,13 +105,11 @@ public class MineHelpSugActivity extends BaseActivity {
 		mRecyclerView.setAdapter(mAdapter);
 		resultIntent = new Intent();
 		setResult(Variables.REFRESH_ORDER_LIST, resultIntent);
-
 	}
 
 	@Override
 	protected void initData() {
 		String json = JsonUtils.getJson("find.txt", this);
-		Log.i(TAG, "initData: " + json);
 		HelpSugEntity helpSugEntity = new Gson().fromJson(json, HelpSugEntity.class);
 		setData(helpSugEntity);
 	}

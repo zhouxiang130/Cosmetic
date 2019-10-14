@@ -61,7 +61,6 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="1d02ed81eb755111de2eb34fb37a6b77"/>
-        <!-- @TODO 正试KEY   1d02ed81eb755111de2eb34fb37a6b77 -->
 
         <!-- 闪屏页activity -->
         <activity
@@ -163,17 +162,17 @@
             android:name="com.yj.cosmetics.ui.activity.MineCollectionActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-        <!-- @TODO 2.0  店铺详情界面 -->
+        <!-- @ 店铺详情界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-        <!-- @TODO 3.0  搜索店铺列表界面 -->
+        <!-- @搜索店铺列表界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.sotreList.StoreListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-        <!-- @TODO 2.0  店铺地理位置地址详情界面 -->
+        <!-- @店铺地理位置地址详情界面 -->
         <activity
             android:name="com.yj.cosmetics.ui.activity.locAddress.locAddressActivity"
             android:launchMode="singleTask"
@@ -207,11 +206,6 @@
         <activity
             android:name="com.yj.cosmetics.ui.activity.couponReceive.CouponReceiveActivity"
             android:hardwareAccelerated="false"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <!-- 求助反馈 2.0添加页面 -->
-        <activity
-            android:name="com.yj.cosmetics.ui.activity.mineSettingHelp.MineSettingHelpActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 意见反馈 2.0添加界面 -->
@@ -466,7 +460,6 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
-        <!-- @TODO 极光推送服务 -->
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"

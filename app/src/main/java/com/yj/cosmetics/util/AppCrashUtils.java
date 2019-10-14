@@ -41,7 +41,6 @@ public class AppCrashUtils implements Thread.UncaughtExceptionHandler {
         String mobileInfo = GetInfoUtils.getMobileInfo();
         String errorInfo = getErrorInfo(throwable);
         //  3. 把这些相关的信息传递到服务器上面
-        // TODO
         LogUtils.i("app 版本信息" + version + "手机信息:" + mobileInfo + "出错信息:" + errorInfo);
 //        Process.killProcess(Process.myPid());
     }

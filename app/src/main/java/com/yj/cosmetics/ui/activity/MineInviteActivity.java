@@ -40,7 +40,7 @@ import cn.onekeyshare.OnekeyShare;
 /**
  * Created by Suo on 2018/3/15.
  *
- * @TODO 邀请好友界面
+ *  邀请好友界面
  */
 
 public class MineInviteActivity extends BaseActivity {

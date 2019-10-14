@@ -302,10 +302,7 @@ public class StoreFellInDetailActivity extends BaseActivity {
 			mDialog = null;
 		}
 	}
-
 	QuickeOrderDialog QuickeOrderDialog;
-
-	//@TODO ---------
 	private void QuickOrder() {
 		if (QuickeOrderDialog == null) {
 			QuickeOrderDialog = new QuickeOrderDialog(StoreFellInDetailActivity.this);

@@ -66,10 +66,7 @@ public class DimenTool {
                     Double num = Double.parseDouble
                             (tempString.substring(tempString.indexOf(">") + 1,
                                     tempString.indexOf("</dimen>") - 2));
-                    // TODO: 2017/3/28 更改比例乘积
-
                     //根据不同的尺寸，计算新的值，拼接新的字符串，并且结尾处换行。
-
                    /* sw240.append(start).append(num *defaultDp/240).append(end).append("\r\n");
                     sw320.append(start).append(num *defaultDp/320).append(end).append("\r\n");
                     sw360.append(start).append(num * defaultDp/360).append(end).append("\r\n");

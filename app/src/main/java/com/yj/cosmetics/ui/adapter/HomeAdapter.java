@@ -538,7 +538,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 				});
 			}
 
-		} else if (holder instanceof HotRecommViewHolder) {//@TODO 秒杀环节
+		} else if (holder instanceof HotRecommViewHolder) {//秒杀环节
 			LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
 			((HotRecommViewHolder) holder).recommRecyclerView.setLayoutManager(layoutManager);
 			if (data.getProductHotList() != null) {

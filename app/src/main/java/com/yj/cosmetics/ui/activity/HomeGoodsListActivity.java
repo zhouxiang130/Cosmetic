@@ -139,7 +139,6 @@ public class HomeGoodsListActivity extends BaseActivity {
 	class MyReceiver extends BroadcastReceiver {
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			// TODO: This method is called when the BroadcastReceiver is receiving
 			if (intent != null) {
 				String shopInfo = intent.getStringExtra("shopInfo");
 				if (shopInfo.equals("yes")) {

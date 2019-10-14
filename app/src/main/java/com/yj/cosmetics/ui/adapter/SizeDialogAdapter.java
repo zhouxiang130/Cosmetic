@@ -74,7 +74,7 @@ public class SizeDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 		}
 	}
 	private void getNearlyLocation(CustomSizeDialogViewGroup mViewGroup, int position){
-		//@TODO ----- 修改bug处 数据size 为 10 说明数据体没问题
+		//修改bug处 数据size 为 10 说明数据体没问题
 		Log.i(TAG, "getNearlyLocation: "+ mSale.get(position).getJsonArray().size());
 		mViewGroup.addItemViews(mSale.get(position).getJsonArray(), CustomSizeDialogViewGroup.TEV_MODE,position);
 		mViewGroup.setGroupClickListener(listener);

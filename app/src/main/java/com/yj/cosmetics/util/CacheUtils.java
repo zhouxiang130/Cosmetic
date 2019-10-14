@@ -20,7 +20,6 @@ public class CacheUtils {
                 }
                 return getFormatSize(cacheSize);
             } catch (Exception e) {
-                // TODO Auto-generated catch block
                 return null;
             }
 

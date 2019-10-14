@@ -208,9 +208,7 @@ public class MineStoreListAdapter extends RecyclerView.Adapter<RecyclerView.View
 						((OrderGoodsViewHolder) holder).tvBottomRight.setOnClickListener(new View.OnClickListener() {
 							@Override
 							public void onClick(View view) {
-								//@TODO -----------------------
 								showPayDialog(mList, position, payMode, payIcon);
-
 //								if (!TextUtils.isEmpty(mList.get(position).getOrderpayStyle())) {
 //									if (mList.get(position).getOrderpayStyle().equals("2")) {
 //										//2 微信支付

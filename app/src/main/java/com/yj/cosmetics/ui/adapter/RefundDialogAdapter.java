@@ -54,7 +54,7 @@ public class RefundDialogAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 			((ItemViewHolder) holder).tvDesc.setText(refund_dialog_desc.get(position));
 //			((ItemViewHolder) holder).refundCb.setTag(new Integer(position));//设置tag 否则划回来时选中消失
 
-			//@TODO 此处添加是标记值
+			//此处添加是标记值
 			if (checkedPosition == position) {
 				map.put(position, true);
 			}

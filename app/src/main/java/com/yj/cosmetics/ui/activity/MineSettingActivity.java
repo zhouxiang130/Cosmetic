@@ -25,7 +25,7 @@ import com.yj.cosmetics.model.NormalEntity;
 import com.yj.cosmetics.model.UpdateEntity;
 import com.yj.cosmetics.service.DownAPKService;
 import com.yj.cosmetics.ui.MainActivity;
-import com.yj.cosmetics.ui.activity.mineSettingHelp.MineSettingHelpActivity;
+import com.yj.cosmetics.ui.activity.mineHelpSug.MineHelpSugActivity;
 import com.yj.cosmetics.util.CacheUtils;
 import com.yj.cosmetics.util.GetInfoUtils;
 import com.yj.cosmetics.util.LogUtils;
@@ -64,18 +64,12 @@ public class MineSettingActivity extends BaseActivity {
 	TextView tvLogOut;
 	@BindView(R.id.iv_update_red)
 	ImageView ivRed;
-	/*@BindView(R.id.mine_setting_swbtn)
-	SwitchView swButton;*/
-
 	@BindView(R.id.settlement_cart_switch_btn)
 	SwitchView switchBtn;
-
 	UpdateDialog updateDialog;
 	AlertDialog alertDialog;
 	private CustomNormalDialog infoDialog;
-
 	private UpdateEntity.UpdateData data;
-
 	private String newVersion;
 	private String oldVersion;
 
@@ -182,8 +176,7 @@ public class MineSettingActivity extends BaseActivity {
 				}
 				break;
 			case R.id.mine_setting_help:
-
-				Intent intentSetting = new Intent(this, MineSettingHelpActivity.class);
+				Intent intentSetting = new Intent(this, MineHelpSugActivity.class);
 				startActivity(intentSetting);
 				break;
 		}

@@ -46,7 +46,7 @@ public class OrderDetailEntity {
 
 		private String orderPaystyle;
 		private String orderState;
-		private String refundType;//@TODO 下单之后，不能发起退款
+		private String refundType;//@ 下单之后，不能发起退款
 
 
 		private String isAccelerate;
@@ -327,7 +327,6 @@ public class OrderDetailEntity {
 
 				@Override
 				public OrderDetialItem createFromParcel(Parcel source) {
-					// TODO Auto-generated method stub
 					OrderDetialItem orderDetialItem = new OrderDetialItem();
 					orderDetialItem.productListimg = source.readString();
 					orderDetialItem.skuPropertiesName = source.readString();
@@ -340,7 +339,6 @@ public class OrderDetailEntity {
 
 				@Override
 				public OrderDetialItem[] newArray(int size) {
-					// TODO Auto-generated method stub
 					return new OrderDetialItem[size];
 				}
 			};

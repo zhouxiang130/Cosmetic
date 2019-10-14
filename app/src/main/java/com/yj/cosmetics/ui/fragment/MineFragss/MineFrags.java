@@ -16,9 +16,6 @@ import android.view.ViewGroup;
 
 import com.google.gson.Gson;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.api.enumtype.SobotChatTitleDisplayMode;
-import com.sobot.chat.api.model.Information;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseFragment;
 import com.yj.cosmetics.base.Constant;
@@ -54,7 +51,6 @@ public class MineFrags extends BaseFragment {
 
 
 	private static final String TAG = "MineFrags";
-	private Information userInfo;
 	@BindView(R.id.progress_layout)
 	ProgressLayout mProgressLayout;
 	@BindView(R.id.xrecyclerView)
@@ -93,7 +89,6 @@ public class MineFrags extends BaseFragment {
 
 	@Override
 	protected void initData() {
-		userInfo = new Information();
 		LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 		mRecyclerView.setLayoutManager(layoutManager);
 		mListAdapter = new MineFragAdapter(getContext(), mUtils);
@@ -124,11 +119,9 @@ public class MineFrags extends BaseFragment {
 		mListAdapter.setCheckInterface(new MineFragAdapter.CheckInterfaces() {
 			@Override
 			public void onChecks(int i) {
-
 				if (i == 1) {//1 是在线客服
-
+					//TODO 改成打电话
 					if (mUtils.isLogin()) {
-						doCustomServices();
 					} else {
 						IntentUtils.IntentToLogin(getActivity());
 					}
@@ -215,32 +208,6 @@ public class MineFrags extends BaseFragment {
 			mDialog.dismiss();
 		}
 	}
-
-	private void doCustomServices() {
-		//用户信息设置
-		//设置用户自定义字段
-		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-		userInfo.setUid(mUtils.getUid());
-		userInfo.setTel(mUtils.getTel());
-		userInfo.setUname(mUtils.getUserName());
-		userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
-		SoftReference<String> appkeySR = new SoftReference<>(Constant.ZC_appkey);
-		String appkey = appkeySR.get();
-		if (!TextUtils.isEmpty(appkey)) {
-			userInfo.setAppkey(appkey);
-			//设置标题显示模式
-			SobotApi.setChatTitleDisplayMode(getActivity().getApplicationContext(), SobotChatTitleDisplayMode.values()[0], "");
-			//设置是否开启消息提醒
-			SobotApi.setNotificationFlag(getActivity().getApplicationContext(), true, R.mipmap.logo, R.mipmap.logo);
-			SobotApi.hideHistoryMsg(getActivity().getApplicationContext(), 0);
-			SobotApi.setEvaluationCompletedExit(getActivity().getApplicationContext(), false);
-			SobotApi.startSobotChat(getActivity(), userInfo);
-		} else {
-			Log.i(TAG, "doCustomServices: " + "app_key 不能为空");
-		}
-
-	}
-
 
 	private void doAsyncGetData() {
 		Map<String, String> map = new HashMap<>();

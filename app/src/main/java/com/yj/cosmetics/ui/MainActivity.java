@@ -25,7 +25,6 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.Key;
 import com.yj.cosmetics.base.URLBuilder;
-import com.yj.cosmetics.function.CustomServices;
 import com.yj.cosmetics.model.NormalEntity;
 import com.yj.cosmetics.ui.fragment.CartFrag.CartFrag;
 import com.yj.cosmetics.ui.fragment.ClassifyFrag;
@@ -49,8 +48,6 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
-import okhttp3.Call;
-import okhttp3.Response;
 
 import static com.yj.cosmetics.util.PermissionUtils.READ_EXTERNAL_STORAGE;
 import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_READ_PHONE_STATE;
@@ -86,11 +83,6 @@ public class MainActivity extends BaseActivity {
 
 	@Override
 	protected void initView() {
-
-		if (mUtils.isLogin()) {
-			AsynUserLuck();
-		}
-
 		mTextView = new TextView[]{tvHomepage, tvClassify, tvStore, tvCart, tvMine};
 		mHomepage = new HomeFrag();
 		mClassify = new ClassifyFrag();
@@ -104,43 +96,8 @@ public class MainActivity extends BaseActivity {
 		LogUtils.i("initView了");
 		initFragment();
 		transTitle();
-		goCustomServices();
 
 	}
-
-	private void AsynUserLuck() {
-		Map<String, String> map = new HashMap<>();
-		map.put("userId", mUtils.getUid());
-		LogUtils.i("searchUserLock 传输的值" + URLBuilder.format(map));
-		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/user/searchUserLock").tag(this)
-				.addParams(Key.data, URLBuilder.format(map))
-				.build().execute(new Utils.MyResultCallback<NormalEntity>() {
-
-			@Override
-			public void onError(Call call, Exception e) {
-				super.onError(call, e);
-				if (call.isCanceled()) {
-					call.cancel();
-				} else {
-				}
-			}
-
-			@Override
-			public NormalEntity parseNetworkResponse(Response response) throws Exception {
-				String json = response.body().string().trim();
-				LogUtils.i("searchUserLock json的值" + json);
-				return new Gson().fromJson(json, NormalEntity.class);
-			}
-
-			@Override
-			public void onResponse(NormalEntity response) {
-				if (response != null && !response.HTTP_OK.equals(response.getCode())) {
-					mUtils.logOut();
-				}
-			}
-		});
-	}
-
 
 	@TargetApi(21)
 	private void transTitle() {
@@ -157,25 +114,6 @@ public class MainActivity extends BaseActivity {
 		LogUtils.i("initData了");
 		//判断权限
 	}
-
-	/**
-	 * 跳转应用首页
-	 */
-	private void goCustomServices() {
-		new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				if (!preferencesUtil.getValuesBoolean("is_notification_skip")) {
-					if (preferencesUtil.getValuesBoolean("is_open_chat_message_info")) {
-						preferencesUtil.setBooleanValue("is_notification_skip", true);
-						CustomServices customServices = new CustomServices(MainActivity.this);
-						customServices.doCustomServices(preferencesUtil);
-					}
-				}
-			}
-		}, SPLASH_DISPLAY_LENGHT);
-	}
-
 
 	private void initFragment() {
 		mFragments = new Fragment[]{mHomepage, mClassify, mStore, mCart, mMine1};

@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
-import com.sobot.chat.api.model.Information;
 import com.yj.cosmetics.base.Constant;
 import com.yj.cosmetics.base.Key;
 import com.yj.cosmetics.base.URLBuilder;
@@ -36,7 +35,6 @@ public class MineFrag_presenter implements MineFrag_contract.Presenter {
 	private UserUtils mUtils;
 
 	private String serviceTel = null;
-	private Information userInfo;
 
 	public MineFrag_presenter(MineFrag_contract.View view) {
 		this.mView = view;
@@ -44,7 +42,6 @@ public class MineFrag_presenter implements MineFrag_contract.Presenter {
 
 	@Override
 	public void subscribe() {
-		userInfo = new Information();
 	}
 
 	@Override
@@ -155,28 +152,6 @@ public class MineFrag_presenter implements MineFrag_contract.Presenter {
 				dismissDialog(mDialog);
 			}
 		});
-	}
-
-	@Override
-	public void doCustomServices() {
-		//用户信息设置
-		//设置用户自定义字段
-		userInfo.setUseRobotVoice(false);//这个属性默认都是false。想使用需要付费。付费才可以设置为true。
-		userInfo.setUid(mUtils.getUid());
-		userInfo.setTel(mUtils.getTel());
-		userInfo.setUname(mUtils.getUserName());
-
-		if (mUtils.getAvatar() != null) {
-			userInfo.setFace(URLBuilder.getUrl(mUtils.getAvatar()));//头像
-		}
-		SoftReference<String> appkeySR = new SoftReference<>(Constant.ZC_appkey);
-		String appkey = appkeySR.get();
-		if (!TextUtils.isEmpty(appkey)) {
-			userInfo.setAppkey(appkey);
-			mView.setSobotApi(userInfo);
-		} else {
-			Log.i(TAG, "doCustomServices: " + "app_key 不能为空");
-		}
 	}
 
 	@Override

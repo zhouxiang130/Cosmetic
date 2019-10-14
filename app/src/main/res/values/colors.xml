@@ -2,9 +2,6 @@
 <resources>
 
     <color name="transparent">#00000000</color>
-
-
-    <!--  @TODO white - gray -  black  -->
     <color name="CF7_FD_F9">#f7fdf9</color>
     <color name="white">#FFFFFF</color>
     <color name="CED_F1_F4">#EDF1F4</color>

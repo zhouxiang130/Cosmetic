@@ -517,7 +517,6 @@ public class UserLoginActivity extends BaseActivity {
 		qq.setPlatformActionListener(new PlatformActionListener() {
 			@Override
 			public void onError(Platform arg0, int arg1, Throwable arg2) {
-				// TODO Auto-generated method stub
 				LogUtils.e("11我onError了" + arg2);
 				arg2.printStackTrace();
 				Bundle bundle = new Bundle();
@@ -530,7 +529,6 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onComplete(Platform arg0, int arg1, HashMap<String, Object> arg2) {
-				// TODO Auto-generated method stub
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
 				mHandler.sendMessage(msg);
@@ -561,7 +559,6 @@ public class UserLoginActivity extends BaseActivity {
 			@Override
 			public void onCancel(Platform arg0, int arg1) {
 				LogUtils.e("我onCancell ");
-				// TODO Auto-generated method stub
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
 				mHandler.sendMessage(msg);
@@ -594,7 +591,6 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onError(Platform arg0, int arg1, Throwable arg2) {
-				// TODO Auto-generated method stub
 				LogUtils.e("222我onError了" + arg2);
 				arg2.printStackTrace();
 				Bundle bundle = new Bundle();
@@ -610,7 +606,6 @@ public class UserLoginActivity extends BaseActivity {
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
 				mHandler.sendMessage(msg);
-				// TODO Auto-generated method stub
 				//输出所有授权信息
 				arg0.getDb().exportData();
 				PlatformDb platDB = arg0.getDb();//获取数平台数据DB
@@ -634,7 +629,6 @@ public class UserLoginActivity extends BaseActivity {
 
 			@Override
 			public void onCancel(Platform arg0, int arg1) {
-				// TODO Auto-generated method stub
 				Message msg = mHandler.obtainMessage();
 				msg.what = TAG_SMS;
 				mHandler.sendMessage(msg);

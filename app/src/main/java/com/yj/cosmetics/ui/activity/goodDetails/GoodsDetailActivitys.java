@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 
-import com.sobot.chat.api.model.Information;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;
@@ -15,14 +14,13 @@ import java.util.ArrayList;
 /**
  * Created by Suo on 2018/3/16.
  *
- * @TODO 商品详情界面(优化====)
+ * @ 商品详情界面(优化====)
  * @TODO 需要优化的为： 部分手机在查看商品详情的情况下 会出现卡顿现象
  */
 
 public class GoodsDetailActivitys extends BaseActivity implements GoodDetails_contract.View {
 
 
-	private Information userInfo;
 	private ArrayList<Object> mTitleList;
 	private String productId, sproductId;
 	private CustomProgressDialog loadingDialog;
@@ -37,7 +35,6 @@ public class GoodsDetailActivitys extends BaseActivity implements GoodDetails_co
 
 	@Override
 	protected void initView() {
-		userInfo = new Information();
 		mTitleList = new ArrayList<>();
 		productId = getIntent().getStringExtra("productId");
 		sproductId = getIntent().getStringExtra("sproductId");

@@ -120,55 +120,13 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 		if (mUtils.getUid() == null) {
 
 		}
-//		refreshStoreData();
 		refresh();
 	}
-
-	private void refreshStoreData() {
-		new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				refresh();
-			}
-		}, 500);
-	}
-/*
-	class MyReceiver extends BroadcastReceiver {
-
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			if (intent != null) {
-
-				if (intent.getStringExtra("refreshData") != null) {
-					if (mUtils.getUid() == null) {
-
-					}
-
-					refreshStoreData();
-					return;
-				}
-
-				if (intent.getStringExtra("latitude") != null && intent.getStringExtra("longitude") != null) {
-					latitude = intent.getStringExtra("latitude");
-					longitude = intent.getStringExtra("longitude");
-					Log.i(TAG, "onReceive: longitude>>>>>" + latitude + " longitude: " + longitude);
-					mRecyclerView.refresh();
-				} else {
-					String addressId = intent.getStringExtra("addressId");
-					Log.e(TAG, "onReceive: " + addressId);
-					doAsyncGetAddressList(intent.getStringExtra("addressId"));
-				}
-			}
-		}
-	}
-*/
-
 
 	@Override
 	public void onHiddenChanged(boolean hidden) {
 		super.onHiddenChanged(hidden);
 		if (!hidden) {
-//			refresh();
 			if (mUtils.isLogin()) {
 				if (mUtils.getAddInfo() != null)
 					tvAddress.setText(mUtils.getAddInfo());
@@ -199,7 +157,7 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 					public void run() {
 						doAsyncGetData();
 					}
-				}, 500);            //refresh data here
+				}, 500);
 			}
 
 			@Override
@@ -236,10 +194,6 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 				intent.putExtra("storeList","1");
 				startActivity(intent);
 				break;
-//			case R.id.frag_store_fab:
-//				mRecyclerView.smoothScrollToPosition(0);
-//				break;
-
 		}
 	}
 
@@ -574,12 +528,5 @@ public class StoreFrag extends BaseFragment implements StoreAdapter.ViewInterfac
 				}
 			}
 		});
-	}
-
-	@Override
-	public void onDestroy() {
-//		OkHttpUtils.getInstance().cancelTag(this);
-//		getActivity().unregisterReceiver(myReceiver);
-		super.onDestroy();
 	}
 }

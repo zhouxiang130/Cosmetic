@@ -289,7 +289,6 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 						((OrderGoodsViewHolder) holder).tvBottomRight.setOnClickListener(new View.OnClickListener() {
 							@Override
 							public void onClick(View view) {
-								//@TODO -----------------------
 								showPayDialog(mList, position, payMode, payIcon);
 
 //								if (!TextUtils.isEmpty(mList.get(position).getOrderpayStyle())) {
@@ -536,11 +535,7 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 			}
 		});
 	}
-
-
 	QuickeOrderDialog QuickeOrderDialog;
-
-	//@TODO ---------
 	private void QuickOrder() {
 		if (QuickeOrderDialog == null) {
 			QuickeOrderDialog = new QuickeOrderDialog(mContext);

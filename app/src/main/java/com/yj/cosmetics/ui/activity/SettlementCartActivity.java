@@ -53,7 +53,7 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2018/3/16.
  *
- * @TODO 提交订单页面
+ *  提交订单页面
  */
 
 public class SettlementCartActivity extends BaseActivity {
@@ -445,7 +445,6 @@ public class SettlementCartActivity extends BaseActivity {
 	// total = 0,  //  总价    //rest = 0;  余额  // tickPic_ 优惠券
 
 	//tvTotal 最后的总价TextView
-	//@TODO ---------------------------------------------------------------
 	public void countTicketPic() {
 //		rest - tickPic
 		if (data != null) {

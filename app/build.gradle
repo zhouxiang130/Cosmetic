@@ -108,6 +108,7 @@ dependencies {
     implementation 'com.android.support:support-annotations:21.0.2'
     implementation 'com.jakewharton:butterknife:8.5.1'
     implementation 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
     implementation(name: 'alipaySdk-15.6.2-20190416165036', ext: 'aar')
     implementation files('libs/rxjava-1.1.1.jar')
     implementation files('libs/rxandroid-1.1.1.jar')
@@ -115,7 +116,6 @@ dependencies {
     implementation files('libs/ShareSDK-Core-2.8.2.jar')
     implementation project(':gallery')
     implementation project(':pickerview')
-    implementation project(':sobotsdk')
     implementation 'com.android.support:multidex:1.0.1'
     implementation project(path: ':xrecyclerview')
 }

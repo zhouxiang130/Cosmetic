@@ -41,7 +41,7 @@ import static com.yj.cosmetics.util.PermissionUtils.REQUEST_CODE_WRITE_EXTRONAL_
 /**
  * Created by Suo on 2016/12/28.
  *
- * @TODO 启动页面
+ *  启动页面
  */
 
 public class SplashActivity extends BaseActivity implements Splash_Contract.View {

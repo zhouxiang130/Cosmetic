@@ -45,7 +45,7 @@ import okhttp3.Response;
 /**
  * Created by Suo on 2018/3/12.
  *
- * @TODO 我的积分 2.0版本修改页面
+ * 我的积分 2.0版本修改页面
  */
 
 public class MineScoring1Activity extends BaseActivity {

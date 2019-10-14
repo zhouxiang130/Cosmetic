@@ -47,7 +47,7 @@ import okhttp3.Response;
 /**
  * Created by Administrator on 2018/6/5 0005.
  *
- * @TODO 签到界面 2.0新增加的页面
+ * 签到界面 2.0新增加的页面
  */
 
 public class MineSignInActivity extends BaseActivity implements MineSign_contract.View {

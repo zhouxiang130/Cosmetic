@@ -285,7 +285,7 @@ public class MineAccountWithdrawActivity extends BaseActivity {
 	private void doAsyncGetSearchExplain() {
 		Map<String, String> map = new HashMap<>();
 		map.put("userId", mUtils.getUid());
-		map.put("type", "1");//@TODO 提现 2.额度提升
+		map.put("type", "1");// 提现 2.额度提升
 		LogUtils.i("传输的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePageTwo/searchExplain").tag(this)
 				.addParams(Key.data, URLBuilder.format(map))

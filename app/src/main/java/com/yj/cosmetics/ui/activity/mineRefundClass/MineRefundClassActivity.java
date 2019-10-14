@@ -23,19 +23,15 @@ import butterknife.OnClick;
 /**
  * Created by Administrator on 2018/6/13 0013.
  *
- * @TODO 选择服务类型 2.0 版本添加页面
+ * @ 选择服务类型 2.0 版本添加页面
  */
 
 public class MineRefundClassActivity extends BaseActivity {
-
-
-	private static final String TAG = "MineRefundClassActivity";
 	@BindView(R.id.refund_rl_tuikuantuihuo)
 	RelativeLayout rlRefundClassGoodInfo;
 	@BindView(R.id.refund_rl_jintuikuan)
 	RelativeLayout refundRlJintuikuan;
 	private OrderDetailEntity.OrderDetialData.OrderDetialItem mList;
-
 	@BindView(R.id.item_order_goods_iv)
 	ImageView ivGoods;
 	@BindView(R.id.item_order_goods_tv_title)
@@ -47,7 +43,6 @@ public class MineRefundClassActivity extends BaseActivity {
 	@BindView(R.id.item_order_goods_tv_number)
 	TextView tvNum;
 	private String orderId, Money, flag;
-
 	private DynamicReceiver dynamicReceiver;
 
 	@Override
@@ -62,16 +57,12 @@ public class MineRefundClassActivity extends BaseActivity {
 		orderId = getIntent().getStringExtra("orderId");
 		Money = getIntent().getStringExtra("Money");
 		flag = getIntent().getStringExtra("flag");
-		Log.d(TAG, " mList.getProductId() ->" + orderId);
-
 		//实例化IntentFilter对象
 		IntentFilter filter = new IntentFilter();
 		filter.addAction("com.yj.robust.receiver_one");
 		dynamicReceiver = new DynamicReceiver();
 		//注册广播接收
 		registerReceiver(dynamicReceiver, filter);
-
-
 		tvTitle.setText(mList.getProductName());
 		tvStyle.setText(mList.getSkuPropertiesName());
 		tvNum.setText("X" + mList.getDetailNum());
@@ -81,7 +72,6 @@ public class MineRefundClassActivity extends BaseActivity {
 				.error(R.mipmap.default_goods)
 				.centerCrop()
 				.into(ivGoods);
-
 	}
 
 	@Override

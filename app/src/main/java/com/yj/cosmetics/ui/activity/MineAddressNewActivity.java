@@ -473,7 +473,7 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 	 * @param start
 	 * @param count
 	 * @param after
-	 * @TODO 添加EditText 输入时候的监听
+	 * 添加EditText 输入时候的监听
 	 *//*
 	@Override
 	public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -571,8 +571,5 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 
 	@Override
 	public void onPoiItemSearched(PoiItem item, int rCode) {
-		// TODO Auto-generated method stub
-
 	}*/
-
 }

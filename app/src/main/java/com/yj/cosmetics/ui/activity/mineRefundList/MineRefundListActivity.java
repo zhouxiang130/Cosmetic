@@ -30,7 +30,7 @@ import okhttp3.Response;
 /**
  * Created by Administrator on 2018/6/14 0014.
  *
- * @TODO 退款/售后 2.0添加界面
+ * @ 退款/售后 2.0添加界面
  */
 
 public class MineRefundListActivity extends BaseActivity {
