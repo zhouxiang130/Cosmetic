@@ -2,8 +2,8 @@ package com.bigkoo.pickerview.lib;
 
 import java.util.TimerTask;
 /**
- * @TODO<滚动惯性的实现>
- * @author 小嵩
+ * @<滚动惯性的实现>
+ * @author
  */
 final class InertiaTimerTask extends TimerTask {
 

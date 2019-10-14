@@ -136,7 +136,6 @@ public final class Picker {
         return this;
     }
 
-    //TODO : Wait achieve
     /**
      * Sets the limitation of a selectable image quality by pixel count within the specified range.
      *

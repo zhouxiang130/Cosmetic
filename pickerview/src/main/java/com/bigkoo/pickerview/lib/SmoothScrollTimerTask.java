@@ -3,8 +3,8 @@ package com.bigkoo.pickerview.lib;
 import java.util.TimerTask;
 
 /**
- * @TODO<平滑滚动的实现>
- * @author 小嵩
+ * @<平滑滚动的实现>
+ * @author
  */
 final class SmoothScrollTimerTask extends TimerTask {
 
