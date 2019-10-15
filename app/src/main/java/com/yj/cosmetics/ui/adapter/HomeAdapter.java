@@ -747,25 +747,14 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 	class HotViewHolder extends RecyclerView.ViewHolder {
 		@BindView(R.id.home_hot_iv1)
 		ImageView iv1;
-		@BindView(R.id.home_hot_iv2)
-		ImageView iv2;
 		@BindView(R.id.home_hot_tv_title1)
 		TextView tvTitle1;
-		@BindView(R.id.home_hot_tv_title2)
-		TextView tvTitle2;
 		@BindView(R.id.home_hot_tv_content1)
 		TextView tvContent1;
-		@BindView(R.id.home_hot_tv_content2)
-		TextView tvContent2;
 		@BindView(R.id.home_hot_tv_price1)
 		TextView tvPrice1;
-		@BindView(R.id.home_hot_tv_price2)
-		TextView tvPrice2;
 		@BindView(R.id.home_hot_ll1)
 		LinearLayout ll1;
-		@BindView(R.id.home_hot_ll2)
-		LinearLayout ll2;
-
 
 		public HotViewHolder(View itemView) {
 			super(itemView);
@@ -774,17 +763,14 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 	}
 
 	class ImgViewHolder extends RecyclerView.ViewHolder {
-
 		@BindView(R.id.ivRecyclerView)
 		RecyclerView mImgRecyclerView;
-
 
 		public ImgViewHolder(View itemView) {
 			super(itemView);
 			ButterKnife.bind(this, itemView);
 		}
 	}
-
 
 	class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 		@BindView(R.id.home_item_iv)

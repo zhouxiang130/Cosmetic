@@ -26,24 +26,6 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:id="@+id/refund_detail_rl_kefu"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:drawableLeft="@mipmap/lianxikefu"
-                        android:drawablePadding="@dimen/dis10"
-                        android:gravity="center"
-                        android:text="联系客服"
-                        android:textColor="@color/C64_64_64"
-                        android:textSize="@dimen/font14"/>
-                </RelativeLayout>
-
                 <View
                     android:layout_width="@dimen/dis1"
                     android:layout_height="match_parent"

@@ -227,7 +227,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis36"
-                        android:src="@mipmap/location_p"/>
+                        android:src="@mipmap/location"/>
 
                     <TextView
                         android:id="@+id/order_detial_tv2"

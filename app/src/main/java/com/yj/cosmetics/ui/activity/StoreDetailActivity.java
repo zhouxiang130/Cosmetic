@@ -225,7 +225,6 @@ public class StoreDetailActivity extends BaseActivity {
 		tvShopName.setText(data.getData().getShopName());
 //		tvServices.setText("起送：" + data.getData().getServiceStartime());
 		tvPublicity.setText("商品： " + data.getData().getShopProCount());
-//		MineStoreFrags.instant(shopId).setData(data);
 
 		if (data.getData().getShopCollectionType() != null && !data.getData().getShopCollectionType().equals("")) {
 			if (data.getData().getShopCollectionType().equals("yes")) {

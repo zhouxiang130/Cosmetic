@@ -115,15 +115,10 @@ public class MineRefundDetailActivity extends BaseActivity {
 	}
 
 
-	@OnClick({R.id.refund_detail_rl_kefu, R.id.refund_detail_rl_rexian})
+	@OnClick({ R.id.refund_detail_rl_rexian})
 	public void onViewClicked(View view) {
 		switch (view.getId()) {
-			case R.id.refund_detail_rl_kefu:
-				//TODO 变成打电话
-				Toast.makeText(this, "暂无客服联系方式", Toast.LENGTH_SHORT).show();
-				break;
 			case R.id.refund_detail_rl_rexian:
-
 				if (TextUtils.isEmpty(mUtils.getServiceTel()) && TextUtils.isEmpty(mUtils.getServiceTel())) {
 					Toast.makeText(this, "暂无客服联系方式", Toast.LENGTH_SHORT).show();
 					return;

@@ -85,7 +85,7 @@
                         android:id="@+id/tv_store_con"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@mipmap/position"
+                        android:drawableLeft="@mipmap/location"
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:paddingTop="@dimen/dis5"

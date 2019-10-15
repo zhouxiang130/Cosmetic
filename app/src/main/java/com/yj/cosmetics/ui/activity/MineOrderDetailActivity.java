@@ -577,8 +577,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 			drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
 			tvNext.setCompoundDrawables(drawable, null, null, null);//设置TextView的drawableleft
 			tvNext.setCompoundDrawablePadding(10);
-			tvNext.setText("加速");
-			tvNext.setTextColor(getResources().getColor(R.color.white));
+			tvNext.setText("加速");			tvNext.setTextColor(getResources().getColor(R.color.white));
 		} else {
 			rlTitle.setVisibility(View.GONE);
 		}

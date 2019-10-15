@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dis3"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/shouye_dingwei"/>
+                    android:src="@mipmap/location"/>
 
                 <com.yj.cosmetics.widget.MarqueeTextView
                     android:id="@+id/frag_homes_tv_info"

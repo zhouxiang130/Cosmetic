@@ -82,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dis34"
-                        android:src="@mipmap/location_p"/>
+                        android:src="@mipmap/location"/>
 
                     <RelativeLayout
                         android:id="@+id/settlement_goods_next"
