@@ -24,7 +24,6 @@ import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.UpdateEntity;
 import com.yj.cosmetics.service.DownAPKService;
-import com.yj.cosmetics.ui.MainActivity;
 import com.yj.cosmetics.util.GetInfoUtils;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.PermissionUtils;

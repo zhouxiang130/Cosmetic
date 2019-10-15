@@ -40,7 +40,7 @@ import com.yj.cosmetics.ui.activity.MineOrderActivity;
 import com.yj.cosmetics.ui.activity.MineOrderDetailActivity;
 import com.yj.cosmetics.ui.activity.PayResultActivity;
 import com.yj.cosmetics.ui.activity.PostJudgeGoodsActivity;
-import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
+import com.yj.cosmetics.ui.activity.StoreDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.util.UserUtils;
@@ -87,8 +87,8 @@ public class MineOrderListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
 	private Integer[] payIcon = new Integer[]{
 //			R.mipmap.yuezhifu,
-			R.mipmap.zhifubaozhifu,
-			R.mipmap.weixinzhifu,
+			R.mipmap.alipay_payment,
+			R.mipmap.wechat_payment,
 	};
 
 

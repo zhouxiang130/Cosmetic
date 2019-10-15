@@ -18,7 +18,7 @@ import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.widget.RecyclerSpace;
 import com.yj.cosmetics.model.GoodsListEntity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
 import com.yj.cosmetics.ui.adapter.StoreGoodsListAdapter;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;

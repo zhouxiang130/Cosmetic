@@ -21,7 +21,7 @@ import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.RefundDetailEntity;
 import com.yj.cosmetics.model.RefundListEntity;
-import com.yj.cosmetics.ui.activity.mineRefundTable.MineRefundDetailTableActivity;
+import com.yj.cosmetics.ui.activity.MineRefundDetailTableActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.Dialog.CustomRefundDialog;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;

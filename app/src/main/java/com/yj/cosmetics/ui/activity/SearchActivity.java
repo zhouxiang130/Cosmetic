@@ -18,7 +18,6 @@ import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.base.Variables;
 import com.yj.cosmetics.model.SearchHotEntity;
-import com.yj.cosmetics.ui.activity.sotreList.StoreListActivity;
 import com.yj.cosmetics.util.KeyBoardUtils;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;

@@ -9,8 +9,6 @@ import android.view.View;
 
 public class MaterialRippleView {
 
-
-
     public static View create(View view){
          return MaterialRippleLayout.on(view)
                 .rippleOverlay(true)

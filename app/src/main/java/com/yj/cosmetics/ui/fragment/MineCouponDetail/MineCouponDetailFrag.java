@@ -12,7 +12,7 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.model.CouponListDataEntity;
-import com.yj.cosmetics.ui.activity.couponReceive.CouponReceiveActivity;
+import com.yj.cosmetics.ui.activity.CouponReceiveActivity;
 import com.yj.cosmetics.ui.adapter.MineCouponDetailAdapter;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;

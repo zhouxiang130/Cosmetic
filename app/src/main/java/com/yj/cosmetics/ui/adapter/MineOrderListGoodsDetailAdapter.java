@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.OrderDetailEntity;
-import com.yj.cosmetics.ui.activity.mineRefundClass.MineRefundClassActivity;
+import com.yj.cosmetics.ui.activity.MineRefundClassActivity;
 import com.yj.cosmetics.util.LogUtils;
 
 import java.util.ArrayList;

@@ -21,7 +21,7 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.HomeClassifyEntity;
 import com.yj.cosmetics.ui.activity.NormalWebViewActivity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;
 

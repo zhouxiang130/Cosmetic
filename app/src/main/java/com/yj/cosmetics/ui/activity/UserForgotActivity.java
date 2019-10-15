@@ -25,7 +25,7 @@ import com.yj.cosmetics.util.AESUtils;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.MatchUtils;
 import com.yj.cosmetics.util.RSAUtils;
-import com.yj.cosmetics.util.SecurityUtil.MD5Utils;
+import com.yj.cosmetics.util.MD5Utils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.util.Utils;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;

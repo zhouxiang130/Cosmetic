@@ -13,14 +13,11 @@ import android.support.v4.content.PermissionChecker;
  */
 
 public class PermissionUtils {
-
-
     final public static int REQUEST_CODE_WRITE_EXTRONAL_STORAGE = 999;
     final public static int CAMERA_ = 998;
     final public static int REQUEST_CODE_READ_PHONE_STATE = 888;
     final public static int READ_EXTERNAL_STORAGE = 989;
     final public static int CALL_PHONE = 988;
-
 
 
     /*
@@ -66,7 +63,4 @@ public class PermissionUtils {
 //        startActivity(localIntent);
 //        finish();
     }
-
-
-
 }

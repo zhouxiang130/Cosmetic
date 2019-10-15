@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
-import com.yj.cosmetics.ui.MainActivity;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;
 
 import butterknife.BindView;

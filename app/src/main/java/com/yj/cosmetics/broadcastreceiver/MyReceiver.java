@@ -8,8 +8,8 @@ import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.yj.cosmetics.model.JPushEntity;
-import com.yj.cosmetics.ui.MainActivity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.MainActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 
 import org.json.JSONException;

@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.yj.cosmetics.MyApplication;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
-import com.yj.cosmetics.ui.MainActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.zhy.http.okhttp.OkHttpUtils;

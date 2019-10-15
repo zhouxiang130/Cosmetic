@@ -11,7 +11,6 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.HomeClassifyEntity;
-import com.yj.cosmetics.ui.MainActivity;
 import com.yj.cosmetics.ui.adapter.HomeClassifyListAdapter;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;

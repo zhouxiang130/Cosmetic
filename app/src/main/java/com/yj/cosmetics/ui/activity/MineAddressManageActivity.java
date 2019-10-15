@@ -19,7 +19,6 @@ import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.base.Variables;
 import com.yj.cosmetics.model.AddressEntity;
 import com.yj.cosmetics.model.NormalEntity;
-import com.yj.cosmetics.ui.MainActivity;
 import com.yj.cosmetics.ui.adapter.ManageAddressAdapter;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;

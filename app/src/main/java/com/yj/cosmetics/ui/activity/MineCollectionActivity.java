@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.ui.adapter.MineOrderTabAdapter;
-import com.yj.cosmetics.ui.fragment.MineCollectFrag.MineCollectFrag;
+import com.yj.cosmetics.ui.fragment.MineCollectFrag;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.NoScrollViewPager;
 

@@ -6,6 +6,7 @@ import com.yj.cosmetics.MyApplication;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -81,11 +82,39 @@ public class FileUtils {
 		} finally {
 			//关流 释放对象
 			//关流 释放对象
-			IOUtils.close(bw);
-			IOUtils.close(fw);
+			close(bw);
+			close(fw);
 		}
 	}
 
+	/**
+	 * 释放资源
+	 * @param closeable
+	 */
+	public static void close(Closeable closeable){
+		if (closeable!= null){
+			try {
+				closeable.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static void closeAll(Closeable... closeables){
+		if(closeables == null){
+			return;
+		}
+		for (Closeable closeable : closeables) {
+			if(closeable!=null){
+				try {
+					closeable.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
 	/**
 	 * 从本地获取缓存数据

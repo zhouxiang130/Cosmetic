@@ -12,7 +12,7 @@ import com.yj.cosmetics.base.Key;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.NormalEntity;
 import com.yj.cosmetics.util.LogUtils;
-import com.yj.cosmetics.util.SecurityUtil.MD5Utils;
+import com.yj.cosmetics.util.MD5Utils;
 import com.yj.cosmetics.util.ToastUtils;
 import com.yj.cosmetics.util.Utils;
 import com.yj.cosmetics.widget.Dialog.CustomProgressDialog;

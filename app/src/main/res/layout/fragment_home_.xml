@@ -67,7 +67,7 @@
                     android:gravity="center"
                     android:paddingLeft="@dimen/dis5"
                     android:paddingRight="@dimen/dis5"
-                    android:src="@mipmap/shouye_jiantou"
+                    android:src="@mipmap/next_center_order"
                     android:visibility="visible"/>
             </LinearLayout>
 

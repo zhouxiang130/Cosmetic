@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.SeckillEntity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.CustomCountDownTimerView;
 import com.yj.cosmetics.widget.MaterialRippleView;

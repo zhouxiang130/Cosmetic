@@ -28,7 +28,7 @@ import com.yj.cosmetics.model.GoodsCommentEntity;
 import com.yj.cosmetics.model.GoodsEntitys;
 import com.yj.cosmetics.ui.activity.BigImageActivity;
 import com.yj.cosmetics.ui.activity.JudgeActivity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.WindowDisplayManager;
 import com.yj.cosmetics.widget.CustomBanner.CustomRollPagerView;

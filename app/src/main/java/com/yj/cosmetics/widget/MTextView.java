@@ -11,12 +11,8 @@ import android.view.View;
  */
 
 public class MTextView extends android.support.v7.widget.AppCompatTextView {
-
-
 	private DrawableLeftListener mLeftListener;
 	private DrawableRightListener mRightListener;
-
-
 	final int DRAWABLE_LEFT = 0;
 	final int DRAWABLE_TOP = 1;
 	final int DRAWABLE_RIGHT = 2;

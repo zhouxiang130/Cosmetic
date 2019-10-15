@@ -11,7 +11,7 @@ public class Constant {
 
 	public static final int USER_LOGIN_OUT = 0x002;
 	//首页导航图三张
-	public static final Integer[] appGuideRes = {R.drawable.leader_guide_page1, R.drawable.leader_guide_page2, R.drawable.leader_guide_page3};
+	public static final Integer[] appGuideRes = {R.drawable.splash, R.drawable.splash, R.drawable.splash};
 
 
 	// APP_ID 替换为你的应用从官方网站申请到的合法appId

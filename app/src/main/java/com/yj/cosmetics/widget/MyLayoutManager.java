@@ -10,7 +10,6 @@ import android.util.AttributeSet;
 
 public class MyLayoutManager extends LinearLayoutManager {
 
-
 	private boolean isScrollEnabled = true;
 
 	public MyLayoutManager(Context context) {

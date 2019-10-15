@@ -16,7 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dis160"
-            android:background="@drawable/invite_bg">
+            android:background="@drawable/integral_bg">
 
             <TextView
                 android:id="@+id/mine_invite_tv_rule"

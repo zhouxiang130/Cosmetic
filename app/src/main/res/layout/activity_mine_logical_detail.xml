@@ -156,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/tv_wuliu_info"
                         android:layout_centerHorizontal="true"
-                        android:background="@mipmap/img_wuliu"/>
+                        android:background="@mipmap/cart_light_x"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/textview_wuliu_info"
                     android:layout_centerHorizontal="true"
-                    android:background="@mipmap/img_wuliu"/>
+                    android:background="@mipmap/cart_light_x"/>
             </RelativeLayout>
         </RelativeLayout>
     </com.yj.cosmetics.widget.ProgressLayout>

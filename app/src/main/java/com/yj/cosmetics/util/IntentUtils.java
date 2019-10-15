@@ -6,8 +6,8 @@ import android.content.Intent;
 import com.yj.cosmetics.ui.activity.HomeGoodsListActivity;
 import com.yj.cosmetics.ui.activity.InfoCenterActivity;
 import com.yj.cosmetics.ui.activity.UserLoginActivity;
-import com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity;
-import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
+import com.yj.cosmetics.ui.activity.GoodsDetailActivity;
+import com.yj.cosmetics.ui.activity.StoreDetailActivity;
 
 /**
  * Created by Suo on 2017/9/11.

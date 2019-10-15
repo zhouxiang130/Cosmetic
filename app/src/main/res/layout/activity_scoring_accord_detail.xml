@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dis95"
-        android:background="@drawable/jfx_bg"
+        android:background="@drawable/integral_bg"
         android:gravity="center"
         android:orientation="vertical">
 

@@ -36,7 +36,6 @@ import com.yj.cosmetics.model.OrderDetailEntity;
 import com.yj.cosmetics.model.PayResult;
 import com.yj.cosmetics.model.ShareEntity;
 import com.yj.cosmetics.model.WXPayEntity;
-import com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity;
 import com.yj.cosmetics.ui.adapter.MineOrderListGoodsDetailAdapter;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;
@@ -190,8 +189,8 @@ public class MineOrderDetailActivity extends BaseActivity {
 
 	private Integer[] payIcon = new Integer[]{
 //			R.mipmap.yuezhifu,
-			R.mipmap.zhifubaozhifu,
-			R.mipmap.weixinzhifu,
+			R.mipmap.alipay_payment,
+			R.mipmap.wechat_payment,
 	};
 
 	private static final int SDK_PAY_FLAG = 1001;

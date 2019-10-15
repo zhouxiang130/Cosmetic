@@ -21,7 +21,6 @@ public class ToastUtils {
 
 	}
 
-
 	public static ToastUtils instant() {
 		if (toastUtils == null) {
 			toastUtils = new ToastUtils();
@@ -70,5 +69,4 @@ public class ToastUtils {
 		}
 		mToast.show();
 	}
-
 }

@@ -15,7 +15,7 @@ import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.LazyLoadFragment;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.SeckillEntity;
-import com.yj.cosmetics.ui.MainActivity;
+import com.yj.cosmetics.ui.activity.MainActivity;
 import com.yj.cosmetics.ui.adapter.HomeSeckillActivityAdapter;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;

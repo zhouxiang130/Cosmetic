@@ -26,7 +26,7 @@ import com.yj.cosmetics.ui.activity.MineInviteActivity;
 import com.yj.cosmetics.ui.activity.MineOrderActivity;
 import com.yj.cosmetics.ui.activity.MinePersonalDataActivity;
 import com.yj.cosmetics.ui.activity.MineSettingActivity;
-import com.yj.cosmetics.ui.activity.mineScoring.MineScoring1Activity;
+import com.yj.cosmetics.ui.activity.MineScoring1Activity;
 import com.yj.cosmetics.util.IntentUtils;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.util.ToastUtils;

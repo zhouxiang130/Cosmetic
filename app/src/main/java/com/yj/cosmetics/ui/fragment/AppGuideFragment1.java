@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.base.Constant;
-import com.yj.cosmetics.ui.MainActivity;
+import com.yj.cosmetics.ui.activity.MainActivity;
 
 /**
  * 作者: Administrator on 2016/7/20.

@@ -51,7 +51,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.yj.cosmetics.ui.MainActivity"
+            android:name="com.yj.cosmetics.ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
@@ -163,17 +163,17 @@
             android:screenOrientation="portrait"/>
         <!-- @ 店铺详情界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.storeDetail.StoreDetailActivity"
+            android:name="com.yj.cosmetics.ui.activity.StoreDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- @搜索店铺列表界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.sotreList.StoreListActivity"
+            android:name="com.yj.cosmetics.ui.activity.StoreListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- @店铺地理位置地址详情界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.locAddress.locAddressActivity"
+            android:name="com.yj.cosmetics.ui.activity.locAddressActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 个人中心管理地址 -->
@@ -198,23 +198,18 @@
             android:screenOrientation="portrait"/>
         <!-- 我的优惠券界面 2.0添加界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineCoupon.MineCouponActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineCouponActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 领券中心 2.0添加页面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.couponReceive.CouponReceiveActivity"
+            android:name="com.yj.cosmetics.ui.activity.CouponReceiveActivity"
             android:hardwareAccelerated="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 意见反馈 2.0添加界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineHelpSug.MineHelpSugActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <!-- 好物秒杀 2.0修改界面 -->
-        <activity
-            android:name="com.yj.cosmetics.ui.activity.homeSeckill.HomeSeckillActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineHelpSugActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 签到 2.0版本界面 -->
@@ -250,28 +245,28 @@
             android:screenOrientation="portrait"/>
         <!-- 我的积分1 2.0修改页面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineScoring.MineScoring1Activity"
+            android:name="com.yj.cosmetics.ui.activity.MineScoring1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 选择服务类型 2.0 版本添加页面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineRefundClass.MineRefundClassActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineRefundClassActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 退款填写界面 2.0 添加页面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineRefundTable.MineRefundDetailTableActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineRefundDetailTableActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!-- 退款/售后 2.0添加界面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineRefundList.MineRefundListActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineRefundListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 退款详情 2.0添加页面 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.mineRefundDetail.MineRefundDetailActivity"
+            android:name="com.yj.cosmetics.ui.activity.MineRefundDetailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 我的积分积分明细 -->
@@ -341,7 +336,7 @@
             android:screenOrientation="portrait"/>
         <!-- 商品详情 -->
         <activity
-            android:name="com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity"
+            android:name="com.yj.cosmetics.ui.activity.GoodsDetailActivity"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>

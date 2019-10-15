@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.yj.cosmetics.R;
 import com.yj.cosmetics.model.HelpSugEntity;
-import com.yj.cosmetics.ui.activity.mineHelpSug.MineHelpSugActivity;
+import com.yj.cosmetics.ui.activity.MineHelpSugActivity;
 import com.yj.cosmetics.util.LogUtils;
 import com.yj.cosmetics.widget.RoundedImageView.RoundedImageView;
 

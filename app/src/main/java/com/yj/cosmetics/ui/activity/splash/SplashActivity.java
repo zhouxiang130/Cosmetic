@@ -22,7 +22,7 @@ import com.yj.cosmetics.base.BaseActivity;
 import com.yj.cosmetics.base.URLBuilder;
 import com.yj.cosmetics.model.UpdateEntity;
 import com.yj.cosmetics.service.DownAPKService;
-import com.yj.cosmetics.ui.MainActivity;
+import com.yj.cosmetics.ui.activity.MainActivity;
 import com.yj.cosmetics.ui.activity.AppGuideActivity;
 import com.yj.cosmetics.ui.activity.UpdateActivity;
 import com.yj.cosmetics.util.GetInfoUtils;

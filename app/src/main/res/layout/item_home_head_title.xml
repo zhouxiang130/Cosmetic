@@ -51,7 +51,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:drawableRight="@mipmap/more_home"
+            android:drawableRight="@mipmap/next_center_order"
             android:drawablePadding="@dimen/dis5"
             android:paddingLeft="@dimen/dis20"
             android:paddingTop="@dimen/dis5"

@@ -24,7 +24,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dis8"
         android:layout_marginBottom="@dimen/dis15"
-        android:drawableRight="@mipmap/more_home"
+        android:drawableRight="@mipmap/next_center_order"
         android:drawablePadding="@dimen/dis5"
         android:text="查看更多"
         android:textColor="@color/C85_85_85"
