@@ -34,7 +34,6 @@ public class BigImageActivity extends BaseActivity {
 	@BindView(R.id.show_big_img_indicator)
 	LinearLayout bigImgIndicator;
 	private String postions;
-
 	private List<ImageView> points;
 	private ArrayList<String> bigImageList;//数据源
 
@@ -77,7 +76,6 @@ public class BigImageActivity extends BaseActivity {
 		bigImgViewPager.setCurrentItem(Integer.parseInt(postions));
 	}
 
-
 	private class MyPagerAdapter extends PagerAdapter {
 
 		@Override
@@ -89,7 +87,6 @@ public class BigImageActivity extends BaseActivity {
 		public boolean isViewFromObject(View view, Object object) {
 			return view == object;
 		}
-
 
 		@Override
 		public Object instantiateItem(ViewGroup container, int position) {
@@ -110,7 +107,6 @@ public class BigImageActivity extends BaseActivity {
 						}
 					});
 //                    .into(view);
-
 			container.addView(view);
 			view.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -137,7 +133,6 @@ public class BigImageActivity extends BaseActivity {
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		params.leftMargin = 15;//设置点的间距
 		params.bottomMargin = 20;//设置点距离底部的间距
-
 		for (int i = 0; i < bigImageList.size(); i++) {
 			ImageView imageView = new ImageView(BigImageActivity.this);
 //            ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
@@ -157,7 +152,6 @@ public class BigImageActivity extends BaseActivity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			finish();
 			return true;
@@ -168,6 +162,5 @@ public class BigImageActivity extends BaseActivity {
 
 	@Override
 	protected void initData() {
-
 	}
 }

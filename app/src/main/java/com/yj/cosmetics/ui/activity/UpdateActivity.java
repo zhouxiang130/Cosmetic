@@ -38,7 +38,6 @@ public class UpdateActivity extends BaseActivity {
     LinearLayout lTry;
     @BindView(R.id.ll_update_cancel)
     LinearLayout lCancel;
-
     private String des;
     private String url;
     private String target;

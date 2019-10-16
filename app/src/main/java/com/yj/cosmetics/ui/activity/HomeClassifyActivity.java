@@ -32,31 +32,16 @@ import okhttp3.Response;
  */
 
 public class HomeClassifyActivity extends BaseActivity {
-
-    /*@BindView(R.id.recyclerView_title)
-    RecyclerView recyclerViewTitle;*/
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     @BindView(R.id.progress_layout)
     ProgressLayout mProgressLayout;
     @BindView(R.id.home_classify_iv_top)
     ImageView ivTop;
-
-  /*  HomeClassifyTitleAdapter mTitleAdapter;
-    private List<String> mTitleList;
-    private int screenWidth;
-    private int scrollWidth ;*/
-
     HomeClassifyListAdapter mListAdapter;
     LinearLayoutManager layoutManager;
-
-
     private  HomeClassifyEntity.HomeClassifyData data;
-
-    private boolean isClick = false;
-
     private String classifyId;
-
 
     @Override
     protected int getContentView() {
@@ -145,7 +130,6 @@ public class HomeClassifyActivity extends BaseActivity {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 if(newState == RecyclerView.SCROLL_STATE_IDLE){
-                    isClick = false;
                 }
                 super.onScrollStateChanged(recyclerView, newState);
             }

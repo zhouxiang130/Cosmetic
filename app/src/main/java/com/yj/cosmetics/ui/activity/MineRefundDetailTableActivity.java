@@ -70,10 +70,7 @@ public class MineRefundDetailTableActivity extends BaseActivity {
 	RelativeLayout rlNext;
 	@BindView(R.id.title_tv_next)
 	TextView tvNext;
-
-
 	List<RefundDetailEntity.RefundDetailItem> entity;
-
 	private static int refund_detial_tag, REFUND_DETIAL_TAG = 2;
 	//		"未收到货","已收到货"
 	private List<String> refund_dialog_desc;//= new String[]{"未收到货", "已收到货"};

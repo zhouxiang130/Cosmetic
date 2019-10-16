@@ -24,7 +24,6 @@ import butterknife.BindView;
 public class AppGuideActivity extends BaseActivity {
     @BindView(R.id.mViewPager)
     ViewPager mViewPager;
-
     List<Integer> imgRes;
     List<Fragment> fragmentList;
 

@@ -113,7 +113,6 @@ public class MineHelpSugActivity extends BaseActivity {
 		setData(helpSugEntity);
 	}
 
-
 	private void setData(HelpSugEntity helpSugEntity) {
 		entity.addAll(helpSugEntity.getData());
 		for (int i = 0; i < entity.size(); i++) {

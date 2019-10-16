@@ -101,7 +101,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
-                    android:src="@mipmap/next_step"/>
+                    android:src="@mipmap/nex_p"/>
             </RelativeLayout>
 
             <View
@@ -133,7 +133,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
-                    android:src="@mipmap/next_step"/>
+                    android:src="@mipmap/nex_p"/>
             </RelativeLayout>
 
             <View
@@ -171,7 +171,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dis15"
-                    android:src="@mipmap/next_step"/>
+                    android:src="@mipmap/nex_p"/>
             </RelativeLayout>
 
             <View

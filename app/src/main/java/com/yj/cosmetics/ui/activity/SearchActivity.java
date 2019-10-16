@@ -52,10 +52,7 @@ public class SearchActivity extends BaseActivity implements CustomSearchHotViewG
 	EditText etContent;
 	@BindView(R.id.search_modify_clean)
 	ImageView ivClean;
-
-
 	private String searchTag = "";
-
 	private CustomNormalDialog mDialog;
 	private String shopId, TAB;
 	private String storeList;

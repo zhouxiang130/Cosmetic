@@ -114,29 +114,20 @@ public class MineOrderDetailActivity extends BaseActivity {
 	TextView tvPayStyle;
 	@BindView(R.id.order_detial_payStyle)
 	LinearLayout llPayTime;
-
 	@BindView(R.id.order_detial_deliver_goods)
 	LinearLayout llDelivesTime;
-
 	@BindView(R.id.title_rl_next)
 	RelativeLayout rlTitle;
-
-
 	@BindView(R.id.title_tv_next)
 	TextView tvNext;
-
-
 	@BindView(R.id.order_detial_deliver_goods_time)
 	TextView tvDeliverTime;
-
 	@BindView(R.id.order_detial_pay_time)
 	TextView tvPaytime;
-
 	@BindView(R.id.mine_order_detial_tv_ftime)
 	TextView tvFtime;
 	@BindView(R.id.order_detial_tv5)
 	TextView tvLogical;
-
 	@BindView(R.id.order_detial_bottom)
 	RelativeLayout rlBottom;
 	@BindView(R.id.order_detial_rl_rest_)
@@ -155,13 +146,10 @@ public class MineOrderDetailActivity extends BaseActivity {
 	TextView shopName;
 	@BindView(R.id.image_store_more)
 	ImageView ivMore;
-
-
 	MineOrderListGoodsDetailAdapter goodsAdapter;
 	private CustomProgressDialog mDialog;
 	CustomNormalContentDialog deleteDialog;
 	QuickeOrderDialog QuickeOrderDialog;
-
 	private OrderDetailEntity.OrderDetialData data;
 	private List<OrderDetailEntity.OrderDetialData.OrderDetialItem> mList;
 	private List<String> orderState;
@@ -573,7 +561,7 @@ public class MineOrderDetailActivity extends BaseActivity {
 
 		if (data.getIsAccelerate() != null && data.getIsAccelerate().equals("1")) {
 			rlTitle.setVisibility(View.VISIBLE);
-			Drawable drawable = getResources().getDrawable(R.mipmap.icon_share);
+			Drawable drawable = getResources().getDrawable(R.mipmap.share_slices);
 			drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
 			tvNext.setCompoundDrawables(drawable, null, null, null);//设置TextView的drawableleft
 			tvNext.setCompoundDrawablePadding(10);

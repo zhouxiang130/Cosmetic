@@ -48,10 +48,8 @@ public class MineInviteActivity extends BaseActivity {
 	TextView tvCode;
 	@BindView(R.id.mine_invite_copy_img)
 	ImageView ivQRCode;
-
 	private ShareEntity.ShareData data;
 	private UserInfoEntity.UserInfoData userInfoData;
-
 	final int Finish = 0x11;
 	final int Cancel = 0x88;
 	final int Failed = 0x99;

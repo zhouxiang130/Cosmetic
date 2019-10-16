@@ -32,7 +32,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dis15"
                 android:layout_marginRight="@dimen/dis15"
-                android:src="@mipmap/back_sear"/>
+                android:src="@mipmap/return_x"/>
         </RelativeLayout>
 
         <RelativeLayout

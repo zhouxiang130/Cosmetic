@@ -34,8 +34,6 @@ public class HomeSeckillActivity extends BaseActivity {
 	ImageView ivRight;
 	@BindView(R.id.home_seckill_iv_left)
 	ImageView ivLeft;
-
-
 	private List<String> mTitle = new ArrayList<String>();
 	private List<Fragment> mFragment = new ArrayList<Fragment>();
 

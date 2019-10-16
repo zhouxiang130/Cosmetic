@@ -122,17 +122,14 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 	ImageView imReturn;
 	@BindView(R.id.im_share)
 	ImageView imShare;
-
 	final int Finish = 0x11;
 	final int Cancel = 0x88;
 	final int Failed = 0x99;
 	private int mHeight;
-
 	//计算过后的商品高度和评论高度
 	public int goodsHeight;
 	public int judgeHeight;
 	public int BannerHeight;
-
 	GoodsDetialTitleAdapter mTitleAdapter;
 	GoodsDetailContentAdapter mAdapter;
 	private CustomProgressDialog loadingDialog;

@@ -47,8 +47,6 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 	TextView tvAddress;
 	@BindView(R.id.address_new_cb)
 	CheckBox cbCheck;
-	/* @BindView(R.id.address_news_save)
-	 Button btnSave;*/
 	@BindView(R.id.address_new_etName)
 	EditText etName;
 	@BindView(R.id.address_new_tel)
@@ -59,22 +57,17 @@ public class MineAddressNewActivity extends BaseActivity { //implements TextWatc
 	RelativeLayout rlNext;
 	@BindView(R.id.title_tv_next)
 	TextView tvNext;
-
-
 	private String addressId;
 //	private int currentPage = 0;// 当前页面，从0开始计数
 //	private PoiSearch.Query query;// Poi查询条件类
 //	private PoiSearch poiSearch;// POI搜索
 //	private PoiResult poiResult; // poi返回的结果
-
 	private ArrayList<JsonBean> options1Items = new ArrayList<>();
 	private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
 	private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();
 	private Thread thread;
 	private boolean isLoaded = false;
-
 	private CustomProgressDialog loadingDialog;
-	private String msg, city;
 
 	@Override
 	protected int getContentView() {

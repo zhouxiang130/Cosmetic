@@ -33,7 +33,6 @@ import okhttp3.Response;
  */
 
 public class InfoCenterActivity extends BaseActivity {
-
 	@BindView(R.id.xrecyclerView)
 	XRecyclerView mRecyclerView;
 	@BindView(R.id.progress_layout)

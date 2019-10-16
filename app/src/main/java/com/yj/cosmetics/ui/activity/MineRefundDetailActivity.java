@@ -54,7 +54,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	RelativeLayout rlprice_;
 	@BindView(R.id.refund_detail_tv_reason_detail_)
 	TextView tvReason_;
-
 	@BindView(R.id.frag_mine_shop_iv)
 	RoundedImageView shopIv;
 	@BindView(R.id.frag_mine_shop_detail)
@@ -63,7 +62,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	TextView shopName;
 	@BindView(R.id.image_store_more)
 	ImageView ivMore;
-
 //	@BindView(R.id.item_order_goods_iv)
 //	ImageView itemOrderGoodsIv;
 //	@BindView(R.id.item_order_goods_tv_price)
@@ -74,7 +72,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 //	TextView itemOrderGoodsTvNumber;
 //	@BindView(R.id.item_order_goods_tv_style)
 //	TextView itemOrderGoodsTvStyle;
-
 	@BindView(R.id.refund_detail_tv_reason_detail)
 	TextView refundDetailTvReasonDetail;
 	@BindView(R.id.refund_detail_tv_price_)
@@ -85,7 +82,6 @@ public class MineRefundDetailActivity extends BaseActivity {
 	TextView refundDetailTvNumber;
 	@BindView(R.id.gridView)
 	WrapContentGridView gridView;
-
 	private String returnId;
 	CustomNormalContentDialog mDialog;
 

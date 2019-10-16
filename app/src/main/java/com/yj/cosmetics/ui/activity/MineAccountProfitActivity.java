@@ -37,11 +37,10 @@ public class MineAccountProfitActivity extends BaseActivity {
     XRecyclerView mRecyclerView;
     @BindView(R.id.progress_layout)
     ProgressLayout mProgressLayout;
-
-
     AccountProfitAdapter mAdapter;
     List<AccountProfitEntity.AccountProfitData> mList;
     private int pageNum = 1;
+
     @Override
     protected int getContentView() {
         return R.layout.activity_mine_account_profit;

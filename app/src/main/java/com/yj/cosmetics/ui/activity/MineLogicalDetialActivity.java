@@ -73,8 +73,6 @@ public class MineLogicalDetialActivity extends BaseActivity {
 	LinearLayout allWuliuInfo;
 	@BindView(R.id.rl_no_wuliu_info)
 	RelativeLayout noWuliuInfo;
-
-
 	private String order;
 
 	/**

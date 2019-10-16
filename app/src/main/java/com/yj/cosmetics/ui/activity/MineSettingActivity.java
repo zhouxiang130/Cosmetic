@@ -92,7 +92,6 @@ public class MineSettingActivity extends BaseActivity {
 			//不为空,比较
 			if (VersionUtils.compareVersions(oldVersion, newVersion) == 1) {
 				//版本不同
-
 				if (!isWorked()) {
 					ivRed.setVisibility(View.VISIBLE);
 					tvVersion.setText("发现新版本");
@@ -102,12 +101,10 @@ public class MineSettingActivity extends BaseActivity {
 				}
 			}
 		}
-
 	}
 
 	@Override
 	protected void initData() {
-
 	}
 
 

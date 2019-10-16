@@ -39,7 +39,6 @@ import okhttp3.Response;
  */
 
 public class MinePersonalConfirmTelActivity extends BaseActivity {
-
     @BindView(R.id.change_alipay_tel)
     TextView tvTel;
     @BindView(R.id.mine_personal_confirm_tel_verify)
@@ -48,14 +47,11 @@ public class MinePersonalConfirmTelActivity extends BaseActivity {
     TextView tvVerify;
     @BindView(R.id.mine_personal_confirm_tel_btn)
     Button btnConfirm;
-
     boolean isSend = false;
     boolean isNetError = false;
-
     final int TAG_SMS = 0x11;
     private SMSThread mThread;
     private int countTime = 60;
-
     CustomProgressDialog mDialog;
 
     private Handler mHandler = new Handler() {

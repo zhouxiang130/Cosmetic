@@ -37,11 +37,6 @@ public class MineCollectionActivity extends BaseActivity {
 	private List<String> mTitle = new ArrayList<String>();
 	private List<Fragment> mFragment = new ArrayList<Fragment>();
 
-//	@BindView(R.id.xrecyclerView)
-//	SwipeHorXRecyclerView mRecyclerView;
-//	@BindView(R.id.progress_layout)
-//	ProgressLayout mProgressLayout;
-
 	@Override
 	protected int getContentView() {
 		return R.layout.activity_mine_collection;
@@ -54,9 +49,6 @@ public class MineCollectionActivity extends BaseActivity {
 		mTitle.add("店铺");
 		mTitle.add("商品");
 		for (int i = 0; i < mTitle.size(); i++) {
-		    /*if(i == 2){
-		        i++;
-            }*/
 			LogUtils.i("我添加了" + i);
 			mFragment.add(MineCollectFrag.instant(i+1));
 		}

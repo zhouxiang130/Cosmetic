@@ -38,25 +38,24 @@
                 android:layout_height="@dimen/dis30"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
                 android:layout_marginRight="10dp">
 
                 <ImageView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:scaleType="center"
-                    android:src="@mipmap/icon_message"/>
+                    android:src="@mipmap/xiaoxi"/>
 
                 <TextView
                     android:id="@+id/goods_list_tv_info"
                     android:layout_width="@dimen/dis16"
                     android:layout_height="@dimen/dis16"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/shape_round360_e83"
+                    android:background="@drawable/shape_round360_white"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/white"
+                    android:textColor="@color/CE8_3C_3C"
                     android:textSize="@dimen/font8"
                     android:visibility="gone"/>
             </RelativeLayout>

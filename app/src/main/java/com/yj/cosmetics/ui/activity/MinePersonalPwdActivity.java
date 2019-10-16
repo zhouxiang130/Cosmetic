@@ -33,7 +33,6 @@ import okhttp3.Response;
  */
 
 public class MinePersonalPwdActivity extends BaseActivity {
-
 	@BindView(R.id.mine_personal_pwd_et_old)
 	EditText etOld;
 	@BindView(R.id.mine_personal_pwd_et_new)
@@ -42,7 +41,6 @@ public class MinePersonalPwdActivity extends BaseActivity {
 	EditText etNewConfirm;
 	@BindView(R.id.mine_personal_pwd_btn)
 	Button btnConfirm;
-
 	CustomProgressDialog mDialog;
 
 	@Override

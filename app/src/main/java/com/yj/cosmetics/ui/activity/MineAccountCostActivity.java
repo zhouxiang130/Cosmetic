@@ -34,14 +34,8 @@ public class MineAccountCostActivity extends BaseActivity {
     RelativeLayout rlTitle;
     @BindView(R.id.mine_account_cost_vline)
     View vLine2;
-
-
     private List<String> mTitle = new ArrayList<String>();
     private List<Fragment> mFragment = new ArrayList<Fragment>();
-
-
-    private boolean visible = true;
-
 
     @Override
     protected int getContentView() {

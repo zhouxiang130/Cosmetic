@@ -64,7 +64,6 @@ public class MyApplication extends MultiDexApplication {
 		ratio = WindowDisplayManager.getRatio(this);
 	}
 
-
 	public static synchronized MyApplication getApplication() {
 		return mApplication;
 	}
@@ -116,7 +115,6 @@ public class MyApplication extends MultiDexApplication {
 		}
 		return null;
 	}
-
 
 	@Override
 	public void onTrimMemory(int level) {

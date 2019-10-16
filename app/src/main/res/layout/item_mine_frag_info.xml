@@ -36,11 +36,11 @@
                     android:layout_marginRight="@dimen/dis15">
 
                     <ImageView
-                        android:layout_width="@dimen/dis22"
-                        android:layout_height="@dimen/dis22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="@dimen/dis3"
-                        android:src="@mipmap/xiaoxi2x"/>
+                        android:scaleType="center"
+                        android:src="@mipmap/xiaoxi"/>
 
                     <TextView
                         android:id="@+id/frag_mine_tv_info"

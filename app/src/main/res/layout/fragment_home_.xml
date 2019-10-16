@@ -88,23 +88,21 @@
                     android:layout_marginRight="@dimen/dis10">
 
                     <ImageView
-                        android:id="@+id/frag_home_info_iv"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentBottom="true"
-                        android:padding="@dimen/dis3"
                         android:scaleType="center"
-                        android:src="@mipmap/icon_message"/>
+                        android:src="@mipmap/xiaoxi"/>
 
                     <TextView
                         android:id="@+id/frag_home_tv_info"
                         android:layout_width="@dimen/dis16"
                         android:layout_height="@dimen/dis16"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/shape_round360_e83"
+                        android:background="@drawable/shape_round360_white"
                         android:gravity="center"
                         android:text=""
-                        android:textColor="@color/white"
+                        android:textColor="@color/CE8_3C_3C"
                         android:textSize="@dimen/font8"
                         android:visibility="gone"/>
                 </RelativeLayout>

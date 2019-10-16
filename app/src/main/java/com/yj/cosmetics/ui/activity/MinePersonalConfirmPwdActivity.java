@@ -31,10 +31,8 @@ import okhttp3.Response;
  */
 
 public class MinePersonalConfirmPwdActivity extends BaseActivity {
-
     @BindView(R.id.mine_personal_confirm_pwd)
     EditText etPwd;
-
     CustomProgressDialog loadingDialog;
 
     @Override

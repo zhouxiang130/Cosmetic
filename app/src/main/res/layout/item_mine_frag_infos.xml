@@ -181,7 +181,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/icon_kf"
+                        android:drawableTop="@mipmap/ic_custom_service_message"
                         android:drawablePadding="@dimen/dis8"
                         android:gravity="center"
                         android:text="在线客服"
@@ -283,7 +283,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableTop="@mipmap/icon_discover"
+                        android:drawableTop="@mipmap/icon_about"
                         android:drawablePadding="@dimen/dis8"
                         android:gravity="center"
                         android:text="关于我们"

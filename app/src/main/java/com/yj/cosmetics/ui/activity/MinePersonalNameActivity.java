@@ -29,7 +29,6 @@ import okhttp3.Response;
  */
 
 public class MinePersonalNameActivity extends BaseActivity {
-
     @BindView(R.id.mine_personal_et_name)
     EditText etName;
     CustomProgressDialog loadingDialog;

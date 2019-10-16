@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ptr="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:ptr="http://schemas.android.com/tools"
+              android:background="@color/transparent"
+              android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <View
             android:id="@+id/frag_store_v_head"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dis24"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis28"
             android:background="@drawable/shape_corner_shade"
             android:visibility="gone"/>
 
@@ -133,5 +133,5 @@
                     android:visibility="gone"/>
             </com.yj.cosmetics.widget.ProgressLayout>
         </RelativeLayout>
-    </RelativeLayout>
-</android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</LinearLayout>

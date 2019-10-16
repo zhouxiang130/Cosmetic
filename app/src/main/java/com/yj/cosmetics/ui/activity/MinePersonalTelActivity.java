@@ -37,17 +37,14 @@ import okhttp3.Response;
  */
 
 public class MinePersonalTelActivity extends BaseActivity {
-
     @BindView(R.id.mine_personal_tel_ettel)
     EditText etTel;
     @BindView(R.id.mine_personal_tel_verify)
     TextView tvSend;
     @BindView(R.id.mine_personal_tel_etverify)
     EditText etVerify;
-
     boolean isSend = false;
     boolean isNetError = false;
-
     CustomProgressDialog mDialog;
     final int TAG_SMS = 0x11;
     private SMSThread mThread;

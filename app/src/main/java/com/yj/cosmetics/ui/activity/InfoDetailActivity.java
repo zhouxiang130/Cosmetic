@@ -30,8 +30,8 @@ public class InfoDetailActivity extends BaseActivity {
     TextView tvDate;
     @BindView(R.id.info_detial_tv_state)
     TextView tvState;
-
     private String mid;
+
     @Override
     protected int getContentView() {
         return R.layout.activity_info_detail;

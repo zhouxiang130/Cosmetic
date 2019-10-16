@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yj.cosmetics.R;
@@ -22,13 +23,15 @@ public class UpdateDialog extends Dialog {
 
     private Context context = null;
     private View view;
-    TextView tvUpdate;
-    TextView tvPass;
+    //    TextView tvUpdate;
+//    TextView tvPass;
+    TextView tvSize;
     TextView tvForce;
     TextView tvTitle;
     TextView tvVersion;
     TextView tvDesc;
     LinearLayout llBottom;
+    RelativeLayout llclose;
     private boolean isCancelable = true;
 
 
@@ -47,22 +50,27 @@ public class UpdateDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(view);
-        tvUpdate = (TextView) view.findViewById(R.id.update_dialog_update);
-        tvPass = (TextView) view.findViewById(R.id.update_dialog_pass);
+//        tvUpdate = (TextView) view.findViewById(R.id.update_dialog_update);
+        tvSize = (TextView) view.findViewById(R.id.update_dialog_size);
         tvForce = (TextView) view.findViewById(R.id.update_dialog_force);
         tvTitle = (TextView) view.findViewById(R.id.update_dialog_title);
         tvVersion = (TextView) view.findViewById(R.id.update_dialog_version);
         tvDesc = (TextView) view.findViewById(R.id.update_dialog_content);
         llBottom = (LinearLayout) view.findViewById(R.id.update_dialog_bottom);
+        llclose = (RelativeLayout) view.findViewById(R.id.rl_img_close);
         setCanceledOnTouchOutside(false);
         setWindow();
     }
 
-    public TextView getUpdate(){
-        return tvUpdate;
-    }
-    public TextView getPass(){
-        return tvPass;
+//    public TextView getUpdate(){
+//        return tvUpdate;
+//    }
+//    public TextView getPass(){
+//        return tvPass;
+//    }
+
+    public TextView getSize(){
+        return tvSize;
     }
     public TextView getForce(){
         return tvForce;
@@ -78,6 +86,10 @@ public class UpdateDialog extends Dialog {
     }
     public void setDesc(CharSequence desc){
         tvDesc.setText(desc);
+    }
+
+    public RelativeLayout getClose() {
+        return llclose;
     }
 
     private void setWindow() {

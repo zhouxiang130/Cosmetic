@@ -49,13 +49,10 @@ public class SplashActivity extends BaseActivity implements Splash_Contract.View
 	RelativeLayout llContent;
 	@BindView(R.id.iv_splash_img)
 	ImageView ivSplash;
-
 	boolean isToRedirectToGuide = true;
-
 	private String oldVersion;
 	private String newVersion;
 	UpdateEntity.UpdateData data;
-
 	UpdateDialog updateDialog;
 	AlertDialog alertDialog;
 	private CustomNormalDialog infoDialog;

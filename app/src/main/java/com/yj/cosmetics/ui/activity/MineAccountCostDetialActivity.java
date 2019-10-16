@@ -61,9 +61,6 @@ public class MineAccountCostDetialActivity extends BaseActivity {
     RelativeLayout rlAccount;
     @BindView(R.id.pill_detial_rl_type)
     RelativeLayout rlType;
-
-
-
     private String cashmoneyId;
     private String flag;
     private String consumeId;

@@ -86,14 +86,10 @@ public class SettlementCartActivity extends BaseActivity {
 	TextView tvLimit;
 	@BindView(R.id.settlement_cart_rl_rest)
 	RelativeLayout rlRest;
-	//	@BindView(R.id.goods_detial_ticket)
-//	RelativeLayout rlTicket;
 	@BindView(R.id.settlement_cart_tv_rest_all)
 	TextView tvRestAll;
 	@BindView(R.id.settlement_cart_tv_rest)
 	TextView tvRest;
-	/*@BindView(R.id.settlement_cart_switch_btn)
-	SwitchCompat switchBtn;*/
 	@BindView(R.id.settlement_cart_switch_btn)
 	SwitchView switchBtn;
 	@BindView(R.id.settlement_cart_tv_price)

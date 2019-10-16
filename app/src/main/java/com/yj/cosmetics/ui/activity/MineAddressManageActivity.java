@@ -182,7 +182,6 @@ public class MineAddressManageActivity extends BaseActivity {
 					intent.putExtra("page", "0");
 					startActivity(intent);
 					deleteDialog.dismiss();
-
 				} else {
 					ToastUtils.showToast(MineAddressManageActivity.this, response.getCode() + " :) " + response.getMsg());
 					deleteDialog.dismiss();
@@ -306,7 +305,6 @@ public class MineAddressManageActivity extends BaseActivity {
 		if (!TextUtils.isEmpty(productId)) {
 			map.put("productId", productId);
 		}
-
 		LogUtils.i("xzAddressValidation 获取地址验证的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/userUp/xzAddressValidation").tag(this)
 				.addParams(Key.data, URLBuilder.format(map))
@@ -333,7 +331,6 @@ public class MineAddressManageActivity extends BaseActivity {
 				if (call.isCanceled()) {
 					call.cancel();
 				} else {
-
 				}
 				dismissDialog2();
 			}
@@ -361,7 +358,6 @@ public class MineAddressManageActivity extends BaseActivity {
 	ValidateAddressDialog deleteDialog;
 
 	private void showDeleteDialog(final int i, String msg, final String addressId) {
-
 		if (deleteDialog == null) {
 			deleteDialog = new ValidateAddressDialog(MineAddressManageActivity.this);
 		}
@@ -380,7 +376,6 @@ public class MineAddressManageActivity extends BaseActivity {
 				deleteDialog.dismiss();
 			}
 		});
-
 		deleteDialog.getTvCancel().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -432,19 +427,17 @@ public class MineAddressManageActivity extends BaseActivity {
 		if (!TextUtils.isEmpty(productId)) {
 			map.put("proId", productId);
 		}
-
 		if (!TextUtils.isEmpty(cartIdObj)) {
 			map.put("cartIdObj", cartIdObj);
 		}
 		if (!TextUtils.isEmpty(shopId)) {
 			map.put("shopId", shopId);
 		}
-
-
 		LogUtils.i("获取地址传输的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/user/searchAddress").tag(this)
 				.addParams(Key.data, URLBuilder.format(map))
 				.build().execute(new Utils.MyResultCallback<AddressEntity>() {
+
 			@Override
 			public void onError(Call call, Exception e) {
 				super.onError(call, e);
@@ -535,7 +528,6 @@ public class MineAddressManageActivity extends BaseActivity {
 //							intent.putExtra("detial", mList.get(i).getAddressAreaDetail());
 //							intent.putExtra("addressId", mList.get(i).getAddressId());
 //							LogUtils.i("intent有值了" + intent.getStringExtra("name"));
-
 							doAsynGetCheckAddress(mList.get(i).getAddressId(), i + 1);
 
 						} else {
@@ -563,13 +555,11 @@ public class MineAddressManageActivity extends BaseActivity {
 				} else {
 					finish();
 				}
-
 //				if (intent != null && TextUtils.isEmpty(intent.getStringExtra("name"))) {
 //					//没有默认地址,返回时展示添加新地址
 //					LogUtils.i("我返回没默认地址了delete为true");
 //					intent.putExtra("delete", "true");
 //				}
-
 			} else {
 				finish();
 			}

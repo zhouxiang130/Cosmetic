@@ -51,7 +51,6 @@ import okhttp3.Response;
  */
 
 public class UserRegistActivity extends BaseActivity {
-	private static final String TAG = "UserRegistActivity";
 	@BindView(R.id.user_regist_tv_tel)
 	TextView tvTel;
 	@BindView(R.id.user_regist_et_tel)

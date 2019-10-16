@@ -29,14 +29,12 @@ import okhttp3.Response;
  */
 
 public class MinePersonalAlipayActivity extends BaseActivity {
-
     @BindView(R.id.alipay_et_account)
     EditText etAccount;
     @BindView(R.id.alipay_et_name)
     EditText etName;
     @BindView(R.id.mine_personal_alipay_btn)
     Button btnConfirm;
-
     CustomProgressDialog mDialog;
 
     @Override
@@ -117,7 +115,6 @@ public class MinePersonalAlipayActivity extends BaseActivity {
                             finish();
                         }
                     },400);
-
                 } else {
                     ToastUtils.showToast(MinePersonalAlipayActivity.this, "网络故障 :)" + response.getMsg());
                 }

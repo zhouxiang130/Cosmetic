@@ -21,7 +21,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -77,8 +76,6 @@ public class HomeFrag extends BaseFragment {
 	ProgressLayout mProgressLayout;
 	@BindView(R.id.frag_classify_rl_top)
 	RelativeLayout rlTop;
-	@BindView(R.id.frag_home_info_iv)
-	ImageView ivInfo;
 	@BindView(R.id.home_vline)
 	View vLine;
 	@BindView(R.id.frag_home_tv_info)
@@ -223,70 +220,6 @@ public class HomeFrag extends BaseFragment {
 					}
 					IntentUtils.IntentToGoodsDetial(getActivity(), mList.get(postion - 8).getProduct_id());
 				}
-			}
-		});
-//		refresh();
-		//获取标题栏高度
-//		ViewTreeObserver viewTreeObserver = rlTop.getViewTreeObserver();
-//		viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//			@Override
-//			public void onGlobalLayout() {
-//				rlTop.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-//				mHeight = Math.round(getResources().getDimension(R.dimen.dis208) - rlTop.getHeight());//这里取的高度应该为图片的高度-标题栏
-//			}
-//		});
-//		mRecyclerView.scrollToPosition(0);
-
-		mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-			@Override
-			public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-				super.onScrollStateChanged(recyclerView, newState);
-			}
-
-			@Override
-			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-				super.onScrolled(recyclerView, dx, dy);
-				LogUtils.i("onScrolled:>>>>> " + dx + "--------------------------" + dy);
-
-	/*            //在这里做颜色渐变的操作
-	            tempY += dy;
-*//*
-		        // 滚动的总距离相对0-150之间有一个百分比，头部的透明度也是从初始值变动到不透明，通过距离的百分比，得到透明度对应的值
-                // 如果小于0那么透明度为初始值，如果大于150为不透明状态*//*
-
-                LogUtils.i("tempY的值"+tempY);
-                if (tempY <= 0) {
-                    //顶部图处于最顶部，标题栏透明
-                    setTopColor(Color.argb(0,255,255,255));
-                    rlTop.setBackgroundColor(Color.argb(0, 255, 255, 255));
-                    ivInfo.setImageResource(R.mipmap.new_home);
-                    vLine.setVisibility(View.GONE);
-                } else if (tempY > 0 && tempY < mHeight) {
-                    //滑动过程中，渐变
-                    float scale = (float) tempY / mHeight;//算出滑动距离比例
-                    float alpha = (255 * scale);//得到透明度
-                    setTopColor(Color.argb((int)alpha,0,0,0));
-                    rlTop.setBackgroundColor(Color.argb((int) alpha, 255, 255, 255));
-                    vLine.setVisibility(View.GONE);
-                } else {
-                    //过顶部图区域，标题栏定色
-                    rlTop.setBackgroundColor(Color.argb(255, 255, 255, 255));
-                    ivInfo.setImageResource(R.mipmap.notification);
-                    setTopColor(Color.argb(255,0,0,0));
-                    vLine.setVisibility(View.VISIBLE);
-                }*/
-//				if (gridLayoutManager.findFirstVisibleItemPosition() > 1) {
-//					//过顶部图区域，标题栏定色
-//					rlTop.setBackgroundColor(Color.argb(255, 255, 255, 255));
-//					ivInfo.setImageResource(R.mipmap.notification);
-//					setTopColor(Color.argb(255, 0, 0, 0));
-//					vLine.setVisibility(View.VISIBLE);
-//				} else {
-//					setTopColor(Color.argb(0, 255, 255, 255));
-//					rlTop.setBackgroundColor(Color.argb(0, 255, 255, 255));
-//					ivInfo.setImageResource(R.mipmap.new_home);
-//					vLine.setVisibility(View.GONE);
-//				}
 			}
 		});
 		transTitle();

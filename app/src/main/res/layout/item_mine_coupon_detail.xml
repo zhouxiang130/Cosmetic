@@ -313,7 +313,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/share"/>
+                android:background="@mipmap/share_x"/>
 
             <TextView
                 android:layout_width="wrap_content"
